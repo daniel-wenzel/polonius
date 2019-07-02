@@ -2,14 +2,14 @@ UPDATE AddressMetadata
 SET behavedLikeDepositAddress=0;
 
 UPDATE Address
-SET isCAPPHotWallet=0, isDepositAddress=0;
+SET isCappReceiver=0, isDepositAddress=0;
 
 UPDATE AddressMetadata
 SET behavedLikeDepositAddress = 1
 WHERE AddressMetadata.address in (SELECT t.`to` FROM Transfer t GROUP BY t.`to` HAVING min(wasEmptiedWithinXBlocks) = 1);
 
 UPDATE Address
-SET isCAPPHotWallet=1
+SET isCappReceiver=1
 WHERE
 	Address.address in 
 		(SELECT 
@@ -37,9 +37,9 @@ WHERE
 		Address a
 		INNER JOIN
 		Transfer t
-		ON m.address = t.`from` AND m.behavedLikeDepositAddress=1 AND t.`to`=a.address and a.isCAPPHotWallet=1
+		ON m.address = t.`from` AND m.behavedLikeDepositAddress=1 AND t.`to`=a.address and a.isCappReceiver=1
 	GROUP BY t.`from`
-	HAVING min(isCAPPHotWallet) = 1);
+	HAVING min(isCappReceiver) = 1);
 
 
 UPDATE Address
@@ -58,5 +58,5 @@ WHERE Address.address in
 		a.isDepositAddress = 0
 	GROUP BY a.address
 	HAVING 
-		count(*) = sum(receiver.isCAPPHotWallet) AND
+		count(*) = sum(receiver.isCappReceiver) AND
 		(count(*) < 10 OR SUM(t.emptiedAccount) > 0.25 * count(*)))

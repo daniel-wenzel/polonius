@@ -2,16 +2,19 @@ const db = require('./util/db')
 
 const statements = 
     `CREATE TABLE "Address" (
-        "address"	TEXT,
-        "name" TEXT,
-        "url" TEXT,
-        "isExchange" INTEGER DEFAULT 0,
+        "address"	TEXT NOT NULL UNIQUE,
+        "name"	TEXT,
+        "url"	TEXT,
+        "isExchange"	INTEGER DEFAULT 0,
         "isDepositAddress"	INTEGER DEFAULT 0,
-        "isCAPPHotWallet"	INTEGER DEFAULT 0,
+        "isCappReceiver"	INTEGER DEFAULT 0,
+        "isCappSender"	INTEGER DEFAULT 0,
+        "isCappStorage"	INTEGER DEFAULT 0,
+        "isCappOther"	INTEGER DEFAULT 0,
         PRIMARY KEY("address")
     );
     CREATE TABLE "Token" (
-        "id"	TEXT,
+        "id"	TEXT  NOT NULL UNIQUE,
         "decimals"	INTEGER NOT NULL,
         "name"	TEXT NOT NULL,
         "address"	TEXT NOT NULL UNIQUE,
@@ -44,7 +47,12 @@ const statements =
     CREATE INDEX transfer_to_index ON Transfer ("to");
     CREATE INDEX transfer_token_index ON Transfer ("token");
     CREATE INDEX address_address_index ON Address ("address");
-    CREATE INDEX address_isCapp_index ON Address ("isCAPPHotWallet");
+
+    CREATE INDEX address_isCappReceiver_index ON Address ("isCappReceiver");
+    CREATE INDEX address_isCappSender_index ON Address ("isCappSender");
+    CREATE INDEX address_isCappStorage_index ON Address ("isCappStorage");
+    CREATE INDEX address_isCappOther_index ON Address ("isCappOther");
+
     CREATE INDEX address_isDeposit_index ON Address ("isDepositAddress");
     CREATE INDEX token_id_index ON Token ("id");
     CREATE INDEX emptied_index ON Transfer (emptiedAccount)
