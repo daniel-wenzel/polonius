@@ -12,7 +12,7 @@ let firstLine = undefined
 
 
 const tokenCreationsReader = readline.createInterface({
-    input: fs.createReadStream('./data/tokenCreations.csv')
+    input: fs.createReadStream('./data/tokenCreations.csv.gz')
   });
   tokenCreationsReader.on('line', (line) => {
       const parts = line.split(',')

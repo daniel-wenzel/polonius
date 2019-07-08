@@ -32,10 +32,10 @@ function addLine(line) {
         firstLine = line
         return
     }
-    if (lines.has(line)) {
+    /*if (lines.has(line)) {
         duplicates++
         return
-    }
+    }*/
     lines.add(line)
 }
 
@@ -112,16 +112,24 @@ async function parseToken(token) {
         
         lineReader.on('close', () => {
             console.log("   read file! removed "+duplicates+" duplicates.")
-            const sorted = mergeSameBlockTransactions(Array.from(lines).sort(compare))
-            const expandedLines = sorted.map(expandLineT)
+            let array = Array.from(lines)
+            lines = undefined // free up memory
+            let sorted = mergeSameBlockTransactions(array.sort(compare))
+            array = undefined // free up memory
 
-            firstLine += ',slug,amountInTokens,currentUSDHigh,currentUSDLow,USDHigh,USDLow'
-            zlib.gzip(firstLine+"\n"+expandedLines.join("\n"), (_, buf) => {
-                fs.writeFile('data/ordered/'+fileName, buf, (err, ok) => {
-                    if (err) rej(err)
-                    res(ok)
-                })
-            })       
+            const output = fs.createWriteStream('data/ordered/'+fileName);
+            const compress = zlib.createGzip();
+            compress.pipe(output);
+            firstLine = 'token,blocknumber,from,to,amount,timestamp,slug,amountInTokens,currentUSDHigh,currentUSDLow,USDHigh,USDLow'
+            compress.write(firstLine+"\n")
+
+            sorted.forEach(l => {
+                const expandedLine = expandLineT(l)+"\n"
+                compress.write(expandedLine)
+            })
+            compress.end()
+            console.log("   wrote file")  
+            compress.on('finish', res);
         })
     })
 }

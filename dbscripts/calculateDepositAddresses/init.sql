@@ -7,15 +7,19 @@ CREATE TABLE "AddressMetadata" (
 	"distinctInDegree"	INTEGER,
 	"distinctOutDegree"	INTEGER,
 	"behavedLikeDepositAddress"	INTEGER DEFAULT 0,
+	"involumeUSD"	NUMERIC,
+	"outvolumeUSD"	NUMERIC,
+	"outdegreeFraction"	NUMERIC,
+	"outvolumeFraction"	INTEGER,
 	PRIMARY KEY("address")
 );
-INSERT INTO AddressMetadata (address, indegree, outdegree, degree, distinctDegree, distinctInDegree, distinctOutDegree)
-    SELECT i.addr, indegree, outdegree, indegree+outdegree as degree, distinct_indegree+distinct_outdegree as distinctDegree, distinct_indegree, distinct_outdegree
+INSERT INTO AddressMetadata (address, indegree, outdegree, degree, distinctDegree, distinctInDegree, distinctOutDegree, involumeUSD, outvolumeUSD, outdegreeFraction, outvolumeFraction)
+    SELECT i.addr, indegree, outdegree, indegree+outdegree as degree, distinct_indegree+distinct_outdegree as distinctDegree, distinct_indegree, distinct_outdegree, involumeUSD, outvolumeUSD, 1.0*distinct_outdegree / distinct_indegree, outvolumeUSD / involumeUSD
     FROM 
-        (SELECT t.`to` as addr,count(*) as indegree, count(distinct t.`from`) as distinct_indegree FROM Transfer t GROUP BY t.`to`) i
+        (SELECT t.`to` as addr,count(*) as indegree, count(distinct t.`from`) as distinct_indegree, sum(t.amountInUSDCurrent) as involumeUSD FROM Transfer t GROUP BY t.`to`) i
         INNER JOIN
-        (SELECT t.`from` as addr,count(*) as outdegree, count(distinct t.`to`) as distinct_outdegree FROM Transfer t GROUP BY t.`from`) o
-        ON i.addr = o.addr;
+        (SELECT t.`from` as addr,count(*) as outdegree, count(distinct t.`to`) as distinct_outdegree,  sum(t.amountInUSDCurrent) as outvolumeUSD FROM Transfer t GROUP BY t.`from`) o
+        ON i.addr = o.addr;	
 
 CREATE INDEX degree_index ON AddressMetadata (degree);
 CREATE INDEX behavedLikeDepositAddress_index ON AddressMetadata (behavedLikeDepositAddress);

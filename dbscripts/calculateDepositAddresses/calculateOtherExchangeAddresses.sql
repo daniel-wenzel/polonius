@@ -36,28 +36,20 @@ WHERE address in
 	GROUP BY cappReceiver.address
 	HAVING cappReceiverM.distinctOutDegree > MIN(cappSenderM.distinctOutDegree));
 
-
 UPDATE Address
 SET isCappSender = 1
 WHERE address in
 	(SELECT 
-        cappSenderM.address
-    FROM
-        Address cappReceiver
-        INNER JOIN
-        AddressMetadata cappReceiverM
-        INNER JOIN
-        AddressMetadata cappSenderM
-        INNER JOIN
-        Address cappSender
-        INNER JOIN
-        Transfer t
-        ON
-        t.`from` = cappReceiver.address and cappReceiver.isCappReceiver = 1 and cappReceiver.isCappSender = 0
-        and cappReceiverM.address = cappReceiver.address
-        and t.`to` = cappSenderM.address
-        and not cappReceiver.address = cappSenderM.address
-        and cappSender.address = cappSenderM.address
-        and not cappSender.isCappReceiver = 1
-    GROUP BY cappReceiver.address, cappSenderM.address
-    HAVING cappSenderM.distinctOutDegree > 100)
+		potentialCappSender.address 
+	FROM 
+		Address cappReceiver 
+		INNER JOIN
+		Address potentialCappSender
+		INNER JOIN 
+		Transfer t
+		ON
+		cappReceiver.address = t.`from` AND
+		potentialCappSender.address = t.`to` AND
+		(cappReceiver.isCappReceiver = 1 or cappReceiver.isCappSender = 1)
+	GROUP BY cappReceiver.address
+	HAVING count(distinct potentialCappSender.address) = 1)

@@ -32,10 +32,13 @@ const statements =
         "amountInUSD"	REAL,
         "emptiedAccount"	INTEGER DEFAULT 0,
         "wasEmptiedWithinXBlocks"	INTEGER DEFAULT 0,
-        "intoDepositAddress"	INTEGER DEFAULT 0,
-        "intraCAPP"	INTEGER DEFAULT 0,
-        "fromCAPP"	INTEGER DEFAULT 0,
+        "isIntoDepositAddress"	INTEGER DEFAULT 0,
+        "isIntraCAPP"	INTEGER DEFAULT 0,
+        "isFromCAPP"	INTEGER DEFAULT 0,
         "revealedPublicKey"	INTEGER DEFAULT 0,
+        "percentile"	NUMERIC,
+        "isEarlyTransfer"	INTEGER,
+        "isVeryEarlyTransfer"	INTEGER,
         FOREIGN KEY("from") REFERENCES "Address"("address"),
         PRIMARY KEY("from","to","token","blocknumber"),
         FOREIGN KEY("to") REFERENCES "Address"("address"),
@@ -65,4 +68,3 @@ db.transaction(() => {
         db.prepare(s).run()
     })
 })();
-console.log("created schema!")
