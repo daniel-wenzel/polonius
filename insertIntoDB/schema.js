@@ -11,6 +11,7 @@ const statements =
         "isCappSender"	INTEGER DEFAULT 0,
         "isCappStorage"	INTEGER DEFAULT 0,
         "isCappOther"	INTEGER DEFAULT 0,
+        "ownedBy"	TEXT,
         PRIMARY KEY("address")
     );
     CREATE TABLE "Token" (
@@ -39,6 +40,12 @@ const statements =
         "percentile"	NUMERIC,
         "isEarlyTransfer"	INTEGER,
         "isVeryEarlyTransfer"	INTEGER,
+        "isFromDiluter"	INTEGER DEFAULT 0,
+        "isToDiluter"	INTEGER DEFAULT 0,
+        "isFromMixer"	INTEGER DEFAULT 0,
+        "isToMixer"	INTEGER DEFAULT 0,
+        "isToConcentrator"	INTEGER DEFAULT 0,
+        "isFromConcentrator"	INTEGER DEFAULT 0,
         FOREIGN KEY("from") REFERENCES "Address"("address"),
         PRIMARY KEY("from","to","token","blocknumber"),
         FOREIGN KEY("to") REFERENCES "Address"("address"),
@@ -55,6 +62,7 @@ const statements =
     CREATE INDEX address_isCappSender_index ON Address ("isCappSender");
     CREATE INDEX address_isCappStorage_index ON Address ("isCappStorage");
     CREATE INDEX address_isCappOther_index ON Address ("isCappOther");
+    CREATE INDEX address_ownedBy_index ON Address ("ownedBy");
 
     CREATE INDEX address_isDeposit_index ON Address ("isDepositAddress");
     CREATE INDEX token_id_index ON Token ("id");

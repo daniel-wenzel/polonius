@@ -11,6 +11,9 @@ CREATE TABLE "AddressMetadata" (
 	"outvolumeUSD"	NUMERIC,
 	"outdegreeFraction"	NUMERIC,
 	"outvolumeFraction"	INTEGER,
+	"isConcentrator"	INTEGER DEFAULT 0,
+	"isMixer"	INTEGER DEFAULT 0,
+	"isDiluter"	INTEGER DEFAULT 0,
 	PRIMARY KEY("address")
 );
 INSERT INTO AddressMetadata (address, indegree, outdegree, degree, distinctDegree, distinctInDegree, distinctOutDegree, involumeUSD, outvolumeUSD, outdegreeFraction, outvolumeFraction)
