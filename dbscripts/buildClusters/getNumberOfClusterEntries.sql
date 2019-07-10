@@ -1,0 +1,1 @@
+SELECT DISTINCT count(member) FROM cluster;
