@@ -1,0 +1,71 @@
+Goal of the thesis: Provide a taxonomy of entities in the network of ERC20 tokens
+- Generally only the addresses and their transfers are known
+- Only few labels exist on Etherscan
+-> Address has to be categorized/grouped based on the subgraph around it
+- A high number of all transfers >83% involve an entity which transfered to over 100 other addresses
+- 90% of addresses interacted with an address with degree over 100
+- Those addresses with a degree > 100 can be neatly grouped into three categories based on whether they rather emit or receive tokens.
+-> clustering and understanding these addresses leads to better understanding of the whole network
+
+Chapter 1: Understanding High Degree Nodes
+- Annectotically Token Networks are dominated by ICOs/Airdrops and Exchanges
+- I try to identify ICOs/Airdrops and Exchanges by ERC20 Tokens
+
+## Exchanges
+1. Exchanges need to determine who deposited money, either use smart contracts or deposit addresses for that. Usually the latter. I focus on the latter in this work.
+1. I propose a model for exchanges
+2. It is generally possible to find deposit addresses and receiving addresses, with showing it
+3. Determining which sender addresses belong to which receiver address is in general hard (show that)
+3a. Maybe heatmap showing how different high degree nodes interacted with receiver addresses
+4. Show two examples exchanges
+
+## ICOs/Airdrops
+1. Explain that transfers before ICOs, multiple ICOs are common.
+
+## Results
+Show how many high degree nodes can be labeled as Exchange/ICO/Airdrop
+
+Chapter 2: Deducing Ownership from Token Networks
+1. An entity can use multiple addresses, for an entity taxonomy it is helpful to understand which addresses belong to the same entity
+2. I propose three? heuristics and evaluate their usefulness
+- Deposit addresses belong to their receiver
+- Deposit address couse
+- Paper wallet use
+- Mapping sender and receiver addresses based Exchanges 3a
+3. Evaluate the heuristcs: How many addresses/value owned do they group? Can we find definite false positives?
+4. Analysis of the ownership graph
+
+Chapter 3: Taxonomy of Token Entities
+
+Chapter 4: K-Anonymity in the ERC20 Token Network
+
+Chapter 4: Case Study: Usage in different token networks? BAT? Aragon?
+
+Chapter 5: Relationship between token entities and their network?
+
+chapter 6: Architecture ?
+
+
+Was ich so gemacht habe:
+1. Exchanges weiter modelliert: 
+	1. Ich kann receiver finden, 
+	2. receiver zu sendern zuordnen ist schwer
+	3. Wohl nur möglich zu sagen "they have a business relationship", but not "they belong to the same entity"
+2. Looked into ICOs
+	1. Tokens do not start with an ICO
+	2. Pre ICO transfers are common
+	3. Multiple ICOs/Airdrops are common
+	4. ICOs/Airdrops occur while other tokens are traded
+	5. Propose way of detecting them/definition
+	6. I shreded my dataset and cant use them now
+3. High Degree nodes
+	1. high degree nodes can be clustered into three groups
+	2. 85% of transfers involve either a node with a distinct degree of over 100 or a deposit address. 90% of addresses interact with one
+4. Basis outline für meine Arbeit
+	Kapitel/Story
+	Soll da auch die Architektur rein?
+5. Weitere Spannende Richtung: K-Anonymity - How many entities actually hold the same tokens and use the same exchanges?
+6. Tokenexplore
+
+Fragen:
+1. Terminologie: Degree == Anzahl der Kanten oder Anzahl der Knoten zu denen die Kanten führen?
