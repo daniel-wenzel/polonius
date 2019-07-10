@@ -12,3 +12,5 @@ WHERE
 UPDATE Transfer
 SET isFromCapp = 1
 WHERE Transfer.`from` in (SELECT address FROM Address WHERE isCappSender = 1) and isIntraCapp = 0;
+
+
