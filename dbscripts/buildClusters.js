@@ -4,12 +4,13 @@ const requireSQL = require('./util/requireSQL')
 const init = requireSQL('dbscripts/buildClusters/init.sql')
 const addSenderAddresses = requireSQL('dbscripts/buildClusters/addSenderAddresses.sql')
 const getNumberOfClusterMerges = requireSQL('dbscripts/buildClusters/getNumberOfClusterMerges.sql')
-const mergeTwoClusters = requireSQL('dbscripts/buildClusters/mergeTwoClusters.sql')
+const mergeManyClusters = requireSQL('dbscripts/buildClusters/mergeManyClusters.sql')
 const dropDuplicates = requireSQL('dbscripts/buildClusters/dropDuplicates.sql')
 const getNumberOfClusterEntries = requireSQL('dbscripts/buildClusters/getNumberOfClusterEntries.sql')
 
 
 init()
+performAllPossibleMerges()
 let numberOfEntries = 0
 addedEntries = undefined
 do {
@@ -19,12 +20,18 @@ do {
     numberOfEntries = newNumberOfEntries
 
     console.log("add addresses (now "+numberOfEntries+")")
-    const numberOfMerges = Object.values(getNumberOfClusterMerges(undefined, 'get'))[0]
-    console.log("merge addresses ("+numberOfMerges+" times)")
-    for (let j=0; j<numberOfMerges; j++) {
-        console.log(j)
-        mergeTwoClusters()
+    performAllPossibleMerges()
+}
+while (addedEntries)
+
+
+
+function performAllPossibleMerges() {
+    let numberOfMerges = Object.values(getNumberOfClusterMerges(undefined, 'get'))[0]
+    while (numberOfMerges > 0) {
+        console.log(numberOfMerges+" merges left")
+        mergeManyClusters()
+        numberOfMerges = Object.values(getNumberOfClusterMerges(undefined, 'get'))[0]
     }
     dropDuplicates()
 }
-while (addedEntries)

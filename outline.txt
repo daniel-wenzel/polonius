@@ -1,3 +1,8 @@
+Sota
+
+Terminology
+
+
 Goal of the thesis: Provide a taxonomy of entities in the network of ERC20 tokens
 - Generally only the addresses and their transfers are known
 - Only few labels exist on Etherscan
@@ -51,13 +56,15 @@ Was ich so gemacht habe:
 	1. Ich kann receiver finden, 
 	2. receiver zu sendern zuordnen ist schwer
 	3. Wohl nur möglich zu sagen "they have a business relationship", but not "they belong to the same entity"
+	4. Methode diskutieren
 2. Looked into ICOs
 	1. Tokens do not start with an ICO
 	2. Pre ICO transfers are common
 	3. Multiple ICOs/Airdrops are common
 	4. ICOs/Airdrops occur while other tokens are traded
 	5. Propose way of detecting them/definition
-	6. I shreded my dataset and cant use them now
+	6. I shreded my dataset and cant use that now
+	7. Proposed Definition/
 3. High Degree nodes
 	1. high degree nodes can be clustered into three groups
 	2. 85% of transfers involve either a node with a distinct degree of over 100 or a deposit address. 90% of addresses interact with one
@@ -68,4 +75,14 @@ Was ich so gemacht habe:
 6. Tokenexplore
 
 Fragen:
-1. Terminologie: Degree == Anzahl der Kanten oder Anzahl der Knoten zu denen die Kanten führen?
+1. Wie zeige ich dass meine Deposit Accounts/Receiver Accounts stimmig sind?
+2. Bürokratie: Wie gehts denn der Anmeldung?
+3. Terminologie: Degree == Anzahl der Kanten oder Anzahl der Knoten zu denen die Kanten führen?
+
+
+Plotten
+Histogramm der Volumen
+Welche Highdegree adressen handeln miteinander (im embedding)
+Terminology
+Sota schreiben
+Model ist Ergebnis -> erstmal weg zum Modell beschreiben

@@ -12,7 +12,7 @@ const maxDegreeToCalculateBalances = 500
 const numBlocksDelayForDepositAddresses = 8640 // 1 day at 10 seconds blocktime 
 
 init({maxDegree: maxDegreeToCalculateBalances})
-    
+
 for (let i=0; i<maxDegreeToCalculateBalances; i++) {
     calculateBalancesStep()
     if (i % 1 == 0) {

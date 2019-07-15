@@ -6,7 +6,9 @@ SET isCappReceiver=0, isDepositAddress=0;
 
 UPDATE AddressMetadata
 SET behavedLikeDepositAddress = 1
-WHERE AddressMetadata.address in (SELECT t.`to` FROM Transfer t GROUP BY t.`to` HAVING min(wasEmptiedWithinXBlocks) = 1);
+WHERE 
+	AddressMetadata.address in (SELECT t.`to` FROM Transfer t GROUP BY t.`to` HAVING min(wasEmptiedWithinXBlocks) = 1)
+	and AddressMetadata.distinctOutDegree < 10;
 
 UPDATE Address
 SET isCappReceiver=1
