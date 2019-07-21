@@ -20,8 +20,7 @@ const statements =
         "name"	TEXT NOT NULL,
         "address"	TEXT NOT NULL UNIQUE,
         PRIMARY KEY("id")
-    );
-    CREATE TABLE "Transfer" (
+    );CREATE TABLE "Transfer" (
         "from"	TEXT,
         "to"	TEXT,
         "token"	TEXT,
@@ -32,11 +31,11 @@ const statements =
         "amountInUSDCurrent"	REAL,
         "amountInUSD"	REAL,
         "emptiedAccount"	INTEGER DEFAULT 0,
-        "wasEmptiedWithinXBlocks"	INTEGER DEFAULT 0,
+        "canBeChangeTransfer"	INTEGER DEFAULT 0,
+        "isChangeTransfer"	INTEGER DEFAULT 0,
         "isIntoDepositAddress"	INTEGER DEFAULT 0,
-        "isIntraCAPP"	INTEGER DEFAULT 0,
-        "isFromCAPP"	INTEGER DEFAULT 0,
-        "revealedPublicKey"	INTEGER DEFAULT 0,
+        "isIntraCapp"	INTEGER DEFAULT 0,
+        "isFromCapp"	INTEGER DEFAULT 0,
         "percentile"	NUMERIC,
         "isEarlyTransfer"	INTEGER,
         "isVeryEarlyTransfer"	INTEGER,
@@ -46,16 +45,18 @@ const statements =
         "isToMixer"	INTEGER DEFAULT 0,
         "isToConcentrator"	INTEGER DEFAULT 0,
         "isFromConcentrator"	INTEGER DEFAULT 0,
-        FOREIGN KEY("from") REFERENCES "Address"("address"),
-        PRIMARY KEY("from","to","token","blocknumber"),
+        FOREIGN KEY("token") REFERENCES "Token"("id"),
         FOREIGN KEY("to") REFERENCES "Address"("address"),
-        FOREIGN KEY("token") REFERENCES "Token"("id")
+        PRIMARY KEY("from","to","token","blocknumber"),
+        FOREIGN KEY("from") REFERENCES "Address"("address")
     );
     
     CREATE INDEX transfer_blocknumber_index ON Transfer (blocknumber);
     CREATE INDEX transfer_from_index ON Transfer ("from");
     CREATE INDEX transfer_to_index ON Transfer ("to");
     CREATE INDEX transfer_token_index ON Transfer ("token");
+    CREATE INDEX transfer_canBeChangeTransfer_index ON Transfer (canBeChangeTransfer);
+    CREATE INDEX transfer_emptiedAccount_index ON Transfer (emptiedAccount);
     CREATE INDEX address_address_index ON Address ("address");
 
     CREATE INDEX address_isCappReceiver_index ON Address ("isCappReceiver");

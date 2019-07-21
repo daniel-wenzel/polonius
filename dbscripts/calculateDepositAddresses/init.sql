@@ -14,6 +14,8 @@ CREATE TABLE "AddressMetadata" (
 	"isConcentrator"	INTEGER DEFAULT 0,
 	"isMixer"	INTEGER DEFAULT 0,
 	"isDiluter"	INTEGER DEFAULT 0,
+	"firstOutBlocknumber"	INTEGER,
+	"canBePaperWallet"	TEXT DEFAULT 'MAYBE',
 	PRIMARY KEY("address")
 );
 /* We can have no incoming or outcomming transactions for an address, therefore we have three different insert statements */
@@ -38,6 +40,8 @@ REPLACE INTO AddressMetadata (address, indegree, outdegree, degree, distinctDegr
 
 CREATE INDEX degree_index ON AddressMetadata (degree);
 CREATE INDEX behavedLikeDepositAddress_index ON AddressMetadata (behavedLikeDepositAddress);
+CREATE INDEX firstOutBlocknumber_index ON AddressMetadata (firstOutBlocknumber);
+
 CREATE TABLE balances (
         "address"	TEXT,
         "blocknumber",

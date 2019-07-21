@@ -30,7 +30,13 @@ SELECT a.address || '-capp' as clusterName, a.address as member
 FROM Address a
 WHERE
 	a.isCappReceiver = 1;
-
+	
+INSERT INTO cluster
+SELECT MAX(`from`, `to`) || '-change' as ClusterName, MIN(`from`, `to`) as member FROM Transfer WHERE isChangeTransfer = 1
+UNION ALL
+SELECT MAX(`from`, `to`) || '-change', MAX(`from`, `to`) FROM Transfer WHERE isChangeTransfer = 1
 
 CREATE INDEX cluster_name ON cluster("clusterName");
 CREATE INDEX cluster_member ON cluster("member");
+
+
