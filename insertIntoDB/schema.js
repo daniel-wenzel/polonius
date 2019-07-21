@@ -11,6 +11,7 @@ const statements =
         "isCappSender"	INTEGER DEFAULT 0,
         "isCappStorage"	INTEGER DEFAULT 0,
         "isCappOther"	INTEGER DEFAULT 0,
+        "isOriginAddress"	INTEGER DEFAULT 0,
         "ownedBy"	TEXT,
         PRIMARY KEY("address")
     );
@@ -45,10 +46,20 @@ const statements =
         "isToMixer"	INTEGER DEFAULT 0,
         "isToConcentrator"	INTEGER DEFAULT 0,
         "isFromConcentrator"	INTEGER DEFAULT 0,
+        "isICOPurchase"	INTEGER DEFAULT 0,
+        "wasEmptiedWithinXBlocks"	INTEGER DEFAULT 0,
         FOREIGN KEY("token") REFERENCES "Token"("id"),
         FOREIGN KEY("to") REFERENCES "Address"("address"),
         PRIMARY KEY("from","to","token","blocknumber"),
         FOREIGN KEY("from") REFERENCES "Address"("address")
+    );
+
+    CREATE TABLE "ICOAddress" (
+        "address"	TEXT NOT NULL,
+        "token"	TEXT NOT NULL,
+        FOREIGN KEY("token") REFERENCES "Token"("id"),
+        PRIMARY KEY("address","token"),
+        FOREIGN KEY("address") REFERENCES "Address"("address")
     );
     
     CREATE INDEX transfer_blocknumber_index ON Transfer (blocknumber);

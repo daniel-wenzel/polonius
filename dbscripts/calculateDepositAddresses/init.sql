@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS AddressMetadata;
+DROP TABLE IF EXISTS balances;
 CREATE TABLE "AddressMetadata" (
 	"address"	TEXT NOT NULL UNIQUE,
 	"indegree"	INTEGER,
