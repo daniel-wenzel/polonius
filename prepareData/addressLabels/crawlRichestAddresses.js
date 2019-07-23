@@ -1,6 +1,6 @@
 const fetch = require("../util/fetch");
 const getAllHrefsBySelector = require("../util/getAllHrefsBySelector");
-const getAllTextBySelector = require("../../scrapers/util/getAllTextBySelector");
+const getAllTextBySelector = require("../util/getAllTextBySelector");
 module.exports = async () => {
   console.log(`crawling richest addresses`);
   const perPage = 100;
