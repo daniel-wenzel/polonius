@@ -7,6 +7,7 @@ const getNumberOfClusterMerges = requireSQL('dbscripts/buildClusters/getNumberOf
 const mergeManyClusters = requireSQL('dbscripts/buildClusters/mergeManyClusters.sql')
 const dropDuplicates = requireSQL('dbscripts/buildClusters/dropDuplicates.sql')
 const getNumberOfClusterEntries = requireSQL('dbscripts/buildClusters/getNumberOfClusterEntries.sql')
+const collapseToEntityGraph = requireSQL('dbscripts/buildClusters/collapseToEntityGraph.sql')
 
 
 init()
@@ -24,6 +25,7 @@ do {
 }
 while (addedEntries)
 
+collapseToEntityGraph()
 
 
 function performAllPossibleMerges() {

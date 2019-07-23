@@ -12,7 +12,7 @@ const statements =
         "isCappStorage"	INTEGER DEFAULT 0,
         "isCappOther"	INTEGER DEFAULT 0,
         "isOriginAddress"	INTEGER DEFAULT 0,
-        "ownedBy"	TEXT,
+        "cluster"	TEXT,
         PRIMARY KEY("address")
     );
     CREATE TABLE "Token" (
@@ -74,11 +74,68 @@ const statements =
     CREATE INDEX address_isCappSender_index ON Address ("isCappSender");
     CREATE INDEX address_isCappStorage_index ON Address ("isCappStorage");
     CREATE INDEX address_isCappOther_index ON Address ("isCappOther");
-    CREATE INDEX address_ownedBy_index ON Address ("ownedBy");
+    CREATE INDEX address_cluster_index ON Address ("cluster");
 
     CREATE INDEX address_isDeposit_index ON Address ("isDepositAddress");
     CREATE INDEX token_id_index ON Token ("id");
     CREATE INDEX emptied_index ON Transfer (emptiedAccount)
+
+    CREATE TABLE "Entity" (
+        "name"	TEXT NOT NULL,
+        "isCapp"	INTEGER,
+        PRIMARY KEY("name")
+    );
+
+    CREATE TABLE "ETransfer" (
+        "from"	TEXT NOT NULL,
+        "to"	TEXT NOT NULL,
+        "token"	TEXT NOT NULL,
+        "blocknumber"	INTEGER NOT NULL,
+        "amount"	INTEGER,
+        "timestamp"	TEXT,
+        "amountInTokens"	REAL,
+        "amountInUSDCurrent"	REAL,
+        "amountInUSD"	REAL,
+        "emptiedAccount"	INTEGER DEFAULT 0,
+        "canBeChangeTransfer"	INTEGER DEFAULT 0,
+        "isChangeTransfer"	INTEGER DEFAULT 0,
+        "isIntoDepositAddress"	INTEGER DEFAULT 0,
+        "isIntraCapp"	INTEGER DEFAULT 0,
+        "isFromCapp"	INTEGER DEFAULT 0,
+        "percentile"	NUMERIC,
+        "isEarlyTransfer"	INTEGER,
+        "isVeryEarlyTransfer"	INTEGER,
+        "isFromDiluter"	INTEGER DEFAULT 0,
+        "isToDiluter"	INTEGER DEFAULT 0,
+        "isFromMixer"	INTEGER DEFAULT 0,
+        "isToMixer"	INTEGER DEFAULT 0,
+        "isToConcentrator"	INTEGER DEFAULT 0,
+        "isFromConcentrator"	INTEGER DEFAULT 0,
+        "isICOPurchase"	INTEGER DEFAULT 0,
+        "wasEmptiedWithinXBlocks"	INTEGER DEFAULT 0,
+        FOREIGN KEY("token") REFERENCES "Token"("id"),
+        FOREIGN KEY("to") REFERENCES "Entity"("name"),
+        PRIMARY KEY("from","to","token","blocknumber"),
+        FOREIGN KEY("from") REFERENCES "Entity"("name")
+    );
+    CREATE INDEX etransfer_blocknumber_index ON ETransfer (blocknumber);
+    CREATE INDEX etransfer_from_index ON ETransfer ("from");
+    CREATE INDEX etransfer_to_index ON ETransfer ("to");
+    CREATE INDEX etransfer_token_index ON ETransfer ("token");	
+    CREATE INDEX entity_name_index ON Entity ("name");
+
+    CREATE TABLE "EntityMetadata" (
+        "name"	TEXT NOT NULL UNIQUE,
+        "indegree"	INTEGER,
+        "outdegree"	INTEGER,
+        "degree"	INTEGER,
+        "distinctDegree"	INTEGER,
+        "distinctInDegree"	INTEGER,
+        "distinctOutDegree"	INTEGER,
+        "involumeUSD"	NUMERIC,
+        "outvolumeUSD"	NUMERIC,
+        PRIMARY KEY("name")
+    );
     `
     
 
