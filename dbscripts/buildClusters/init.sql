@@ -1,5 +1,5 @@
 DROP TABLE IF EXISTS cluster;
-CREATE TABLE cluster AS
+CREATE TEMP TABLE cluster AS
 SELECT DISTINCT
 	depositAddress.address || '-couse' as clusterName, senderAddress.address as member
 FROM 
