@@ -135,7 +135,7 @@ const statements =
         "involumeUSD"	NUMERIC,
         "outvolumeUSD"	NUMERIC,
         PRIMARY KEY("name")
-    );
+    )
     `
     
 
