@@ -78,7 +78,7 @@ const statements =
 
     CREATE INDEX address_isDeposit_index ON Address ("isDepositAddress");
     CREATE INDEX token_id_index ON Token ("id");
-    CREATE INDEX emptied_index ON Transfer (emptiedAccount)
+    CREATE INDEX emptied_index ON Transfer (emptiedAccount);
 
     CREATE TABLE "Entity" (
         "name"	TEXT NOT NULL,
