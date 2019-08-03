@@ -4,10 +4,10 @@ const getDecimals = require('./getDecimals')
 
 
 async function run() {
-    await crawlCoinMarketCap()
+    /*await crawlCoinMarketCap()
     await new Promise(res => setTimeout(res, 2500))
     await crawlHistoricalMarketValues()
-    await new Promise(res => setTimeout(res, 2500))
+    await new Promise(res => setTimeout(res, 2500))*/
     await getDecimals()
 }
 

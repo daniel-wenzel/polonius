@@ -32,8 +32,15 @@ async function run() {
     save()
 }
 async function getDecimals(address) {
-    const data = await rp.get(`http://api.ethplorer.io/getTokenInfo/${address}?apiKey=freekey`, {json:true})
-    return +data.decimals
+    try {
+        const data = await rp.get(`http://api.ethplorer.io/getTokenInfo/${address}?apiKey=freekey`, {json:true})
+        return +data.decimals
+    }
+    catch(e) {
+        console.log(e)
+        console.log("waiting before trying again")
+        await new Promise(res => setTimeout(res, 10000))
+    }
 }
 
 function save() {
