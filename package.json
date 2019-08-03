@@ -10,6 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "better-sqlite3": "^5.4.0"
+    "better-sqlite3": "^5.4.0",
+    "bignumber.js": "^9.0.0",
+    "event-stream": "^4.0.1",
+    "gunzip-maybe": "^1.4.1",
+    "tar-stream": "^2.1.0"
   }
 }
