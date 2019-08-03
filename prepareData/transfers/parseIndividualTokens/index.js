@@ -121,7 +121,7 @@ async function parseToken(token) {
             const compress = zlib.createGzip();
             compress.pipe(output);
             //firstLine = 'token,blocknumber,from,to,amount,timestamp,slug,amountInTokens,currentUSDHigh,currentUSDLow,USDHigh,USDLow'
-            firstLine = 'token,blocknumber,from,to,amount,timestamp,slug,amountInTokens,amountInUSD'
+            firstLine = 'token,blocknumber,from,to,amount,id,slug,amountInTokens,amountInUSD'
             compress.write(firstLine+"\n")
 
             sorted.forEach(l => {
