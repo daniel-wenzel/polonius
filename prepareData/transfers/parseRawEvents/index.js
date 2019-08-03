@@ -4,6 +4,13 @@ const https = require('https')
 const extract = tar.extract()
 const es = require('event-stream')
 const BigNumber = require('bignumber.js')
+const fs = require('fs')
+const zlib     = require('zlib');
+const output = fs.createWriteStream('data/transfers.csv.gz');
+const compress = zlib.createGzip();
+const firstLine = 'token,blocknumber,from,to,amount,id'
+compress.pipe(output);
+compress.write(firstLine+"\n")
 
 
 https.get('https://tubcloud.tu-berlin.de/s/tEHoSia5raaBDpG/download', (resp) => {
@@ -17,16 +24,13 @@ extract.on('entry', function (header, stream, next) {
     // call next when you are done with this entry
     numFiles ++
     stream.on('end', function () {
-        console.log(numFiles)
+        if (numFiles % 10 == 0) {
+            console.log(numFiles+" parsed")
+        }
         next() // ready for next entry
     })
-    if (numFiles < 0) {
-        stream.resume()
-    }
-    else {
-        parseFileStream(stream)
-    }
-    // // just auto drain the stream
+
+    parseFileStream(stream)
 })
 
 extract.on('finish', function () {
@@ -38,17 +42,9 @@ function parseFileStream(stream) {
     stream
         .pipe(es.split())
         .pipe(es.filterSync(isTransfer))
-        .pipe(es.filterSync(line => {
-            if (i++ <50) {
-                isTransfer(line)
-                return true
-            }
-            process.exit(1)
-            return false
-        }))
         .pipe(es.mapSync(parseTransfer)) 
         .pipe(es.join('\n')) 
-        .pipe(process.stdout)
+        .pipe(compress)
 }
 function isTransfer(line) {
     const topicField = getTopicField(line, 5)
