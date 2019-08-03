@@ -2,6 +2,7 @@ node_modules
 db
 !db/*.sqbpro
 data/*
+!data/tokens.json
 !data/unpack.sh
 !data/etherscanLabels/
 !data/etherscanLabels/*

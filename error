@@ -1,0 +1,576 @@
+StatusCodeError: 403 - "<!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!--<![endif]-->\n<head>\n<title>Attention Required! | Cloudflare</title>\n<meta name=\"captcha-bypass\" id=\"captcha-bypass\" />\n<meta charset=\"UTF-8\" />\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge,chrome=1\" />\n<meta name=\"robots\" content=\"noindex, nofollow\" />\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1,maximum-scale=1\" />\n<link rel=\"stylesheet\" id=\"cf_styles-css\" href=\"/cdn-cgi/styles/cf.errors.css\" type=\"text/css\" media=\"screen,projection\" />\n<!--[if lt IE 9]><link rel=\"stylesheet\" id='cf_styles-ie-css' href=\"/cdn-cgi/styles/cf.errors.ie.css\" type=\"text/css\" media=\"screen,projection\" /><![endif]-->\n<style type=\"text/css\">body{margin:0;padding:0}</style>\n\n\n<!--[if gte IE 10]><!--><script type=\"text/javascript\" src=\"/cdn-cgi/scripts/zepto.min.js\"></script><!--<![endif]-->\n<!--[if gte IE 10]><!--><script type=\"text/javascript\" src=\"/cdn-cgi/scripts/cf.common.js\"></script><!--<![endif]-->\n\n\n\n\n</head>\n<body>\n  <div id=\"cf-wrapper\">\n    <div class=\"cf-alert cf-alert-error cf-cookie-error\" id=\"cookie-alert\" data-translate=\"enable_cookies\">Please enable cookies.</div>\n    <div id=\"cf-error-details\" class=\"cf-error-details-wrapper\">\n      <div class=\"cf-wrapper cf-header cf-error-overview\">\n        <h1 data-translate=\"challenge_headline\">One more step</h1>\n        <h2 class=\"cf-subheadline\"><span data-translate=\"complete_sec_check\">Please complete the security check to access</span> etherscan.io</h2>\n      </div><!-- /.header -->\n      \n      <div class=\"cf-section cf-highlight cf-captcha-container\">\n        <div class=\"cf-wrapper\">\n          <div class=\"cf-columns two\">\n            <div class=\"cf-column\">\n            \n              <div class=\"cf-highlight-inverse cf-form-stacked\">\n                <form class=\"challenge-form\" id=\"challenge-form\" action=\"/cdn-cgi/l/chk_captcha\" method=\"get\">\n  <input type=\"hidden\" name=\"s\" value=\"4ec7eec2dd7ed1a18ecf2b94990e7645306bfbc3-1564827903-1800-ATwoa91bpaeC0blBff3pqTjkMdb4oUi2v3MlYeL47FKswIqEh3xpA6yaXQK3SOdJDtfwwvBBvjEy+nUeNnaxpYYLUB2d/xNYuc/5ipdWMG6/gKBM+wzfMhVn3fMOLFFA1YgX7YNT1iYG8E/i/8c6uuC4872rc3b+4trYSeAfSBag\"></input>\n  <script type=\"text/javascript\" src=\"/cdn-cgi/scripts/cf.challenge.js\" data-type=\"normal\"  data-ray=\"500795df9996a6e7\" async data-sitekey=\"6LfBixYUAAAAABhdHynFUIMA_sa4s-XsJvnjtgB0\"></script>\n  <div class=\"g-recaptcha\"></div>\n  <noscript id=\"cf-captcha-bookmark\" class=\"cf-captcha-info\">\n    <div><div style=\"width: 302px\">\n      <div>\n        <iframe src=\"https://www.google.com/recaptcha/api/fallback?k=6LfBixYUAAAAABhdHynFUIMA_sa4s-XsJvnjtgB0\" frameborder=\"0\" scrolling=\"no\" style=\"width: 302px; height:422px; border-style: none;\"></iframe>\n      </div>\n      <div style=\"width: 300px; border-style: none; bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px; background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;\">\n        <textarea id=\"g-recaptcha-response\" name=\"g-recaptcha-response\" class=\"g-recaptcha-response\" style=\"width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;\"></textarea>\n        <input type=\"submit\" value=\"Submit\"></input>\n      </div>\n    </div></div>\n  </noscript>\n</form>\n\n                \n              </div>\n            </div>\n\n            <div class=\"cf-column\">\n              <div class=\"cf-screenshot-container\">\n              \n                <span class=\"cf-no-screenshot\"></span>\n              \n              </div>\n            </div>\n          </div><!-- /.columns -->\n        </div>\n      </div><!-- /.captcha-container -->\n\n      <div class=\"cf-section cf-wrapper\">\n        <div class=\"cf-columns two\">\n          <div class=\"cf-column\">\n            <h2 data-translate=\"why_captcha_headline\">Why do I have to complete a CAPTCHA?</h2>\n            \n            <p data-translate=\"why_captcha_detail\">Completing the CAPTCHA proves you are a human and gives you temporary access to the web property.</p>\n          </div>\n\n          <div class=\"cf-column\">\n            <h2 data-translate=\"resolve_captcha_headline\">What can I do to prevent this in the future?</h2>\n            \n\n            <p data-translate=\"resolve_captcha_antivirus\">If you are on a personal connection, like at home, you can run an anti-virus scan on your device to make sure it is not infected with malware.</p>\n\n            <p data-translate=\"resolve_captcha_network\">If you are at an office or shared network, you can ask the network administrator to run a scan across the network looking for misconfigured or infected devices.</p>\n            \n          </div>\n        </div>\n      </div><!-- /.section -->\n      \n\n      <div class=\"cf-error-footer cf-wrapper\">\n  <p>\n    <span class=\"cf-footer-item\">Cloudflare Ray ID: <strong>500795df9996a6e7</strong></span>\n    <span class=\"cf-footer-separator\">&bull;</span>\n    <span class=\"cf-footer-item\"><span>Your IP</span>: 52.209.158.253</span>\n    <span class=\"cf-footer-separator\">&bull;</span>\n    <span class=\"cf-footer-item\"><span>Performance &amp; security by</span> <a href=\"https://www.cloudflare.com/5xx-error-landing?utm_source=error_footer\" id=\"brand_link\" target=\"_blank\">Cloudflare</a></span>\n    \n  </p>\n</div><!-- /.error-footer -->\n\n\n    </div><!-- /#cf-error-details -->\n  </div><!-- /#cf-wrapper -->\n\n  <script type=\"text/javascript\">\n  window._cf_translation = {};\n  \n  \n</script>\n\n\n  \n</body>\n</html>\n"
+    at new StatusCodeError (/home/ubuntu/baltasar/node_modules/request-promise-core/lib/errors.js:32:15)
+    at Request.plumbing.callback (/home/ubuntu/baltasar/node_modules/request-promise-core/lib/plumbing.js:104:33)
+    at Request.RP$callback [as _callback] (/home/ubuntu/baltasar/node_modules/request-promise-core/lib/plumbing.js:46:31)
+    at Request.self.callback (/home/ubuntu/baltasar/node_modules/request/request.js:185:22)
+    at Request.emit (events.js:203:13)
+    at Request.<anonymous> (/home/ubuntu/baltasar/node_modules/request/request.js:1161:10)
+    at Request.emit (events.js:203:13)
+    at IncomingMessage.<anonymous> (/home/ubuntu/baltasar/node_modules/request/request.js:1083:12)
+    at Object.onceWrapper (events.js:291:20)
+    at IncomingMessage.emit (events.js:208:15)
+    at endReadableNT (_stream_readable.js:1161:12)
+    at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+  name: 'StatusCodeError',
+  statusCode: 403,
+  message: `403 - "<!DOCTYPE html>\\n<!--[if lt IE 7]> <html class=\\"no-js ie6 oldie\\" lang=\\"en-US\\"> <![endif]-->\\n<!--[if IE 7]>    <html class=\\"no-js ie7 oldie\\" lang=\\"en-US\\"> <![endif]-->\\n<!--[if IE 8]>    <html class=\\"no-js ie8 oldie\\" lang=\\"en-US\\"> <![endif]-->\\n<!--[if gt IE 8]><!--> <html class=\\"no-js\\" lang=\\"en-US\\"> <!--<![endif]-->\\n<head>\\n<title>Attention Required! | Cloudflare</title>\\n<meta name=\\"captcha-bypass\\" id=\\"captcha-bypass\\" />\\n<meta charset=\\"UTF-8\\" />\\n<meta http-equiv=\\"Content-Type\\" content=\\"text/html; charset=UTF-8\\" />\\n<meta http-equiv=\\"X-UA-Compatible\\" content=\\"IE=Edge,chrome=1\\" />\\n<meta name=\\"robots\\" content=\\"noindex, nofollow\\" />\\n<meta name=\\"viewport\\" content=\\"width=device-width,initial-scale=1,maximum-scale=1\\" />\\n<link rel=\\"stylesheet\\" id=\\"cf_styles-css\\" href=\\"/cdn-cgi/styles/cf.errors.css\\" type=\\"text/css\\" media=\\"screen,projection\\" />\\n<!--[if lt IE 9]><link rel=\\"stylesheet\\" id='cf_styles-ie-css' href=\\"/cdn-cgi/styles/cf.errors.ie.css\\" type=\\"text/css\\" media=\\"screen,projection\\" /><![endif]-->\\n<style type=\\"text/css\\">body{margin:0;padding:0}</style>\\n\\n\\n<!--[if gte IE 10]><!--><script type=\\"text/javascript\\" src=\\"/cdn-cgi/scripts/zepto.min.js\\"></script><!--<![endif]-->\\n<!--[if gte IE 10]><!--><script type=\\"text/javascript\\" src=\\"/cdn-cgi/scripts/cf.common.js\\"></script><!--<![endif]-->\\n\\n\\n\\n\\n</head>\\n<body>\\n  <div id=\\"cf-wrapper\\">\\n    <div class=\\"cf-alert cf-alert-error cf-cookie-error\\" id=\\"cookie-alert\\" data-translate=\\"enable_cookies\\">Please enable cookies.</div>\\n    <div id=\\"cf-error-details\\" class=\\"cf-error-details-wrapper\\">\\n      <div class=\\"cf-wrapper cf-header cf-error-overview\\">\\n        <h1 data-translate=\\"challenge_headline\\">One more step</h1>\\n        <h2 class=\\"cf-subheadline\\"><span data-translate=\\"complete_sec_check\\">Please complete the security check to access</span> etherscan.io</h2>\\n      </div><!-- /.header -->\\n      \\n      <div class=\\"cf-section cf-highlight cf-captcha-container\\">\\n        <div class=\\"cf-wrapper\\">\\n          <div class=\\"cf-columns two\\">\\n            <div class=\\"cf-column\\">\\n            \\n              <div class=\\"cf-highlight-inverse cf-form-stacked\\">\\n                <form class=\\"challenge-form\\" id=\\"challenge-form\\" action=\\"/cdn-cgi/l/chk_captcha\\" method=\\"get\\">\\n  <input type=\\"hidden\\" name=\\"s\\" value=\\"4ec7eec2dd7ed1a18ecf2b94990e7645306bfbc3-1564827903-1800-ATwoa91bpaeC0blBff3pqTjkMdb4oUi2v3MlYeL47FKswIqEh3xpA6yaXQK3SOdJDtfwwvBBvjEy+nUeNnaxpYYLUB2d/xNYuc/5ipdWMG6/gKBM+wzfMhVn3fMOLFFA1YgX7YNT1iYG8E/i/8c6uuC4872rc3b+4trYSeAfSBag\\"></input>\\n  <script type=\\"text/javascript\\" src=\\"/cdn-cgi/scripts/cf.challenge.js\\" data-type=\\"normal\\"  data-ray=\\"500795df9996a6e7\\" async data-sitekey=\\"6LfBixYUAAAAABhdHynFUIMA_sa4s-XsJvnjtgB0\\"></script>\\n  <div class=\\"g-recaptcha\\"></div>\\n  <noscript id=\\"cf-captcha-bookmark\\" class=\\"cf-captcha-info\\">\\n    <div><div style=\\"width: 302px\\">\\n      <div>\\n        <iframe src=\\"https://www.google.com/recaptcha/api/fallback?k=6LfBixYUAAAAABhdHynFUIMA_sa4s-XsJvnjtgB0\\" frameborder=\\"0\\" scrolling=\\"no\\" style=\\"width: 302px; height:422px; border-style: none;\\"></iframe>\\n      </div>\\n      <div style=\\"width: 300px; border-style: none; bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px; background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;\\">\\n        <textarea id=\\"g-recaptcha-response\\" name=\\"g-recaptcha-response\\" class=\\"g-recaptcha-response\\" style=\\"width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;\\"></textarea>\\n        <input type=\\"submit\\" value=\\"Submit\\"></input>\\n      </div>\\n    </div></div>\\n  </noscript>\\n</form>\\n\\n                \\n              </div>\\n            </div>\\n\\n            <div class=\\"cf-column\\">\\n              <div class=\\"cf-screenshot-container\\">\\n              \\n                <span class=\\"cf-no-screenshot\\"></span>\\n              \\n              </div>\\n            </div>\\n          </div><!-- /.columns -->\\n        </div>\\n      </div><!-- /.captcha-container -->\\n\\n      <div class=\\"cf-section cf-wrapper\\">\\n        <div class=\\"cf-columns two\\">\\n          <div class=\\"cf-column\\">\\n            <h2 data-translate=\\"why_captcha_headline\\">Why do I have to complete a CAPTCHA?</h2>\\n            \\n            <p data-translate=\\"why_captcha_detail\\">Completing the CAPTCHA proves you are a human and gives you temporary access to the web property.</p>\\n          </div>\\n\\n          <div class=\\"cf-column\\">\\n            <h2 data-translate=\\"resolve_captcha_headline\\">What can I do to prevent this in the future?</h2>\\n            \\n\\n            <p data-translate=\\"resolve_captcha_antivirus\\">If you are on a personal connection, like at home, you can run an anti-virus scan on your device to make sure it is not infected with malware.</p>\\n\\n            <p data-translate=\\"resolve_captcha_network\\">If you are at an office or shared network, you can ask the network administrator to run a scan across the network looking for misconfigured or infected devices.</p>\\n            \\n          </div>\\n        </div>\\n      </div><!-- /.section -->\\n      \\n\\n      <div class=\\"cf-error-footer cf-wrapper\\">\\n  <p>\\n    <span class=\\"cf-footer-item\\">Cloudflare Ray ID: <strong>500795df9996a6e7</strong></span>\\n    <span class=\\"cf-footer-separator\\">&bull;</span>\\n    <span class=\\"cf-footer-item\\"><span>Your IP</span>: 52.209.158.253</span>\\n    <span class=\\"cf-footer-separator\\">&bull;</span>\\n    <span class=\\"cf-footer-item\\"><span>Performance &amp; security by</span> <a href=\\"https://www.cloudflare.com/5xx-error-landing?utm_source=error_footer\\" id=\\"brand_link\\" target=\\"_blank\\">Cloudflare</a></span>\\n    \\n  </p>\\n</div><!-- /.error-footer -->\\n\\n\\n    </div><!-- /#cf-error-details -->\\n  </div><!-- /#cf-wrapper -->\\n\\n  <script type=\\"text/javascript\\">\\n  window._cf_translation = {};\\n  \\n  \\n</script>\\n\\n\\n  \\n</body>\\n</html>\\n"`,
+  error: '<!DOCTYPE html>\n' +
+    '<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->\n' +
+    '<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->\n' +
+    '<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->\n' +
+    '<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->\n' +
+    '<head>\n' +
+    '<title>Attention Required! | Cloudflare</title>\n' +
+    '<meta name="captcha-bypass" id="captcha-bypass" />\n' +
+    '<meta charset="UTF-8" />\n' +
+    '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />\n' +
+    '<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />\n' +
+    '<meta name="robots" content="noindex, nofollow" />\n' +
+    '<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />\n' +
+    '<link rel="stylesheet" id="cf_styles-css" href="/cdn-cgi/styles/cf.errors.css" type="text/css" media="screen,projection" />\n' +
+    `<!--[if lt IE 9]><link rel="stylesheet" id='cf_styles-ie-css' href="/cdn-cgi/styles/cf.errors.ie.css" type="text/css" media="screen,projection" /><![endif]-->\n` +
+    '<style type="text/css">body{margin:0;padding:0}</style>\n' +
+    '\n' +
+    '\n' +
+    '<!--[if gte IE 10]><!--><script type="text/javascript" src="/cdn-cgi/scripts/zepto.min.js"></script><!--<![endif]-->\n' +
+    '<!--[if gte IE 10]><!--><script type="text/javascript" src="/cdn-cgi/scripts/cf.common.js"></script><!--<![endif]-->\n' +
+    '\n' +
+    '\n' +
+    '\n' +
+    '\n' +
+    '</head>\n' +
+    '<body>\n' +
+    '  <div id="cf-wrapper">\n' +
+    '    <div class="cf-alert cf-alert-error cf-cookie-error" id="cookie-alert" data-translate="enable_cookies">Please enable cookies.</div>\n' +
+    '    <div id="cf-error-details" class="cf-error-details-wrapper">\n' +
+    '      <div class="cf-wrapper cf-header cf-error-overview">\n' +
+    '        <h1 data-translate="challenge_headline">One more step</h1>\n' +
+    '        <h2 class="cf-subheadline"><span data-translate="complete_sec_check">Please complete the security check to access</span> etherscan.io</h2>\n' +
+    '      </div><!-- /.header -->\n' +
+    '      \n' +
+    '      <div class="cf-section cf-highlight cf-captcha-container">\n' +
+    '        <div class="cf-wrapper">\n' +
+    '          <div class="cf-columns two">\n' +
+    '            <div class="cf-column">\n' +
+    '            \n' +
+    '              <div class="cf-highlight-inverse cf-form-stacked">\n' +
+    '                <form class="challenge-form" id="challenge-form" action="/cdn-cgi/l/chk_captcha" method="get">\n' +
+    '  <input type="hidden" name="s" value="4ec7eec2dd7ed1a18ecf2b94990e7645306bfbc3-1564827903-1800-ATwoa91bpaeC0blBff3pqTjkMdb4oUi2v3MlYeL47FKswIqEh3xpA6yaXQK3SOdJDtfwwvBBvjEy+nUeNnaxpYYLUB2d/xNYuc/5ipdWMG6/gKBM+wzfMhVn3fMOLFFA1YgX7YNT1iYG8E/i/8c6uuC4872rc3b+4trYSeAfSBag"></input>\n' +
+    '  <script type="text/javascript" src="/cdn-cgi/scripts/cf.challenge.js" data-type="normal"  data-ray="500795df9996a6e7" async data-sitekey="6LfBixYUAAAAABhdHynFUIMA_sa4s-XsJvnjtgB0"></script>\n' +
+    '  <div class="g-recaptcha"></div>\n' +
+    '  <noscript id="cf-captcha-bookmark" class="cf-captcha-info">\n' +
+    '    <div><div style="width: 302px">\n' +
+    '      <div>\n' +
+    '        <iframe src="https://www.google.com/recaptcha/api/fallback?k=6LfBixYUAAAAABhdHynFUIMA_sa4s-XsJvnjtgB0" frameborder="0" scrolling="no" style="width: 302px; height:422px; border-style: none;"></iframe>\n' +
+    '      </div>\n' +
+    '      <div style="width: 300px; border-style: none; bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px; background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">\n' +
+    '        <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;"></textarea>\n' +
+    '        <input type="submit" value="Submit"></input>\n' +
+    '      </div>\n' +
+    '    </div></div>\n' +
+    '  </noscript>\n' +
+    '</form>\n' +
+    '\n' +
+    '                \n' +
+    '              </div>\n' +
+    '            </div>\n' +
+    '\n' +
+    '            <div class="cf-column">\n' +
+    '              <div class="cf-screenshot-container">\n' +
+    '              \n' +
+    '                <span class="cf-no-screenshot"></span>\n' +
+    '              \n' +
+    '              </div>\n' +
+    '            </div>\n' +
+    '          </div><!-- /.columns -->\n' +
+    '        </div>\n' +
+    '      </div><!-- /.captcha-container -->\n' +
+    '\n' +
+    '      <div class="cf-section cf-wrapper">\n' +
+    '        <div class="cf-columns two">\n' +
+    '          <div class="cf-column">\n' +
+    '            <h2 data-translate="why_captcha_headline">Why do I have to complete a CAPTCHA?</h2>\n' +
+    '            \n' +
+    '            <p data-translate="why_captcha_detail">Completing the CAPTCHA proves you are a human and gives you temporary access to the web property.</p>\n' +
+    '          </div>\n' +
+    '\n' +
+    '          <div class="cf-column">\n' +
+    '            <h2 data-translate="resolve_captcha_headline">What can I do to prevent this in the future?</h2>\n' +
+    '            \n' +
+    '\n' +
+    '            <p data-translate="resolve_captcha_antivirus">If you are on a personal connection, like at home, you can run an anti-virus scan on your device to make sure it is not infected with malware.</p>\n' +
+    '\n' +
+    '            <p data-translate="resolve_captcha_network">If you are at an office or shared network, you can ask the network administrator to run a scan across the network looking for misconfigured or infected devices.</p>\n' +
+    '            \n' +
+    '          </div>\n' +
+    '        </div>\n' +
+    '      </div><!-- /.section -->\n' +
+    '      \n' +
+    '\n' +
+    '      <div class="cf-error-footer cf-wrapper">\n' +
+    '  <p>\n' +
+    '    <span class="cf-footer-item">Cloudflare Ray ID: <strong>500795df9996a6e7</strong></span>\n' +
+    '    <span class="cf-footer-separator">&bull;</span>\n' +
+    '    <span class="cf-footer-item"><span>Your IP</span>: 52.209.158.253</span>\n' +
+    '    <span class="cf-footer-separator">&bull;</span>\n' +
+    '    <span class="cf-footer-item"><span>Performance &amp; security by</span> <a href="https://www.cloudflare.com/5xx-error-landing?utm_source=error_footer" id="brand_link" target="_blank">Cloudflare</a></span>\n' +
+    '    \n' +
+    '  </p>\n' +
+    '</div><!-- /.error-footer -->\n' +
+    '\n' +
+    '\n' +
+    '    </div><!-- /#cf-error-details -->\n' +
+    '  </div><!-- /#cf-wrapper -->\n' +
+    '\n' +
+    '  <script type="text/javascript">\n' +
+    '  window._cf_translation = {};\n' +
+    '  \n' +
+    '  \n' +
+    '</script>\n' +
+    '\n' +
+    '\n' +
+    '  \n' +
+    '</body>\n' +
+    '</html>\n',
+  options: {
+    uri: 'https://etherscan.io/token/civic',
+    resolveWithFullResponse: true,
+    callback: [Function: RP$callback],
+    transform: undefined,
+    simple: true,
+    transform2xxOnly: false
+  },
+  response: IncomingMessage {
+    _readableState: ReadableState {
+      objectMode: false,
+      highWaterMark: 16384,
+      buffer: BufferList { head: null, tail: null, length: 0 },
+      length: 0,
+      pipes: null,
+      pipesCount: 0,
+      flowing: true,
+      ended: true,
+      endEmitted: true,
+      reading: false,
+      sync: false,
+      needReadable: false,
+      emittedReadable: false,
+      readableListening: false,
+      resumeScheduled: false,
+      paused: false,
+      emitClose: true,
+      autoDestroy: false,
+      destroyed: false,
+      defaultEncoding: 'utf8',
+      awaitDrain: 0,
+      readingMore: false,
+      decoder: null,
+      encoding: null
+    },
+    readable: false,
+    _events: [Object: null prototype] {
+      end: [Array],
+      close: [Array],
+      data: [Function],
+      error: [Function]
+    },
+    _eventsCount: 4,
+    _maxListeners: undefined,
+    socket: TLSSocket {
+      _tlsOptions: [Object],
+      _secureEstablished: true,
+      _securePending: false,
+      _newSessionPending: false,
+      _controlReleased: true,
+      _SNICallback: null,
+      servername: 'etherscan.io',
+      alpnProtocol: false,
+      authorized: true,
+      authorizationError: null,
+      encrypted: true,
+      _events: [Object: null prototype],
+      _eventsCount: 10,
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'etherscan.io',
+      _readableState: [ReadableState],
+      readable: true,
+      _maxListeners: undefined,
+      _writableState: [WritableState],
+      writable: false,
+      allowHalfOpen: false,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: undefined,
+      _server: null,
+      ssl: [TLSWrap],
+      _requestCert: true,
+      _rejectUnauthorized: true,
+      parser: null,
+      _httpMessage: [ClientRequest],
+      [Symbol(res)]: [TLSWrap],
+      [Symbol(asyncId)]: 1232,
+      [Symbol(kHandle)]: [TLSWrap],
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: null,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(connect-options)]: [Object]
+    },
+    connection: TLSSocket {
+      _tlsOptions: [Object],
+      _secureEstablished: true,
+      _securePending: false,
+      _newSessionPending: false,
+      _controlReleased: true,
+      _SNICallback: null,
+      servername: 'etherscan.io',
+      alpnProtocol: false,
+      authorized: true,
+      authorizationError: null,
+      encrypted: true,
+      _events: [Object: null prototype],
+      _eventsCount: 10,
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'etherscan.io',
+      _readableState: [ReadableState],
+      readable: true,
+      _maxListeners: undefined,
+      _writableState: [WritableState],
+      writable: false,
+      allowHalfOpen: false,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: undefined,
+      _server: null,
+      ssl: [TLSWrap],
+      _requestCert: true,
+      _rejectUnauthorized: true,
+      parser: null,
+      _httpMessage: [ClientRequest],
+      [Symbol(res)]: [TLSWrap],
+      [Symbol(asyncId)]: 1232,
+      [Symbol(kHandle)]: [TLSWrap],
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: null,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(connect-options)]: [Object]
+    },
+    httpVersionMajor: 1,
+    httpVersionMinor: 1,
+    httpVersion: '1.1',
+    complete: true,
+    headers: {
+      date: 'Sat, 03 Aug 2019 10:25:03 GMT',
+      'content-type': 'text/html; charset=UTF-8',
+      'transfer-encoding': 'chunked',
+      connection: 'close',
+      'cf-chl-bypass': '1',
+      'set-cookie': [Array],
+      'cache-control': 'max-age=2',
+      expires: 'Sat, 03 Aug 2019 10:25:05 GMT',
+      'x-frame-options': 'SAMEORIGIN',
+      'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+      server: 'cloudflare',
+      'cf-ray': '500795df9996a6e7-DUB'
+    },
+    rawHeaders: [
+      'Date',
+      'Sat, 03 Aug 2019 10:25:03 GMT',
+      'Content-Type',
+      'text/html; charset=UTF-8',
+      'Transfer-Encoding',
+      'chunked',
+      'Connection',
+      'close',
+      'CF-Chl-Bypass',
+      '1',
+      'Set-Cookie',
+      '__cfduid=d1001a86e9ad03cf2a8f29d4fe41a33651564827903; expires=Sun, 02-Aug-20 10:25:03 GMT; path=/; domain=.etherscan.io; HttpOnly',
+      'Cache-Control',
+      'max-age=2',
+      'Expires',
+      'Sat, 03 Aug 2019 10:25:05 GMT',
+      'X-Frame-Options',
+      'SAMEORIGIN',
+      'Expect-CT',
+      'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+      'Server',
+      'cloudflare',
+      'CF-RAY',
+      '500795df9996a6e7-DUB'
+    ],
+    trailers: {},
+    rawTrailers: [],
+    aborted: false,
+    upgrade: false,
+    url: '',
+    method: null,
+    statusCode: 403,
+    statusMessage: 'Forbidden',
+    client: TLSSocket {
+      _tlsOptions: [Object],
+      _secureEstablished: true,
+      _securePending: false,
+      _newSessionPending: false,
+      _controlReleased: true,
+      _SNICallback: null,
+      servername: 'etherscan.io',
+      alpnProtocol: false,
+      authorized: true,
+      authorizationError: null,
+      encrypted: true,
+      _events: [Object: null prototype],
+      _eventsCount: 10,
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'etherscan.io',
+      _readableState: [ReadableState],
+      readable: true,
+      _maxListeners: undefined,
+      _writableState: [WritableState],
+      writable: false,
+      allowHalfOpen: false,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: undefined,
+      _server: null,
+      ssl: [TLSWrap],
+      _requestCert: true,
+      _rejectUnauthorized: true,
+      parser: null,
+      _httpMessage: [ClientRequest],
+      [Symbol(res)]: [TLSWrap],
+      [Symbol(asyncId)]: 1232,
+      [Symbol(kHandle)]: [TLSWrap],
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: null,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(connect-options)]: [Object]
+    },
+    _consuming: true,
+    _dumped: false,
+    req: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 5,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      socket: [TLSSocket],
+      connection: [TLSSocket],
+      _header: 'GET /token/civic HTTP/1.1\r\nhost: etherscan.io\r\nConnection: close\r\n\r\n',
+      _onPendingData: [Function: noopPendingOutput],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      path: '/token/civic',
+      _ended: true,
+      res: [Circular],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      [Symbol(isCorked)]: false,
+      [Symbol(outHeadersKey)]: [Object: null prototype]
+    },
+    request: Request {
+      _events: [Object: null prototype],
+      _eventsCount: 5,
+      _maxListeners: undefined,
+      uri: [Url],
+      resolveWithFullResponse: true,
+      readable: true,
+      writable: true,
+      _qs: [Querystring],
+      _auth: [Auth],
+      _oauth: [OAuth],
+      _multipart: [Multipart],
+      _redirect: [Redirect],
+      _tunnel: [Tunnel],
+      _rp_resolve: [Function],
+      _rp_reject: [Function],
+      _rp_promise: [Promise [Object]],
+      _rp_callbackOrig: undefined,
+      callback: [Function],
+      _rp_options: [Object],
+      headers: {},
+      setHeader: [Function],
+      hasHeader: [Function],
+      getHeader: [Function],
+      removeHeader: [Function],
+      method: 'GET',
+      localAddress: undefined,
+      pool: {},
+      dests: [],
+      __isRequestRequest: true,
+      _callback: [Function: RP$callback],
+      proxy: null,
+      tunnel: true,
+      setHost: true,
+      originalCookieHeader: undefined,
+      _disableCookies: true,
+      _jar: undefined,
+      port: 443,
+      host: 'etherscan.io',
+      path: '/token/civic',
+      httpModule: [Object],
+      agentClass: [Function: Agent],
+      agent: [Agent],
+      _started: true,
+      href: 'https://etherscan.io/token/civic',
+      req: [ClientRequest],
+      ntick: true,
+      response: [Circular],
+      originalHost: 'etherscan.io',
+      originalHostHeaderName: 'host',
+      responseContent: [Circular],
+      _destdata: true,
+      _ended: true,
+      _callbackCalled: true
+    },
+    toJSON: [Function: responseToJSON],
+    caseless: Caseless { dict: [Object] },
+    body: '<!DOCTYPE html>\n' +
+      '<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->\n' +
+      '<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->\n' +
+      '<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->\n' +
+      '<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->\n' +
+      '<head>\n' +
+      '<title>Attention Required! | Cloudflare</title>\n' +
+      '<meta name="captcha-bypass" id="captcha-bypass" />\n' +
+      '<meta charset="UTF-8" />\n' +
+      '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />\n' +
+      '<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />\n' +
+      '<meta name="robots" content="noindex, nofollow" />\n' +
+      '<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />\n' +
+      '<link rel="stylesheet" id="cf_styles-css" href="/cdn-cgi/styles/cf.errors.css" type="text/css" media="screen,projection" />\n' +
+      `<!--[if lt IE 9]><link rel="stylesheet" id='cf_styles-ie-css' href="/cdn-cgi/styles/cf.errors.ie.css" type="text/css" media="screen,projection" /><![endif]-->\n` +
+      '<style type="text/css">body{margin:0;padding:0}</style>\n' +
+      '\n' +
+      '\n' +
+      '<!--[if gte IE 10]><!--><script type="text/javascript" src="/cdn-cgi/scripts/zepto.min.js"></script><!--<![endif]-->\n' +
+      '<!--[if gte IE 10]><!--><script type="text/javascript" src="/cdn-cgi/scripts/cf.common.js"></script><!--<![endif]-->\n' +
+      '\n' +
+      '\n' +
+      '\n' +
+      '\n' +
+      '</head>\n' +
+      '<body>\n' +
+      '  <div id="cf-wrapper">\n' +
+      '    <div class="cf-alert cf-alert-error cf-cookie-error" id="cookie-alert" data-translate="enable_cookies">Please enable cookies.</div>\n' +
+      '    <div id="cf-error-details" class="cf-error-details-wrapper">\n' +
+      '      <div class="cf-wrapper cf-header cf-error-overview">\n' +
+      '        <h1 data-translate="challenge_headline">One more step</h1>\n' +
+      '        <h2 class="cf-subheadline"><span data-translate="complete_sec_check">Please complete the security check to access</span> etherscan.io</h2>\n' +
+      '      </div><!-- /.header -->\n' +
+      '      \n' +
+      '      <div class="cf-section cf-highlight cf-captcha-container">\n' +
+      '        <div class="cf-wrapper">\n' +
+      '          <div class="cf-columns two">\n' +
+      '            <div class="cf-column">\n' +
+      '            \n' +
+      '              <div class="cf-highlight-inverse cf-form-stacked">\n' +
+      '                <form class="challenge-form" id="challenge-form" action="/cdn-cgi/l/chk_captcha" method="get">\n' +
+      '  <input type="hidden" name="s" value="4ec7eec2dd7ed1a18ecf2b94990e7645306bfbc3-1564827903-1800-ATwoa91bpaeC0blBff3pqTjkMdb4oUi2v3MlYeL47FKswIqEh3xpA6yaXQK3SOdJDtfwwvBBvjEy+nUeNnaxpYYLUB2d/xNYuc/5ipdWMG6/gKBM+wzfMhVn3fMOLFFA1YgX7YNT1iYG8E/i/8c6uuC4872rc3b+4trYSeAfSBag"></input>\n' +
+      '  <script type="text/javascript" src="/cdn-cgi/scripts/cf.challenge.js" data-type="normal"  data-ray="500795df9996a6e7" async data-sitekey="6LfBixYUAAAAABhdHynFUIMA_sa4s-XsJvnjtgB0"></script>\n' +
+      '  <div class="g-recaptcha"></div>\n' +
+      '  <noscript id="cf-captcha-bookmark" class="cf-captcha-info">\n' +
+      '    <div><div style="width: 302px">\n' +
+      '      <div>\n' +
+      '        <iframe src="https://www.google.com/recaptcha/api/fallback?k=6LfBixYUAAAAABhdHynFUIMA_sa4s-XsJvnjtgB0" frameborder="0" scrolling="no" style="width: 302px; height:422px; border-style: none;"></iframe>\n' +
+      '      </div>\n' +
+      '      <div style="width: 300px; border-style: none; bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px; background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">\n' +
+      '        <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;"></textarea>\n' +
+      '        <input type="submit" value="Submit"></input>\n' +
+      '      </div>\n' +
+      '    </div></div>\n' +
+      '  </noscript>\n' +
+      '</form>\n' +
+      '\n' +
+      '                \n' +
+      '              </div>\n' +
+      '            </div>\n' +
+      '\n' +
+      '            <div class="cf-column">\n' +
+      '              <div class="cf-screenshot-container">\n' +
+      '              \n' +
+      '                <span class="cf-no-screenshot"></span>\n' +
+      '              \n' +
+      '              </div>\n' +
+      '            </div>\n' +
+      '          </div><!-- /.columns -->\n' +
+      '        </div>\n' +
+      '      </div><!-- /.captcha-container -->\n' +
+      '\n' +
+      '      <div class="cf-section cf-wrapper">\n' +
+      '        <div class="cf-columns two">\n' +
+      '          <div class="cf-column">\n' +
+      '            <h2 data-translate="why_captcha_headline">Why do I have to complete a CAPTCHA?</h2>\n' +
+      '            \n' +
+      '            <p data-translate="why_captcha_detail">Completing the CAPTCHA proves you are a human and gives you temporary access to the web property.</p>\n' +
+      '          </div>\n' +
+      '\n' +
+      '          <div class="cf-column">\n' +
+      '            <h2 data-translate="resolve_captcha_headline">What can I do to prevent this in the future?</h2>\n' +
+      '            \n' +
+      '\n' +
+      '            <p data-translate="resolve_captcha_antivirus">If you are on a personal connection, like at home, you can run an anti-virus scan on your device to make sure it is not infected with malware.</p>\n' +
+      '\n' +
+      '            <p data-translate="resolve_captcha_network">If you are at an office or shared network, you can ask the network administrator to run a scan across the network looking for misconfigured or infected devices.</p>\n' +
+      '            \n' +
+      '          </div>\n' +
+      '        </div>\n' +
+      '      </div><!-- /.section -->\n' +
+      '      \n' +
+      '\n' +
+      '      <div class="cf-error-footer cf-wrapper">\n' +
+      '  <p>\n' +
+      '    <span class="cf-footer-item">Cloudflare Ray ID: <strong>500795df9996a6e7</strong></span>\n' +
+      '    <span class="cf-footer-separator">&bull;</span>\n' +
+      '    <span class="cf-footer-item"><span>Your IP</span>: 52.209.158.253</span>\n' +
+      '    <span class="cf-footer-separator">&bull;</span>\n' +
+      '    <span class="cf-footer-item"><span>Performance &amp; security by</span> <a href="https://www.cloudflare.com/5xx-error-landing?utm_source=error_footer" id="brand_link" target="_blank">Cloudflare</a></span>\n' +
+      '    \n' +
+      '  </p>\n' +
+      '</div><!-- /.error-footer -->\n' +
+      '\n' +
+      '\n' +
+      '    </div><!-- /#cf-error-details -->\n' +
+      '  </div><!-- /#cf-wrapper -->\n' +
+      '\n' +
+      '  <script type="text/javascript">\n' +
+      '  window._cf_translation = {};\n' +
+      '  \n' +
+      '  \n' +
+      '</script>\n' +
+      '\n' +
+      '\n' +
+      '  \n' +
+      '</body>\n' +
+      '</html>\n'
+  }
+}
