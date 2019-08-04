@@ -29,7 +29,7 @@ readTransfers()
 
 function readTransfers() {
     const lineReader = readline.createInterface({
-        input: fs.createReadStream('./data/transfers1.csv.gz').pipe(zlib.createGunzip())
+        input: fs.createReadStream('./data/transfers.csv.gz').pipe(zlib.createGunzip())
       });
       
     lineReader.on('line', (line) => {
