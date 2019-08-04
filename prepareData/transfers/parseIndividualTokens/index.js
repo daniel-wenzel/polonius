@@ -24,7 +24,6 @@ async function run() {
 }
 run().catch(err => console.error(err))
 
-let duplicates = 0
 let firstLine = undefined
 let lines = new Set()
 function addLine(line) {
@@ -98,7 +97,6 @@ async function parseToken(token) {
     }
     console.log("parsing "+token.slug)
     firstLine = undefined
-    duplicates = 0
     lines = new Set()
     const expandLineT = expandLine(token)
     return new Promise((res, rej) => {
@@ -111,7 +109,6 @@ async function parseToken(token) {
         });
         
         lineReader.on('close', () => {
-            console.log("   read file! removed "+duplicates+" duplicates.")
             let array = Array.from(lines)
             lines = undefined // free up memory
             let sorted = mergeSameBlockTransactions(array.sort(compare))

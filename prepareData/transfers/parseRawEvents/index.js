@@ -12,7 +12,7 @@ const firstLine = 'token,blocknumber,from,to,amount,id'
 compress.pipe(output);
 compress.write(firstLine+"\n")
 
-
+BigNumber.config({ EXPONENTIAL_AT: 100 })
 https.get('https://tubcloud.tu-berlin.de/s/tEHoSia5raaBDpG/download', (resp) => {
     resp.pipe(gunzip()).pipe(extract)
 })
