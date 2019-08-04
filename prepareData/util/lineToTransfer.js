@@ -1,6 +1,6 @@
-const fields = ['tokenAddress', 'blockNumber', 'from', 'to', 'amount', 'timestamp', 'slug', 'amountInTokens', 'amountInUSDCurrentHigh', 'amountInUSDCurrentLow', 'amountInUSDHigh', 'amountInUSDLow']
-const numberFields = ['blockNumber', 'amountInTokens', 'amountInUSDCurrentHigh', 'amountInUSDCurrentLow', 'amountInUSDHigh', 'amountInUSDLow']
-const dateFields = ['timestamp']
+const fields = ['tokenAddress', 'blockNumber', 'from', 'to', 'amount', 'id', 'slug', 'amountInTokens', 'amountInUSD',]
+const numberFields = ['blockNumber', 'amountInTokens', 'amountInUSD']
+const dateFields = [] //['timestamp']
 const moment = require('moment')
 module.exports = (line) => {
     const entries = line.split(',')
