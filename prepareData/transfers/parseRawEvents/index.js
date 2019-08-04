@@ -27,6 +27,7 @@ extract.on('entry', function (header, stream, next) {
         if (numFiles % 10 == 0) {
             console.log(numFiles+" parsed")
         }
+        compress.write("\n")
         next() // ready for next entry
     })
 
