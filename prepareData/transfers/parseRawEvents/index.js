@@ -10,7 +10,7 @@ const output = fs.createWriteStream('data/transfers.csv.gz');
 const compress = zlib.createGzip();
 const firstLine = 'token,blocknumber,from,to,amount,id'
 compress.pipe(output);
-compress.write(firstLine+"\n") , {flags: 'a'}
+compress.write(firstLine+"\n")
 
 
 https.get('https://tubcloud.tu-berlin.de/s/tEHoSia5raaBDpG/download', (resp) => {
@@ -37,8 +37,9 @@ extract.on('finish', function () {
     // all entries read
     compress.end()
 })
-let block
-let i = 0;
+compress.on('finish', () => {
+    console.log("compress finished. Done.")
+});
 function parseFileStream(stream) {
     stream
         .pipe(es.split())

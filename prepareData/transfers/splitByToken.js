@@ -29,7 +29,7 @@ readTransfers()
 
 function readTransfers() {
     const lineReader = readline.createInterface({
-        input: fs.createReadStream('./data/transfers.csv.gz').pipe(zlib.createGunzip())
+        input: fs.createReadStream('./data/transfers1.csv.gz').pipe(zlib.createGunzip())
       });
       
     lineReader.on('line', (line) => {
@@ -38,11 +38,23 @@ function readTransfers() {
     
     lineReader.on('close', () => {
         console.log("done!")
+    })
+
+    lineReader.on('error', (err) => {
+        console.log("FINISHED WITH ERROR")
+        console.log(err)
+
         clearInterval(interval)
         Object.values(streams).forEach(s => s.end())
+        console.log("check if all files were written correctly")
+        lineReader.end()
     })
 }
 
+function stop() {
+    clearInterval(interval)
+    Object.values(streams).forEach(s => s.end())
+}
 
 function writeLine(line) {
     if (firstLine === undefined) {
