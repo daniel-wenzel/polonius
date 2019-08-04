@@ -10,8 +10,8 @@ cmcTokens.forEach(t => interestingAddresses.add(t.address))
 let n = 0;
 let firstLine = undefined
 
-
-const tokenCreationsReader = readline.createInterface({
+readTransfers()
+/*const tokenCreationsReader = readline.createInterface({
     input: fs.createReadStream('./data/tokenCreations.csv.gz')
   });
   tokenCreationsReader.on('line', (line) => {
@@ -24,6 +24,10 @@ const tokenCreationsReader = readline.createInterface({
       writeLine(parts.join(','))
   }).on('close', () => {
     console.log("added token creations")
+    
+})*/
+
+function readTransfers() {
     const lineReader = readline.createInterface({
         input: fs.createReadStream('./data/tokenTransfers.csv.gz').pipe(zlib.createGunzip())
       });
@@ -37,7 +41,7 @@ const tokenCreationsReader = readline.createInterface({
         clearInterval(interval)
         Object.values(streams).forEach(s => s.end())
     })
-})
+}
 
 
 function writeLine(line) {
