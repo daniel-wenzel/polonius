@@ -28,8 +28,17 @@ readTransfers()
 })*/
 
 function readTransfers() {
+    const gzip = zlib.createGunzip()
+    gzip.on('error', (err) => {
+        console.log("FINISHED WITH ERROR")
+        console.log(err)
+
+        stop()
+        console.log("check if all files were written correctly")
+        lineReader.close()
+    })
     const lineReader = readline.createInterface({
-        input: fs.createReadStream('./data/transfers.csv.gz').pipe(zlib.createGunzip())
+        input: fs.createReadStream('./data/transfers.csv.gz').pipe(gzip)
       });
       
     lineReader.on('line', (line) => {
@@ -38,16 +47,7 @@ function readTransfers() {
     
     lineReader.on('close', () => {
         console.log("done!")
-    })
-
-    lineReader.on('error', (err) => {
-        console.log("FINISHED WITH ERROR")
-        console.log(err)
-
-        clearInterval(interval)
-        Object.values(streams).forEach(s => s.end())
-        console.log("check if all files were written correctly")
-        lineReader.end()
+        stop()
     })
 }
 
