@@ -12,7 +12,7 @@ module.exports = (token) => {
         const oneToken = Big(10).pow(token.decimals)
         const amountInTokens = amount.div(oneToken)
         //console.log(day.format('YYYY-MM-DD'))
-        const amountInUSD = round(amount.mul(+token.price))
+        const amountInUSD = round(amountInTokens.mul(+token.price))
         line += ','+token.slug+','+round(amountInTokens, 5)+','+amountInUSD
         /*const amountInUSDCurrentHigh = round(amountInTokens.mul(todaysValueHigh))
         const amountInUSDCurrentLow = round(amountInTokens.mul(todaysValueLow))
