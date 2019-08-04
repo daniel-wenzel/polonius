@@ -16,5 +16,6 @@ module.exports = (line) => {
             result[k] = moment.utc(result[k], 'X').toISOString()
         }
     })
+    result.raw = line
     return result
 }
