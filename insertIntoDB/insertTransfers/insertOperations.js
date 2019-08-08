@@ -1,5 +1,5 @@
 const db = require('../util/db')
-const insertTransfers = db.prepare('INSERT OR IGNORE INTO Transfer (`from`, `to`, `token`, `blocknumber`, amount, timestamp, amountInTokens, amountInUSDCurrent, amountInUSD) VALUES (@from, @to, @slug, @blockNumber, @amount, null, @amountInTokens, @amountInUSDCurrent, @amountInUSD)');
+const insertTransfers = db.prepare('INSERT OR IGNORE INTO Transfer (`from`, `to`, `token`, `blocknumber`, amount, timestamp, amountInTokens, amountInUSDCurrent) VALUES (@from, @to, @slug, @blockNumber, @amount, null, @amountInTokens, @amountInUSD)');
 const insertAccounts = db.prepare('INSERT OR IGNORE INTO Address (address) VALUES (?)');
 
 
