@@ -26,7 +26,7 @@ WHERE
                     and 
                     firstOutBlocknumber < balances.blocknumber and
                     firstOutBlocknumber + 30 > balances.blocknumber and
-                    balance > -0.05 and balance < 0.05;
+                    balance > -0.05 and balance < 0.05
                 );
 /* it is not a paper wallet if it wasnt emptied with/shortly after the first outgoing transfer */
 UPDATE AddressMetadata
@@ -62,18 +62,6 @@ WHERE
         ((SELECT firstOutBlocknumber FROM AddressMetadata m WHERE m.address = Transfer.`to`) > blocknumber 
         OR 
         (SELECT firstOutBlocknumber FROM AddressMetadata m WHERE m.address = Transfer.`to`) is null);
-
-
-SELECT 
-    m.address, count(*), count(distinct t.`to`)
-FROM 
-    AddressMetadata m INNER JOIN
-    Transfer t
-    ON m.address = t.`from`
-WHERE
-    canBePaperWallet = 'YES' and emptiedAccount = 1
-GROUP BY m.address
-ORDER BY count(*) DESC;
 
 
 UPDATE Transfer
