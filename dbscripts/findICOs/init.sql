@@ -35,7 +35,7 @@ WITH RECURSIVE
 		SELECT DISTINCT token, address, address, originalAmount, originalAmount, blocknumber, isOriginAddress, 0 
 		FROM 
 			(SELECT * FROM potentialICOs 
-			ORDER BY isOriginAddress ASC LIMIT 50)
+			ORDER BY isOriginAddress DESC)
 	UNION ALL
 		SELECT 
 			i.token, i.sender, a.address, i.originalAmount, MIN(t.amountInUSDCurrent, i.originalAmount), t.blocknumber, a.isOriginAddress, i.hops+1
