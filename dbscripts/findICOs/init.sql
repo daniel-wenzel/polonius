@@ -8,7 +8,9 @@ DELETE FROM ICOAddress;
 
 UPDATE Address
 SET isOriginAddress = 1
-WHERE address in (SELECT address FROM AddressMetadata WHERE outvolumeUSD - involumeUSD > 100 and outvolumeUSD / (1.0 * involumeUSD) > 2);
+WHERE 
+	address in (SELECT address FROM AddressMetadata WHERE outvolumeUSD - involumeUSD > 100 and outvolumeUSD / (1.0 * involumeUSD) > 2)
+	OR address = '0x0000000000000000000000000000000000000000';
 
 DROP TABLE IF EXISTS potentialICOs;
 CREATE TEMP TABLE potentialICOs AS
@@ -26,18 +28,21 @@ CREATE TEMP TABLE potentialICOs AS
 			
 CREATE TEMP TABLE ICOs AS
 WITH RECURSIVE
+    GroupedTransfer(`from`, `to`, token, blocknumber, amountInUSDCurrent) AS (
+        SELECT `from`, `to`, token, min(blocknumber), sum(amountInUSDCurrent) from Transfer GROUP BY `from`, `to`, token
+    ),
 	ICOPath(token, sender, pathPoint, originalAmount, transferedAmount, blocknumber, isOriginAddress, hops) AS (
 		SELECT DISTINCT token, address, address, originalAmount, originalAmount, blocknumber, isOriginAddress, 0 
 		FROM 
 			(SELECT * FROM potentialICOs 
-			ORDER BY isOriginAddress DESC)
+			ORDER BY isOriginAddress ASC LIMIT 50)
 	UNION ALL
 		SELECT 
-			i.token, i.sender, t.`from`, i.originalAmount, MIN(sum(t.amountInUSDCurrent), i.originalAmount), max(t.blocknumber), a.isOriginAddress, i.hops+1
+			i.token, i.sender, a.address, i.originalAmount, MIN(t.amountInUSDCurrent, i.originalAmount), t.blocknumber, a.isOriginAddress, i.hops+1
 		FROM
 			ICOPath i
 			INNER JOIN
-			Transfer t
+			GroupedTransfer t
 			INNER JOIN
 			Address a
 			ON 
@@ -48,7 +53,6 @@ WITH RECURSIVE
 				a.address = t.`from` and
 				i.isOriginAddress = 0 and
 				i.hops < 5
-		GROUP BY i.token, i.sender, t.`from`
 		ORDER BY 8 DESC
 	)
 SELECT 
