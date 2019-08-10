@@ -6,8 +6,8 @@ const success = requireSQL('dbscripts/calculateDepositAddresses/exp_determineSuc
 const fs = require('fs');
 let writeStream = fs.createWriteStream('expOutput.csv');
 
-blockDelays = [180]//, 360, 4320, 8640, 17280, 60480]
-percentages = [0.1, 0.2]//, 0.25, 0.33, 0.5, 0.75]
+blockDelays = [180, 360, 4320, 8640, 17280, 60480]
+percentages = [0.1, 0.2, 0.25, 0.33, 0.5, 0.75]
 writeStream.write('numBlocks,percentage,numCappReceivers,numDepositAddresses,numFalsePositives\n')
 for (let numBlocks of blockDelays) {
     for (let percentage of percentages) {
