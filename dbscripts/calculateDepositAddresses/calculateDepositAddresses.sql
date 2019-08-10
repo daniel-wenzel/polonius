@@ -7,7 +7,10 @@ SET isCappReceiver=0, isDepositAddress=0;
 UPDATE AddressMetadata
 SET behavedLikeDepositAddress = 1
 WHERE 
-	AddressMetadata.address in (SELECT t.`to` FROM Transfer t GROUP BY t.`to` HAVING min(wasEmptiedWithinXBlocks) = 1)
+	AddressMetadata.address in 
+		(SELECT t.`to` 
+		 FROM Transfer t 
+		 GROUP BY t.`to` HAVING min(wasEmptiedWithinXBlocks) = 1)
 	and AddressMetadata.distinctOutDegree < 10;
 
 UPDATE Address
@@ -25,7 +28,9 @@ WHERE
 			ON senderMetadata.address = t.`from` AND senderMetadata.behavedLikeDepositAddress=1
 				and receiverMetadata.address = t.`to`
 		GROUP BY t.`to`
-		HAVING count(DISTINCT senderMetadata.address) >= 100 and count(DISTINCT senderMetadata.address) > 0.25 * receiverMetadata.distinctInDegree);
+		HAVING 
+			count(DISTINCT senderMetadata.address) >= 100 and 
+			count(DISTINCT senderMetadata.address) > 0.25 * receiverMetadata.distinctInDegree);
 		
 UPDATE Address
 SET isDepositAddress=1
@@ -43,6 +48,55 @@ WHERE
 	GROUP BY t.`from`
 	HAVING min(isCappReceiver) = 1);
 
+
+/* An address might actually not be a capp receiver because the deposit addresses also transfered to non receivers */
+UPDATE Address
+SET isCappReceiver=0
+WHERE
+	Address.address in 
+		(SELECT address from
+		(SELECT 
+			receiver.address, 
+            (SELECT count(distinct s.address)
+                FROM 
+                    Transfer t INNER JOIN 
+                    Address s
+                ON 
+                    t.`to` = receiver.address and
+                    t.`from` = s.address and
+                    s.isDepositAddress
+            ) as numDepositAddresses, 
+            receiverMetadata.distinctInDegree
+		FROM
+            Address receiver
+            NATURAL JOIN
+			AddressMetadata receiverMetadata
+        WHERE
+            isCappReceiver = 1 and 
+            (numDepositAddresses is null OR
+            numDepositAddresses < 100 OR
+            numDepositAddresses < @minPercentageBehavedLikeDepositAddress * receiverMetadata.distinctInDegree)) a);
+/* now we might have fewer capp receivers, so we need to recalculate the deposit addresses */
+UPDATE Address
+SET isDepositAddress=1
+WHERE isDepositAddress = 0;
+
+UPDATE Address
+SET isDepositAddress=1
+WHERE
+	Address.address in 
+	(SELECT 
+		t.`from`
+	FROM
+		AddressMetadata m
+		INNER JOIN 
+		Address a
+		INNER JOIN
+		Transfer t
+		ON m.address = t.`from` AND m.behavedLikeDepositAddress=1 AND t.`to`=a.address and a.isCappReceiver=1
+	GROUP BY t.`from`
+	HAVING min(isCappReceiver) = 1);
+/* actually this should be performed in a loop until its stable ... */
 
 UPDATE Address
 SET isDepositAddress = 1
