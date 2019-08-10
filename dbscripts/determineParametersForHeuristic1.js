@@ -11,6 +11,6 @@ for (let numBlocks of blockDelays) {
         console.log(`numBlocks: ${numBlocks} percentage: ${percentage}`)
         //calculateEmptiedAddresses({numBlocks: numBlocks})
         //calculateDepositAddresses({minPercentageBehavedLikeDepositAddress: percentage})
-        console.log(success(undefined, 'get')[0])
+        console.log(success(undefined, 'get'))
     }
 }
