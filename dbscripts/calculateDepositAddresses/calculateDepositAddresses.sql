@@ -30,7 +30,7 @@ WHERE
 		GROUP BY t.`to`
 		HAVING 
 			count(DISTINCT senderMetadata.address) >= 100 and 
-			count(DISTINCT senderMetadata.address) > 0.25 * receiverMetadata.distinctInDegree);
+			count(DISTINCT senderMetadata.address) > @minPercentageBehavedLikeDepositAddress * receiverMetadata.distinctInDegree);
 		
 UPDATE Address
 SET isDepositAddress=1
@@ -78,8 +78,8 @@ WHERE
             numDepositAddresses < @minPercentageBehavedLikeDepositAddress * receiverMetadata.distinctInDegree)) a);
 /* now we might have fewer capp receivers, so we need to recalculate the deposit addresses */
 UPDATE Address
-SET isDepositAddress=1
-WHERE isDepositAddress = 0;
+SET isDepositAddress = 0
+WHERE isDepositAddress = 1;
 
 UPDATE Address
 SET isDepositAddress=1
