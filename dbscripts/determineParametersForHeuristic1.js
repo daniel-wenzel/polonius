@@ -1,6 +1,7 @@
 require('log-timestamp');
 const requireSQL = require('./util/requireSQL')
-const recalc = requireSQL('dbscripts/calculateDepositAddresses/exp_calculate.sql')
+const recalc1 = requireSQL('dbscripts/calculateDepositAddresses/exp_calculate.sql')
+const recalc2 = requireSQL('dbscripts/calculateDepositAddresses/exp_calculate.sql')
 const success = requireSQL('dbscripts/calculateDepositAddresses/exp_determineSuccess.sql')
 
 const fs = require('fs');
@@ -10,11 +11,12 @@ percentages = [0.1, 0.2, 0.25, 0.33, 0.4, 0.45, 0.5, 0.6, 0.75]
 
 writeHorriblyInefficient('numBlocks,percentage,numCappReceivers,numDepositAddresses,numFalsePositives,fps')
 for (let numBlocks of blockDelays) {
+    recalc1({numBlocks})
     for (let percentage of percentages) {
         console.log(`numBlocks: ${numBlocks} percentage: ${percentage}`)
-        //recalc({ minPercentageBehavedLikeDepositAddress: percentage, numBlocks })
+        recalc2({ minPercentageBehavedLikeDepositAddress: percentage })
         const ans = success(undefined, 'get')
-        //console.log(ans)
+        console.log(ans)
         writeHorriblyInefficient([numBlocks, percentage].concat(Object.values(ans)).join(','))
     }
 }
