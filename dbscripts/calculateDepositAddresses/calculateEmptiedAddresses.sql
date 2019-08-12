@@ -1,5 +1,6 @@
 UPDATE Transfer
-SET emptiedAccount=0, wasEmptiedWithinXBlocks=0;
+SET emptiedAccount=0, wasEmptiedWithinXBlocks=0
+WHERE emptiedAccount=1 OR wasEmptiedWithinXBlocks=1;
 
 UPDATE Transfer
 SET emptiedAccount = 1

@@ -1,8 +1,10 @@
 UPDATE AddressMetadata
-SET behavedLikeDepositAddress=0;
+SET behavedLikeDepositAddress=0
+WHERE behavedLikeDepositAddress=1;
 
 UPDATE Address
-SET isCappReceiver=0, isDepositAddress=0;
+SET isCappReceiver=0, isDepositAddress=0
+WHERE isCappReceiver=1 OR isDepositAddress=1;
 
 UPDATE AddressMetadata
 SET behavedLikeDepositAddress = 1
