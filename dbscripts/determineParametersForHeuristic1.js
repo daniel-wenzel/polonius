@@ -1,3 +1,4 @@
+require('log-timestamp');
 const requireSQL = require('./util/requireSQL')
 const recalc = requireSQL('dbscripts/calculateDepositAddresses/exp_calculate.sql')
 const success = requireSQL('dbscripts/calculateDepositAddresses/exp_determineSuccess.sql')
