@@ -12,9 +12,9 @@ writeHorriblyInefficient('numBlocks,percentage,numCappReceivers,numDepositAddres
 for (let numBlocks of blockDelays) {
     for (let percentage of percentages) {
         console.log(`numBlocks: ${numBlocks} percentage: ${percentage}`)
-        recalc({ minPercentageBehavedLikeDepositAddress: percentage, numBlocks })
+        //recalc({ minPercentageBehavedLikeDepositAddress: percentage, numBlocks })
         const ans = success(undefined, 'get')
-        console.log(ans)
+        //console.log(ans)
         writeHorriblyInefficient([numBlocks, percentage].concat(Object.values(ans)).join(','))
     }
 }
