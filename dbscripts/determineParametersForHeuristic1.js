@@ -6,10 +6,10 @@ const success = requireSQL('dbscripts/calculateDepositAddresses/exp_determineSuc
 
 const fs = require('fs');
 
-blockDelays = [51840]//[180, 360, 4320, 8640, 17280, 25920, 34560, 43200, 51840, 60480]
-percentages = [0.5]//[0.1, 0.2, 0.25, 0.33, 0.4, 0.45, 0.5, 0.6, 0.75]
+blockDelays = [180, 360, 4320, 8640, 17280, 25920, 34560, 43200, 51840, 60480]
+percentages = [0.1, 0.2, 0.25, 0.33, 0.4, 0.45, 0.5, 0.6, 0.75]
 
-//writeHorriblyInefficient('numBlocks,percentage,numCappReceivers,numDepositAddresses,numFalsePositives,fps')
+writeHorriblyInefficient('numBlocks,percentage,numCappReceivers,numDepositAddresses,numFalsePositives,fps')
 for (let numBlocks of blockDelays) {
     recalc1({numBlocks})
     for (let percentage of percentages) {
@@ -17,12 +17,12 @@ for (let numBlocks of blockDelays) {
         recalc2({ minPercentageBehavedLikeDepositAddress: percentage })
         const ans = success(undefined, 'get')
         console.log(ans)
-        //writeHorriblyInefficient([numBlocks, percentage].concat(Object.values(ans)).join(','))
+        writeHorriblyInefficient([numBlocks, percentage].concat(Object.values(ans)).join(','))
     }
 }
 
 function writeHorriblyInefficient(line) {
-    let writeStream = fs.createWriteStream('expOutput_v2.csv', {'flags': 'a'});
+    let writeStream = fs.createWriteStream('expOutput_v3.csv', {'flags': 'a'});
     writeStream.write(line+"\n")
     writeStream.end()
 }

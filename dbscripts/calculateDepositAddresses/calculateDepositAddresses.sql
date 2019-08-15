@@ -86,6 +86,7 @@ WHERE isDepositAddress = 1;
 UPDATE Address
 SET isDepositAddress=1
 WHERE
+	isCappReceiver = 0 and
 	Address.address in 
 	(SELECT 
 		t.`from`
@@ -113,7 +114,7 @@ WHERE Address.address in
 		Address receiver
 		ON a.address = t.`from` and t.`to`=receiver.address
 	WHERE
-		a.isDepositAddress = 0
+		a.isDepositAddress = 0 and a.isCappReceiver = 0
 	GROUP BY a.address
 	HAVING 
 		count(*) = sum(receiver.isCappReceiver) AND
