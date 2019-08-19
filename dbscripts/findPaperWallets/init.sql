@@ -67,18 +67,10 @@ WHERE
 UPDATE Transfer
 SET isChangeTransfer = 1
 WHERE
-    Transfer.blocknumber in (SELECT 
-        max(t.blocknumber) as blocknumber
-    FROM 
-        AddressMetadata m INNER JOIN
-        Transfer t
-        ON m.address = t.`from`
-    WHERE
-        canBePaperWallet = 'YES' and 
-        emptiedAccount = 1 and 
-        Transfer.`from` = t.`from` and 
-        m.firstOutBlocknumber <> t.blocknumber /* means that it wasnt the first out transfer */
-    GROUP BY m.address
-    HAVING count(distinct t.`to`) = 1)
-AND
+    Transfer.emptiedAccount = 1 and
+    EXISTS (
+        SELECT * FROM AddressMetadata m
+        WHERE m.canBePaperWallet = 'YES' and m.address = Transfer.`from`
+    )
+    AND
 	Transfer.`to` not in (SELECT address FROM AddressMetadata m WHERE m.canBePaperWallet = 'NO');
