@@ -6,8 +6,8 @@ const success = requireSQL('dbscripts/calculateDepositAddresses/exp_determineSuc
 
 const fs = require('fs');
 
-blockDelays = [180, 360, 4320, 8640, 17280, 25920, 34560, 43200, 51840, 60480]
-percentages = [0.1, 0.2, 0.25, 0.33, 0.4, 0.45, 0.5, 0.6, 0.75]
+blockDelays = [180, 360, 4320, 8640, 17280, 25920, 34560, 43200, 60480, 51840]
+percentages = [0.1, 0.2, 0.25, 0.33, 0.4, 0.45, 0.6, 0.75, 0.5]
 
 writeHorriblyInefficient('numBlocks,percentage,numCappReceivers,numDepositAddresses,numFalsePositives,fps')
 for (let numBlocks of blockDelays) {

@@ -54,7 +54,7 @@ WHERE
     address in (SELECT address FROM Address WHERE isDepositAddress = 1);
 
 
-UPDATE Transfer
+/*UPDATE Transfer
 SET isChangeTransfer = 1
 WHERE
 	emptiedAccount = 1
@@ -62,7 +62,7 @@ WHERE
         ((SELECT firstOutBlocknumber FROM AddressMetadata m WHERE m.address = Transfer.`to`) > blocknumber 
         OR 
         (SELECT firstOutBlocknumber FROM AddressMetadata m WHERE m.address = Transfer.`to`) is null);
-
+*/
 
 UPDATE Transfer
 SET isChangeTransfer = 1
