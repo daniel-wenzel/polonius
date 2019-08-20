@@ -1,5 +1,5 @@
 UPDATE Address
-SET isCappSender = 1
+SET isCappSender = 0
 WHERE isCappSender <> 0;
 
 UPDATE Address
