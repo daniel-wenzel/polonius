@@ -44,6 +44,9 @@ CREATE INDEX degree_index ON AddressMetadata (degree);
 CREATE INDEX behavedLikeDepositAddress_index ON AddressMetadata (behavedLikeDepositAddress);
 CREATE INDEX firstOutBlocknumber_index ON AddressMetadata (firstOutBlocknumber);
 
+CREATE INDEX distinctInDegree_index ON AddressMetadata (distinctInDegree);
+CREATE INDEX distinctOutDegree_index ON AddressMetadata (distinctOutDegree);
+
 CREATE TABLE balances (
         "address"	TEXT,
         "blocknumber",
