@@ -37,13 +37,13 @@ WHERE address in
 		Address cappReceiver
 		NATURAL JOIN
 		AddressMetadata cappReceiver
-	WHERE distinctOutDegree > 100 and isCappReceiver = 1);
+1	WHERE distinctOutDegree > 100 and isCappReceiver = 1);
 
 
 UPDATE Address
 SET isCappOther = 1
 WHERE address in 
-SELECT 
+(SELECT 
 	cw.address
 	/*rToC.*, cToS.sd, cToS.sd_n, cToS.sd_volume, cToS.sd_perc*/
 FROM
@@ -113,4 +113,4 @@ INNER JOIN
 	HAVING SUM(amountInUSDCurrent) > 0.05 * senderM.involumeUSD
 	) as cToS
 ON
-	rToC.cw = cToS.cw
+	rToC.cw = cToS.cw)
