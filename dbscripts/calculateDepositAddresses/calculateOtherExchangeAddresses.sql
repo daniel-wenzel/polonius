@@ -1,5 +1,9 @@
 UPDATE Address
 SET isCappSender = 1
+WHERE isCappSender <> 0;
+
+UPDATE Address
+SET isCappSender = 1
 WHERE address in
 (SELECT 
     sender.address
@@ -34,6 +38,38 @@ WHERE address in
 		NATURAL JOIN
 		AddressMetadata cappReceiver
 	WHERE distinctOutDegree > 100 and isCappReceiver = 1);
+/*
+
+SELECT
+	coldWallet.*
+FROM 
+	Address receiver
+	INNER JOIN
+	Transfer fromReceiver
+	INNER JOIN
+	Address coldWallet
+	INNER JOIN 
+	Transfer toSender
+	INNER JOIN 
+	Address sender
+	INNER JOIN
+	AddressMetadata coldWalletM
+ON
+	receiver.address = fromReceiver.`from` and
+	fromReceiver.`to` = coldWallet.address and
+	coldWallet.address = toSender.`from` and
+	toSender.`to` = sender.address and
+	coldWallet.address = coldWalletM.address
+WHERE
+	receiver.isCappReceiver = 1 and
+	sender.isCappSender = 1 and
+	coldWallet.isDepositAddress = 0 and
+	coldWalletM.involumeUSD > 5000
+GROUP BY coldWallet.address
+HAVING 
+	SUM(fromReceiver.amountInUSDCurrent) > 0.8*coldWalletM.involumeUSD and 
+	SUM(toSender.amountInUSDCurrent) > 0.8*coldWalletM.outvolumeUSD 
+*/
 
 /*
 UPDATE Address
