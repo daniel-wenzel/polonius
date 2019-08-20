@@ -14,10 +14,10 @@ FROM
 		t.`from` = senderAddress.address and
 		senderAddress.isDepositAddress = 1 and
 		c.member = receiverAddress.address and
-		(receiverAddress.isCappReceiver = 1 or receiverAddress.isCappOther = 1 or receiverAddress.isCappStorage = 1)
-TODODODO
+		(receiverAddress.isCappReceiver = 1 or receiverAddress.isCappOther = 1 or receiverAddress.isCappStorage = 1);
+INSERT INTO cluster
 SELECT 
-
+	c.clusterName, other.address
 FROM
 	(Address receiver
 	NATURAL JOIN
@@ -28,9 +28,12 @@ FROM
 	(Address other
 	NATURAL JOIN
 	AddressMetadata other)
+	INNER JOIN
+	cluster c
 ON 
 	receiver.address = t.`from` and
-	other.address = t.`to`
+	other.address = t.`to` and
+	c.member = receiver.address
 WHERE
 	receiver.isCappReceiver = 1 and
 	(sender.isCappSender = 1 OR sender.isCappOther = 1)

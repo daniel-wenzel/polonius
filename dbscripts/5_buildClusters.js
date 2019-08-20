@@ -25,7 +25,7 @@ do {
 }
 while (addedEntries)
 
-collapseToEntityGraph()
+//collapseToEntityGraph()
 
 
 function performAllPossibleMerges() {
