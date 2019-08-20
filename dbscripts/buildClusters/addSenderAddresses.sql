@@ -15,6 +15,8 @@ FROM
 		senderAddress.isDepositAddress = 1 and
 		c.member = receiverAddress.address and
 		(receiverAddress.isCappReceiver = 1 or receiverAddress.isCappOther = 1 or receiverAddress.isCappStorage = 1);
+
+
 INSERT INTO cluster
 SELECT 
 	c.clusterName, other.address
@@ -36,6 +38,6 @@ ON
 	c.member = receiver.address
 WHERE
 	receiver.isCappReceiver = 1 and
-	(sender.isCappSender = 1 OR sender.isCappOther = 1)
-GROUP BY receiver.address, sender.address
-HAVING SUM(amountInUSDCurrent) > 0.05 * receiver.outvolumeUSD
+	(other.isCappSender = 1 OR other.isCappOther = 1)
+GROUP BY receiver.address, other.address
+HAVING SUM(amountInUSDCurrent) > 0.05 * receiverM.outvolumeUSD
