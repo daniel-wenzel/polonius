@@ -136,3 +136,89 @@ WHERE address in
 		(cappReceiver.isCappReceiver = 1 or cappReceiver.isCappSender = 1)
 	GROUP BY cappReceiver.address
 	HAVING count(distinct potentialCappSender.address) = 1)*/
+
+SELECT 
+    coldWallet.address as cold,
+    coldWallet.*, coldWalletM.*,
+    (SELECT 
+        sum(t.amountInUSDCurrent) 
+    FROM
+        Transfer t
+        INNER JOIN
+        Address receiver
+        ON receiver.address = t.`from` and t.`to` = coldWallet.address
+    WHERE 
+        receiver.isCappReceiver = 1
+    ) as fromReceiverInflow,
+    (SELECT 
+        sum(t.amountInUSDCurrent) 
+    FROM
+        Transfer t
+        INNER JOIN
+        Address sender
+        ON sender.address = t.`to` and t.`from` = coldWallet.address
+    WHERE 
+        sender.isCappSender = 1
+    ) as toSenderOutflow
+    
+FROM
+	(SELECT
+	
+	FROM
+		(Address coldWallet
+		NATURAL JOIN
+		AddressMetadata coldWalletM)
+		INNER JOIN
+		(Address receiver
+		NATURAL JOIN
+		AddressMetadata receiverM)
+		INNER JOIN
+		Transfer rToc
+	ON
+		coldWallet.address = rToc.`to` AND
+		receiver.address = rToc.`from` AND
+	WHERE
+		coldWallet.isDepositAddress = 0 AND
+		coldWallet.isCappReceiver = 0 AND
+		coldWallet.isCappSender = 0 AND
+		coldWalletM.distinctInDegree < 10 AND
+		coldWalletM.distinctOutDegree < 10 AND
+		coldWalletM.involumeUSD > 1000 AND
+		coldWalletM.outvolumeUSD > 1000 and
+		receiver.isCappReceiver = 1
+	GROUP BY receiver.address, coldWallet.address
+	HAVING SUM(amountInUSDCurrent) > 0.05 * receiverM.outvolumeUSD
+
+	)
+
+    (Address coldWallet
+    NATURAL JOIN
+    AddressMetadata coldWalletM)
+	INNER JOIN
+	Address receiver
+	INNER JOIN
+	Transfer rToc
+	INNER JOIN
+	Address sender
+	INNER JOIN
+	Transfer cTos
+ON
+	coldWallet.address = rToc.`to` AND
+	receiver.address = rToc.`from` AND
+	coldWallet.address = cTos.`from` AND
+	sender.address = cTos.`to` 
+WHERE
+    coldWallet.isDepositAddress = 0 AND
+    coldWallet.isCappReceiver = 0 AND
+    coldWallet.isCappSender = 0 AND
+    coldWalletM.distinctInDegree < 10 AND
+    coldWalletM.distinctOutDegree < 10 AND
+    coldWalletM.involumeUSD > 1000 AND
+    coldWalletM.outvolumeUSD > 1000 and
+	receiver.
+
+    fromReceiverInflow > 1000 AND
+    fromReceiverInflow > 0.5 * coldWalletM.involumeUSD AND
+    fromReceiverInflow > toSenderOutflow AND
+    toSenderOutflow > 1000
+LIMIT 50
