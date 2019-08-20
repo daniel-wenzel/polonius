@@ -44,7 +44,7 @@ UPDATE Address
 SET isCappOther = 1
 WHERE address in 
 (SELECT 
-	cw.address
+	rToC.cw
 	/*rToC.*, cToS.sd, cToS.sd_n, cToS.sd_volume, cToS.sd_perc*/
 FROM
 	(SELECT

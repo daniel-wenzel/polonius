@@ -1,20 +1,12 @@
 UPDATE Address
-SET isCappSender = 1
-WHERE address in
-	(SELECT 
-		cappReceiver.address
-	FROM
-		Address cappReceiver
-		NATURAL JOIN
-		AddressMetadata cappReceiver
-	WHERE distinctOutDegree > 100 and isCappReceiver = 1);
-
+SET isCappOther = 0
+WHERE isCappOther =1;
 
 UPDATE Address
 SET isCappOther = 1
 WHERE address in 
 (SELECT 
-	cw.address
+	rToC.cw
 	/*rToC.*, cToS.sd, cToS.sd_n, cToS.sd_volume, cToS.sd_perc*/
 FROM
 	(SELECT
