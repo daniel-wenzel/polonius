@@ -1,6 +1,6 @@
 INSERT INTO cluster
 SELECT 
-    address, substr(MAX(rnk), INSTR(MAX(rnk), "$")+1)
+    substr(MAX(rnk), INSTR(MAX(rnk), "$")+1), address
 FROM
     (SELECT 
         depo.address, count(*) || "$" || c.clusterName  as rnk
