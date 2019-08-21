@@ -2,13 +2,13 @@ const db = require('../../insertIntoDB/util/db')
 const fs = require('fs')
 
 module.exports = (path) => {
-    const statementFile = fs.readFileSync('./'+path, {encoding: 'utf-8'})
+    const statementFileRaw = fs.readFileSync('./'+path, {encoding: 'utf-8'})
+    const statementFile = statementFileRaw.replace(/\/\*([\s\S]*?)\*\//, "")
     return db.transaction((args, method = 'run') => {
         const pathElements = path.split('/')
         const results = []
         console.log("Running "+pathElements[pathElements.length-1])
         // remove comments
-        statementFile = statementFile.replace(/\/\*([\s\S]*?)\*\//, "")
         statementFile.split(';').forEach(statement => {
             if (statement.trim() == "") return
             const startTime = Date.now()
