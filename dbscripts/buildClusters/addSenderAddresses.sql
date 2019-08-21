@@ -1,4 +1,4 @@
-INSERT INTO cluster
+/*INSERT INTO cluster
 SELECT DISTINCT
 	c.clusterName, t.`from`
 FROM
@@ -15,7 +15,7 @@ FROM
 		senderAddress.isDepositAddress = 1 and
 		c.member = receiverAddress.address and
 		(receiverAddress.isCappReceiver = 1 or receiverAddress.isCappOther = 1 or receiverAddress.isCappStorage = 1);
-
+*/
 
 INSERT INTO cluster
 SELECT 
