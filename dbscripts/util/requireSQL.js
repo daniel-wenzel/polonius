@@ -8,6 +8,8 @@ module.exports = (path) => {
         const results = []
         console.log("Running "+pathElements[pathElements.length-1])
         statementFile.split(';').forEach(statement => {
+            // remove comments
+            statement = statement.replace(/\/\*([\s\S]*?)\*\//, "")
             if (statement.trim() == "") return
             const startTime = Date.now()
             console.log(statement.trim())
