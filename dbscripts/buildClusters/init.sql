@@ -63,3 +63,14 @@ CREATE INDEX cluster_name ON cluster("clusterName");
 CREATE INDEX cluster_member ON cluster("member");
 
 
+INSERT INTO
+SELECT 
+    CASE
+        WHEN INSTR(name, ":") > 0 THEN substr(name, 0, INSTR(name, ":"))
+        WHEN INSTR(name, " ") > 0 THEN substr(name, 0, INSTR(name, " "))
+        ELSE name
+    END as entity,
+    name
+FROM
+   Address
+WHERE name is not null and isExchange = 1
