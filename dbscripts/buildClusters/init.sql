@@ -70,7 +70,7 @@ SELECT
         WHEN INSTR(name, " ") > 0 THEN substr(name, 0, INSTR(name, " "))
         ELSE name
     END as entity,
-    name
+    address
 FROM
    Address
 WHERE name is not null and isExchange = 1
