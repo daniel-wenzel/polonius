@@ -58,7 +58,7 @@ WHERE
     r1.address <> r2.address
 GROUP BY r1.address, r2.address
 HAVING count(*) > 50
-ORDER BY cluster
+ORDER BY cluster;
 
 CREATE INDEX cluster_name ON cluster("clusterName");
 CREATE INDEX cluster_member ON cluster("member");
