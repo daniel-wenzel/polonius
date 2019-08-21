@@ -7,9 +7,9 @@ module.exports = (path) => {
         const pathElements = path.split('/')
         const results = []
         console.log("Running "+pathElements[pathElements.length-1])
+        // remove comments
+        statementFile = statementFile.replace(/\/\*([\s\S]*?)\*\//, "")
         statementFile.split(';').forEach(statement => {
-            // remove comments
-            statement = statement.replace(/\/\*([\s\S]*?)\*\//, "")
             if (statement.trim() == "") return
             const startTime = Date.now()
             console.log(statement.trim())
