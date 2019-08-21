@@ -19,7 +19,7 @@ FROM
             c.member = receiverAddress.address and
             (receiverAddress.isCappReceiver = 1 or receiverAddress.isCappOther = 1 or receiverAddress.isCappStorage = 1)
     GROUP BY depo.address, c.clusterName)
-GROUP BY rnk;
+GROUP BY depo.address;
 
 
 INSERT INTO cluster
