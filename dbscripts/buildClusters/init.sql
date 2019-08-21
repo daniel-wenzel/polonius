@@ -32,6 +32,34 @@ FROM Address a
 WHERE
 	a.isCappReceiver = 1;
 
+/* All receivers which received from at least 50 different deposit addresses are part of the same cluster */
+INSERT INTO cluster
+SELECT 
+    MAX(r1.address, r2.address) || "-samedepos" as cluster, r2.address
+FROM 
+    Address depo
+    INNER JOIN
+    Transfer t1
+    INNER JOIN 
+    Address r1
+    INNER JOIN
+    Transfer t2
+    INNER JOIN 
+    Address r2
+ON
+    depo.address = t1.`from` and
+    t1.`to` = r1.address and
+    depo.address = t2.`from` and
+    t2.`to` = r2.address
+WHERE 
+    depo.isDepositAddress = 1 and
+    r1.isCappReceiver = 1 and
+    r2.isCappReceiver = 1 and
+    r1.address <> r2.address
+GROUP BY r1.address, r2.address
+HAVING count(*) > 50
+ORDER BY cluster
+
 CREATE INDEX cluster_name ON cluster("clusterName");
 CREATE INDEX cluster_member ON cluster("member");
 

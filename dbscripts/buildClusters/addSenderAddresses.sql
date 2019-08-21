@@ -1,21 +1,26 @@
-/*INSERT INTO cluster
-SELECT DISTINCT
-	c.clusterName, t.`from`
+INSERT INTO cluster
+SELECT 
+    address, substr(MAX(rnk), INSTR(MAX(rnk), "$")+1)
 FROM
-	cluster c
-	INNER JOIN
-	Transfer t
-	INNER JOIN
-	Address senderAddress
-	INNER JOIN
-	Address receiverAddress
-	WHERE 
-		c.member = t.`to` and 
-		t.`from` = senderAddress.address and
-		senderAddress.isDepositAddress = 1 and
-		c.member = receiverAddress.address and
-		(receiverAddress.isCappReceiver = 1 or receiverAddress.isCappOther = 1 or receiverAddress.isCappStorage = 1);
-*/
+    (SELECT 
+        depo.address, count(*) || "$" || c.clusterName  as rnk
+    FROM
+        cluster c
+        INNER JOIN
+        Transfer t
+        INNER JOIN
+        Address depo
+        INNER JOIN
+        Address receiverAddress
+        WHERE 
+            c.member = t.`to` and 
+            t.`from` = depo.address and
+            depo.isDepositAddress = 1 and
+            c.member = receiverAddress.address and
+            (receiverAddress.isCappReceiver = 1 or receiverAddress.isCappOther = 1 or receiverAddress.isCappStorage = 1)
+    GROUP BY depo.address, c.clusterName)
+GROUP BY rnk;
+
 
 INSERT INTO cluster
 SELECT 
