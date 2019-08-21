@@ -63,7 +63,7 @@ CREATE INDEX cluster_name ON cluster("clusterName");
 CREATE INDEX cluster_member ON cluster("member");
 
 
-INSERT INTO
+INSERT INTO cluster
 SELECT 
     CASE
         WHEN INSTR(name, ":") > 0 THEN substr(name, 0, INSTR(name, ":"))
