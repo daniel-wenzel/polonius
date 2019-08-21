@@ -18,8 +18,7 @@ WHERE
 	senderAddress.isCappOther = 0 and
 	senderAddress.isCappStorage = 0 and
 	senderAddress.isDepositAddress = 0 AND
-	senderMeta.distinctOutDegree < 5
-LIMIT 1;
+	senderMeta.distinctOutDegree < 5;
 
 /* The above query will also insert addresses which are the only ones that deposited to that depositAddress
  This results in clusters of size 1, therefore we can immediately delete them*/
