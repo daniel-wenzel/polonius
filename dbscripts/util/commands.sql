@@ -1,78 +1,30 @@
-UPDATE Address
-SET isCappOther = 0
-WHERE isCappOther =1;
+CREATE TABLE "EntityTaxonomy" (
+        "name" TEXT NOT NULL UNIQUE,
+        "type" TEXT,
+        PRIMARY KEY("name")1
+    );
 
-UPDATE Address
-SET isCappOther = 1
-WHERE address in 
-(SELECT 
-	rToC.cw
-	/*rToC.*, cToS.sd, cToS.sd_n, cToS.sd_volume, cToS.sd_perc*/
-FROM
-	(SELECT
-		coldWallet.address as cw,
-		coldWallet.name as cw_n,
-		receiver.address as rv,
-		receiver.name as rv_n,
-		SUM(amountInUSDCurrent) as rv_volume,
-		SUM(amountInUSDCurrent) *1.0 / receiverM.outvolumeUSD as rv_perc 
-	FROM
-		(Address coldWallet
-		NATURAL JOIN
-		AddressMetadata coldWalletM)
-		INNER JOIN
-		(Address receiver
-		NATURAL JOIN
-		AddressMetadata receiverM)
-		INNER JOIN
-		Transfer rToc
-	ON
-		coldWallet.address = rToc.`to` AND
-		receiver.address = rToc.`from`
-	WHERE
-		coldWallet.isDepositAddress = 0 AND
-		coldWallet.isCappReceiver = 0 AND
-		coldWallet.isCappSender = 0 AND
-		coldWalletM.distinctInDegree < 10 AND
-		coldWalletM.distinctOutDegree < 10 AND
-		coldWalletM.involumeUSD > 1000 AND
-		coldWalletM.outvolumeUSD > 1000 and
-		receiver.isCappReceiver = 1
-	GROUP BY receiver.address, coldWallet.address
-	HAVING SUM(amountInUSDCurrent) > 0.05 * receiverM.outvolumeUSD
-	) as rToC
-INNER JOIN
-	(SELECT
-		coldWallet.address as cw,
-		coldWallet.name as cw_n,
-		sender.address as sd,
-		sender.name as sd_n,
-		SUM(amountInUSDCurrent) as sd_volume,
-		SUM(amountInUSDCurrent) *1.0 / senderM.involumeUSD as sd_perc 
-	FROM
-		(Address coldWallet
-		NATURAL JOIN
-		AddressMetadata coldWalletM)
-		INNER JOIN
-		(Address sender
-		NATURAL JOIN
-		AddressMetadata senderM)
-		INNER JOIN
-		Transfer cToS
-	ON
-		coldWallet.address = cToS.`from` AND
-		sender.address = cToS.`to`
-	WHERE
-		coldWallet.isDepositAddress = 0 AND
-		coldWallet.isCappReceiver = 0 AND
-		coldWallet.isCappSender = 0 AND
-		coldWalletM.distinctInDegree < 10 AND
-		coldWalletM.distinctOutDegree < 10 AND
-		coldWalletM.involumeUSD > 1000 AND
-		coldWalletM.outvolumeUSD > 1000 and
-		sender.isCappSender = 1
-	GROUP BY sender.address, coldWallet.address
-	HAVING SUM(amountInUSDCurrent) > 0.05 * senderM.involumeUSD
-	) as cToS
-ON
-	rToC.cw = cToS.cw)
+INSERT INTO EntityTaxonomy
+SELECT 
+	name, 
+	CASE
+		WHEN distinctInDegree / (0.0 + distinctInDegree + distinctOutDegree) >  0.9 THEN "concentrator"
+		WHEN distinctOutDegree / (0.0 + distinctInDegree + distinctOutDegree) >  0.9 THEN "dilluter"
+		ELSE "mixer"
+	END
+FROM EntityMetadata
+WHERE distinctDegree >= 100;
+
+INSERT INTO EntityTaxonomy
+SELECT 
+	name, 
+	CASE
+		WHEN distinctInDegree = 0 and distinctOutDegree > 0 THEN "source"
+		WHEN distinctInDegree = 1 and distinctOutDegree = 0 THEN "sink_simple"
+		WHEN distinctInDegree > 1 and distinctOutDegree = 0 THEN "sink_complex"
+		WHEN distinctInDegree = 1 and distinctOutDegree = 1 THEN "connector_simple"
+		WHEN distinctInDegree >= 1 and distinctOutDegree >= 1 THEN "connector_complex"
+		ELSE "n/a"
+	END
+FROM EntityMetadata
+WHERE distinctDegree < 100;

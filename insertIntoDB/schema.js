@@ -135,6 +135,12 @@ const statements =
         "involumeUSD"	NUMERIC,
         "outvolumeUSD"	NUMERIC,
         PRIMARY KEY("name")
+    );
+
+    CREATE TABLE "EntityTaxonomy" (
+        "name" TEXT NOT NULL UNIQUE,
+        "type" TEXT,
+        PRIMARY KEY("name")
     )
     `
     
