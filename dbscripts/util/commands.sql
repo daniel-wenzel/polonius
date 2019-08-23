@@ -1,7 +1,7 @@
 CREATE TABLE "EntityTaxonomy" (
         "name" TEXT NOT NULL UNIQUE,
         "type" TEXT,
-        PRIMARY KEY("name")1
+        PRIMARY KEY("name")
     );
 
 INSERT INTO EntityTaxonomy
