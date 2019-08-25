@@ -8,13 +8,12 @@ const moment = require('moment')
 
 async function insertPricesForToken(token) {
     const valuesRaw = await getHistoricalMarketValue(token)
-    console.log(token, valuesRaw)
     const values = valuesRaw.map(d => ({
         date: +moment(d.date).format('X'),
         price: d.close,
-        token
+        token: token
     }))
-    values.forEach(values => insertIntoPricingTable(values))
+    values.forEach(value => insertIntoPricingTable(value))
     writePrices({token})
 }
 async function run() {
