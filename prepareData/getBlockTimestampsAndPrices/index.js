@@ -13,12 +13,11 @@ async function run() {
             let blockPercentage = (blockMinor - block + blockStep) / blockStep
             let time = Math.round((curTime - prevTime) * blockPercentage + prevTime)
 
-            console.log(blockMinor +" "+time)
+            writeTimestamp({
+                blocknumber: blockMinor,
+                timestamp: time 
+            })
         }
-        writeTimestamp({
-            blocknumber: blockMinor,
-            timestamp: time 
-        })
         await new Promise(res => setTimeout(res, 10000))
     }
 }
