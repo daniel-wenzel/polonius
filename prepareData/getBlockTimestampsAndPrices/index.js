@@ -15,11 +15,12 @@ async function run() {
 
             console.log(blockMinor +" "+time)
         }
-        break
-        
+        writeTimestamp({
+            blocknumber: blockMinor,
+            timestamp: time 
+        })
+        await new Promise(res => setTimeout(res, 10000))
     }
-
 }
-console.log(minBlock, maxBlock)
-//run()
+run()
 
