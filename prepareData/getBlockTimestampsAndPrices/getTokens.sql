@@ -1,2 +1,3 @@
 SELECT DISTINCT token
-FROM ETransfer;
+FROM ETransfer
+WHERE token not in (SELECT DISTINCT token from Prices);

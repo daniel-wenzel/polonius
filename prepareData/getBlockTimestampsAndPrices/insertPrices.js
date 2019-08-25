@@ -13,10 +13,9 @@ async function insertPricesForToken(token) {
         price: d.close
     }))
     values.forEach(insertIntoPricingTable)
+    break;
 }
+createPricingTable()
 const tokens = getTokens(undefined, 'all')
-console.log(tokens)
-/*createPricingTable()
-tokens.forEach(insertPricesForToken)
+tokens.map(t => t.token).forEach(insertPricesForToken)
 writePrices()
-*/

@@ -1,1 +1,1 @@
-INSERT INTO Pricing VALUES (@date, @token, @price);
+INSERT OR IGNORE INTO Pricing VALUES (@date, @token, @price);
