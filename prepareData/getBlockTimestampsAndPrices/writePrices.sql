@@ -6,4 +6,5 @@ SET amountInUSD = (
         date = CAST(timestamp AS int) / 86400 * 86400
         AND
         ETransfer.token = Price.token
-    ) * amount;
+    ) * amount
+WHERE token = @token
