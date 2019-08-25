@@ -4,4 +4,3 @@ CREATE TABLE IF NOT EXISTS "Price" (
     "price" REAL NOT NULL,
     PRIMARY KEY("date","token")
 );
-DELETE FROM Price;

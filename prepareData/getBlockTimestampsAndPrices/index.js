@@ -21,5 +21,5 @@ async function run() {
         await new Promise(res => setTimeout(res, 10000))
     }
 }
-run()
+run().then(require('./insertPrices'))
 
