@@ -13,10 +13,20 @@ async function insertPricesForToken(token) {
         date: +moment(d.date).format('X'),
         price: d.close
     }))
-    values.forEach(insertIntoPricingTable)
+    values.forEach(values => insertIntoPricingTable(values))
     writePrices({token})
 }
-createPricingTable()
-const tokens = getTokens(undefined, 'all')
-console.log(tokens.length+" tokens found")
-tokens.map(t => t.token).forEach(insertPricesForToken)
+async function run() {
+    try {
+        createPricingTable()
+        const tokens = getTokens(undefined, 'all')
+        console.log(tokens.length+" tokens found")
+        for (const {token} of tokens) {
+            await insertPricesForToken(token)
+        }
+    }
+    catch (e) {
+        console.error(e)
+    }
+}
+run()
