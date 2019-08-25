@@ -11,7 +11,8 @@ async function insertPricesForToken(token) {
     console.log(token, valuesRaw)
     const values = valuesRaw.map(d => ({
         date: +moment(d.date).format('X'),
-        price: d.close
+        price: d.close,
+        token
     }))
     values.forEach(values => insertIntoPricingTable(values))
     writePrices({token})
