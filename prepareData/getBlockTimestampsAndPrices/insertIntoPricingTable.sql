@@ -1,0 +1,1 @@
+INSERT INTO Pricing VALUES (@date, @token, @price);

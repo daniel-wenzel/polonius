@@ -34,7 +34,7 @@ async function run() {
     }
 }
 async function getHistoricalData(slug) {
-    const $ = await fetch(`https://coinmarketcap.com/currencies/${slug}/historical-data/?start=20130428&end=20190523`)
+    const $ = await fetch(`https://coinmarketcap.com/currencies/${slug}/historical-data/?start=20130428&end=20220523`)
     const dates = getAllTextBySelector($, '#historical-data tbody .text-left')
     const values = getAllAttributesBySelector($, '#historical-data tbody [data-format-value]', 'data-format-value').map(i => +i)
 
@@ -68,3 +68,5 @@ function save() {
 }
 
 module.exports = run
+
+module.exports.getHistoricalMarketValue = getHistoricalData

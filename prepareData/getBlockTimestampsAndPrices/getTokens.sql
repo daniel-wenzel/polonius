@@ -1,0 +1,2 @@
+SELECT DISTINCT token
+FROM ETransfer;
