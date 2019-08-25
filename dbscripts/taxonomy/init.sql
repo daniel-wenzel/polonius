@@ -4,6 +4,7 @@ CREATE TABLE "EntityTaxonomy" (
         PRIMARY KEY("name")
     );
 
+/* ITER 1 */
 INSERT INTO EntityTaxonomy
 SELECT 
 	name, 
@@ -14,7 +15,7 @@ SELECT
 	END
 FROM EntityMetadata
 WHERE distinctDegree >= 100;
-
+/* ITER 2 */
 INSERT INTO EntityTaxonomy
 SELECT 
 	name, 
@@ -28,3 +29,4 @@ SELECT
 	END
 FROM EntityMetadata
 WHERE distinctDegree < 100;
+/* ITER 3 */

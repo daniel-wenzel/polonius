@@ -134,6 +134,10 @@ const statements =
         "distinctOutDegree"	INTEGER,
         "involumeUSD"	NUMERIC,
         "outvolumeUSD"	NUMERIC,
+        "firstInTransfer" INTEGER,
+        "firstOutTransfer" INTEGER,
+        "lastInTransfer" INTEGER,
+        "lastOutTransfer" INTEGER,
         PRIMARY KEY("name")
     );
 
