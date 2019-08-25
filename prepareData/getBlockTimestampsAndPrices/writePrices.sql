@@ -1,7 +1,7 @@
 UPDATE ETransfer
 SET amountInUSD = (
     SELECT price 
-    FROM Prices 
+    FROM Price
     WHERE 
         date = CAST(timestamp AS int) / 86400 * 86400
         AND
