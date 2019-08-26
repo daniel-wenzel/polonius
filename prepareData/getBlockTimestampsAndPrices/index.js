@@ -7,7 +7,7 @@ const getMinMaxBlock = requireSQL('./prepareData/getBlockTimestampsAndPrices/get
 const {minBlock, maxBlock} = getMinMaxBlock(null, 'get')
 async function run() {
     let prevTime = await getBlockTimestamp(minBlock)
-    for (let block=minBlock + blockStep; block <= maxBlock+1; block+=blockStep) {
+    for (let block=minBlock + blockStep; block <= maxBlock+blockStep; block+=blockStep) {
         const curTime = await getBlockTimestamp(block)
         for (let blockMinor=block - blockStep; blockMinor<=block; blockMinor++) {
             let blockPercentage = (blockMinor - block + blockStep) / blockStep
