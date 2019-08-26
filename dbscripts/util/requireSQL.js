@@ -12,7 +12,7 @@ module.exports = (path) => {
         statementFile.split(';').forEach(statement => {
             if (statement.trim() == "") return
             const startTime = Date.now()
-            console.log(statement.trim())
+            printStatement(statement, args)
             if (args != undefined) {
                 results.push(db.prepare(statement)[method](args))
             }
@@ -26,4 +26,12 @@ module.exports = (path) => {
         if (results.length == 1) return results[0]
         return results
     })
+}
+
+function printStatement(statement, args) {
+    statement = statement.trim()
+    Object.keys(args).forEach(key => {
+        statement = statement.replace(new RegExp('@'+key, 'g'), args[key])
+    })
+    console.log(statement)
 }
