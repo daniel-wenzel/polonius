@@ -1,3 +1,3 @@
 UPDATE ETransfer
-SET timestamp = (CAST (ROUND(@minTime + 1.0*(blocknumber - @minBlock) / (@maxBlock - @minBlock) * (@maxTime - @minTime))) as int)
+SET timestamp = ROUND(@minTime + 1.0*(blocknumber - @minBlock) / (@maxBlock - @minBlock) * (@maxTime - @minTime))
 WHERE blocknumber >= @minBlock and blocknumber < @maxBlock;
