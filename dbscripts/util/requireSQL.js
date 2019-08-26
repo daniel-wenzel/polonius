@@ -30,8 +30,10 @@ module.exports = (path) => {
 
 function printStatement(statement, args) {
     statement = statement.trim()
-    Object.keys(args).forEach(key => {
-        statement = statement.replace(new RegExp('@'+key, 'g'), args[key])
-    })
+    if (args != undefined) {
+        Object.keys(args).forEach(key => {
+            statement = statement.replace(new RegExp('@'+key, 'g'), args[key])
+        })
+    }
     console.log(statement)
 }
