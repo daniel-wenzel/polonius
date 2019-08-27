@@ -34,7 +34,7 @@ ON
     m.name = t.`from` and 
     t.`to` = child.name and
     childT.blocknumber = @blocknumber and
-    t.blocknumber <= @ blocknumber
+    t.blocknumber <= @blocknumber
 GROUP BY m.name, childT.type
 HAVING sum(amountInUSDCurrent) > 0.75 * outvolumeUSD;
 
