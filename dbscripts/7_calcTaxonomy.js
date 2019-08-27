@@ -5,7 +5,7 @@ const getMaxBlocknumber = requireSQL('dbscripts/taxonomy/util_getMaxBlocknumber.
 
 
 const steps = ['0_updateMetadata.sql', '1_type', '2_activness', '3_operator', '4_profitability']
-const sqlCommands = steps.map(s => requireSQL('dbscripts/taxonomy/'+s))
+const sqlCommands = steps.map(s => requireSQL('dbscripts/taxonomy/'+s+".sql"))
 const createTaxonomy = (blocknumber) => {
     if (blocknumber == null) {
         blocknumber = getMaxBlocknumber({}, 'get')
