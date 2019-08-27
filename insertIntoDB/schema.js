@@ -113,6 +113,7 @@ const statements =
         "isFromConcentrator"	INTEGER DEFAULT 0,
         "isICOPurchase"	INTEGER DEFAULT 0,
         "wasEmptiedWithinXBlocks"	INTEGER DEFAULT 0,
+        "profitability"	NUMERIC,
         FOREIGN KEY("token") REFERENCES "Token"("id"),
         FOREIGN KEY("to") REFERENCES "Entity"("name"),
         PRIMARY KEY("from","to","token","blocknumber"),

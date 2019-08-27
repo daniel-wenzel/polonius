@@ -1,0 +1,1 @@
+SELECT MAX(blocknumber) FROM ETransfer

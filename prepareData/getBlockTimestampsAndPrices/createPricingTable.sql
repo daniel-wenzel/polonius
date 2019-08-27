@@ -4,3 +4,6 @@ CREATE TABLE IF NOT EXISTS "Price" (
     "price" REAL NOT NULL,
     PRIMARY KEY("date","token")
 );
+
+CREATE INDEX price_token ON Price("token");
+CREATE INDEX price_date ON price("date");
