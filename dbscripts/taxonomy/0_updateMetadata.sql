@@ -29,7 +29,7 @@ CREATE INDEX outTemp_name ON outTemp("name");
 
 UPDATE EntityMetadata SET 
     indegree = (SELECT indegree FROM inTemp WHERE inTemp.name = EntityMetadata.name),
-    distinct_indegree = (SELECT indegree FROM inTemp WHERE inTemp.name = EntityMetadata.name),
+    distinctInDegree = (SELECT distinct_indegree FROM inTemp WHERE inTemp.name = EntityMetadata.name),
     involumeUSD = (SELECT involumeUSD FROM inTemp WHERE inTemp.name = EntityMetadata.name),
     firstInTransfer = (SELECT firstInTransfer FROM inTemp WHERE inTemp.name = EntityMetadata.name),
     lastInTransfer = (SELECT lastInTransfer FROM inTemp WHERE inTemp.name = EntityMetadata.name)
@@ -37,23 +37,23 @@ WHERE EntityMetadata.name in (SELECT name from inTemp);
 
 UPDATE EntityMetadata SET
     indegree = 0,
-    distinct_indegree = 0,
+    distinctInDegree = 0,
     involumeUSD = 0,
     firstInTransfer = null,
     lastInTransfer = null
 WHERE EntityMetadata.name not in (SELECT name from inTemp);
 
 UPDATE EntityMetadata SET
-    outdegree = (SELECT indegree FROM outTemp WHERE outTemp.name = EntityMetadata.name),
-    distinct_outdegree = (SELECT indegree FROM outTemp WHERE outTemp.name = EntityMetadata.name),
-    outvolumeUSD = (SELECT involumeUSD FROM outTemp WHERE outTemp.name = EntityMetadata.name),
+    outdegree = (SELECT outdegree FROM outTemp WHERE outTemp.name = EntityMetadata.name),
+    distinctOutDegree = (SELECT distinct_outdegree FROM outTemp WHERE outTemp.name = EntityMetadata.name),
+    outvolumeUSD = (SELECT outvolumeUSD FROM outTemp WHERE outTemp.name = EntityMetadata.name),
     firstOutTransfer = (SELECT firstOutTransfer FROM outTemp WHERE outTemp.name = EntityMetadata.name),
     lastOutTransfer = (SELECT lastOutTransfer FROM outTemp WHERE outTemp.name = EntityMetadata.name)
 WHERE EntityMetadata.name in (SELECT name from outTemp);
 
 UPDATE EntityMetadata SET
     outdegree = 0,
-    distinct_outdegree = 0,
+    distinctOutDegree = 0,
     outvolumeUSD = 0,
     firstInTransfer = null,
     lastInTransfer = null
@@ -61,4 +61,4 @@ WHERE EntityMetadata.name not in (SELECT name from outTemp);
 
 UPDATE EntityMetadata SET
     degree = indegree + outdegree,
-    distinctDegree = distinct_indegree + distinct_outdegree; 
+    distinctDegree = distinctInDegree + distinctOutDegree; 
