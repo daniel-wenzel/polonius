@@ -15,7 +15,7 @@ ON
     t.`from` = parent.name and
     parentT.blocknumber = @blocknumber and
     t.blocknumber <= @blocknumber
-GROUP BY e.name, parentT.type
+GROUP BY m.name, parentT.type
 HAVING sum(amountInUSDCurrent) > 0.75 * involumeUSD;
 
 CREATE TEMP TABLE children AS
@@ -35,7 +35,7 @@ ON
     t.`to` = child.name and
     childT.blocknumber = @blocknumber and
     t.blocknumber <= @ blocknumber
-GROUP BY e.name, childT.type
+GROUP BY m.name, childT.type
 HAVING sum(amountInUSDCurrent) > 0.75 * outvolumeUSD;
 
 CREATE INDEX Children_name ON children("name");
