@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS Purchase;
 DROP TABLE IF EXISTS Sale;
-CREATE TABLE Purchase AS
+CREATE TEMP TABLE Purchase AS
 SELECT
     e.name, 
     t.token, 
@@ -11,7 +11,7 @@ SELECT
         ELSE amountInTokens
     END) as amount
 FROM
-    (SELECT * FROM Entity LIMIT 100000) e
+    Entity
     INNER JOIN
     ETransfer t
     ON e.name = t.`to`
@@ -19,7 +19,7 @@ WHERE blocknumber < @blocknumber
 GROUP BY e.name, t.token
 HAVING price > 0;
 
-CREATE TABLE Sale AS
+CREATE TEMP TABLE Sale AS
 SELECT
     e.name, 
     t.token, 
@@ -30,7 +30,7 @@ SELECT
         ELSE amountInTokens
     END) as amount
 FROM
-    (SELECT * FROM Entity LIMIT 100000) e
+    Entity e
     INNER JOIN
     ETransfer t
     ON e.name = t.`from`
@@ -67,7 +67,7 @@ FROM
         Purchase p
         LEFT OUTER JOIN
         Sale s
-        ON p.name = s.name and p.token = s.token) trades
+        ON p.name = s.name and p.token = +s.token) trades
     INNER JOIN
     Price
     ON 
