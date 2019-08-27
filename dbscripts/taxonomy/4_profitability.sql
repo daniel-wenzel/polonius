@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS Purchase;
+/*DROP TABLE IF EXISTS Purchase;
 DROP TABLE IF EXISTS Sale;
 CREATE TABLE Purchase AS
 SELECT
@@ -42,7 +42,7 @@ CREATE INDEX sale_name ON sale("name");
 CREATE INDEX sale_token ON sale("token");
 CREATE INDEX purchase_name ON purchase("name");
 CREATE INDEX purchase_token ON purchase("token");
-
+*/
 CREATE TEMP TABLE Profitability AS
 SELECT
     name,
