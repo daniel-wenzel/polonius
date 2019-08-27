@@ -43,13 +43,13 @@ CREATE INDEX sale_token ON sale("token");
 CREATE INDEX purchase_name ON purchase("name");
 CREATE INDEX purchase_token ON purchase("token");
 */
-CREATE TEMP TABLE Profitability AS
+CREATE TABLE Profits AS
 SELECT
     name,
     SUM(saleProfits) as profits,
     SUM(tokensLeft * price) as holdingValue,
     SUM(purchaseExpenses) as expenses,
-    SUM(saleProfits + tokensLeft * price) / SUM(purchaseExpenses) as profitability
+    SUM(saleProfits + tokensLeft * price) / SUM(purchaseExpenses) as profitPercentage
 FROM
     (SELECT
         p.name,
@@ -76,8 +76,7 @@ FROM
         Price.token = trades.token
 GROUP BY name;
 
-CREATE INDEX Profitability_name ON Profitability("name");
+CREATE INDEX Profits_name ON Profits("name");
 
 UPDATE EntityMetadata 
-SET profitability = (SELECT Profitability.profitability FROM Profitability WHERE Profitability.name = EntityMetadata.name)
-WHERE name <> "0x0000000000000000000000000000000000000002";
+SET profitability = (SELECT Profits.profitPercentage FROM Profits WHERE Profits.name = EntityMetadata.name);
