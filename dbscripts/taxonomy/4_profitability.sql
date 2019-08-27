@@ -1,4 +1,4 @@
-CREATE TEMP TABLE Purchase AS
+CREATE TABLE Purchase AS
 SELECT
     e.name, 
     t.token, 
@@ -17,7 +17,7 @@ WHERE blocknumber < @blocknumber
 GROUP BY e.name, t.token
 HAVING price > 0;
 
-CREATE TEMP TABLE Sale AS
+CREATE TABLE Sale AS
 SELECT
     e.name, 
     t.token, 
