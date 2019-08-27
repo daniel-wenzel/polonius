@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS Purchase;
+DROP TABLE IF EXISTS Sale;
 CREATE TABLE Purchase AS
 SELECT
     e.name, 
@@ -9,7 +11,7 @@ SELECT
         ELSE amountInTokens
     END) as amount
 FROM
-    (SELECT * FROM Entity LIMIT 10000) e
+    (SELECT * FROM Entity LIMIT 100000) e
     INNER JOIN
     ETransfer t
     ON e.name = t.`to`
@@ -28,7 +30,7 @@ SELECT
         ELSE amountInTokens
     END) as amount
 FROM
-    (SELECT * FROM Entity LIMIT 10000) e
+    (SELECT * FROM Entity LIMIT 100000) e
     INNER JOIN
     ETransfer t
     ON e.name = t.`from`
@@ -41,7 +43,7 @@ CREATE INDEX sale_token ON sale("token");
 CREATE INDEX purchase_name ON purchase("name");
 CREATE INDEX purchase_token ON purchase("token");
 
-/*CREATE TEMP TABLE Profitability AS
+CREATE TEMP TABLE Profitability AS
 SELECT
     name,
     SUM(saleProfits) as profits,
@@ -78,5 +80,3 @@ CREATE INDEX Profitability_name ON Profitability("name");
 
 UPDATE EntityMetadata 
 SET profitability = (SELECT profitability FROM Profitability WHERE EntityMetadata.name = Profitability.name);
-
-*/    
