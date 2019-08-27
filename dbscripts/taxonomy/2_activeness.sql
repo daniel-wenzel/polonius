@@ -6,6 +6,7 @@ SET activeness = (
         WHEN @maxDate - MAX(IFNULL(lastInTransfer,0), IFNULL(lastOutTransfer,0)) < 1000 * 60 * 60 * 24 * 7 THEN "weekly"
         WHEN @maxDate - MAX(IFNULL(lastInTransfer,0), IFNULL(lastOutTransfer,0)) < 1000 * 60 * 60 * 24 * 30 THEN "monthly"
         ELSE "inactive"
+    END 
     FROM
         EntityMetadata
     WHERE EntityMetadata.name = EntityTaxonomy.name)
