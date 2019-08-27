@@ -1,6 +1,6 @@
 CREATE TEMP TABLE parents AS
 SELECT 
-    e.name, 
+    m.name, 
     parentT.type
 FROM 
     EntityMetadata m
@@ -20,7 +20,7 @@ HAVING sum(amountInUSDCurrent) > 0.75 * involumeUSD;
 
 CREATE TEMP TABLE children AS
 SELECT 
-    e.name, 
+    m.name, 
     childT.type
 FROM 
     EntityMetadata m
