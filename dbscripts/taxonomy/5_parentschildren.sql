@@ -14,7 +14,7 @@ ON
     m.name = t.`to` and 
     t.`from` = parent.name and
     parentT.blocknumber = @blocknumber and
-    t.blocknumber <= @ blocknumber
+    t.blocknumber <= @blocknumber
 GROUP BY e.name, parentT.type
 HAVING sum(amountInUSDCurrent) > 0.75 * involumeUSD;
 
