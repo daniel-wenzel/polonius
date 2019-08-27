@@ -14,8 +14,9 @@ const createTaxonomy = (blocknumber) => {
         console.log(blocknumber)
     }
     const timestamp = getTimestamp({blocknumber},'get').timestamp
+    const timestampDay = Math.floor(timestamp / 86400) * 86400
     console.log(timestamp)
-    sqlCommands.map(sql => sql({blocknumber, timestamp}))
+    sqlCommands.map(sql => sql({blocknumber, timestamp, timestampDay}))
 }
 init()
 createTaxonomy()

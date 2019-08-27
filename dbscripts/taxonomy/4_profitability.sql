@@ -9,7 +9,7 @@ SELECT
         ELSE amountInTokens
     END) as amount
 FROM
-    Entity e
+    (SELECT * FROM Entity LIMIT 10000) e
     INNER JOIN
     ETransfer t
     ON e.name = t.`to`
@@ -28,7 +28,7 @@ SELECT
         ELSE amountInTokens
     END) as amount
 FROM
-    Entity e
+    (SELECT * FROM Entity LIMIT 10000) e
     INNER JOIN
     ETransfer t
     ON e.name = t.`from`
@@ -41,7 +41,7 @@ CREATE INDEX sale_token ON sale("token");
 CREATE INDEX purchase_name ON purchase("name");
 CREATE INDEX purchase_token ON purchase("token");
 
-CREATE TEMP TABLE Profitability AS
+/*CREATE TEMP TABLE Profitability AS
 SELECT
     name,
     SUM(saleProfits) as profits,
@@ -69,7 +69,7 @@ FROM
     INNER JOIN
     Price
     ON 
-        date = (SELECT CAST(max(timestamp) AS int) FROM ETransfer) / 86400 * 86400
+        date = @timestampDay
         and
         Price.token = trades.token
 GROUP BY name;
@@ -79,4 +79,4 @@ CREATE INDEX Profitability_name ON Profitability("name");
 UPDATE EntityMetadata 
 SET profitability = (SELECT profitability FROM Profitability WHERE EntityMetadata.name = Profitability.name);
 
-    
+*/    
