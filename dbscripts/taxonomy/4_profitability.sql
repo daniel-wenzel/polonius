@@ -43,7 +43,8 @@ CREATE INDEX sale_token ON sale("token");
 CREATE INDEX purchase_name ON purchase("name");
 CREATE INDEX purchase_token ON purchase("token");
 */
-/*CREATE TABLE Profits AS
+DROP TABLE Profits IF EXISTS;
+CREATE TABLE Profits AS
 SELECT
     name,
     SUM(saleProfits) as profits,
@@ -71,10 +72,10 @@ FROM
     INNER JOIN
     Price
     ON 
-        date = @day
+        date = "1556755200"
         and
         Price.token = trades.token
-GROUP BY name;*/
+GROUP BY name;
 
 CREATE INDEX Profits_name ON Profits("name");
 
