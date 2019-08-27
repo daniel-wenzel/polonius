@@ -79,5 +79,8 @@ GROUP BY name;
 
 CREATE INDEX Profits_name ON Profits("name");
 
+UPDATE EntityMetadata
+SET profitability = null;
+
 UPDATE EntityMetadata 
 SET profitability = (SELECT Profits.profitPercentage FROM Profits WHERE Profits.name = EntityMetadata.name);
