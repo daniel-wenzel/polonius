@@ -41,9 +41,9 @@ HAVING sum(amountInUSDCurrent) > 0.75 * outvolumeUSD;
 CREATE INDEX Children_name ON children("name");
 CREATE INDEX Parents_name ON parents("name");
 
-UPDATE EntityTaxonomy
-SET children = (SELECT type FROM children WHERE children.name = EntityTaxonomy.name)
-SET parents = (SELECT type FROM parents WHERE parents.name = EntityTaxonomy.name)
+UPDATE EntityTaxonomy SET 
+    children = (SELECT type FROM children WHERE children.name = EntityTaxonomy.name),
+    parents = (SELECT type FROM parents WHERE parents.name = EntityTaxonomy.name)
 WHERE blocknumber = @blocknumber;
 
 UPDATE EntityTaxonomy
