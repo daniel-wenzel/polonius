@@ -10,10 +10,10 @@ const steps = ['0_updateMetadata', '1_type', '2_activeness', '3_operator', '4_pr
 const sqlCommands = steps.map(s => requireSQL('dbscripts/taxonomy/'+s+".sql"))
 const createTaxonomy = (blocknumber) => {
     if (blocknumber == null) {
-        blocknumber = getMaxBlocknumber({}, 'get').blocknumber
+        blocknumber = getMaxBlocknumber({}, 'get')
         console.log(blocknumber)
     }
-    const timestamp = getTimestamp({blocknumber},'get').timestamp
+    const timestamp = getTimestamp({blocknumber},'get')
     console.log(timestamp)
     //sqlCommands.map(sql => sql({blocknumber, timestamp}))
 }

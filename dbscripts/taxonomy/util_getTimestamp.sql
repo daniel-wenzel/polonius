@@ -1,1 +1,1 @@
-SELECT MIN(timestamp) FROM ETransfer WHERE blocknumber >= @blocknumber
+SELECT MIN(timestamp) as timestamp FROM ETransfer WHERE blocknumber >= @blocknumber

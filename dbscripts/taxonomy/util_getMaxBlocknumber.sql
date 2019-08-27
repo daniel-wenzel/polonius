@@ -1,1 +1,1 @@
-SELECT MAX(blocknumber) FROM ETransfer
+SELECT MAX(blocknumber) as blocknumber FROM ETransfer
