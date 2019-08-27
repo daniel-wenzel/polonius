@@ -1,4 +1,4 @@
-INSERT INTO EntityTaxonomy
+INSERT INTO EntityTaxonomy (name, blocknumber, type)
 SELECT 
 	name, 
     @blocknumber,
@@ -13,7 +13,7 @@ SELECT
 FROM EntityMetadata
 WHERE distinctDegree < 100;
 
-INSERT INTO EntityTaxonomy
+INSERT INTO EntityTaxonomy (name, blocknumber, type)
 SELECT 
 	name, 
     @blocknumber,
