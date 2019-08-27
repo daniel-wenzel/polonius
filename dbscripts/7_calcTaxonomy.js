@@ -15,7 +15,7 @@ const createTaxonomy = (blocknumber) => {
     }
     const timestamp = getTimestamp({blocknumber},'get').timestamp
     console.log(timestamp)
-    //sqlCommands.map(sql => sql({blocknumber, timestamp}))
+    sqlCommands.map(sql => sql({blocknumber, timestamp}))
 }
-//init()
+init()
 createTaxonomy()
