@@ -72,7 +72,7 @@ FROM
     INNER JOIN
     Price
     ON 
-        date = "1556755200"
+        date = @day
         and
         Price.token = trades.token
 GROUP BY name;
