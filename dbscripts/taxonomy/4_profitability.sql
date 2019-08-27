@@ -79,4 +79,4 @@ GROUP BY name;
 CREATE INDEX Profitability_name ON Profitability("name");
 
 UPDATE EntityMetadata 
-SET profitability = (SELECT profitability FROM Profitability WHERE EntityMetadata.name = Profitability.name);
+SET profitability = (SELECT Profitability.profitability FROM Profitability WHERE EntityMetadata.name = Profitability.name);
