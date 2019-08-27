@@ -55,8 +55,8 @@ UPDATE EntityMetadata SET
     outdegree = 0,
     distinctOutDegree = 0,
     outvolumeUSD = 0,
-    firstInTransfer = null,
-    lastInTransfer = null
+    firstOutTransfer = null,
+    lastOutTransfer = null
 WHERE EntityMetadata.name not in (SELECT name from outTemp);
 
 UPDATE EntityMetadata SET

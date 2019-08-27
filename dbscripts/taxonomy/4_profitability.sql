@@ -1,6 +1,7 @@
-/*DROP TABLE IF EXISTS Purchase;
+DROP TABLE IF EXISTS Purchase;
 DROP TABLE IF EXISTS Sale;
-CREATE TABLE Purchase AS
+DROP TABLE IF EXISTS Profits;
+CREATE TEMP TABLE Purchase AS
 SELECT
     e.name, 
     t.token, 
@@ -19,7 +20,7 @@ WHERE blocknumber < @blocknumber
 GROUP BY e.name, t.token
 HAVING price > 0;
 
-CREATE TABLE Sale AS
+CREATE TEMP TABLE Sale AS
 SELECT
     e.name, 
     t.token, 
@@ -42,9 +43,8 @@ CREATE INDEX sale_name ON sale("name");
 CREATE INDEX sale_token ON sale("token");
 CREATE INDEX purchase_name ON purchase("name");
 CREATE INDEX purchase_token ON purchase("token");
-*/
-DROP TABLE IF EXISTS Profits;
-CREATE TABLE Profits AS
+
+CREATE TEMP TABLE Profits AS
 SELECT
     name,
     SUM(saleProfits) as profits,
@@ -79,8 +79,21 @@ GROUP BY name;
 
 CREATE INDEX Profits_name ON Profits("name");
 
-UPDATE EntityMetadata
-SET profitability = null;
-
 UPDATE EntityMetadata 
 SET profitability = (SELECT Profits.profitPercentage FROM Profits WHERE Profits.name = EntityMetadata.name);
+
+UPDATE EntityTaxonomy
+SET profitability = (
+    SELECT CASE
+        WHEN profitability < 0.1 THEN "loss_massive"
+        WHEN profitability < 0.67 THEN "loss_heavy"
+        WHEN profitability < 0.9 THEN "loss"
+        WHEN profitability < 1.1 THEN "steady"
+        WHEN profitability < 1.5 THEN "profit"
+        WHEN profitability < 10 THEN "profit_heavy"
+        ELSE "profit_massive"
+    END 
+    FROM
+        EntityMetadata
+    WHERE EntityMetadata.name = EntityTaxonomy.name)
+WHERE blocknumber = @blocknumber;
