@@ -43,7 +43,7 @@ CREATE INDEX sale_token ON sale("token");
 CREATE INDEX purchase_name ON purchase("name");
 CREATE INDEX purchase_token ON purchase("token");
 */
-DROP TABLE Profits IF EXISTS;
+DROP TABLE IF EXISTS Profits;
 CREATE TABLE Profits AS
 SELECT
     name,
