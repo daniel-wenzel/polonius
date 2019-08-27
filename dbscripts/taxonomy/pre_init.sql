@@ -12,5 +12,5 @@ CREATE TABLE IF NOT EXISTS "EntityTaxonomy" (
         PRIMARY KEY("name", "blocknumber")
     );
 
-CREATE INDEX tax_name ON EntityTaxonomy("name");
-CREATE INDEX tax_blocknumber ON EntityTaxonomy("blocknumber");
+CREATE INDEX IF NOT EXISTS tax_name ON EntityTaxonomy("name");
+CREATE INDEX IF NOT EXISTS  tax_blocknumber ON EntityTaxonomy("blocknumber");
