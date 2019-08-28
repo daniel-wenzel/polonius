@@ -20,6 +20,8 @@ const statements =
         "decimals"	INTEGER NOT NULL,
         "name"	TEXT NOT NULL,
         "address"	TEXT NOT NULL UNIQUE,
+        "reportedSupply" NUMERIC,
+        "actualSupply" NUMERIC,
         PRIMARY KEY("id")
     );CREATE TABLE "Transfer" (
         "from"	TEXT,
