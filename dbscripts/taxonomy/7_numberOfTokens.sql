@@ -19,31 +19,27 @@ GROUP BY `to`;
 
 CREATE INDEX inUsed_name ON inUsed("name");
 CREATE INDEX outUsed_name ON outUsed("name");
+ 
+UPDATE inUsed
+SET cnt = MAX(cnt, SELECT cnt from outUsed where outUsed.name = inUsed.name)
+WHERE name in (SELECT name FROM outUsed);
 
-CREATE TEMP TABLE numTokensUsed AS
-SELECT e.name, MAX(IFNULL(f.cnt, 0), IFNULL(t.cnt, 0))
-FROM
-Entity e
-LEFT OUTER JOIN
-inUsed f
-LEFT OUTER JOIN
-outUsed t
-ON e.name = f.name and e.name = t.name;
+INSERT INTO inUsed
+SELECT * FROM outUsed where outUsed.name not in (SELECT name FROM inUsed);
 
-CREATE INDEX numTokensUsed_name ON numTokensUsed("name");
 UPDATE EntityTaxonomy
 SET numberOfTokens = (
     SELECT CASE
-        WHEN numTokens is null THEN "NONE"
-        WHEN numTokens = 1 THEN "1"
-        WHEN numTokens < 3 THEN "2"
-        WHEN numTokens < 7 THEN "3-6"
-        WHEN numTokens < 7 THEN "6-30"
+        WHEN cnt is null THEN "ERR"
+        WHEN cnt = 1 THEN "1"
+        WHEN cnt < 3 THEN "2"
+        WHEN cnt < 7 THEN "3-6"
+        WHEN cnt < 7 THEN "6-30"
         ELSE ">30"
     END 
     FROM
-        numTokensUsed
-    WHERE numTokensUsed.name = EntityTaxonomy.name)
+        inUsed
+    WHERE inUsed.name = EntityTaxonomy.name)
 WHERE blocknumber = @blocknumber;
 
 UPDATE EntityTaxonomy
