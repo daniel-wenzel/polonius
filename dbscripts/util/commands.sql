@@ -1,16 +1,16 @@
 CREATE TEMP TABLE inTokens AS
-(SELECT
+SELECT
     i.`to` as name, i.`token`, SUM(i.amountInTokens) as amount
 FROM
     ETransfer i
-GROUP BY i.`to`, i.token);
+GROUP BY i.`to`, i.token;
 
 CREATE TEMP TABLE outTokens AS
-(SELECT
+SELECT
     i.`from` as name, i.`token`, SUM(i.amountInTokens) as amount
 FROM
     ETransfer i
-GROUP BY i.`from`, i.token);
+GROUP BY i.`from`, i.token;
 
 CREATE INDEX inTokens_ft ON inTokens("name","token");
 CREATE INDEX inTokens_t ON inTokens("token");
