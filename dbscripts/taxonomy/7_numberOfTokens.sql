@@ -1,9 +1,12 @@
-/*CREATE TABLE inUsed AS
+DROP TABLE IF EXISTS inUsed;
+DROP TABLE IF EXISTS outUsed;
+
+CREATE TEMP TABLE inUsed AS
 SELECT `from` as name,count(distinct token) as cnt FROM ETransfer
 WHERE blocknumber <= @blocknumber
 GROUP BY `from`;
 
-CREATE TABLE outUsed AS
+CREATE TEMP TABLE outUsed AS
 SELECT `to` as name,count(distinct token) as cnt FROM ETransfer
 WHERE blocknumber <= @blocknumber
 GROUP BY `to`;
@@ -17,7 +20,7 @@ WHERE name in (SELECT name FROM outUsed);
 
 INSERT INTO inUsed
 SELECT * FROM outUsed where outUsed.name not in (SELECT name FROM inUsed);
-*/
+
 UPDATE EntityTaxonomy
 SET numberOfTokens = (
     SELECT CASE
