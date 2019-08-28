@@ -25,7 +25,7 @@ SET numberOfTokens = (
         WHEN cnt = 1 THEN "1"
         WHEN cnt < 3 THEN "2"
         WHEN cnt < 7 THEN "3-6"
-        WHEN cnt < 30 THEN "6-30"
+        WHEN cnt <= 30 THEN "6-30"
         ELSE ">30"
     END 
     FROM
