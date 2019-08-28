@@ -1,3 +1,6 @@
+DROP TABLE IF EXISTS inTemp;
+DROP TABLE IF EXISTS outTemp;
+
 CREATE TABLE inTemp AS
 SELECT 
     t.`to` as name,
