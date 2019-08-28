@@ -1,13 +1,4 @@
-/*CREATE TEMP TABLE numTokensUsed AS
-SELECT 
-name, count(distinct token) as numTokens
-FROM
-(SELECT `from` as name, token FROM ETransfer WHERE blocknumber <= @blocknumber
-UNION ALL
-SELECT `to` as name, token FROM ETransfer WHERE blocknumber <= @blocknumber)
-GROUP BY name;*/
-
-CREATE TABLE inUsed AS
+/*CREATE TABLE inUsed AS
 SELECT `from` as name,count(distinct token) as cnt FROM ETransfer
 WHERE blocknumber <= @blocknumber
 GROUP BY `from`;
@@ -26,7 +17,7 @@ WHERE name in (SELECT name FROM outUsed);
 
 INSERT INTO inUsed
 SELECT * FROM outUsed where outUsed.name not in (SELECT name FROM inUsed);
-
+*/
 UPDATE EntityTaxonomy
 SET numberOfTokens = (
     SELECT CASE
@@ -34,7 +25,7 @@ SET numberOfTokens = (
         WHEN cnt = 1 THEN "1"
         WHEN cnt < 3 THEN "2"
         WHEN cnt < 7 THEN "3-6"
-        WHEN cnt < 7 THEN "6-30"
+        WHEN cnt < 30 THEN "6-30"
         ELSE ">30"
     END 
     FROM
