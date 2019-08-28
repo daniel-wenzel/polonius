@@ -1,6 +1,6 @@
 INSERT INTO Price 
 SELECT 
-    replacement.token, replacement.date, p.price
+    replacement.date, replacement.token, p.price
 FROM
     (SELECT
         missing.token, missing.date, MAX(p.date) as replacementDate
