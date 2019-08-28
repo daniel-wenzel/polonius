@@ -5,5 +5,5 @@ CREATE TABLE IF NOT EXISTS "Price" (
     PRIMARY KEY("date","token")
 );
 
-CREATE INDEX price_token ON Price("token");
-CREATE INDEX price_date ON price("date");
+CREATE INDEX IF NOT EXISTS price_token ON Price("token");
+CREATE INDEX IF NOT EXISTS price_date ON price("date");

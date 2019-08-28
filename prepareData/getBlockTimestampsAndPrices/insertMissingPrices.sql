@@ -1,4 +1,4 @@
-INSERT INTO Price 
+INSERT OR IGNORE INTO Price 
 SELECT 
     replacement.date, replacement.token, p.price
 FROM
