@@ -7,12 +7,12 @@ UNION ALL
 SELECT `to` as name, token FROM ETransfer WHERE blocknumber <= @blocknumber)
 GROUP BY name;*/
 
-CREATE TEMP TABLE inUsed AS
+CREATE TABLE inUsed AS
 SELECT `from` as name,count(distinct token) as cnt FROM ETransfer
 WHERE blocknumber <= @blocknumber
 GROUP BY `from`;
 
-CREATE TEMP TABLE outUsed AS
+CREATE TABLE outUsed AS
 SELECT `to` as name,count(distinct token) as cnt FROM ETransfer
 WHERE blocknumber <= @blocknumber
 GROUP BY `to`;
