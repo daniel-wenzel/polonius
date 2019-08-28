@@ -17,6 +17,9 @@ SELECT `to` as name,count(distinct token) as cnt FROM ETransfer
 WHERE blocknumber <= @blocknumber
 GROUP BY `to`;
 
+CREATE INDEX inUsed_name ON inUsed("name");
+CREATE INDEX outUsed_name ON outUsed("name");
+
 CREATE TEMP TABLE numTokensUsed AS
 SELECT e.name, MAX(IFNULL(f.cnt, 0), IFNULL(t.cnt, 0))
 FROM
@@ -27,6 +30,7 @@ LEFT OUTER JOIN
 outUsed t
 ON e.name = f.name and e.name = t.name;
 
+CREATE INDEX numTokensUsed_name ON numTokensUsed("name");
 UPDATE EntityTaxonomy
 SET numberOfTokens = (
     SELECT CASE
