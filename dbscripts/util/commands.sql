@@ -1,3 +1,5 @@
+/*
+
 CREATE TEMP TABLE inTokens AS
 SELECT
     i.`to` as name, i.`token`, SUM(i.amountInTokens) as amount
@@ -30,3 +32,7 @@ GROUP BY i.token;
 
 UPDATE Token
 SET actualSupply = (SELECT supply FROM supplies WHERE supplies.token = Token.id);
+*/
+UPDATE Token
+SET actualSupply = "NOT INCLUDED"
+WHERE id not in (SELECT distinct token from ETransfer);
