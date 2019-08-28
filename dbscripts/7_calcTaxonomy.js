@@ -12,8 +12,8 @@ const steps = [/*
     '2_activeness', 
     '3_operator', 
     '4_profitability', 
-    '5_parentschildren',*/
-    '6_holdingSize',
+    '5_parentschildren',
+    '6_holdingSize',*/
     '7_numberOfTokens'
 ]
 const sqlCommands = steps.map(s => requireSQL('dbscripts/taxonomy/'+s+".sql"))

@@ -1,7 +1,6 @@
-CREATE TEMP TABLE numTokensUsed
-    (SELECT e.`to` as name, count(distinct token) as numTokens
-    FROM ETransfer e) ins
-    LEFT OUTER
+CREATE TEMP TABLE numTokensUsed AS
+SELECT e.`to` as name, count(distinct token) as numTokens
+FROM ETransfer e
 GROUP BY e.`to`
 
 
