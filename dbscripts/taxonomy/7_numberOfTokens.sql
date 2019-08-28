@@ -19,7 +19,7 @@ LEFT OUTER JOIN
 (SELECT `to` as name,count(distinct token) as cnt FROM ETransfer
 WHERE blocknumber <= @blocknumber
 GROUP BY `to`) t
-ON e.name = f.name and e.name = t.name
+ON e.name = f.name and e.name = t.name;
 
 
 UPDATE EntityTaxonomy
