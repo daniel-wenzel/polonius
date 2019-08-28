@@ -1,4 +1,6 @@
-CREATE TABLE parents AS
+DROP TABLE if exists parents;
+DROP TABLE if exists children;
+CREATE TEMP TABLE parents AS
 SELECT 
     m.name, 
     parentT.type
@@ -18,7 +20,7 @@ ON
 GROUP BY m.name, parentT.type
 HAVING sum(amountInUSDCurrent) > 0.75 * involumeUSD;
 
-CREATE TABLE children AS
+CREATE TEMP TABLE children AS
 SELECT 
     m.name, 
     childT.type
@@ -51,9 +53,9 @@ SET children = 'none'
 WHERE blocknumber = @blocknumber and name in (SELECT name from EntityMetadata where distinctOutDegree = 0);
 
 UPDATE EntityTaxonomy
-SET parents = 'mixed'
+SET parents = 'diverse'
 WHERE blocknumber = @blocknumber and parents is null;
 
 UPDATE EntityTaxonomy
-SET children = 'mixed'
+SET children = 'diverse'
 WHERE blocknumber = @blocknumber and children is null;
