@@ -143,6 +143,8 @@ const statements =
         "firstOutTransfer" INTEGER,
         "lastInTransfer" INTEGER,
         "lastOutTransfer" INTEGER,
+        "involumeUSD_adjusted" NUMERIC,
+        "outvolumeUSD_adjusted" NUMERIC,
         PRIMARY KEY("name")
     );
 

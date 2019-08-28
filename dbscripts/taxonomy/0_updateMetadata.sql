@@ -4,7 +4,7 @@ SELECT
     count(distinct t.`from`) as distinct_indegree,
     count(t.`from`) as indegree,
     sum(amountInUSDCurrent) as involumeUSD,
-    sum(amountInUSDCurrent * excludeFromAdjustedVolumes) as involumeUSD_adjusted,
+    sum(amountInUSDCurrent) - sum(amountInUSDCurrent * excludeFromAdjustedVolumes) as involumeUSD_adjusted,
     MIN(timestamp) as firstInTransfer,
     Max(timestamp) as lastInTransfer
 FROM 
@@ -21,7 +21,7 @@ SELECT
     count(distinct t.`to`) as distinct_outdegree,
     count(t.`to`) as outdegree,
     sum(amountInUSDCurrent) as outvolumeUSD,
-    sum(amountInUSDCurrent * excludeFromAdjustedVolumes) as outvolumeUSD_adjusted,
+    sum(amountInUSDCurrent) - sum(amountInUSDCurrent * excludeFromAdjustedVolumes) as outvolumeUSD_adjusted,
     MIN(timestamp) as firstOutTransfer,
     Max(timestamp) as lastOutTransfer
 FROM 
