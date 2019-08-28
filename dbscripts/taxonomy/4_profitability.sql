@@ -85,13 +85,13 @@ SET profitability = (SELECT Profits.profitPercentage FROM Profits WHERE Profits.
 UPDATE EntityTaxonomy
 SET profitability = (
     SELECT CASE
-        WHEN profitability < 0.1 THEN "loss_massive"
-        WHEN profitability < 0.67 THEN "loss_heavy"
-        WHEN profitability < 0.9 THEN "loss"
-        WHEN profitability < 1.1 THEN "steady"
-        WHEN profitability < 1.5 THEN "profit"
-        WHEN profitability < 10 THEN "profit_heavy"
-        ELSE "profit_massive"
+        WHEN profitability < 0.1 THEN "loss_<.1"
+        WHEN profitability < 0.67 THEN "loss_<.67"
+        WHEN profitability < 0.9 THEN "loss_<.9"
+        WHEN profitability < 1.1 THEN "steady>=.9,<1.1"
+        WHEN profitability < 1.5 THEN "profit<1.5"
+        WHEN profitability < 10 THEN "profit_heavy<10"
+        ELSE "profit_massive>=10"
     END 
     FROM
         EntityMetadata

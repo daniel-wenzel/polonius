@@ -1,4 +1,4 @@
-CREATE TEMP TABLE parents AS
+CREATE TABLE parents AS
 SELECT 
     m.name, 
     parentT.type
@@ -18,7 +18,7 @@ ON
 GROUP BY m.name, parentT.type
 HAVING sum(amountInUSDCurrent) > 0.75 * involumeUSD;
 
-CREATE TEMP TABLE children AS
+CREATE TABLE children AS
 SELECT 
     m.name, 
     childT.type

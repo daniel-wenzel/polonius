@@ -8,11 +8,11 @@ const getMaxBlocknumber = requireSQL('dbscripts/taxonomy/util_getMaxBlocknumber.
 
 const steps = [/*
     '0_updateMetadata', 
-    '1_type', */
+    '1_type', 
     '2_activeness', 
     '3_operator', 
-    /*'4_profitability', 
-    '5_parentschildren',
+    '4_profitability', */
+    '5_parentschildren',/*
     '6_holdingSize',
     '7_numberOfTokens'*/
 ]
