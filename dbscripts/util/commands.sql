@@ -37,7 +37,8 @@ SET actualSupply = (SELECT supply FROM supplies WHERE supplies.token = Token.id)
 ALTER TABLE Token
 ADD COLUMN 
     "excludeFromAdjustedVolumes" INT;
-CREATE INDEX Token_exclude AS Token('excludeFromAdjustedVolumes');
+
+CREATE INDEX Token_exclude ON Token('excludeFromAdjustedVolumes');
 
 UPDATE Token
 SET excludeFromAdjustedVolumes = actualSupply / 1.0 / reportedSupply > 2;
