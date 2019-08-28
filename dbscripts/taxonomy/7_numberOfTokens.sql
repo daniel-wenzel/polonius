@@ -21,7 +21,7 @@ CREATE INDEX inUsed_name ON inUsed("name");
 CREATE INDEX outUsed_name ON outUsed("name");
  
 UPDATE inUsed
-SET cnt = MAX(cnt, SELECT cnt from outUsed where outUsed.name = inUsed.name)
+SET cnt = MAX(cnt, (SELECT cnt from outUsed where outUsed.name = inUsed.name))
 WHERE name in (SELECT name FROM outUsed);
 
 INSERT INTO inUsed
