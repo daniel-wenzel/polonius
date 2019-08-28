@@ -1,3 +1,4 @@
+INSERT INTO Price 
 SELECT 
     replacement.token, replacement.date, p.price
 FROM
