@@ -6,3 +6,11 @@ WHERE EntityTaxonomy.name in
     FROM
         Address
     WHERE isCappReceiver = 1);
+
+UPDATE EntityTaxonomy
+SET operator = 'other'
+WHERE EntityTaxonomy.name not in
+    (SELECT DISTINCT Address.cluster
+    FROM
+        Address
+    WHERE isCappReceiver = 1);
