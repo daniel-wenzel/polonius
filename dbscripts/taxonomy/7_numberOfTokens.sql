@@ -1,6 +1,6 @@
 CREATE TEMP TABLE numTokensUsed AS
 SELECT 
-    e.`to` as name, count(distinct token) as numTokens
+    name, count(distinct token) as numTokens
 FROM
     Entity e
     INNER JOIN
