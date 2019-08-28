@@ -7,7 +7,7 @@ FROM
     ETransfer t
     ON e.name = t.`from` or e.name = t.`to`
 WHERE blocknumber <= @blocknumber
-GROUP BY e.`to`;
+GROUP BY name;
 
 UPDATE EntityTaxonomy
 SET numberOfTokens = (
