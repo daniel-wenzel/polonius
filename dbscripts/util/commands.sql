@@ -18,7 +18,7 @@ CREATE INDEX outTokens_ft ON outTokens("name","token");
 
 CREATE TEMP TABLE supplies AS
 SELECT
-    token, SUM(i.amount - IFNULL(o.amount,0)) as supply
+    i.token, SUM(i.amount - IFNULL(o.amount,0)) as supply
 FROM
     inTokens i
     LEFT OUTER JOIN
