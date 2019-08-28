@@ -1,12 +1,12 @@
 
-CREATE TEMP TABLE inTokens AS
+CREATE TABLE inTokens AS
 SELECT
     i.`to` as name, i.`token`, SUM(i.amountInTokens) as amount
 FROM
     ETransfer i
 GROUP BY i.`to`, i.token;
 
-CREATE TEMP TABLE outTokens AS
+CREATE TABLE outTokens AS
 SELECT
     i.`from` as name, i.`token`, SUM(i.amountInTokens) as amount
 FROM
@@ -17,7 +17,7 @@ CREATE INDEX inTokens_ft ON inTokens("name","token");
 CREATE INDEX inTokens_t ON inTokens("token");
 CREATE INDEX outTokens_ft ON outTokens("name","token");
 
-CREATE TEMP TABLE supplies AS
+CREATE TABLE supplies AS
 SELECT
     i.token, SUM(i.amount - IFNULL(o.amount,0)) as supply
 FROM
