@@ -1,12 +1,10 @@
 CREATE TEMP TABLE numTokensUsed AS
 SELECT 
-    name, count(distinct token) as numTokens
+name, count(distinct token) as numTokens
 FROM
-    Entity e
-    INNER JOIN
-    ETransfer t
-    ON e.name = t.`from` or e.name = t.`to`
-WHERE blocknumber <= @blocknumber
+(SELECT `from` as name, token FROM ETransfer WHERE blocknumber <= @blocknumber
+UNION ALL
+SELECT `to` as name, token FROM ETransfer WHERE blocknumber <= @blocknumber)
 GROUP BY name;
 
 UPDATE EntityTaxonomy
