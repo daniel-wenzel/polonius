@@ -7,20 +7,25 @@ UNION ALL
 SELECT `to` as name, token FROM ETransfer WHERE blocknumber <= @blocknumber)
 GROUP BY name;*/
 
+CREATE TEMP TABLE inUsed AS
+SELECT `from` as name,count(distinct token) as cnt FROM ETransfer
+WHERE blocknumber <= @blocknumber
+GROUP BY `from`;
+
+CREATE TEMP TABLE outUsed AS
+SELECT `to` as name,count(distinct token) as cnt FROM ETransfer
+WHERE blocknumber <= @blocknumber
+GROUP BY `to`;
+
 CREATE TEMP TABLE numTokensUsed AS
 SELECT e.name, MAX(IFNULL(f.cnt, 0), IFNULL(t.cnt, 0))
 FROM
 Entity e
 LEFT OUTER JOIN
-(SELECT `from` as name,count(distinct token) as cnt FROM ETransfer
-WHERE blocknumber <= @blocknumber
-GROUP BY `from`) f
+inUsed f
 LEFT OUTER JOIN
-(SELECT `to` as name,count(distinct token) as cnt FROM ETransfer
-WHERE blocknumber <= @blocknumber
-GROUP BY `to`) t
+outUsed t
 ON e.name = f.name and e.name = t.name;
-
 
 UPDATE EntityTaxonomy
 SET numberOfTokens = (
