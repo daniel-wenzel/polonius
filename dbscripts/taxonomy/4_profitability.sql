@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS Purchase;
 DROP TABLE IF EXISTS Sale;
 DROP TABLE IF EXISTS Profits;
-CREATE TEMP TABLE Purchase AS
+CREATE TABLE Purchase AS
 SELECT
     e.name, 
     t.token, 
@@ -20,7 +20,7 @@ WHERE blocknumber < @blocknumber
 GROUP BY e.name, t.token
 HAVING price > 0;
 
-CREATE TEMP TABLE Sale AS
+CREATE TABLE Sale AS
 SELECT
     e.name, 
     t.token, 
@@ -44,7 +44,7 @@ CREATE INDEX sale_token ON sale("token");
 CREATE INDEX purchase_name ON purchase("name");
 CREATE INDEX purchase_token ON purchase("token");
 
-CREATE TEMP TABLE Profits AS
+CREATE TABLE Profits AS
 SELECT
     name,
     SUM(saleProfits) as profits,
@@ -91,7 +91,8 @@ SET profitability = (
         WHEN profitability < 1.1 THEN "steady>=.9,<1.1"
         WHEN profitability < 1.5 THEN "profit<1.5"
         WHEN profitability < 10 THEN "profit_heavy<10"
-        ELSE "profit_massive>=10"
+        WHEN profitability >= 10 THEN "profit_massive>=10"
+        ELSE "UNKNOWN"
     END 
     FROM
         EntityMetadata
