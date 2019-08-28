@@ -13,7 +13,7 @@ FROM
     Token
     ON t.token = Token.id
 WHERE blocknumber <= @blocknumber
-GROUP BY name;
+GROUP BY t.`to`;
 
 CREATE TABLE outTemp AS
 SELECT 
@@ -30,7 +30,7 @@ FROM
     Token
     ON t.token = Token.id
 WHERE blocknumber <= @blocknumber
-GROUP BY name;
+GROUP BY t.`from`;
 
 CREATE INDEX inTemp_name ON inTemp("name");
 CREATE INDEX outTemp_name ON outTemp("name");
