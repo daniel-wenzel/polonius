@@ -1,4 +1,4 @@
-CREATE TEMP TABLE inTemp AS
+CREATE TABLE inTemp AS
 SELECT 
     t.`to` as name,
     count(distinct t.`from`) as distinct_indegree,
@@ -15,7 +15,7 @@ FROM
 WHERE blocknumber <= @blocknumber
 GROUP BY name;
 
-CREATE TEMP TABLE outTemp AS
+CREATE TABLE outTemp AS
 SELECT 
     t.`from` as name,
     count(distinct t.`to`) as distinct_outdegree,
