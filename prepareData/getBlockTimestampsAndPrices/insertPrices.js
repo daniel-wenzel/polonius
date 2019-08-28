@@ -18,13 +18,13 @@ async function insertPricesForToken(token) {
 }
 async function run() {
     try {
-        /*createPricingTable()
+        createPricingTable()
         const tokens = getTokens(undefined, 'all')
-        console.log(tokens.length+" tokens found")
+        /*console.log(tokens.length+" tokens found")
         for (const {token} of tokens) {
             await insertPricesForToken(token)
-        }*/
-        insertMissingPrices()
+        }
+        insertMissingPrices()*/
         for (const {token} of tokens) {
             writePrices({token})
         }
