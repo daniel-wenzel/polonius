@@ -90,8 +90,8 @@ SET yield = (
         WHEN profitability < 0.9 THEN "loss<.9"
         WHEN profitability < 1.1 THEN "steady>=.9,<1.1"
         WHEN profitability < 1.5 THEN "profit<1.5"
-        WHEN profitability < 10 THEN "profit_heavy<10"
-        WHEN profitability >= 10 THEN "profit_massive>=10"
+        WHEN profitability < 10 THEN "profit<10"
+        WHEN profitability >= 10 THEN "profit>=10"
         ELSE "unknown"
     END 
     FROM
