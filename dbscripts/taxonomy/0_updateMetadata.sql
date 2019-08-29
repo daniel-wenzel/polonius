@@ -3,6 +3,7 @@ DROP TABLE IF EXISTS outTemp;
 
 CREATE TABLE inTemp AS
 SELECT
+    name,
     count(distinct other) as distinct_indegree,
     count(*) as indegree,
     sum(amount) as involumeUSD,
@@ -25,6 +26,7 @@ GROUP BY name;
 
 CREATE TABLE outTemp AS
 SELECT
+    name,
     count(distinct other) as distinct_outdegree,
     count(*) as outdegree,
     sum(amount) as outvolumeUSD,
