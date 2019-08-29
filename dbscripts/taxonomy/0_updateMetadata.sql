@@ -8,6 +8,7 @@ SELECT
     count(*) as indegree,
     sum(amount) as involumeUSD,
     sum(amount_adjusted) as involumeUSD_adjusted,
+    sum(amount_highcap) as involumeUSD_highcap,
     MIN(timestamp) as firstInTransfer,
     Max(timestamp) as lastInTransfer
 FROM 
@@ -16,6 +17,7 @@ FROM
         t.`from` as other,
         amountInUSDCurrent as amount,
         amountInUSDCurrent - amountInUSDCurrent * excludeFromAdjustedVolumes as amount_adjusted,
+        amountInUSDCurrent * highMarketCap as amount_highcap,
         timestamp
     FROM 
         ETransfer t
@@ -31,6 +33,7 @@ SELECT
     count(*) as outdegree,
     sum(amount) as outvolumeUSD,
     sum(amount_adjusted) as outvolumeUSD_adjusted,
+    sum(amount_highcap) as outvolumeUSD_highcap,
     MIN(timestamp) as firstOutTransfer,
     Max(timestamp) as lastOutTransfer
 FROM 
@@ -39,6 +42,7 @@ FROM
         t.`to` as other,
         amountInUSDCurrent as amount,
         amountInUSDCurrent - amountInUSDCurrent * excludeFromAdjustedVolumes as amount_adjusted,
+        amountInUSDCurrent * highMarketCap as amount_highcap,
         timestamp
     FROM 
         ETransfer t
@@ -55,6 +59,7 @@ UPDATE EntityMetadata SET
     distinctInDegree = (SELECT distinct_indegree FROM inTemp WHERE inTemp.name = EntityMetadata.name),
     involumeUSD = (SELECT involumeUSD FROM inTemp WHERE inTemp.name = EntityMetadata.name),
     involumeUSD_adjusted = (SELECT involumeUSD_adjusted FROM inTemp WHERE inTemp.name = EntityMetadata.name),
+    involumeUSD_highcap = (SELECT involumeUSD_highcap FROM inTemp WHERE inTemp.name = EntityMetadata.name),
     firstInTransfer = (SELECT firstInTransfer FROM inTemp WHERE inTemp.name = EntityMetadata.name),
     lastInTransfer = (SELECT lastInTransfer FROM inTemp WHERE inTemp.name = EntityMetadata.name)
 WHERE EntityMetadata.name in (SELECT name from inTemp);
@@ -64,6 +69,7 @@ UPDATE EntityMetadata SET
     distinctInDegree = 0,
     involumeUSD = 0,
     involumeUSD_adjusted = 0,
+    involumeUSD_highcap = 0,
     firstInTransfer = null,
     lastInTransfer = null
 WHERE EntityMetadata.name not in (SELECT name from inTemp);
@@ -73,6 +79,7 @@ UPDATE EntityMetadata SET
     distinctOutDegree = (SELECT distinct_outdegree FROM outTemp WHERE outTemp.name = EntityMetadata.name),
     outvolumeUSD = (SELECT outvolumeUSD FROM outTemp WHERE outTemp.name = EntityMetadata.name),
     outvolumeUSD_adjusted = (SELECT outvolumeUSD_adjusted FROM outTemp WHERE outTemp.name = EntityMetadata.name),
+    outvolumeUSD_highcap = (SELECT outvolumeUSD_highcap FROM inTemp WHERE inTemp.name = EntityMetadata.name),
     firstOutTransfer = (SELECT firstOutTransfer FROM outTemp WHERE outTemp.name = EntityMetadata.name),
     lastOutTransfer = (SELECT lastOutTransfer FROM outTemp WHERE outTemp.name = EntityMetadata.name)
 WHERE EntityMetadata.name in (SELECT name from outTemp);
@@ -82,6 +89,7 @@ UPDATE EntityMetadata SET
     distinctOutDegree = 0,
     outvolumeUSD = 0,
     outvolumeUSD_adjusted = 0,
+    outvolumeUSD_highcap = 0,
     firstOutTransfer = null,
     lastOutTransfer = null
 WHERE EntityMetadata.name not in (SELECT name from outTemp);

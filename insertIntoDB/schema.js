@@ -23,6 +23,7 @@ const statements =
         "reportedSupply" NUMERIC,
         "actualSupply" NUMERIC,
         "excludeFromAdjustedVolumes" INT,
+        "highMarketCap" INT DEFAULT 0,
         PRIMARY KEY("id")
     );CREATE TABLE "Transfer" (
         "from"	TEXT,
@@ -145,6 +146,8 @@ const statements =
         "lastOutTransfer" INTEGER,
         "involumeUSD_adjusted" NUMERIC,
         "outvolumeUSD_adjusted" NUMERIC,
+        "outvolumeUSD_highcap" NUMERIC DEFAULT 0,
+        "involumeUSD_highcap" NUMERIC DEFAULT 0,
         PRIMARY KEY("name")
     );
 
