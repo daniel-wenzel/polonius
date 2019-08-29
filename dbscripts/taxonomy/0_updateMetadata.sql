@@ -79,7 +79,7 @@ UPDATE EntityMetadata SET
     distinctOutDegree = (SELECT distinct_outdegree FROM outTemp WHERE outTemp.name = EntityMetadata.name),
     outvolumeUSD = (SELECT outvolumeUSD FROM outTemp WHERE outTemp.name = EntityMetadata.name),
     outvolumeUSD_adjusted = (SELECT outvolumeUSD_adjusted FROM outTemp WHERE outTemp.name = EntityMetadata.name),
-    outvolumeUSD_highcap = (SELECT outvolumeUSD_highcap FROM inTemp WHERE inTemp.name = EntityMetadata.name),
+    outvolumeUSD_highcap = (SELECT outvolumeUSD_highcap FROM outTemp WHERE outTemp.name = EntityMetadata.name),
     firstOutTransfer = (SELECT firstOutTransfer FROM outTemp WHERE outTemp.name = EntityMetadata.name),
     lastOutTransfer = (SELECT lastOutTransfer FROM outTemp WHERE outTemp.name = EntityMetadata.name)
 WHERE EntityMetadata.name in (SELECT name from outTemp);
