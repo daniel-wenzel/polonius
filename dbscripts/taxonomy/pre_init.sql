@@ -1,10 +1,11 @@
+DROP TABLE EntityTaxonomy;
 CREATE TABLE IF NOT EXISTS "EntityTaxonomy" (
         "name" TEXT NOT NULL,
 		"blocknumber" INTEGER NOT NULL, 
         "type" TEXT, /* ICO, Exchange, Diluter, Mixer, Concentrator, Sink .. */
 		"operator" TEXT DEFAULT "external", /* External, Smart Contract, Capp */
 		"activeness" TEXT, /* Empty, Daily Active, Weekly Active, Monthly Active, Inactive */
-		"profitability" TEXT, /* ??? */
+		"yield" TEXT, /* ??? */
 		"parents" TEXT, /* ??? */
 		"children" TEXT, /* ??? */
 		"holdingSize" TEXT, /* ??? */

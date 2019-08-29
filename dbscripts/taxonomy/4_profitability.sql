@@ -83,7 +83,7 @@ UPDATE EntityMetadata
 SET profitability = (SELECT Profits.profitPercentage FROM Profits WHERE Profits.name = EntityMetadata.name);
 
 UPDATE EntityTaxonomy
-SET profitability = (
+SET yield = (
     SELECT CASE
         WHEN profitability < 0.1 THEN "loss<.1"
         WHEN profitability < 0.67 THEN "loss<.67"
