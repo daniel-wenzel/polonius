@@ -2,38 +2,48 @@ DROP TABLE IF EXISTS inTemp;
 DROP TABLE IF EXISTS outTemp;
 
 CREATE TABLE inTemp AS
-SELECT 
-    t.`to` as name,
-    count(distinct t.`from`) as distinct_indegree,
-    count(t.`from`) as indegree,
-    sum(amountInUSDCurrent) as involumeUSD,
-    sum(amountInUSDCurrent) - sum(amountInUSDCurrent * excludeFromAdjustedVolumes) as involumeUSD_adjusted,
+SELECT
+    count(distinct other) as distinct_indegree,
+    count(*) as indegree,
+    sum(amount) as involumeUSD,
+    sum(amount_adjusted) as involumeUSD_adjusted,
     MIN(timestamp) as firstInTransfer,
     Max(timestamp) as lastInTransfer
 FROM 
-    ETransfer t
-    INNER JOIN
-    Token
-    ON t.token = Token.id
-WHERE blocknumber <= @blocknumber
-GROUP BY t.`to`;
+    (SELECT 
+        t.`to` as name,
+        t.`from` as other,
+        amountInUSDCurrent as amount,
+        amountInUSDCurrent - amountInUSDCurrent * excludeFromAdjustedVolumes as amount_adjusted,
+        timestamp
+    FROM 
+        ETransfer t
+        INNER JOIN
+        Token
+        ON t.token = Token.id)
+GROUP BY name;
 
 CREATE TABLE outTemp AS
-SELECT 
-    t.`from` as name,
-    count(distinct t.`to`) as distinct_outdegree,
-    count(t.`to`) as outdegree,
-    sum(amountInUSDCurrent) as outvolumeUSD,
-    sum(amountInUSDCurrent) - sum(amountInUSDCurrent * excludeFromAdjustedVolumes) as outvolumeUSD_adjusted,
+SELECT
+    count(distinct other) as distinct_outdegree,
+    count(*) as outdegree,
+    sum(amount) as outvolumeUSD,
+    sum(amount_adjusted) as outvolumeUSD_adjusted,
     MIN(timestamp) as firstOutTransfer,
     Max(timestamp) as lastOutTransfer
 FROM 
-    ETransfer t
-    INNER JOIN
-    Token
-    ON t.token = Token.id
-WHERE blocknumber <= @blocknumber
-GROUP BY t.`from`;
+    (SELECT 
+        t.`from` as name,
+        t.`to` as other,
+        amountInUSDCurrent as amount,
+        amountInUSDCurrent - amountInUSDCurrent * excludeFromAdjustedVolumes as amount_adjusted,
+        timestamp
+    FROM 
+        ETransfer t
+        INNER JOIN
+        Token
+        ON t.token = Token.id)
+GROUP BY name;
 
 CREATE INDEX inTemp_name ON inTemp("name");
 CREATE INDEX outTemp_name ON outTemp("name");
