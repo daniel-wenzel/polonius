@@ -10,7 +10,8 @@ SELECT
     CASE 
         WHEN amountInUSD is null THEN 0
         ELSE amountInTokens
-    END) as amount
+    END) as amount,
+    SUM(amountInTokens) as amount_unadjusted
 FROM
     Entity e
     INNER JOIN
@@ -29,7 +30,8 @@ SELECT
     CASE 
         WHEN amountInUSD is null THEN 0
         ELSE amountInTokens
-    END) as amount
+    END) as amount,
+    SUM(amountInTokens) as amount_unadjusted
 FROM
     Entity e
     INNER JOIN
@@ -50,7 +52,9 @@ SELECT
     SUM(saleProfits) as profits,
     SUM(tokensLeft * price) as holdingValue,
     SUM(purchaseExpenses) as expenses,
-    SUM(saleProfits + tokensLeft * price) / SUM(purchaseExpenses) as profitPercentage
+    SUM(saleProfits + tokensLeft * price) / SUM(purchaseExpenses) as profitPercentage,
+    SUM(amount_unadjusted),
+    sum(tokensLeft_unadjusted)
 FROM
     (SELECT
         p.name,
@@ -63,7 +67,11 @@ FROM
         CASE (IFNULL(s.amount,0) > p.amount)
             WHEN 1 THEN 0
             ELSE p.amount - IFNULL(s.amount,0)
-        END as tokensLeft
+        END as tokensLeft,
+        CASE (IFNULL(s.amount_unadjusted,0) > p.amount_unadjusted)
+            WHEN 1 THEN 0
+            ELSE p.amount - IFNULL(s.amount,0)
+        END as tokensLeft_unadjusted,
     FROM
         Purchase p
         LEFT OUTER JOIN
