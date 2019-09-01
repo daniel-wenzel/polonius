@@ -53,8 +53,7 @@ SELECT
     SUM(tokensLeft * price) as holdingValue,
     SUM(purchaseExpenses) as expenses,
     SUM(saleProfits + tokensLeft * price) / SUM(purchaseExpenses) as profitPercentage,
-    SUM(amount_unadjusted),
-    sum(tokensLeft_unadjusted)
+    SUM(amount_unadjusted)
 FROM
     (SELECT
         p.name,
@@ -67,11 +66,7 @@ FROM
         CASE (IFNULL(s.amount,0) > p.amount)
             WHEN 1 THEN 0
             ELSE p.amount - IFNULL(s.amount,0)
-        END as tokensLeft,
-        CASE (IFNULL(s.amount_unadjusted,0) > p.amount_unadjusted)
-            WHEN 1 THEN 0
-            ELSE p.amount - IFNULL(s.amount,0)
-        END as tokensLeft_unadjusted,
+        END as tokensLeft
     FROM
         Purchase p
         LEFT OUTER JOIN
