@@ -52,8 +52,7 @@ SELECT
     SUM(saleProfits) as profits,
     SUM(tokensLeft * price) as holdingValue,
     SUM(purchaseExpenses) as expenses,
-    SUM(saleProfits + tokensLeft * price) / SUM(purchaseExpenses) as profitPercentage,
-    SUM(amount_unadjusted)
+    SUM(saleProfits + tokensLeft * price) / SUM(purchaseExpenses) as profitPercentage
 FROM
     (SELECT
         p.name,
