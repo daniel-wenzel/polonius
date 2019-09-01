@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS Purchase;
+/*DROP TABLE IF EXISTS Purchase;
 DROP TABLE IF EXISTS Sale;
 DROP TABLE IF EXISTS Profits;
 CREATE TABLE Purchase AS
@@ -45,7 +45,7 @@ CREATE INDEX sale_name ON sale("name");
 CREATE INDEX sale_token ON sale("token");
 CREATE INDEX purchase_name ON purchase("name");
 CREATE INDEX purchase_token ON purchase("token");
-
+*/
 CREATE TABLE Profits AS
 SELECT
     name,
