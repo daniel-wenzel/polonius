@@ -42,11 +42,6 @@ WHERE
 CREATE INDEX TokBal_name ON TokenBalance("name");
 CREATE INDEX TokBal_token ON TokenBalance("token");
     
-
-
-/*UPDATE TokenBalance
-SET percentage = 1.0*balance / (SELECT totalBalance FROM BalanceSums b WHERE b.token = TokenBalance.token);
-*/
 INSERT INTO TokenBalance
 SELECT 
     name,
