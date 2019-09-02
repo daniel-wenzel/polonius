@@ -2,7 +2,7 @@
 DROP TABLE IF EXISTS TokenBalance;
 DROP TABLE IF EXISTS BalanceSums;
 
-CREATE Table BalanceSums AS
+CREATE TEMP Table BalanceSums AS
 SELECT 
     p.token, 
     SUM(CASE 
@@ -54,4 +54,15 @@ SELECT
 FROM
     TokenBalance
 WHERE token not in (SELECT id FROM Token WHERE excludeFromAdjustedVolumes = 1)
-GROUP BY name
+GROUP BY name;
+
+INSERT INTO TokenBalance
+SELECT 
+    name,
+    "HIGH_CAP",
+    null,
+    sum(percentage) / (SELECT count(distinct token) from TokenBalance inner join token ON TokenBalance.token = token.id where token.highMarketCap = 1)
+FROM
+    TokenBalance
+WHERE token in (SELECT id FROM Token WHERE highMarketCap = 1)
+GROUP BY name;
