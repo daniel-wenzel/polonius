@@ -1,4 +1,5 @@
 /* Here we are calculating the balance of each entity in tokens for later analysis */
+DROP TABLE IF EXISTS TokenBalance;
 CREATE TABLE TokenBalance AS
 SELECT 
     p.name, p.token, 
@@ -26,6 +27,7 @@ INSERT INTO TokenBalance
 SELECT 
     name,
     "ALL_ADJUSTED",
+    null,
     sum(percentage) / (SELECT count(distinct token) from TokenBalance inner join token ON TokenBalance.token = token.id where token.excludeFromAdjustedVolumes = 0)
 FROM
     TokenBalance
