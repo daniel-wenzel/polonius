@@ -20,7 +20,7 @@ WHERE
 CREATE INDEX TokBal_name ON TokenBalance("name");
 CREATE INDEX TokBal_token ON TokenBalance("token");
     
-CREATE TEMP Table BalanceSums
+CREATE TEMP Table BalanceSums AS
 SELECT token, balance as totalBalance
 FROM TokenBalance
 GROUP BY token;
