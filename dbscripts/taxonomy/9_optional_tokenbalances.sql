@@ -1,5 +1,22 @@
 /* Here we are calculating the balance of each entity in tokens for later analysis */
 DROP TABLE IF EXISTS TokenBalance;
+
+CREATE TEMP Table BalanceSums AS
+SELECT 
+    p.token, 
+    SUM(CASE 
+        WHEN p.amount_unadjusted - IFNULL(s.amount_unadjusted, 0) > 0 THEN p.amount_unadjusted - IFNULL(s.amount_unadjusted, 0)
+        ELSE 0
+    END) as totalBalance,
+FROM
+    Purchase p
+    LEFT OUTER JOIN
+    Sale s
+    ON p.name = s.name and p.token = +s.token
+WHERE 
+    p.amount_unadjusted >= IFNULL(s.amount_unadjusted, 0);
+GROUP BY token;
+
 CREATE TABLE TokenBalance AS
 SELECT 
     p.name, p.token, 
@@ -7,7 +24,10 @@ SELECT
         WHEN p.amount_unadjusted - IFNULL(s.amount_unadjusted, 0) > 0 THEN p.amount_unadjusted - IFNULL(s.amount_unadjusted, 0)
         ELSE 0
     END as balance,
-    null as percentage
+    1.0*CASE 
+        WHEN p.amount_unadjusted - IFNULL(s.amount_unadjusted, 0) > 0 THEN p.amount_unadjusted - IFNULL(s.amount_unadjusted, 0)
+        ELSE 0
+    END / (SELECT totalBalance FROM BalanceSums WHERE BalanceSums.token = p.token) as percentage
 FROM
     Purchase p
     LEFT OUTER JOIN
@@ -20,14 +40,11 @@ WHERE
 CREATE INDEX TokBal_name ON TokenBalance("name");
 CREATE INDEX TokBal_token ON TokenBalance("token");
     
-CREATE TEMP Table BalanceSums AS
-SELECT token, balance as totalBalance
-FROM TokenBalance
-GROUP BY token;
 
-UPDATE TokenBalance
+
+/*UPDATE TokenBalance
 SET percentage = 1.0*balance / (SELECT totalBalance FROM BalanceSums b WHERE b.token = TokenBalance.token);
-
+*/
 INSERT INTO TokenBalance
 SELECT 
     name,
