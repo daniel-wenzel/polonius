@@ -23,7 +23,7 @@ SELECT
     x.name,
     x.token,
     x.balance,
-    x.balance * 1.0 / totalBalance
+    x.balance * 1.0 / totalBalance as percentage
 FROM
     (SELECT 
         p.name, p.token, 
