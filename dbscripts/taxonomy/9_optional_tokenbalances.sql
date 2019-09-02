@@ -27,12 +27,14 @@ SELECT
     1.0*CASE 
         WHEN p.amount_unadjusted - IFNULL(s.amount_unadjusted, 0) > 0 THEN p.amount_unadjusted - IFNULL(s.amount_unadjusted, 0)
         ELSE 0
-    END / (SELECT totalBalance FROM BalanceSums WHERE BalanceSums.token = p.token) as percentage
+    END / sum.totalBalance as percentage
 FROM
+    BalanceSums sum
+    INNER JOIN
     Purchase p
     LEFT OUTER JOIN
     Sale s
-    ON p.name = s.name and p.token = +s.token
+    ON p.name = s.name and p.token = +s.token and p.token = +sum.token
 WHERE 
     /*p.token in (SELECT id FROM Token WHERE highMarketCap = 1) and*/
     p.amount_unadjusted >= IFNULL(s.amount_unadjusted, 0);
