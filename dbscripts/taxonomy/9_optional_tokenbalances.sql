@@ -14,7 +14,7 @@ FROM
     Sale s
     ON p.name = s.name and p.token = +s.token
 WHERE 
-    p.amount_unadjusted >= IFNULL(s.amount_unadjusted, 0);
+    p.amount_unadjusted >= IFNULL(s.amount_unadjusted, 0)
 GROUP BY token;
 
 CREATE TABLE TokenBalance AS
