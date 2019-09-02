@@ -4,6 +4,7 @@ CREATE TABLE IF NOT EXISTS "EntityTaxonomy" (
         "type" TEXT, /* ICO, Exchange, Diluter, Mixer, Concentrator, Sink .. */
 		"operator" TEXT DEFAULT "external", /* External, Smart Contract, Capp */
 		"activeness" TEXT, /* Empty, Daily Active, Weekly Active, Monthly Active, Inactive */
+		"age" TEXT, /* ??? */
 		"yield" TEXT, /* ??? */
 		"parents" TEXT, /* ??? */
 		"children" TEXT, /* ??? */
