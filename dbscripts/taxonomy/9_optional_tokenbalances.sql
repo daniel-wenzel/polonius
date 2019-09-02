@@ -1,7 +1,8 @@
 /* Here we are calculating the balance of each entity in tokens for later analysis */
 DROP TABLE IF EXISTS TokenBalance;
+DROP TABLE IF EXISTS BalanceSums;
 
-CREATE TEMP Table BalanceSums AS
+CREATE Table BalanceSums AS
 SELECT 
     p.token, 
     SUM(CASE 
@@ -18,30 +19,32 @@ WHERE
 GROUP BY p.token;
 
 CREATE TABLE TokenBalance AS
-SELECT 
-    p.name, p.token, 
-    CASE 
-        WHEN p.amount_unadjusted - IFNULL(s.amount_unadjusted, 0) > 0 THEN p.amount_unadjusted - IFNULL(s.amount_unadjusted, 0)
-        ELSE 0
-    END as balance,
-    1.0*CASE 
-        WHEN p.amount_unadjusted - IFNULL(s.amount_unadjusted, 0) > 0 THEN p.amount_unadjusted - IFNULL(s.amount_unadjusted, 0)
-        ELSE 0
-    END / sum.totalBalance as percentage
+SELECT
+    x.name,
+    x.token,
+    x.balance,
+    x.balance * 1.0 / totalBalance
 FROM
-    BalanceSums sum
-    INNER JOIN
-    Purchase p
-    LEFT OUTER JOIN
-    Sale s
-    ON p.name = s.name and p.token = +s.token and p.token = +sum.token
-WHERE 
-    /*p.token in (SELECT id FROM Token WHERE highMarketCap = 1) and*/
-    p.amount_unadjusted >= IFNULL(s.amount_unadjusted, 0);
+    (SELECT 
+        p.name, p.token, 
+        CASE 
+            WHEN p.amount_unadjusted - IFNULL(s.amount_unadjusted, 0) > 0 THEN p.amount_unadjusted - IFNULL(s.amount_unadjusted, 0)
+            ELSE 0
+        END as balance
+    FROM
+        Purchase p
+        LEFT OUTER JOIN
+        Sale s
+        ON p.name = s.name and p.token = +s.token
+    WHERE 
+        /*p.token in (SELECT id FROM Token WHERE highMarketCap = 1) and*/
+        p.amount_unadjusted >= IFNULL(s.amount_unadjusted, 0)) x
+    NATURAL JOIN
+    BalanceSums;
 
 CREATE INDEX TokBal_name ON TokenBalance("name");
 CREATE INDEX TokBal_token ON TokenBalance("token");
-    
+
 INSERT INTO TokenBalance
 SELECT 
     name,
