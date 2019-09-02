@@ -7,7 +7,7 @@ SELECT
     SUM(CASE 
         WHEN p.amount_unadjusted - IFNULL(s.amount_unadjusted, 0) > 0 THEN p.amount_unadjusted - IFNULL(s.amount_unadjusted, 0)
         ELSE 0
-    END) as totalBalance,
+    END) as totalBalance
 FROM
     Purchase p
     LEFT OUTER JOIN
