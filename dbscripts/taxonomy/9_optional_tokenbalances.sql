@@ -14,7 +14,7 @@ FROM
     Sale s
     ON p.name = s.name and p.token = +s.token
 WHERE 
-    p.token in (SELECT id FROM Token WHERE highMarketCap = 1) and
+    /*p.token in (SELECT id FROM Token WHERE highMarketCap = 1) and*/
     p.amount_unadjusted >= IFNULL(s.amount_unadjusted, 0);
 
 CREATE INDEX TokBal_name ON TokenBalance("name");
@@ -31,5 +31,5 @@ SELECT
     sum(percentage) / (SELECT count(distinct token) from TokenBalance inner join token ON TokenBalance.token = token.id where token.excludeFromAdjustedVolumes = 0)
 FROM
     TokenBalance
-WHERE token not in (SELECT id FROM Token WHERE excludeFromAdjustedVolumes = 0)
+WHERE token not in (SELECT id FROM Token WHERE excludeFromAdjustedVolumes = 1)
 GROUP BY name
