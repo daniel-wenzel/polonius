@@ -15,7 +15,7 @@ FROM
     ON p.name = s.name and p.token = +s.token
 WHERE 
     p.amount_unadjusted >= IFNULL(s.amount_unadjusted, 0)
-GROUP BY token;
+GROUP BY p.token;
 
 CREATE TABLE TokenBalance AS
 SELECT 
