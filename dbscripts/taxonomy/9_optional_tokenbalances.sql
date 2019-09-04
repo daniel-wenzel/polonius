@@ -1,5 +1,5 @@
-/* Here we are calculating the balance of each entity in tokens for later analysis */
-/*
+/* Here we are calculating the balance of each entity in tokens for later analysis 
+
 DROP TABLE IF EXISTS TokenBalance;
 DROP TABLE IF EXISTS BalanceSums;
 
