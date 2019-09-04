@@ -30,4 +30,5 @@ const createTaxonomy = (blocknumber) => {
     sqlCommands.map(sql => sql({blocknumber, timestamp, day}))
 }
 init()
-createTaxonomy(7020000)
+//createTaxonomy(7020000)
+createTaxonomy()
