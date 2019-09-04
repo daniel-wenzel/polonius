@@ -66,3 +66,15 @@ FROM
     TokenBalance
 WHERE token in (SELECT id FROM Token WHERE highMarketCap = 1)
 GROUP BY name;
+
+DROP TABLE IF EXISTS FormerTaxonomyResults;
+CREATE TABLE FormerTaxonomyResults AS
+SELECT 
+    type, operator, age, activeness, yield, parents, children, holdingSize, numberOfTokens, token, count(*) as numAddresses, sum(percentage) as percTokens
+FROM
+    EntityTaxonomy
+    NATURAL JOIN
+    TokenBalance
+WHERE 
+    percentage > 0
+group by type, operator, age, activeness, yield, parents, children, holdingSize, numberOfTokens, token

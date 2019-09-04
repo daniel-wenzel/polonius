@@ -10,13 +10,13 @@ const steps = [
    /* '0_updateMetadata', 
     '1_type', 
     '2_activeness', 
-    '3_operator', */
+    '3_operator', 
     '4_profitability', 
     '5_parentschildren',
     '6_holdingSize',
     '7_numberOfTokens',
-    '8_age',
-    //'9_optional_tokenbalances'
+    '8_age',*/
+    '9_optional_tokenbalances'
 ]
 const sqlCommands = steps.map(s => requireSQL('dbscripts/taxonomy/'+s+".sql"))
 const createTaxonomy = (blocknumber) => {
