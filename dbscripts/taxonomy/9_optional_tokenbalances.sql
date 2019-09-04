@@ -1,4 +1,5 @@
 /* Here we are calculating the balance of each entity in tokens for later analysis */
+/*
 DROP TABLE IF EXISTS TokenBalance;
 DROP TABLE IF EXISTS BalanceSums;
 
@@ -37,7 +38,6 @@ FROM
         Sale s
         ON p.name = s.name and p.token = +s.token
     WHERE 
-        /*p.token in (SELECT id FROM Token WHERE highMarketCap = 1) and*/
         p.amount_unadjusted >= IFNULL(s.amount_unadjusted, 0)) x
     NATURAL JOIN
     BalanceSums;
@@ -67,7 +67,7 @@ FROM
 WHERE token in (SELECT id FROM Token WHERE highMarketCap = 1)
 GROUP BY name;
 
-DROP TABLE IF EXISTS FormerTaxonomyResults;
+DROP TABLE IF EXISTS FormerTaxonomyResults;*/
 CREATE TABLE FormerTaxonomyResults AS
 SELECT 
     type, operator, age, activeness, yield, parents, children, holdingSize, numberOfTokens, token, count(*) as numAddresses, sum(percentage) as percTokens
@@ -76,5 +76,6 @@ FROM
     NATURAL JOIN
     TokenBalance
 WHERE 
-    percentage > 0
+    percentage > 0 and
+    blocknumber = @blocknumber
 group by type, operator, age, activeness, yield, parents, children, holdingSize, numberOfTokens, token
