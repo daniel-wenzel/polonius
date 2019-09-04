@@ -1,5 +1,5 @@
 
-DROP TABLE IF EXISTS Profits;
+/*DROP TABLE IF EXISTS Profits;
 DROP TABLE IF EXISTS Purchase;
 DROP TABLE IF EXISTS Sale;
 CREATE TABLE Purchase AS
@@ -82,10 +82,10 @@ FROM
 GROUP BY name;
 
 CREATE INDEX Profits_name ON Profits("name");
-
+*/
 UPDATE EntityMetadata 
 SET profitability = (SELECT Profits.profitPercentage FROM Profits WHERE Profits.name = EntityMetadata.name)
-where blocknumber = @blocknumber;
+
 
 UPDATE EntityTaxonomy
 SET yield = (
