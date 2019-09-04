@@ -28,7 +28,7 @@ WHERE distinctDegree >= 100;
 /* This means we know in advance if an address will be an ICO */
 UPDATE EntityTaxonomy
 SET type = 'ico'
-WHERE EntityTaxonomy.name in
+WHERE blocknumber = @blocknumber and EntityTaxonomy.name in
     (SELECT DISTINCT Address.cluster
     FROM
         (ICOAddress 
@@ -38,7 +38,7 @@ WHERE EntityTaxonomy.name in
 /* This means we know in advance if an address will be an ICO */
 UPDATE EntityTaxonomy
 SET type = 'exchange'
-WHERE EntityTaxonomy.name in
+WHERE blocknumber = @blocknumber and EntityTaxonomy.name in
     (SELECT name
     FROM
         Entity WHERE isExchange = 1);

@@ -1,7 +1,7 @@
 /* This is completely independent of the timestamp :( */
 UPDATE EntityTaxonomy
 SET operator = 'capp'
-WHERE EntityTaxonomy.name in
+WHERE blocknumber = @blocknumber and EntityTaxonomy.name in
     (SELECT DISTINCT Address.cluster
     FROM
         Address
@@ -9,7 +9,7 @@ WHERE EntityTaxonomy.name in
 
 UPDATE EntityTaxonomy
 SET operator = 'other'
-WHERE EntityTaxonomy.name not in
+WHERE blocknumber = @blocknumber and EntityTaxonomy.name not in
     (SELECT DISTINCT Address.cluster
     FROM
         Address

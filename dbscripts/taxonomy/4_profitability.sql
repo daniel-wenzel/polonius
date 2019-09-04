@@ -18,7 +18,7 @@ FROM
     INNER JOIN
     ETransfer t
     ON e.name = t.`to`
-WHERE blocknumber < @blocknumber
+WHERE blocknumber <= @blocknumber
 GROUP BY e.name, t.token;
 
 CREATE TABLE Sale AS
@@ -37,7 +37,7 @@ FROM
     INNER JOIN
     ETransfer t
     ON e.name = t.`from`
-WHERE blocknumber < @blocknumber
+WHERE blocknumber <= @blocknumber
 GROUP BY e.name, t.token; 
 
 CREATE INDEX sale_name ON sale("name");
@@ -84,7 +84,8 @@ GROUP BY name;
 CREATE INDEX Profits_name ON Profits("name");
 
 UPDATE EntityMetadata 
-SET profitability = (SELECT Profits.profitPercentage FROM Profits WHERE Profits.name = EntityMetadata.name);
+SET profitability = (SELECT Profits.profitPercentage FROM Profits WHERE Profits.name = EntityMetadata.name)
+where blocknumber = @blocknumber;
 
 UPDATE EntityTaxonomy
 SET yield = (

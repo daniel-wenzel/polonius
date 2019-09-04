@@ -23,7 +23,8 @@ FROM
         ETransfer t
         INNER JOIN
         Token
-        ON t.token = Token.id)
+        ON t.token = Token.id
+    WHERE t.blocknumber <= @blocknumber)
 GROUP BY name;
 
 CREATE TABLE outTemp AS
@@ -48,7 +49,8 @@ FROM
         ETransfer t
         INNER JOIN
         Token
-        ON t.token = Token.id)
+        ON t.token = Token.id
+    WHERE t.blocknumber <= @blocknumber)
 GROUP BY name;
 
 CREATE INDEX inTemp_name ON inTemp("name");
