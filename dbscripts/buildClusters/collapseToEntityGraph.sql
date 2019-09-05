@@ -7,13 +7,13 @@ SET cluster = address
 WHERE address not in (SELECT member from cluster);
 
 
-INSERT INTO Entity
+REPLACE INTO Entity
 SELECT 
     cluster, max(isCappReceiver)
 FROM Address
 GROUP BY cluster;
 
-INSERT INTO ETransfer
+REPLACE INTO ETransfer
 SELECT
     sender.cluster,
     receiver.cluster,
@@ -58,7 +58,7 @@ GROUP BY
 
 
 /* We can have no incoming or outcomming transactions for an address, therefore we have three different insert statements */
-INSERT INTO EntityMetadata (name, indegree, outdegree, degree, distinctDegree, distinctInDegree, distinctOutDegree, involumeUSD, outvolumeUSD)
+REPLACE INTO EntityMetadata (name, indegree, outdegree, degree, distinctDegree, distinctInDegree, distinctOutDegree, involumeUSD, outvolumeUSD)
     SELECT i.addr, indegree, 0, indegree as degree, distinct_indegree as distinctDegree, distinct_indegree, 0, involumeUSD, 0
     FROM 
         (SELECT t.`to` as addr,count(*) as indegree, count(distinct t.`from`) as distinct_indegree, sum(t.amountInUSDCurrent) as involumeUSD FROM ETransfer t GROUP BY t.`to`) i;

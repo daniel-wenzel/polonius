@@ -50,7 +50,7 @@ async function parseCMCPage(url, backoff) {
             }
             address = await followLinkAndExtractAddress(etherscan)
         }
-        address = address.substring(0, 42)
+        address = address.substring(0, 42).toLowerCase()
         const slug = url.split('/')[4]
         const name = $('h1 img').first().attr('alt')
         const logo = $('h1 img').first().attr('src')

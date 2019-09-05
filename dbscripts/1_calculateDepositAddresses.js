@@ -12,7 +12,7 @@ const maxDegreeToCalculateBalances = 500
 const numBlocksDelayForDepositAddresses = 8640 // 1 day at 10 seconds blocktime 
 const minPercentageBehavedLikeDepositAddress = 0.25
 
-/*init({maxDegree: maxDegreeToCalculateBalances})
+init({maxDegree: maxDegreeToCalculateBalances})
 
 for (let i=0; i<maxDegreeToCalculateBalances; i++) {
     calculateBalancesStep()
@@ -21,6 +21,6 @@ for (let i=0; i<maxDegreeToCalculateBalances; i++) {
     }
 }
 calculateEmptiedAddresses({numBlocks: numBlocksDelayForDepositAddresses})
-calculateDepositAddresses({minPercentageBehavedLikeDepositAddress})*/
+calculateDepositAddresses({minPercentageBehavedLikeDepositAddress})
 calculateOtherExchangeAddresses()
-//labelTransfers()
+labelTransfers()
