@@ -1,4 +1,4 @@
-UPDATE ETransfer
+UPDATE Transfer
 SET amountInUSD = amountInTokens * (
     SELECT price 
     FROM Price
