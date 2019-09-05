@@ -4,8 +4,9 @@ const readline = require('readline');
 
 const interval = setInterval(status, 5000)
 const cmcTokens = require('../fileLocations').getTokens()
+cmcTokens.forEach(t => t.address = t.address.toLowerCase())
 const interestingAddresses = new Set()
-cmcTokens.forEach(t => interestingAddresses.add(t.address.toLowerCase()))
+cmcTokens.forEach(t => interestingAddresses.add(t.address))
 
 let n = 0;
 let firstLine = undefined
