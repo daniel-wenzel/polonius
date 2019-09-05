@@ -1,4 +1,4 @@
-/* Here we are calculating the balance of each entity in tokens for later analysis 
+/* Here we are calculating the balance of each entity in tokens for later analysis */
 
 DROP TABLE IF EXISTS TokenBalance;
 DROP TABLE IF EXISTS BalanceSums;
@@ -66,7 +66,7 @@ FROM
     TokenBalance
 WHERE token in (SELECT id FROM Token WHERE highMarketCap = 1)
 GROUP BY name;
-*/
+
 DROP TABLE IF EXISTS FormerTaxonomyResults;
 CREATE TABLE FormerTaxonomyResults AS
 SELECT 
