@@ -37,7 +37,7 @@ WHERE address in
 		Address cappReceiver
 		NATURAL JOIN
 		AddressMetadata cappReceiver
-1	WHERE distinctOutDegree > 100 and isCappReceiver = 1);
+	WHERE distinctOutDegree > 100 and isCappReceiver = 1);
 
 
 UPDATE Address
