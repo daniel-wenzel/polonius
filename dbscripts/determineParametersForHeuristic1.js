@@ -22,7 +22,7 @@ for (let numBlocks of blockDelays) {
 }
 
 function writeHorriblyInefficient(line) {
-    let writeStream = fs.createWriteStream('expOutput_v3.csv', {'flags': 'a'});
+    let writeStream = fs.createWriteStream('expOutput_v4.csv', {'flags': 'a'});
     writeStream.write(line+"\n")
     writeStream.end()
 }
