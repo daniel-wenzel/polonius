@@ -9,7 +9,7 @@ WHERE address not in (SELECT member from cluster);
 
 REPLACE INTO Entity
 SELECT 
-    cluster, max(isCappReceiver)
+    cluster, max(isCappReceiver), max(isExchange)
 FROM Address
 GROUP BY cluster;
 
