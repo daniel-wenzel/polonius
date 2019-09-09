@@ -1,4 +1,3 @@
-DROP TABLE EntityTaxonomy;
 CREATE TABLE IF NOT EXISTS "EntityTaxonomy" (
         "name" TEXT NOT NULL,
 		"blocknumber" INTEGER NOT NULL, 
