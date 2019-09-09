@@ -149,6 +149,7 @@ const statements =
         "outvolumeUSD_adjusted" NUMERIC,
         "outvolumeUSD_highcap" NUMERIC DEFAULT 0,
         "involumeUSD_highcap" NUMERIC DEFAULT 0,
+        "profitability" NUMERIC,
         PRIMARY KEY("name")
     );
 
