@@ -82,7 +82,7 @@ DROP TABLE IF EXISTS Entity;
         "name" TEXT NOT NULL UNIQUE,
         "type" TEXT,
         PRIMARY KEY("name")
-    )
+    );
     
 
 REPLACE INTO Entity
