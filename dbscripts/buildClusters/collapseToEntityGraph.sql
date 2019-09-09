@@ -77,14 +77,7 @@ DROP TABLE IF EXISTS Entity;
         "outvolumeUSD_highcap" NUMERIC DEFAULT 0,
         "involumeUSD_highcap" NUMERIC DEFAULT 0,
         PRIMARY KEY("name")
-    );
-
-    CREATE TABLE "EntityTaxonomy" (
-        "name" TEXT NOT NULL UNIQUE,
-        "type" TEXT,
-        PRIMARY KEY("name")
-    );
-    
+    );    
 
 REPLACE INTO Entity
 SELECT 
