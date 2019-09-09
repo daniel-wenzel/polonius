@@ -54,7 +54,7 @@ FROM
 WHERE token not in (SELECT id FROM Token WHERE excludeFromAdjustedVolumes = 1)
 GROUP BY name;
 */
-CREATE TABLE IF NOT EXISTS TaxonomyResults (
+CREATE IF NOT EXISTS TABLE TaxonomyResults (
 		"blocknumber" INTEGER NOT NULL, 
         "token" TEXT NOT NULL,
         "type" TEXT, NOT NULL,
