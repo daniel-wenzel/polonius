@@ -6,10 +6,10 @@ UPDATE Address
 SET cluster = address
 WHERE address not in (SELECT member from cluster);
 
-DELETE FROM Entity;
 DELETE FROM ETransfer;
-DELETE FROM EntityMetadata;
 DELETE FROM EntityTaxonomy;
+DELETE FROM EntityMetadata;
+DELETE FROM Entity;
 
 REPLACE INTO Entity
 SELECT 
