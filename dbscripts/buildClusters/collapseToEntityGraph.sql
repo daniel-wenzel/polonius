@@ -119,7 +119,8 @@ SELECT
     isToConcentrator,
     isFromConcentrator,
     isICOPurchase,
-    wasEmptiedWithinXBlocks
+    wasEmptiedWithinXBlocks,
+    null /* profitability */
 FROM
     Address sender
     INNER JOIN
