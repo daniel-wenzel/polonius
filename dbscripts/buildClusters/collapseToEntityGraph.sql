@@ -6,10 +6,84 @@ UPDATE Address
 SET cluster = address
 WHERE address not in (SELECT member from cluster);
 */
-DELETE FROM ETransfer;
-DELETE FROM EntityTaxonomy;
-DELETE FROM EntityMetadata;
-DELETE FROM Entity;
+
+DROP TABLE IF EXISTS ETransfer;
+DROP TABLE IF EXISTS EntityTaxonomy;
+DROP TABLE IF EXISTS EntityMetadata;
+DROP TABLE IF EXISTS Entity;
+
+    CREATE TABLE "Entity" (
+        "name"	TEXT NOT NULL,
+        "isCapp"	INTEGER,
+        PRIMARY KEY("name")
+    );
+
+    CREATE TABLE "ETransfer" (
+        "from"	TEXT NOT NULL,
+        "to"	TEXT NOT NULL,
+        "token"	TEXT NOT NULL,
+        "blocknumber"	INTEGER NOT NULL,
+        "amount"	INTEGER,
+        "timestamp"	TEXT,
+        "amountInTokens"	REAL,
+        "amountInUSDCurrent"	REAL,
+        "amountInUSD"	REAL,
+        "emptiedAccount"	INTEGER DEFAULT 0,
+        "canBeChangeTransfer"	INTEGER DEFAULT 0,
+        "isChangeTransfer"	INTEGER DEFAULT 0,
+        "isIntoDepositAddress"	INTEGER DEFAULT 0,
+        "isIntraCapp"	INTEGER DEFAULT 0,
+        "isFromCapp"	INTEGER DEFAULT 0,
+        "percentile"	NUMERIC,
+        "isEarlyTransfer"	INTEGER,
+        "isVeryEarlyTransfer"	INTEGER,
+        "isFromDiluter"	INTEGER DEFAULT 0,
+        "isToDiluter"	INTEGER DEFAULT 0,
+        "isFromMixer"	INTEGER DEFAULT 0,
+        "isToMixer"	INTEGER DEFAULT 0,
+        "isToConcentrator"	INTEGER DEFAULT 0,
+        "isFromConcentrator"	INTEGER DEFAULT 0,
+        "isICOPurchase"	INTEGER DEFAULT 0,
+        "wasEmptiedWithinXBlocks"	INTEGER DEFAULT 0,
+        "profitability"	NUMERIC,
+        FOREIGN KEY("token") REFERENCES "Token"("id"),
+        FOREIGN KEY("to") REFERENCES "Entity"("name"),
+        PRIMARY KEY("from","to","token","blocknumber"),
+        FOREIGN KEY("from") REFERENCES "Entity"("name")
+    );
+    CREATE INDEX etransfer_blocknumber_index ON ETransfer (blocknumber);
+    CREATE INDEX etransfer_from_index ON ETransfer ("from");
+    CREATE INDEX etransfer_to_index ON ETransfer ("to");
+    CREATE INDEX etransfer_token_index ON ETransfer ("token");	
+    CREATE INDEX entity_name_index ON Entity ("name");
+
+    CREATE TABLE "EntityMetadata" (
+        "name"	TEXT NOT NULL UNIQUE,
+        "indegree"	INTEGER,
+        "outdegree"	INTEGER,
+        "degree"	INTEGER,
+        "distinctDegree"	INTEGER,
+        "distinctInDegree"	INTEGER,
+        "distinctOutDegree"	INTEGER,
+        "involumeUSD"	NUMERIC,
+        "outvolumeUSD"	NUMERIC,
+        "firstInTransfer" INTEGER,
+        "firstOutTransfer" INTEGER,
+        "lastInTransfer" INTEGER,
+        "lastOutTransfer" INTEGER,
+        "involumeUSD_adjusted" NUMERIC,
+        "outvolumeUSD_adjusted" NUMERIC,
+        "outvolumeUSD_highcap" NUMERIC DEFAULT 0,
+        "involumeUSD_highcap" NUMERIC DEFAULT 0,
+        PRIMARY KEY("name")
+    );
+
+    CREATE TABLE "EntityTaxonomy" (
+        "name" TEXT NOT NULL UNIQUE,
+        "type" TEXT,
+        PRIMARY KEY("name")
+    )
+    
 
 REPLACE INTO Entity
 SELECT 
