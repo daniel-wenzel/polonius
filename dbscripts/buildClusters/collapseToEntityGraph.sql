@@ -15,6 +15,7 @@ DROP TABLE IF EXISTS Entity;
     CREATE TABLE "Entity" (
         "name"	TEXT NOT NULL,
         "isCapp"	INTEGER,
+        "isExchange" INTEGER,
         PRIMARY KEY("name")
     );
 
