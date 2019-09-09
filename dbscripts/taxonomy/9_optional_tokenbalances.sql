@@ -50,10 +50,10 @@ SELECT
     name,
     "ALL_ADJUSTED",
     null,
-    sum(percentage) / (SELECT count(distinct token) from TokenBalance inner join token ON TokenBalance.token = token.id where token.excludeFromAdjustedVolumes = 0)
+    sum(percentage) / (SELECT count(distinct id) FROM Token INNER JOIN TokenBalance on id = token WHERE excludeFromAdjustedVolumes = 0)
 FROM
     TokenBalance
-WHERE token not in (SELECT id FROM Token WHERE excludeFromAdjustedVolumes = 1)
+WHERE token in (SELECT id FROM Token WHERE excludeFromAdjustedVolumes = 0)
 GROUP BY name;
 
 INSERT INTO TokenBalance
