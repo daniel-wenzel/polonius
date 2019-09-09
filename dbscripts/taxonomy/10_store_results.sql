@@ -57,7 +57,7 @@ GROUP BY name;
 CREATE TABLE IF NOT EXISTS "TaxonomyResults" (
 		"blocknumber" INTEGER NOT NULL, 
         "token" TEXT NOT NULL,
-        "type" TEXT, NOT NULL,
+        "type" TEXT NOT NULL,
 		"operator" TEXT NOT NULL,
 		"activeness" TEXT NOT NULL,
 		"age" TEXT NOT NULL,
