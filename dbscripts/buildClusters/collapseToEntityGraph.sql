@@ -1,11 +1,11 @@
-/*UPDATE Address
+UPDATE Address
 SET cluster = (SELECT clusterName from cluster where member = address)
 WHERE address in (SELECT member from cluster);
 
 UPDATE Address
 SET cluster = address
 WHERE address not in (SELECT member from cluster);
-*/
+
 
 DROP TABLE IF EXISTS ETransfer;
 DROP TABLE IF EXISTS EntityTaxonomy;
