@@ -1,1 +1,1 @@
-SELECT distinct blocknumber FROM TaxonomyResults;
+SELECT distinct blocknumber as blocknumber FROM TaxonomyResults;
