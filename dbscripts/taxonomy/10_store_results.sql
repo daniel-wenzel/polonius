@@ -59,16 +59,16 @@ CREATE TABLE IF NOT EXISTS "TaxonomyResults" (
         "token" TEXT NOT NULL,
         "type" TEXT NOT NULL,
 		"operator" TEXT NOT NULL,
-		"activeness" TEXT NOT NULL,
 		"age" TEXT NOT NULL,
+		"activeness" TEXT NOT NULL,
 		"yield" TEXT NOT NULL,
 		"parents" TEXT NOT NULL,
 		"children" TEXT NOT NULL,
 		"holdingSize" TEXT NOT NULL,
 		"numberOfTokens" TEXT NOT NULL,
         "numAddresses" NUMERIC NOT NULL,
-        "percEntities" NUMERIC NOT NULL,
-        PRIMARY KEY("blocknumber", "token", "type", "operator", "activness", "age", "yield", "parents", "children", "holdingSize", "numberOfTokens")
+        "percTokens" NUMERIC NOT NULL,
+        PRIMARY KEY("blocknumber", "token", "type", "operator", "activeness", "age", "yield", "parents", "children", "holdingSize", "numberOfTokens")
 );
 
 CREATE INDEX IF NOT EXISTS TaxonomyResults_blocknumber ON TaxonomyResults("blocknumber");
