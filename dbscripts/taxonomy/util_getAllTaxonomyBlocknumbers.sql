@@ -1,0 +1,1 @@
+SELECT distinct blocknumber FROM TaxonomyResults;

@@ -4,6 +4,7 @@ const requireSQL = require('./util/requireSQL')
 const init = requireSQL('dbscripts/taxonomy/pre_init.sql')
 const getTimestamp = requireSQL('dbscripts/taxonomy/util_getTimestamp.sql')
 const getMaxBlocknumber = requireSQL('dbscripts/taxonomy/util_getMaxBlocknumber.sql')
+const getAllTaxonomyBlocknumbers = requireSQL('dbscript/taxonomy/util_getAllTaxonomyBlocknumbers.sql')
 
 
 const steps = [
@@ -30,6 +31,17 @@ const createTaxonomy = (blocknumber) => {
     console.log(timestamp)
     sqlCommands.map(sql => sql({blocknumber, timestamp, day}))
 }
-init()
+/*init()
 createTaxonomy(7020000)
 //createTaxonomy()
+
+*/
+const maxBlocknumber = getMaxBlocknumber({}, 'get').blocknumber
+const blocks = [maxBlocknumber]
+const existingBlocks = getAllTaxonomyBlocknumbers(undefined, 'all').map(r => r.blocknumber)
+for (let i = 0; i < 18; i++) {
+    blocks.push(blocknumber - 172800+i)
+}
+console.log(blocks)
+const blocksToBeCreated = blocks.filter(b => !existingBlocks.includes(b))
+console.log(blocksToBeCreated)
