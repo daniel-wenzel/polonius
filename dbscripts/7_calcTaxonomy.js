@@ -37,10 +37,10 @@ createTaxonomy(7020000)
 
 */
 const maxBlocknumber = getMaxBlocknumber({}, 'get').blocknumber
-const blocks = [maxBlocknumber]
+const blocks = []
 const existingBlocks = getAllTaxonomyBlocknumbers(undefined, 'all').map(r => r.blocknumber)
 for (let i = 0; i < 18; i++) {
-    blocks.push(blocknumber - 172800+i)
+    blocks.push(maxBlocknumber - 172800+i)
 }
 console.log(blocks)
 const blocksToBeCreated = blocks.filter(b => !existingBlocks.includes(b))
