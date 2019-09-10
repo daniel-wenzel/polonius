@@ -4,7 +4,7 @@ const requireSQL = require('./util/requireSQL')
 const init = requireSQL('dbscripts/taxonomy/pre_init.sql')
 const getTimestamp = requireSQL('dbscripts/taxonomy/util_getTimestamp.sql')
 const getMaxBlocknumber = requireSQL('dbscripts/taxonomy/util_getMaxBlocknumber.sql')
-const getAllTaxonomyBlocknumbers = requireSQL('dbscript/taxonomy/util_getAllTaxonomyBlocknumbers.sql')
+const getAllTaxonomyBlocknumbers = requireSQL('dbscripts/taxonomy/util_getAllTaxonomyBlocknumbers.sql')
 
 
 const steps = [
