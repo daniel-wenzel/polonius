@@ -32,7 +32,7 @@ const createTaxonomy = (blocknumber) => {
     sqlCommands.map(sql => sql({blocknumber, timestamp, day}))
 }
 init()
-//createTaxonomy()
+createTaxonomy()
 /*
 const maxBlocknumber = getMaxBlocknumber({}, 'get').blocknumber
 const blocks = []
