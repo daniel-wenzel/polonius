@@ -31,11 +31,9 @@ const createTaxonomy = (blocknumber) => {
     console.log(timestamp)
     sqlCommands.map(sql => sql({blocknumber, timestamp, day}))
 }
-/*init()
-createTaxonomy(7020000)
+init()
 //createTaxonomy()
-
-*/
+/*
 const maxBlocknumber = getMaxBlocknumber({}, 'get').blocknumber
 const blocks = []
 const existingBlocks = getAllTaxonomyBlocknumbers(undefined, 'all').map(r => r.blocknumber)
@@ -45,3 +43,4 @@ for (let i = 0; i < 18; i++) {
 const blocksToBeCreated = blocks.filter(b => !existingBlocks.includes(b))
 console.log(blocksToBeCreated.length+" taxonomies to go :)")
 blocksToBeCreated.forEach(block => createTaxonomy(block))
+*/
