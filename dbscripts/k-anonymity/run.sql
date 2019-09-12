@@ -30,6 +30,8 @@ FROM
         ON t.`to` = c.name)
 GROUP BY name;
 
+CREATE INDEX asdasd ON ExchangeQuasiIdentifiers("name");
+
 CREATE TABLE QuasiIdentifiers AS
 SELECT
     t.`from` as name,
@@ -56,4 +58,6 @@ SET taxonomy =
 UPDATE QuasiIdentifiers
 SET exchange = (SELECT exchange FROM ExchangeQuasiIdentifiers e where e.name = QuasiIdentifiers.name);
 
-
+CREATE INDEX QuasiIdentifiers_e ON QuasiIdentifiers("exchange");
+CREATE INDEX QuasiIdentifiers_t ON QuasiIdentifiers("token");
+CREATE INDEX QuasiIdentifiers_tax ON QuasiIdentifiers("taxonomy");
