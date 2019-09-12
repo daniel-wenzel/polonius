@@ -40,8 +40,6 @@ SELECT
     null as exchange
 FROM
     ETransfer t
-WHERE 
-    token = '0x' OR token = 'basic-attention-token' or token = 'dai' or token = 'aragon'
 GROUP BY name;
 
 UPDATE QuasiIdentifiers
