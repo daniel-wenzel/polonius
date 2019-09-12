@@ -32,6 +32,7 @@ GROUP BY name;
 
 CREATE INDEX asdasd ON ExchangeQuasiIdentifiers("name");
 
+DROP TABLE QuasiIdentifiers IF EXISTS;
 CREATE TABLE QuasiIdentifiers AS
 SELECT
     t.`from` as name,
