@@ -20,13 +20,13 @@ const dimensions =
 
 const fs = require('fs')
 if (!fs.existsSync('./data/k-anonymity-combinations.json')) {
+    console.log("init!")
     init()
 }
 const combinations = require('../data/k-anonymity-combinations.json')
-
-if (Object.values(combinations).some(c => c === {})) {
+if (Object.values(combinations).some(c => Object.entries(c).length == 0)) {
     perDimensionInit()
-    Object.keys(combinations).map(d => combinations[d] === {}).forEach(dimensions => {
+    Object.keys(combinations).filter(d => Object.entries(combinations[d]).length == 0).forEach(dimensions => {
         const ans = db.prepare(`
             SELECT 
                 k, sum(k) as numMatches
@@ -74,5 +74,3 @@ function saveIfNeeded(force=false) {
         console.log("saved")
     }
 }
-
-init()
