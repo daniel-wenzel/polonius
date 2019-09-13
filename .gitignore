@@ -3,6 +3,7 @@ db
 !db/*.sqbpro
 data/*
 !data/tokens.json
+!data/k-anonymity-combinations.json
 !data/unpack.sh
 !data/etherscanLabels/
 !data/etherscanLabels/*
