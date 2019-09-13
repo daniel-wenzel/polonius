@@ -1,6 +1,6 @@
 require('log-timestamp');
 const requireSQL = require('./util/requireSQL')
-const db = require('../../insertIntoDB/util/db')
+const db = require('../insertIntoDB/util/db')
 const run = requireSQL('dbscripts/k-anonymity/run.sql')
 const perDimensionInit = requireSQL('dbscripts/k-anonymity/perDimension.sql')
 //run() // this takes quite a while
