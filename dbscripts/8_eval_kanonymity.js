@@ -37,11 +37,21 @@ if (Object.values(combinations).some(c => Object.entries(c).length == 0)) {
                 FROM
                 kAnonPerDimension
                 GROUP BY ${dimensions}) as exchangeUnique
-            WHERE k = 1 OR k = 20 OR k = 100
+            WHERE k <= 100
             GROUP BY k
             ORDER BY k
         `).all()
-        combinations[dimensions] = ans
+        const save = {
+            k1:0,
+            k20:0,
+            k100:0
+        }
+        for ({k, numMatches} of ans) {
+            if (k == 1) save.k1 += numMatches
+            if (k <= 20) save.k20 += numMatches
+            if (k <= 100) save.k100 += numMatches
+        }
+        combinations[dimensions] = save
         saveIfNeeded(true)
     })
 }
