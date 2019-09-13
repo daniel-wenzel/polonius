@@ -1,14 +1,54 @@
 {
-  "token": {},
-  "type": {},
-  "token, type": {},
-  "activeness": {},
-  "activeness, token": {},
-  "activeness, type": {},
-  "activeness, token, type": {},
-  "age": {},
-  "age, token": {},
-  "age, type": {},
+  "token": {
+    "k1": 533877,
+    "k20": 798382,
+    "k100": 949828
+  },
+  "type": {
+    "k1": 0,
+    "k20": 0,
+    "k100": 55
+  },
+  "token, type": {
+    "k1": 548029,
+    "k20": 825422,
+    "k100": 990294
+  },
+  "activeness": {
+    "k1": 0,
+    "k20": 0,
+    "k100": 0
+  },
+  "activeness, token": {
+    "k1": 584792,
+    "k20": 869288,
+    "k100": 1051187
+  },
+  "activeness, type": {
+    "k1": 0,
+    "k20": 15,
+    "k100": 268
+  },
+  "activeness, token, type": {
+    "k1": 600178,
+    "k20": 904934,
+    "k100": 1128439
+  },
+  "age": {
+    "k1": 0,
+    "k20": 0,
+    "k100": 0
+  },
+  "age, token": {
+    "k1": 554948,
+    "k20": 834117,
+    "k100": 1017561
+  },
+  "age, type": {
+    "k1": 1,
+    "k20": 41,
+    "k100": 477
+  },
   "age, token, type": {},
   "activeness, age": {},
   "activeness, age, token": {},
