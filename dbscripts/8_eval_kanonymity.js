@@ -3,6 +3,7 @@ const requireSQL = require('./util/requireSQL')
 const db = require('../insertIntoDB/util/db')
 const run = requireSQL('dbscripts/k-anonymity/run.sql')
 const perDimensionInit = requireSQL('dbscripts/k-anonymity/perDimension.sql')
+let sinceLastSave = 0
 //run() // this takes quite a while
 
 const dimensions = 
@@ -65,7 +66,6 @@ function init() {
 function normalizeCombination(combination) {
     return combination.sort().join(', ')
 }
-let sinceLastSave = 0
 function saveIfNeeded(force=false) {
     sinceLastSave ++
     if (force || sinceLastSave > 50) {
