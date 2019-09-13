@@ -52,9 +52,10 @@ if (Object.values(combinations).some(c => Object.entries(c).length == 0)) {
             if (k <= 100) save.k100 += numMatches
         }
         combinations[dimensions] = save
-        saveIfNeeded(true)
+        saveIfNeeded()
     })
 }
+saveIfNeeded(true)
 
 function init() {
     const combinations = [[]]
