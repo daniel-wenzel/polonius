@@ -24,5 +24,5 @@ async function run() {
         prevBlock = block
     }
 }
-run().then(require('./insertPrices'))
+run().then(() => require('./insertPrices'))
 

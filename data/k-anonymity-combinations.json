@@ -1,13 +1,78 @@
 {
-  "token": {},
-  "type": {},
-  "token, type": {},
-  "activeness": {},
-  "activeness, token": {},
-  "activeness, type": {},
-  "activeness, token, type": {},
-  "age": {},
-  "age, token": {},
+  "token": [
+    {
+      "k": 1,
+      "numMatches": 533877
+    },
+    {
+      "k": 20,
+      "numMatches": 4740
+    },
+    {
+      "k": 100,
+      "numMatches": 600
+    }
+  ],
+  "type": [],
+  "token, type": [
+    {
+      "k": 1,
+      "numMatches": 548029
+    },
+    {
+      "k": 20,
+      "numMatches": 4400
+    },
+    {
+      "k": 100,
+      "numMatches": 1400
+    }
+  ],
+  "activeness": [],
+  "activeness, token": [
+    {
+      "k": 1,
+      "numMatches": 584792
+    },
+    {
+      "k": 20,
+      "numMatches": 5020
+    },
+    {
+      "k": 100,
+      "numMatches": 1200
+    }
+  ],
+  "activeness, type": [],
+  "activeness, token, type": [
+    {
+      "k": 1,
+      "numMatches": 600178
+    },
+    {
+      "k": 20,
+      "numMatches": 5560
+    },
+    {
+      "k": 100,
+      "numMatches": 1600
+    }
+  ],
+  "age": [],
+  "age, token": [
+    {
+      "k": 1,
+      "numMatches": 554948
+    },
+    {
+      "k": 20,
+      "numMatches": 5080
+    },
+    {
+      "k": 100,
+      "numMatches": 1200
+    }
+  ],
   "age, type": {},
   "age, token, type": {},
   "activeness, age": {},
