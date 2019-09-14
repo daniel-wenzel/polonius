@@ -49,1017 +49,5069 @@
     "k20": 41,
     "k100": 477
   },
-  "age, token, type": {},
-  "activeness, age": {},
-  "activeness, age, token": {},
-  "activeness, age, type": {},
-  "activeness, age, token, type": {},
-  "yield": {},
-  "token, yield": {},
-  "type, yield": {},
-  "token, type, yield": {},
-  "activeness, yield": {},
-  "activeness, token, yield": {},
-  "activeness, type, yield": {},
-  "activeness, token, type, yield": {},
-  "age, yield": {},
-  "age, token, yield": {},
-  "age, type, yield": {},
-  "age, token, type, yield": {},
-  "activeness, age, yield": {},
-  "activeness, age, token, yield": {},
-  "activeness, age, type, yield": {},
-  "activeness, age, token, type, yield": {},
-  "children": {},
-  "children, token": {},
-  "children, type": {},
-  "children, token, type": {},
-  "activeness, children": {},
-  "activeness, children, token": {},
-  "activeness, children, type": {},
-  "activeness, children, token, type": {},
-  "age, children": {},
-  "age, children, token": {},
-  "age, children, type": {},
-  "age, children, token, type": {},
-  "activeness, age, children": {},
-  "activeness, age, children, token": {},
-  "activeness, age, children, type": {},
-  "activeness, age, children, token, type": {},
-  "children, yield": {},
-  "children, token, yield": {},
-  "children, type, yield": {},
-  "children, token, type, yield": {},
-  "activeness, children, yield": {},
-  "activeness, children, token, yield": {},
-  "activeness, children, type, yield": {},
-  "activeness, children, token, type, yield": {},
-  "age, children, yield": {},
-  "age, children, token, yield": {},
-  "age, children, type, yield": {},
-  "age, children, token, type, yield": {},
-  "activeness, age, children, yield": {},
-  "activeness, age, children, token, yield": {},
-  "activeness, age, children, type, yield": {},
-  "activeness, age, children, token, type, yield": {},
-  "parents": {},
-  "parents, token": {},
-  "parents, type": {},
-  "parents, token, type": {},
-  "activeness, parents": {},
-  "activeness, parents, token": {},
-  "activeness, parents, type": {},
-  "activeness, parents, token, type": {},
-  "age, parents": {},
-  "age, parents, token": {},
-  "age, parents, type": {},
-  "age, parents, token, type": {},
-  "activeness, age, parents": {},
-  "activeness, age, parents, token": {},
-  "activeness, age, parents, type": {},
-  "activeness, age, parents, token, type": {},
-  "parents, yield": {},
-  "parents, token, yield": {},
-  "parents, type, yield": {},
-  "parents, token, type, yield": {},
-  "activeness, parents, yield": {},
-  "activeness, parents, token, yield": {},
-  "activeness, parents, type, yield": {},
-  "activeness, parents, token, type, yield": {},
-  "age, parents, yield": {},
-  "age, parents, token, yield": {},
-  "age, parents, type, yield": {},
-  "age, parents, token, type, yield": {},
-  "activeness, age, parents, yield": {},
-  "activeness, age, parents, token, yield": {},
-  "activeness, age, parents, type, yield": {},
-  "activeness, age, parents, token, type, yield": {},
-  "children, parents": {},
-  "children, parents, token": {},
-  "children, parents, type": {},
-  "children, parents, token, type": {},
-  "activeness, children, parents": {},
-  "activeness, children, parents, token": {},
-  "activeness, children, parents, type": {},
-  "activeness, children, parents, token, type": {},
-  "age, children, parents": {},
-  "age, children, parents, token": {},
-  "age, children, parents, type": {},
-  "age, children, parents, token, type": {},
-  "activeness, age, children, parents": {},
-  "activeness, age, children, parents, token": {},
-  "activeness, age, children, parents, type": {},
-  "activeness, age, children, parents, token, type": {},
-  "children, parents, yield": {},
-  "children, parents, token, yield": {},
-  "children, parents, type, yield": {},
-  "children, parents, token, type, yield": {},
-  "activeness, children, parents, yield": {},
-  "activeness, children, parents, token, yield": {},
-  "activeness, children, parents, type, yield": {},
-  "activeness, children, parents, token, type, yield": {},
-  "age, children, parents, yield": {},
-  "age, children, parents, token, yield": {},
-  "age, children, parents, type, yield": {},
-  "age, children, parents, token, type, yield": {},
-  "activeness, age, children, parents, yield": {},
-  "activeness, age, children, parents, token, yield": {},
-  "activeness, age, children, parents, type, yield": {},
-  "activeness, age, children, parents, token, type, yield": {},
-  "holdingSize": {},
-  "holdingSize, token": {},
-  "holdingSize, type": {},
-  "holdingSize, token, type": {},
-  "activeness, holdingSize": {},
-  "activeness, holdingSize, token": {},
-  "activeness, holdingSize, type": {},
-  "activeness, holdingSize, token, type": {},
-  "age, holdingSize": {},
-  "age, holdingSize, token": {},
-  "age, holdingSize, type": {},
-  "age, holdingSize, token, type": {},
-  "activeness, age, holdingSize": {},
-  "activeness, age, holdingSize, token": {},
-  "activeness, age, holdingSize, type": {},
-  "activeness, age, holdingSize, token, type": {},
-  "holdingSize, yield": {},
-  "holdingSize, token, yield": {},
-  "holdingSize, type, yield": {},
-  "holdingSize, token, type, yield": {},
-  "activeness, holdingSize, yield": {},
-  "activeness, holdingSize, token, yield": {},
-  "activeness, holdingSize, type, yield": {},
-  "activeness, holdingSize, token, type, yield": {},
-  "age, holdingSize, yield": {},
-  "age, holdingSize, token, yield": {},
-  "age, holdingSize, type, yield": {},
-  "age, holdingSize, token, type, yield": {},
-  "activeness, age, holdingSize, yield": {},
-  "activeness, age, holdingSize, token, yield": {},
-  "activeness, age, holdingSize, type, yield": {},
-  "activeness, age, holdingSize, token, type, yield": {},
-  "children, holdingSize": {},
-  "children, holdingSize, token": {},
-  "children, holdingSize, type": {},
-  "children, holdingSize, token, type": {},
-  "activeness, children, holdingSize": {},
-  "activeness, children, holdingSize, token": {},
-  "activeness, children, holdingSize, type": {},
-  "activeness, children, holdingSize, token, type": {},
-  "age, children, holdingSize": {},
-  "age, children, holdingSize, token": {},
-  "age, children, holdingSize, type": {},
-  "age, children, holdingSize, token, type": {},
-  "activeness, age, children, holdingSize": {},
-  "activeness, age, children, holdingSize, token": {},
-  "activeness, age, children, holdingSize, type": {},
-  "activeness, age, children, holdingSize, token, type": {},
-  "children, holdingSize, yield": {},
-  "children, holdingSize, token, yield": {},
-  "children, holdingSize, type, yield": {},
-  "children, holdingSize, token, type, yield": {},
-  "activeness, children, holdingSize, yield": {},
-  "activeness, children, holdingSize, token, yield": {},
-  "activeness, children, holdingSize, type, yield": {},
-  "activeness, children, holdingSize, token, type, yield": {},
-  "age, children, holdingSize, yield": {},
-  "age, children, holdingSize, token, yield": {},
-  "age, children, holdingSize, type, yield": {},
-  "age, children, holdingSize, token, type, yield": {},
-  "activeness, age, children, holdingSize, yield": {},
-  "activeness, age, children, holdingSize, token, yield": {},
-  "activeness, age, children, holdingSize, type, yield": {},
-  "activeness, age, children, holdingSize, token, type, yield": {},
-  "holdingSize, parents": {},
-  "holdingSize, parents, token": {},
-  "holdingSize, parents, type": {},
-  "holdingSize, parents, token, type": {},
-  "activeness, holdingSize, parents": {},
-  "activeness, holdingSize, parents, token": {},
-  "activeness, holdingSize, parents, type": {},
-  "activeness, holdingSize, parents, token, type": {},
-  "age, holdingSize, parents": {},
-  "age, holdingSize, parents, token": {},
-  "age, holdingSize, parents, type": {},
-  "age, holdingSize, parents, token, type": {},
-  "activeness, age, holdingSize, parents": {},
-  "activeness, age, holdingSize, parents, token": {},
-  "activeness, age, holdingSize, parents, type": {},
-  "activeness, age, holdingSize, parents, token, type": {},
-  "holdingSize, parents, yield": {},
-  "holdingSize, parents, token, yield": {},
-  "holdingSize, parents, type, yield": {},
-  "holdingSize, parents, token, type, yield": {},
-  "activeness, holdingSize, parents, yield": {},
-  "activeness, holdingSize, parents, token, yield": {},
-  "activeness, holdingSize, parents, type, yield": {},
-  "activeness, holdingSize, parents, token, type, yield": {},
-  "age, holdingSize, parents, yield": {},
-  "age, holdingSize, parents, token, yield": {},
-  "age, holdingSize, parents, type, yield": {},
-  "age, holdingSize, parents, token, type, yield": {},
-  "activeness, age, holdingSize, parents, yield": {},
-  "activeness, age, holdingSize, parents, token, yield": {},
-  "activeness, age, holdingSize, parents, type, yield": {},
-  "activeness, age, holdingSize, parents, token, type, yield": {},
-  "children, holdingSize, parents": {},
-  "children, holdingSize, parents, token": {},
-  "children, holdingSize, parents, type": {},
-  "children, holdingSize, parents, token, type": {},
-  "activeness, children, holdingSize, parents": {},
-  "activeness, children, holdingSize, parents, token": {},
-  "activeness, children, holdingSize, parents, type": {},
-  "activeness, children, holdingSize, parents, token, type": {},
-  "age, children, holdingSize, parents": {},
-  "age, children, holdingSize, parents, token": {},
-  "age, children, holdingSize, parents, type": {},
-  "age, children, holdingSize, parents, token, type": {},
-  "activeness, age, children, holdingSize, parents": {},
-  "activeness, age, children, holdingSize, parents, token": {},
-  "activeness, age, children, holdingSize, parents, type": {},
-  "activeness, age, children, holdingSize, parents, token, type": {},
-  "children, holdingSize, parents, yield": {},
-  "children, holdingSize, parents, token, yield": {},
-  "children, holdingSize, parents, type, yield": {},
-  "children, holdingSize, parents, token, type, yield": {},
-  "activeness, children, holdingSize, parents, yield": {},
-  "activeness, children, holdingSize, parents, token, yield": {},
-  "activeness, children, holdingSize, parents, type, yield": {},
-  "activeness, children, holdingSize, parents, token, type, yield": {},
-  "age, children, holdingSize, parents, yield": {},
-  "age, children, holdingSize, parents, token, yield": {},
-  "age, children, holdingSize, parents, type, yield": {},
-  "age, children, holdingSize, parents, token, type, yield": {},
-  "activeness, age, children, holdingSize, parents, yield": {},
-  "activeness, age, children, holdingSize, parents, token, yield": {},
-  "activeness, age, children, holdingSize, parents, type, yield": {},
-  "activeness, age, children, holdingSize, parents, token, type, yield": {},
-  "numberOfTokens": {},
-  "numberOfTokens, token": {},
-  "numberOfTokens, type": {},
-  "numberOfTokens, token, type": {},
-  "activeness, numberOfTokens": {},
-  "activeness, numberOfTokens, token": {},
-  "activeness, numberOfTokens, type": {},
-  "activeness, numberOfTokens, token, type": {},
-  "age, numberOfTokens": {},
-  "age, numberOfTokens, token": {},
-  "age, numberOfTokens, type": {},
-  "age, numberOfTokens, token, type": {},
-  "activeness, age, numberOfTokens": {},
-  "activeness, age, numberOfTokens, token": {},
-  "activeness, age, numberOfTokens, type": {},
-  "activeness, age, numberOfTokens, token, type": {},
-  "numberOfTokens, yield": {},
-  "numberOfTokens, token, yield": {},
-  "numberOfTokens, type, yield": {},
-  "numberOfTokens, token, type, yield": {},
-  "activeness, numberOfTokens, yield": {},
-  "activeness, numberOfTokens, token, yield": {},
-  "activeness, numberOfTokens, type, yield": {},
-  "activeness, numberOfTokens, token, type, yield": {},
-  "age, numberOfTokens, yield": {},
-  "age, numberOfTokens, token, yield": {},
-  "age, numberOfTokens, type, yield": {},
-  "age, numberOfTokens, token, type, yield": {},
-  "activeness, age, numberOfTokens, yield": {},
-  "activeness, age, numberOfTokens, token, yield": {},
-  "activeness, age, numberOfTokens, type, yield": {},
-  "activeness, age, numberOfTokens, token, type, yield": {},
-  "children, numberOfTokens": {},
-  "children, numberOfTokens, token": {},
-  "children, numberOfTokens, type": {},
-  "children, numberOfTokens, token, type": {},
-  "activeness, children, numberOfTokens": {},
-  "activeness, children, numberOfTokens, token": {},
-  "activeness, children, numberOfTokens, type": {},
-  "activeness, children, numberOfTokens, token, type": {},
-  "age, children, numberOfTokens": {},
-  "age, children, numberOfTokens, token": {},
-  "age, children, numberOfTokens, type": {},
-  "age, children, numberOfTokens, token, type": {},
-  "activeness, age, children, numberOfTokens": {},
-  "activeness, age, children, numberOfTokens, token": {},
-  "activeness, age, children, numberOfTokens, type": {},
-  "activeness, age, children, numberOfTokens, token, type": {},
-  "children, numberOfTokens, yield": {},
-  "children, numberOfTokens, token, yield": {},
-  "children, numberOfTokens, type, yield": {},
-  "children, numberOfTokens, token, type, yield": {},
-  "activeness, children, numberOfTokens, yield": {},
-  "activeness, children, numberOfTokens, token, yield": {},
-  "activeness, children, numberOfTokens, type, yield": {},
-  "activeness, children, numberOfTokens, token, type, yield": {},
-  "age, children, numberOfTokens, yield": {},
-  "age, children, numberOfTokens, token, yield": {},
-  "age, children, numberOfTokens, type, yield": {},
-  "age, children, numberOfTokens, token, type, yield": {},
-  "activeness, age, children, numberOfTokens, yield": {},
-  "activeness, age, children, numberOfTokens, token, yield": {},
-  "activeness, age, children, numberOfTokens, type, yield": {},
-  "activeness, age, children, numberOfTokens, token, type, yield": {},
-  "numberOfTokens, parents": {},
-  "numberOfTokens, parents, token": {},
-  "numberOfTokens, parents, type": {},
-  "numberOfTokens, parents, token, type": {},
-  "activeness, numberOfTokens, parents": {},
-  "activeness, numberOfTokens, parents, token": {},
-  "activeness, numberOfTokens, parents, type": {},
-  "activeness, numberOfTokens, parents, token, type": {},
-  "age, numberOfTokens, parents": {},
-  "age, numberOfTokens, parents, token": {},
-  "age, numberOfTokens, parents, type": {},
-  "age, numberOfTokens, parents, token, type": {},
-  "activeness, age, numberOfTokens, parents": {},
-  "activeness, age, numberOfTokens, parents, token": {},
-  "activeness, age, numberOfTokens, parents, type": {},
-  "activeness, age, numberOfTokens, parents, token, type": {},
-  "numberOfTokens, parents, yield": {},
-  "numberOfTokens, parents, token, yield": {},
-  "numberOfTokens, parents, type, yield": {},
-  "numberOfTokens, parents, token, type, yield": {},
-  "activeness, numberOfTokens, parents, yield": {},
-  "activeness, numberOfTokens, parents, token, yield": {},
-  "activeness, numberOfTokens, parents, type, yield": {},
-  "activeness, numberOfTokens, parents, token, type, yield": {},
-  "age, numberOfTokens, parents, yield": {},
-  "age, numberOfTokens, parents, token, yield": {},
-  "age, numberOfTokens, parents, type, yield": {},
-  "age, numberOfTokens, parents, token, type, yield": {},
-  "activeness, age, numberOfTokens, parents, yield": {},
-  "activeness, age, numberOfTokens, parents, token, yield": {},
-  "activeness, age, numberOfTokens, parents, type, yield": {},
-  "activeness, age, numberOfTokens, parents, token, type, yield": {},
-  "children, numberOfTokens, parents": {},
-  "children, numberOfTokens, parents, token": {},
-  "children, numberOfTokens, parents, type": {},
-  "children, numberOfTokens, parents, token, type": {},
-  "activeness, children, numberOfTokens, parents": {},
-  "activeness, children, numberOfTokens, parents, token": {},
-  "activeness, children, numberOfTokens, parents, type": {},
-  "activeness, children, numberOfTokens, parents, token, type": {},
-  "age, children, numberOfTokens, parents": {},
-  "age, children, numberOfTokens, parents, token": {},
-  "age, children, numberOfTokens, parents, type": {},
-  "age, children, numberOfTokens, parents, token, type": {},
-  "activeness, age, children, numberOfTokens, parents": {},
-  "activeness, age, children, numberOfTokens, parents, token": {},
-  "activeness, age, children, numberOfTokens, parents, type": {},
-  "activeness, age, children, numberOfTokens, parents, token, type": {},
-  "children, numberOfTokens, parents, yield": {},
-  "children, numberOfTokens, parents, token, yield": {},
-  "children, numberOfTokens, parents, type, yield": {},
-  "children, numberOfTokens, parents, token, type, yield": {},
-  "activeness, children, numberOfTokens, parents, yield": {},
-  "activeness, children, numberOfTokens, parents, token, yield": {},
-  "activeness, children, numberOfTokens, parents, type, yield": {},
-  "activeness, children, numberOfTokens, parents, token, type, yield": {},
-  "age, children, numberOfTokens, parents, yield": {},
-  "age, children, numberOfTokens, parents, token, yield": {},
-  "age, children, numberOfTokens, parents, type, yield": {},
-  "age, children, numberOfTokens, parents, token, type, yield": {},
-  "activeness, age, children, numberOfTokens, parents, yield": {},
-  "activeness, age, children, numberOfTokens, parents, token, yield": {},
-  "activeness, age, children, numberOfTokens, parents, type, yield": {},
-  "activeness, age, children, numberOfTokens, parents, token, type, yield": {},
-  "holdingSize, numberOfTokens": {},
-  "holdingSize, numberOfTokens, token": {},
-  "holdingSize, numberOfTokens, type": {},
-  "holdingSize, numberOfTokens, token, type": {},
-  "activeness, holdingSize, numberOfTokens": {},
-  "activeness, holdingSize, numberOfTokens, token": {},
-  "activeness, holdingSize, numberOfTokens, type": {},
-  "activeness, holdingSize, numberOfTokens, token, type": {},
-  "age, holdingSize, numberOfTokens": {},
-  "age, holdingSize, numberOfTokens, token": {},
-  "age, holdingSize, numberOfTokens, type": {},
-  "age, holdingSize, numberOfTokens, token, type": {},
-  "activeness, age, holdingSize, numberOfTokens": {},
-  "activeness, age, holdingSize, numberOfTokens, token": {},
-  "activeness, age, holdingSize, numberOfTokens, type": {},
-  "activeness, age, holdingSize, numberOfTokens, token, type": {},
-  "holdingSize, numberOfTokens, yield": {},
-  "holdingSize, numberOfTokens, token, yield": {},
-  "holdingSize, numberOfTokens, type, yield": {},
-  "holdingSize, numberOfTokens, token, type, yield": {},
-  "activeness, holdingSize, numberOfTokens, yield": {},
-  "activeness, holdingSize, numberOfTokens, token, yield": {},
-  "activeness, holdingSize, numberOfTokens, type, yield": {},
-  "activeness, holdingSize, numberOfTokens, token, type, yield": {},
-  "age, holdingSize, numberOfTokens, yield": {},
-  "age, holdingSize, numberOfTokens, token, yield": {},
-  "age, holdingSize, numberOfTokens, type, yield": {},
-  "age, holdingSize, numberOfTokens, token, type, yield": {},
-  "activeness, age, holdingSize, numberOfTokens, yield": {},
-  "activeness, age, holdingSize, numberOfTokens, token, yield": {},
-  "activeness, age, holdingSize, numberOfTokens, type, yield": {},
-  "activeness, age, holdingSize, numberOfTokens, token, type, yield": {},
-  "children, holdingSize, numberOfTokens": {},
-  "children, holdingSize, numberOfTokens, token": {},
-  "children, holdingSize, numberOfTokens, type": {},
-  "children, holdingSize, numberOfTokens, token, type": {},
-  "activeness, children, holdingSize, numberOfTokens": {},
-  "activeness, children, holdingSize, numberOfTokens, token": {},
-  "activeness, children, holdingSize, numberOfTokens, type": {},
-  "activeness, children, holdingSize, numberOfTokens, token, type": {},
-  "age, children, holdingSize, numberOfTokens": {},
-  "age, children, holdingSize, numberOfTokens, token": {},
-  "age, children, holdingSize, numberOfTokens, type": {},
-  "age, children, holdingSize, numberOfTokens, token, type": {},
-  "activeness, age, children, holdingSize, numberOfTokens": {},
-  "activeness, age, children, holdingSize, numberOfTokens, token": {},
-  "activeness, age, children, holdingSize, numberOfTokens, type": {},
-  "activeness, age, children, holdingSize, numberOfTokens, token, type": {},
-  "children, holdingSize, numberOfTokens, yield": {},
-  "children, holdingSize, numberOfTokens, token, yield": {},
-  "children, holdingSize, numberOfTokens, type, yield": {},
-  "children, holdingSize, numberOfTokens, token, type, yield": {},
-  "activeness, children, holdingSize, numberOfTokens, yield": {},
-  "activeness, children, holdingSize, numberOfTokens, token, yield": {},
-  "activeness, children, holdingSize, numberOfTokens, type, yield": {},
-  "activeness, children, holdingSize, numberOfTokens, token, type, yield": {},
-  "age, children, holdingSize, numberOfTokens, yield": {},
-  "age, children, holdingSize, numberOfTokens, token, yield": {},
-  "age, children, holdingSize, numberOfTokens, type, yield": {},
-  "age, children, holdingSize, numberOfTokens, token, type, yield": {},
-  "activeness, age, children, holdingSize, numberOfTokens, yield": {},
-  "activeness, age, children, holdingSize, numberOfTokens, token, yield": {},
-  "activeness, age, children, holdingSize, numberOfTokens, type, yield": {},
-  "activeness, age, children, holdingSize, numberOfTokens, token, type, yield": {},
-  "holdingSize, numberOfTokens, parents": {},
-  "holdingSize, numberOfTokens, parents, token": {},
-  "holdingSize, numberOfTokens, parents, type": {},
-  "holdingSize, numberOfTokens, parents, token, type": {},
-  "activeness, holdingSize, numberOfTokens, parents": {},
-  "activeness, holdingSize, numberOfTokens, parents, token": {},
-  "activeness, holdingSize, numberOfTokens, parents, type": {},
-  "activeness, holdingSize, numberOfTokens, parents, token, type": {},
-  "age, holdingSize, numberOfTokens, parents": {},
-  "age, holdingSize, numberOfTokens, parents, token": {},
-  "age, holdingSize, numberOfTokens, parents, type": {},
-  "age, holdingSize, numberOfTokens, parents, token, type": {},
-  "activeness, age, holdingSize, numberOfTokens, parents": {},
-  "activeness, age, holdingSize, numberOfTokens, parents, token": {},
-  "activeness, age, holdingSize, numberOfTokens, parents, type": {},
-  "activeness, age, holdingSize, numberOfTokens, parents, token, type": {},
-  "holdingSize, numberOfTokens, parents, yield": {},
-  "holdingSize, numberOfTokens, parents, token, yield": {},
-  "holdingSize, numberOfTokens, parents, type, yield": {},
-  "holdingSize, numberOfTokens, parents, token, type, yield": {},
-  "activeness, holdingSize, numberOfTokens, parents, yield": {},
-  "activeness, holdingSize, numberOfTokens, parents, token, yield": {},
-  "activeness, holdingSize, numberOfTokens, parents, type, yield": {},
-  "activeness, holdingSize, numberOfTokens, parents, token, type, yield": {},
-  "age, holdingSize, numberOfTokens, parents, yield": {},
-  "age, holdingSize, numberOfTokens, parents, token, yield": {},
-  "age, holdingSize, numberOfTokens, parents, type, yield": {},
-  "age, holdingSize, numberOfTokens, parents, token, type, yield": {},
-  "activeness, age, holdingSize, numberOfTokens, parents, yield": {},
-  "activeness, age, holdingSize, numberOfTokens, parents, token, yield": {},
-  "activeness, age, holdingSize, numberOfTokens, parents, type, yield": {},
-  "activeness, age, holdingSize, numberOfTokens, parents, token, type, yield": {},
-  "children, holdingSize, numberOfTokens, parents": {},
-  "children, holdingSize, numberOfTokens, parents, token": {},
-  "children, holdingSize, numberOfTokens, parents, type": {},
-  "children, holdingSize, numberOfTokens, parents, token, type": {},
-  "activeness, children, holdingSize, numberOfTokens, parents": {},
-  "activeness, children, holdingSize, numberOfTokens, parents, token": {},
-  "activeness, children, holdingSize, numberOfTokens, parents, type": {},
-  "activeness, children, holdingSize, numberOfTokens, parents, token, type": {},
-  "age, children, holdingSize, numberOfTokens, parents": {},
-  "age, children, holdingSize, numberOfTokens, parents, token": {},
-  "age, children, holdingSize, numberOfTokens, parents, type": {},
-  "age, children, holdingSize, numberOfTokens, parents, token, type": {},
-  "activeness, age, children, holdingSize, numberOfTokens, parents": {},
-  "activeness, age, children, holdingSize, numberOfTokens, parents, token": {},
-  "activeness, age, children, holdingSize, numberOfTokens, parents, type": {},
-  "activeness, age, children, holdingSize, numberOfTokens, parents, token, type": {},
-  "children, holdingSize, numberOfTokens, parents, yield": {},
-  "children, holdingSize, numberOfTokens, parents, token, yield": {},
-  "children, holdingSize, numberOfTokens, parents, type, yield": {},
-  "children, holdingSize, numberOfTokens, parents, token, type, yield": {},
-  "activeness, children, holdingSize, numberOfTokens, parents, yield": {},
-  "activeness, children, holdingSize, numberOfTokens, parents, token, yield": {},
-  "activeness, children, holdingSize, numberOfTokens, parents, type, yield": {},
-  "activeness, children, holdingSize, numberOfTokens, parents, token, type, yield": {},
-  "age, children, holdingSize, numberOfTokens, parents, yield": {},
-  "age, children, holdingSize, numberOfTokens, parents, token, yield": {},
-  "age, children, holdingSize, numberOfTokens, parents, type, yield": {},
-  "age, children, holdingSize, numberOfTokens, parents, token, type, yield": {},
-  "activeness, age, children, holdingSize, numberOfTokens, parents, yield": {},
-  "activeness, age, children, holdingSize, numberOfTokens, parents, token, yield": {},
-  "activeness, age, children, holdingSize, numberOfTokens, parents, type, yield": {},
-  "activeness, age, children, holdingSize, numberOfTokens, parents, token, type, yield": {},
-  "operator": {},
-  "operator, token": {},
-  "operator, type": {},
-  "operator, token, type": {},
-  "activeness, operator": {},
-  "activeness, operator, token": {},
-  "activeness, operator, type": {},
-  "activeness, operator, token, type": {},
-  "age, operator": {},
-  "age, operator, token": {},
-  "age, operator, type": {},
-  "age, operator, token, type": {},
-  "activeness, age, operator": {},
-  "activeness, age, operator, token": {},
-  "activeness, age, operator, type": {},
-  "activeness, age, operator, token, type": {},
-  "operator, yield": {},
-  "operator, token, yield": {},
-  "operator, type, yield": {},
-  "operator, token, type, yield": {},
-  "activeness, operator, yield": {},
-  "activeness, operator, token, yield": {},
-  "activeness, operator, type, yield": {},
-  "activeness, operator, token, type, yield": {},
-  "age, operator, yield": {},
-  "age, operator, token, yield": {},
-  "age, operator, type, yield": {},
-  "age, operator, token, type, yield": {},
-  "activeness, age, operator, yield": {},
-  "activeness, age, operator, token, yield": {},
-  "activeness, age, operator, type, yield": {},
-  "activeness, age, operator, token, type, yield": {},
-  "children, operator": {},
-  "children, operator, token": {},
-  "children, operator, type": {},
-  "children, operator, token, type": {},
-  "activeness, children, operator": {},
-  "activeness, children, operator, token": {},
-  "activeness, children, operator, type": {},
-  "activeness, children, operator, token, type": {},
-  "age, children, operator": {},
-  "age, children, operator, token": {},
-  "age, children, operator, type": {},
-  "age, children, operator, token, type": {},
-  "activeness, age, children, operator": {},
-  "activeness, age, children, operator, token": {},
-  "activeness, age, children, operator, type": {},
-  "activeness, age, children, operator, token, type": {},
-  "children, operator, yield": {},
-  "children, operator, token, yield": {},
-  "children, operator, type, yield": {},
-  "children, operator, token, type, yield": {},
-  "activeness, children, operator, yield": {},
-  "activeness, children, operator, token, yield": {},
-  "activeness, children, operator, type, yield": {},
-  "activeness, children, operator, token, type, yield": {},
-  "age, children, operator, yield": {},
-  "age, children, operator, token, yield": {},
-  "age, children, operator, type, yield": {},
-  "age, children, operator, token, type, yield": {},
-  "activeness, age, children, operator, yield": {},
-  "activeness, age, children, operator, token, yield": {},
-  "activeness, age, children, operator, type, yield": {},
-  "activeness, age, children, operator, token, type, yield": {},
-  "operator, parents": {},
-  "operator, parents, token": {},
-  "operator, parents, type": {},
-  "operator, parents, token, type": {},
-  "activeness, operator, parents": {},
-  "activeness, operator, parents, token": {},
-  "activeness, operator, parents, type": {},
-  "activeness, operator, parents, token, type": {},
-  "age, operator, parents": {},
-  "age, operator, parents, token": {},
-  "age, operator, parents, type": {},
-  "age, operator, parents, token, type": {},
-  "activeness, age, operator, parents": {},
-  "activeness, age, operator, parents, token": {},
-  "activeness, age, operator, parents, type": {},
-  "activeness, age, operator, parents, token, type": {},
-  "operator, parents, yield": {},
-  "operator, parents, token, yield": {},
-  "operator, parents, type, yield": {},
-  "operator, parents, token, type, yield": {},
-  "activeness, operator, parents, yield": {},
-  "activeness, operator, parents, token, yield": {},
-  "activeness, operator, parents, type, yield": {},
-  "activeness, operator, parents, token, type, yield": {},
-  "age, operator, parents, yield": {},
-  "age, operator, parents, token, yield": {},
-  "age, operator, parents, type, yield": {},
-  "age, operator, parents, token, type, yield": {},
-  "activeness, age, operator, parents, yield": {},
-  "activeness, age, operator, parents, token, yield": {},
-  "activeness, age, operator, parents, type, yield": {},
-  "activeness, age, operator, parents, token, type, yield": {},
-  "children, operator, parents": {},
-  "children, operator, parents, token": {},
-  "children, operator, parents, type": {},
-  "children, operator, parents, token, type": {},
-  "activeness, children, operator, parents": {},
-  "activeness, children, operator, parents, token": {},
-  "activeness, children, operator, parents, type": {},
-  "activeness, children, operator, parents, token, type": {},
-  "age, children, operator, parents": {},
-  "age, children, operator, parents, token": {},
-  "age, children, operator, parents, type": {},
-  "age, children, operator, parents, token, type": {},
-  "activeness, age, children, operator, parents": {},
-  "activeness, age, children, operator, parents, token": {},
-  "activeness, age, children, operator, parents, type": {},
-  "activeness, age, children, operator, parents, token, type": {},
-  "children, operator, parents, yield": {},
-  "children, operator, parents, token, yield": {},
-  "children, operator, parents, type, yield": {},
-  "children, operator, parents, token, type, yield": {},
-  "activeness, children, operator, parents, yield": {},
-  "activeness, children, operator, parents, token, yield": {},
-  "activeness, children, operator, parents, type, yield": {},
-  "activeness, children, operator, parents, token, type, yield": {},
-  "age, children, operator, parents, yield": {},
-  "age, children, operator, parents, token, yield": {},
-  "age, children, operator, parents, type, yield": {},
-  "age, children, operator, parents, token, type, yield": {},
-  "activeness, age, children, operator, parents, yield": {},
-  "activeness, age, children, operator, parents, token, yield": {},
-  "activeness, age, children, operator, parents, type, yield": {},
-  "activeness, age, children, operator, parents, token, type, yield": {},
-  "holdingSize, operator": {},
-  "holdingSize, operator, token": {},
-  "holdingSize, operator, type": {},
-  "holdingSize, operator, token, type": {},
-  "activeness, holdingSize, operator": {},
-  "activeness, holdingSize, operator, token": {},
-  "activeness, holdingSize, operator, type": {},
-  "activeness, holdingSize, operator, token, type": {},
-  "age, holdingSize, operator": {},
-  "age, holdingSize, operator, token": {},
-  "age, holdingSize, operator, type": {},
-  "age, holdingSize, operator, token, type": {},
-  "activeness, age, holdingSize, operator": {},
-  "activeness, age, holdingSize, operator, token": {},
-  "activeness, age, holdingSize, operator, type": {},
-  "activeness, age, holdingSize, operator, token, type": {},
-  "holdingSize, operator, yield": {},
-  "holdingSize, operator, token, yield": {},
-  "holdingSize, operator, type, yield": {},
-  "holdingSize, operator, token, type, yield": {},
-  "activeness, holdingSize, operator, yield": {},
-  "activeness, holdingSize, operator, token, yield": {},
-  "activeness, holdingSize, operator, type, yield": {},
-  "activeness, holdingSize, operator, token, type, yield": {},
-  "age, holdingSize, operator, yield": {},
-  "age, holdingSize, operator, token, yield": {},
-  "age, holdingSize, operator, type, yield": {},
-  "age, holdingSize, operator, token, type, yield": {},
-  "activeness, age, holdingSize, operator, yield": {},
-  "activeness, age, holdingSize, operator, token, yield": {},
-  "activeness, age, holdingSize, operator, type, yield": {},
-  "activeness, age, holdingSize, operator, token, type, yield": {},
-  "children, holdingSize, operator": {},
-  "children, holdingSize, operator, token": {},
-  "children, holdingSize, operator, type": {},
-  "children, holdingSize, operator, token, type": {},
-  "activeness, children, holdingSize, operator": {},
-  "activeness, children, holdingSize, operator, token": {},
-  "activeness, children, holdingSize, operator, type": {},
-  "activeness, children, holdingSize, operator, token, type": {},
-  "age, children, holdingSize, operator": {},
-  "age, children, holdingSize, operator, token": {},
-  "age, children, holdingSize, operator, type": {},
-  "age, children, holdingSize, operator, token, type": {},
-  "activeness, age, children, holdingSize, operator": {},
-  "activeness, age, children, holdingSize, operator, token": {},
-  "activeness, age, children, holdingSize, operator, type": {},
-  "activeness, age, children, holdingSize, operator, token, type": {},
-  "children, holdingSize, operator, yield": {},
-  "children, holdingSize, operator, token, yield": {},
-  "children, holdingSize, operator, type, yield": {},
-  "children, holdingSize, operator, token, type, yield": {},
-  "activeness, children, holdingSize, operator, yield": {},
-  "activeness, children, holdingSize, operator, token, yield": {},
-  "activeness, children, holdingSize, operator, type, yield": {},
-  "activeness, children, holdingSize, operator, token, type, yield": {},
-  "age, children, holdingSize, operator, yield": {},
-  "age, children, holdingSize, operator, token, yield": {},
-  "age, children, holdingSize, operator, type, yield": {},
-  "age, children, holdingSize, operator, token, type, yield": {},
-  "activeness, age, children, holdingSize, operator, yield": {},
-  "activeness, age, children, holdingSize, operator, token, yield": {},
-  "activeness, age, children, holdingSize, operator, type, yield": {},
-  "activeness, age, children, holdingSize, operator, token, type, yield": {},
-  "holdingSize, operator, parents": {},
-  "holdingSize, operator, parents, token": {},
-  "holdingSize, operator, parents, type": {},
-  "holdingSize, operator, parents, token, type": {},
-  "activeness, holdingSize, operator, parents": {},
-  "activeness, holdingSize, operator, parents, token": {},
-  "activeness, holdingSize, operator, parents, type": {},
-  "activeness, holdingSize, operator, parents, token, type": {},
-  "age, holdingSize, operator, parents": {},
-  "age, holdingSize, operator, parents, token": {},
-  "age, holdingSize, operator, parents, type": {},
-  "age, holdingSize, operator, parents, token, type": {},
-  "activeness, age, holdingSize, operator, parents": {},
-  "activeness, age, holdingSize, operator, parents, token": {},
-  "activeness, age, holdingSize, operator, parents, type": {},
-  "activeness, age, holdingSize, operator, parents, token, type": {},
-  "holdingSize, operator, parents, yield": {},
-  "holdingSize, operator, parents, token, yield": {},
-  "holdingSize, operator, parents, type, yield": {},
-  "holdingSize, operator, parents, token, type, yield": {},
-  "activeness, holdingSize, operator, parents, yield": {},
-  "activeness, holdingSize, operator, parents, token, yield": {},
-  "activeness, holdingSize, operator, parents, type, yield": {},
-  "activeness, holdingSize, operator, parents, token, type, yield": {},
-  "age, holdingSize, operator, parents, yield": {},
-  "age, holdingSize, operator, parents, token, yield": {},
-  "age, holdingSize, operator, parents, type, yield": {},
-  "age, holdingSize, operator, parents, token, type, yield": {},
-  "activeness, age, holdingSize, operator, parents, yield": {},
-  "activeness, age, holdingSize, operator, parents, token, yield": {},
-  "activeness, age, holdingSize, operator, parents, type, yield": {},
-  "activeness, age, holdingSize, operator, parents, token, type, yield": {},
-  "children, holdingSize, operator, parents": {},
-  "children, holdingSize, operator, parents, token": {},
-  "children, holdingSize, operator, parents, type": {},
-  "children, holdingSize, operator, parents, token, type": {},
-  "activeness, children, holdingSize, operator, parents": {},
-  "activeness, children, holdingSize, operator, parents, token": {},
-  "activeness, children, holdingSize, operator, parents, type": {},
-  "activeness, children, holdingSize, operator, parents, token, type": {},
-  "age, children, holdingSize, operator, parents": {},
-  "age, children, holdingSize, operator, parents, token": {},
-  "age, children, holdingSize, operator, parents, type": {},
-  "age, children, holdingSize, operator, parents, token, type": {},
-  "activeness, age, children, holdingSize, operator, parents": {},
-  "activeness, age, children, holdingSize, operator, parents, token": {},
-  "activeness, age, children, holdingSize, operator, parents, type": {},
-  "activeness, age, children, holdingSize, operator, parents, token, type": {},
-  "children, holdingSize, operator, parents, yield": {},
-  "children, holdingSize, operator, parents, token, yield": {},
-  "children, holdingSize, operator, parents, type, yield": {},
-  "children, holdingSize, operator, parents, token, type, yield": {},
-  "activeness, children, holdingSize, operator, parents, yield": {},
-  "activeness, children, holdingSize, operator, parents, token, yield": {},
-  "activeness, children, holdingSize, operator, parents, type, yield": {},
-  "activeness, children, holdingSize, operator, parents, token, type, yield": {},
-  "age, children, holdingSize, operator, parents, yield": {},
-  "age, children, holdingSize, operator, parents, token, yield": {},
-  "age, children, holdingSize, operator, parents, type, yield": {},
-  "age, children, holdingSize, operator, parents, token, type, yield": {},
-  "activeness, age, children, holdingSize, operator, parents, yield": {},
-  "activeness, age, children, holdingSize, operator, parents, token, yield": {},
-  "activeness, age, children, holdingSize, operator, parents, type, yield": {},
-  "activeness, age, children, holdingSize, operator, parents, token, type, yield": {},
-  "numberOfTokens, operator": {},
-  "numberOfTokens, operator, token": {},
-  "numberOfTokens, operator, type": {},
-  "numberOfTokens, operator, token, type": {},
-  "activeness, numberOfTokens, operator": {},
-  "activeness, numberOfTokens, operator, token": {},
-  "activeness, numberOfTokens, operator, type": {},
-  "activeness, numberOfTokens, operator, token, type": {},
-  "age, numberOfTokens, operator": {},
-  "age, numberOfTokens, operator, token": {},
-  "age, numberOfTokens, operator, type": {},
-  "age, numberOfTokens, operator, token, type": {},
-  "activeness, age, numberOfTokens, operator": {},
-  "activeness, age, numberOfTokens, operator, token": {},
-  "activeness, age, numberOfTokens, operator, type": {},
-  "activeness, age, numberOfTokens, operator, token, type": {},
-  "numberOfTokens, operator, yield": {},
-  "numberOfTokens, operator, token, yield": {},
-  "numberOfTokens, operator, type, yield": {},
-  "numberOfTokens, operator, token, type, yield": {},
-  "activeness, numberOfTokens, operator, yield": {},
-  "activeness, numberOfTokens, operator, token, yield": {},
-  "activeness, numberOfTokens, operator, type, yield": {},
-  "activeness, numberOfTokens, operator, token, type, yield": {},
-  "age, numberOfTokens, operator, yield": {},
-  "age, numberOfTokens, operator, token, yield": {},
-  "age, numberOfTokens, operator, type, yield": {},
-  "age, numberOfTokens, operator, token, type, yield": {},
-  "activeness, age, numberOfTokens, operator, yield": {},
-  "activeness, age, numberOfTokens, operator, token, yield": {},
-  "activeness, age, numberOfTokens, operator, type, yield": {},
-  "activeness, age, numberOfTokens, operator, token, type, yield": {},
-  "children, numberOfTokens, operator": {},
-  "children, numberOfTokens, operator, token": {},
-  "children, numberOfTokens, operator, type": {},
-  "children, numberOfTokens, operator, token, type": {},
-  "activeness, children, numberOfTokens, operator": {},
-  "activeness, children, numberOfTokens, operator, token": {},
-  "activeness, children, numberOfTokens, operator, type": {},
-  "activeness, children, numberOfTokens, operator, token, type": {},
-  "age, children, numberOfTokens, operator": {},
-  "age, children, numberOfTokens, operator, token": {},
-  "age, children, numberOfTokens, operator, type": {},
-  "age, children, numberOfTokens, operator, token, type": {},
-  "activeness, age, children, numberOfTokens, operator": {},
-  "activeness, age, children, numberOfTokens, operator, token": {},
-  "activeness, age, children, numberOfTokens, operator, type": {},
-  "activeness, age, children, numberOfTokens, operator, token, type": {},
-  "children, numberOfTokens, operator, yield": {},
-  "children, numberOfTokens, operator, token, yield": {},
-  "children, numberOfTokens, operator, type, yield": {},
-  "children, numberOfTokens, operator, token, type, yield": {},
-  "activeness, children, numberOfTokens, operator, yield": {},
-  "activeness, children, numberOfTokens, operator, token, yield": {},
-  "activeness, children, numberOfTokens, operator, type, yield": {},
-  "activeness, children, numberOfTokens, operator, token, type, yield": {},
-  "age, children, numberOfTokens, operator, yield": {},
-  "age, children, numberOfTokens, operator, token, yield": {},
-  "age, children, numberOfTokens, operator, type, yield": {},
-  "age, children, numberOfTokens, operator, token, type, yield": {},
-  "activeness, age, children, numberOfTokens, operator, yield": {},
-  "activeness, age, children, numberOfTokens, operator, token, yield": {},
-  "activeness, age, children, numberOfTokens, operator, type, yield": {},
-  "activeness, age, children, numberOfTokens, operator, token, type, yield": {},
-  "numberOfTokens, operator, parents": {},
-  "numberOfTokens, operator, parents, token": {},
-  "numberOfTokens, operator, parents, type": {},
-  "numberOfTokens, operator, parents, token, type": {},
-  "activeness, numberOfTokens, operator, parents": {},
-  "activeness, numberOfTokens, operator, parents, token": {},
-  "activeness, numberOfTokens, operator, parents, type": {},
-  "activeness, numberOfTokens, operator, parents, token, type": {},
-  "age, numberOfTokens, operator, parents": {},
-  "age, numberOfTokens, operator, parents, token": {},
-  "age, numberOfTokens, operator, parents, type": {},
-  "age, numberOfTokens, operator, parents, token, type": {},
-  "activeness, age, numberOfTokens, operator, parents": {},
-  "activeness, age, numberOfTokens, operator, parents, token": {},
-  "activeness, age, numberOfTokens, operator, parents, type": {},
-  "activeness, age, numberOfTokens, operator, parents, token, type": {},
-  "numberOfTokens, operator, parents, yield": {},
-  "numberOfTokens, operator, parents, token, yield": {},
-  "numberOfTokens, operator, parents, type, yield": {},
-  "numberOfTokens, operator, parents, token, type, yield": {},
-  "activeness, numberOfTokens, operator, parents, yield": {},
-  "activeness, numberOfTokens, operator, parents, token, yield": {},
-  "activeness, numberOfTokens, operator, parents, type, yield": {},
-  "activeness, numberOfTokens, operator, parents, token, type, yield": {},
-  "age, numberOfTokens, operator, parents, yield": {},
-  "age, numberOfTokens, operator, parents, token, yield": {},
-  "age, numberOfTokens, operator, parents, type, yield": {},
-  "age, numberOfTokens, operator, parents, token, type, yield": {},
-  "activeness, age, numberOfTokens, operator, parents, yield": {},
-  "activeness, age, numberOfTokens, operator, parents, token, yield": {},
-  "activeness, age, numberOfTokens, operator, parents, type, yield": {},
-  "activeness, age, numberOfTokens, operator, parents, token, type, yield": {},
-  "children, numberOfTokens, operator, parents": {},
-  "children, numberOfTokens, operator, parents, token": {},
-  "children, numberOfTokens, operator, parents, type": {},
-  "children, numberOfTokens, operator, parents, token, type": {},
-  "activeness, children, numberOfTokens, operator, parents": {},
-  "activeness, children, numberOfTokens, operator, parents, token": {},
-  "activeness, children, numberOfTokens, operator, parents, type": {},
-  "activeness, children, numberOfTokens, operator, parents, token, type": {},
-  "age, children, numberOfTokens, operator, parents": {},
-  "age, children, numberOfTokens, operator, parents, token": {},
-  "age, children, numberOfTokens, operator, parents, type": {},
-  "age, children, numberOfTokens, operator, parents, token, type": {},
-  "activeness, age, children, numberOfTokens, operator, parents": {},
-  "activeness, age, children, numberOfTokens, operator, parents, token": {},
-  "activeness, age, children, numberOfTokens, operator, parents, type": {},
-  "activeness, age, children, numberOfTokens, operator, parents, token, type": {},
-  "children, numberOfTokens, operator, parents, yield": {},
-  "children, numberOfTokens, operator, parents, token, yield": {},
-  "children, numberOfTokens, operator, parents, type, yield": {},
-  "children, numberOfTokens, operator, parents, token, type, yield": {},
-  "activeness, children, numberOfTokens, operator, parents, yield": {},
-  "activeness, children, numberOfTokens, operator, parents, token, yield": {},
-  "activeness, children, numberOfTokens, operator, parents, type, yield": {},
-  "activeness, children, numberOfTokens, operator, parents, token, type, yield": {},
-  "age, children, numberOfTokens, operator, parents, yield": {},
-  "age, children, numberOfTokens, operator, parents, token, yield": {},
-  "age, children, numberOfTokens, operator, parents, type, yield": {},
-  "age, children, numberOfTokens, operator, parents, token, type, yield": {},
-  "activeness, age, children, numberOfTokens, operator, parents, yield": {},
-  "activeness, age, children, numberOfTokens, operator, parents, token, yield": {},
-  "activeness, age, children, numberOfTokens, operator, parents, type, yield": {},
-  "activeness, age, children, numberOfTokens, operator, parents, token, type, yield": {},
-  "holdingSize, numberOfTokens, operator": {},
-  "holdingSize, numberOfTokens, operator, token": {},
-  "holdingSize, numberOfTokens, operator, type": {},
-  "holdingSize, numberOfTokens, operator, token, type": {},
-  "activeness, holdingSize, numberOfTokens, operator": {},
-  "activeness, holdingSize, numberOfTokens, operator, token": {},
-  "activeness, holdingSize, numberOfTokens, operator, type": {},
-  "activeness, holdingSize, numberOfTokens, operator, token, type": {},
-  "age, holdingSize, numberOfTokens, operator": {},
-  "age, holdingSize, numberOfTokens, operator, token": {},
-  "age, holdingSize, numberOfTokens, operator, type": {},
-  "age, holdingSize, numberOfTokens, operator, token, type": {},
-  "activeness, age, holdingSize, numberOfTokens, operator": {},
-  "activeness, age, holdingSize, numberOfTokens, operator, token": {},
-  "activeness, age, holdingSize, numberOfTokens, operator, type": {},
-  "activeness, age, holdingSize, numberOfTokens, operator, token, type": {},
-  "holdingSize, numberOfTokens, operator, yield": {},
-  "holdingSize, numberOfTokens, operator, token, yield": {},
-  "holdingSize, numberOfTokens, operator, type, yield": {},
-  "holdingSize, numberOfTokens, operator, token, type, yield": {},
-  "activeness, holdingSize, numberOfTokens, operator, yield": {},
-  "activeness, holdingSize, numberOfTokens, operator, token, yield": {},
-  "activeness, holdingSize, numberOfTokens, operator, type, yield": {},
-  "activeness, holdingSize, numberOfTokens, operator, token, type, yield": {},
-  "age, holdingSize, numberOfTokens, operator, yield": {},
-  "age, holdingSize, numberOfTokens, operator, token, yield": {},
-  "age, holdingSize, numberOfTokens, operator, type, yield": {},
-  "age, holdingSize, numberOfTokens, operator, token, type, yield": {},
-  "activeness, age, holdingSize, numberOfTokens, operator, yield": {},
-  "activeness, age, holdingSize, numberOfTokens, operator, token, yield": {},
-  "activeness, age, holdingSize, numberOfTokens, operator, type, yield": {},
-  "activeness, age, holdingSize, numberOfTokens, operator, token, type, yield": {},
-  "children, holdingSize, numberOfTokens, operator": {},
-  "children, holdingSize, numberOfTokens, operator, token": {},
-  "children, holdingSize, numberOfTokens, operator, type": {},
-  "children, holdingSize, numberOfTokens, operator, token, type": {},
-  "activeness, children, holdingSize, numberOfTokens, operator": {},
-  "activeness, children, holdingSize, numberOfTokens, operator, token": {},
-  "activeness, children, holdingSize, numberOfTokens, operator, type": {},
-  "activeness, children, holdingSize, numberOfTokens, operator, token, type": {},
-  "age, children, holdingSize, numberOfTokens, operator": {},
-  "age, children, holdingSize, numberOfTokens, operator, token": {},
-  "age, children, holdingSize, numberOfTokens, operator, type": {},
-  "age, children, holdingSize, numberOfTokens, operator, token, type": {},
-  "activeness, age, children, holdingSize, numberOfTokens, operator": {},
-  "activeness, age, children, holdingSize, numberOfTokens, operator, token": {},
-  "activeness, age, children, holdingSize, numberOfTokens, operator, type": {},
-  "activeness, age, children, holdingSize, numberOfTokens, operator, token, type": {},
-  "children, holdingSize, numberOfTokens, operator, yield": {},
-  "children, holdingSize, numberOfTokens, operator, token, yield": {},
-  "children, holdingSize, numberOfTokens, operator, type, yield": {},
-  "children, holdingSize, numberOfTokens, operator, token, type, yield": {},
-  "activeness, children, holdingSize, numberOfTokens, operator, yield": {},
-  "activeness, children, holdingSize, numberOfTokens, operator, token, yield": {},
-  "activeness, children, holdingSize, numberOfTokens, operator, type, yield": {},
-  "activeness, children, holdingSize, numberOfTokens, operator, token, type, yield": {},
-  "age, children, holdingSize, numberOfTokens, operator, yield": {},
-  "age, children, holdingSize, numberOfTokens, operator, token, yield": {},
-  "age, children, holdingSize, numberOfTokens, operator, type, yield": {},
-  "age, children, holdingSize, numberOfTokens, operator, token, type, yield": {},
-  "activeness, age, children, holdingSize, numberOfTokens, operator, yield": {},
-  "activeness, age, children, holdingSize, numberOfTokens, operator, token, yield": {},
-  "activeness, age, children, holdingSize, numberOfTokens, operator, type, yield": {},
-  "activeness, age, children, holdingSize, numberOfTokens, operator, token, type, yield": {},
-  "holdingSize, numberOfTokens, operator, parents": {},
-  "holdingSize, numberOfTokens, operator, parents, token": {},
-  "holdingSize, numberOfTokens, operator, parents, type": {},
-  "holdingSize, numberOfTokens, operator, parents, token, type": {},
-  "activeness, holdingSize, numberOfTokens, operator, parents": {},
-  "activeness, holdingSize, numberOfTokens, operator, parents, token": {},
-  "activeness, holdingSize, numberOfTokens, operator, parents, type": {},
-  "activeness, holdingSize, numberOfTokens, operator, parents, token, type": {},
-  "age, holdingSize, numberOfTokens, operator, parents": {},
-  "age, holdingSize, numberOfTokens, operator, parents, token": {},
-  "age, holdingSize, numberOfTokens, operator, parents, type": {},
-  "age, holdingSize, numberOfTokens, operator, parents, token, type": {},
-  "activeness, age, holdingSize, numberOfTokens, operator, parents": {},
-  "activeness, age, holdingSize, numberOfTokens, operator, parents, token": {},
-  "activeness, age, holdingSize, numberOfTokens, operator, parents, type": {},
-  "activeness, age, holdingSize, numberOfTokens, operator, parents, token, type": {},
-  "holdingSize, numberOfTokens, operator, parents, yield": {},
-  "holdingSize, numberOfTokens, operator, parents, token, yield": {},
-  "holdingSize, numberOfTokens, operator, parents, type, yield": {},
-  "holdingSize, numberOfTokens, operator, parents, token, type, yield": {},
-  "activeness, holdingSize, numberOfTokens, operator, parents, yield": {},
-  "activeness, holdingSize, numberOfTokens, operator, parents, token, yield": {},
-  "activeness, holdingSize, numberOfTokens, operator, parents, type, yield": {},
-  "activeness, holdingSize, numberOfTokens, operator, parents, token, type, yield": {},
-  "age, holdingSize, numberOfTokens, operator, parents, yield": {},
-  "age, holdingSize, numberOfTokens, operator, parents, token, yield": {},
-  "age, holdingSize, numberOfTokens, operator, parents, type, yield": {},
-  "age, holdingSize, numberOfTokens, operator, parents, token, type, yield": {},
-  "activeness, age, holdingSize, numberOfTokens, operator, parents, yield": {},
-  "activeness, age, holdingSize, numberOfTokens, operator, parents, token, yield": {},
-  "activeness, age, holdingSize, numberOfTokens, operator, parents, type, yield": {},
-  "activeness, age, holdingSize, numberOfTokens, operator, parents, token, type, yield": {},
-  "children, holdingSize, numberOfTokens, operator, parents": {},
-  "children, holdingSize, numberOfTokens, operator, parents, token": {},
-  "children, holdingSize, numberOfTokens, operator, parents, type": {},
-  "children, holdingSize, numberOfTokens, operator, parents, token, type": {},
-  "activeness, children, holdingSize, numberOfTokens, operator, parents": {},
-  "activeness, children, holdingSize, numberOfTokens, operator, parents, token": {},
-  "activeness, children, holdingSize, numberOfTokens, operator, parents, type": {},
-  "activeness, children, holdingSize, numberOfTokens, operator, parents, token, type": {},
-  "age, children, holdingSize, numberOfTokens, operator, parents": {},
-  "age, children, holdingSize, numberOfTokens, operator, parents, token": {},
-  "age, children, holdingSize, numberOfTokens, operator, parents, type": {},
-  "age, children, holdingSize, numberOfTokens, operator, parents, token, type": {},
-  "activeness, age, children, holdingSize, numberOfTokens, operator, parents": {},
-  "activeness, age, children, holdingSize, numberOfTokens, operator, parents, token": {},
-  "activeness, age, children, holdingSize, numberOfTokens, operator, parents, type": {},
-  "activeness, age, children, holdingSize, numberOfTokens, operator, parents, token, type": {},
-  "children, holdingSize, numberOfTokens, operator, parents, yield": {},
-  "children, holdingSize, numberOfTokens, operator, parents, token, yield": {},
-  "children, holdingSize, numberOfTokens, operator, parents, type, yield": {},
-  "children, holdingSize, numberOfTokens, operator, parents, token, type, yield": {},
-  "activeness, children, holdingSize, numberOfTokens, operator, parents, yield": {},
-  "activeness, children, holdingSize, numberOfTokens, operator, parents, token, yield": {},
-  "activeness, children, holdingSize, numberOfTokens, operator, parents, type, yield": {},
-  "activeness, children, holdingSize, numberOfTokens, operator, parents, token, type, yield": {},
-  "age, children, holdingSize, numberOfTokens, operator, parents, yield": {},
-  "age, children, holdingSize, numberOfTokens, operator, parents, token, yield": {},
-  "age, children, holdingSize, numberOfTokens, operator, parents, type, yield": {},
-  "age, children, holdingSize, numberOfTokens, operator, parents, token, type, yield": {},
-  "activeness, age, children, holdingSize, numberOfTokens, operator, parents, yield": {},
-  "activeness, age, children, holdingSize, numberOfTokens, operator, parents, token, yield": {},
-  "activeness, age, children, holdingSize, numberOfTokens, operator, parents, type, yield": {},
-  "activeness, age, children, holdingSize, numberOfTokens, operator, parents, token, type, yield": {}
+  "age, token, type": {
+    "k1": 570730,
+    "k20": 866849,
+    "k100": 1086529
+  },
+  "activeness, age": {
+    "k1": 0,
+    "k20": 0,
+    "k100": 0
+  },
+  "activeness, age, token": {
+    "k1": 607471,
+    "k20": 917537,
+    "k100": 1150588
+  },
+  "activeness, age, type": {
+    "k1": 3,
+    "k20": 352,
+    "k100": 1946
+  },
+  "activeness, age, token, type": {
+    "k1": 624932,
+    "k20": 962545,
+    "k100": 1243132
+  },
+  "yield": {
+    "k1": 0,
+    "k20": 0,
+    "k100": 0
+  },
+  "token, yield": {
+    "k1": 614525,
+    "k20": 899365,
+    "k100": 1105285
+  },
+  "type, yield": {
+    "k1": 0,
+    "k20": 84,
+    "k100": 262
+  },
+  "token, type, yield": {
+    "k1": 633010,
+    "k20": 941442,
+    "k100": 1233717
+  },
+  "activeness, yield": {
+    "k1": 0,
+    "k20": 0,
+    "k100": 39
+  },
+  "activeness, token, yield": {
+    "k1": 669961,
+    "k20": 998538,
+    "k100": 1309444
+  },
+  "activeness, type, yield": {
+    "k1": 15,
+    "k20": 488,
+    "k100": 2853
+  },
+  "activeness, token, type, yield": {
+    "k1": 691047,
+    "k20": 1065077,
+    "k100": 1457698
+  },
+  "age, yield": {
+    "k1": 0,
+    "k20": 54,
+    "k100": 79
+  },
+  "age, token, yield": {
+    "k1": 636919,
+    "k20": 950121,
+    "k100": 1230365
+  },
+  "age, type, yield": {
+    "k1": 16,
+    "k20": 419,
+    "k100": 1878
+  },
+  "age, token, type, yield": {
+    "k1": 657357,
+    "k20": 1006136,
+    "k100": 1389338
+  },
+  "activeness, age, yield": {
+    "k1": 2,
+    "k20": 94,
+    "k100": 486
+  },
+  "activeness, age, token, yield": {
+    "k1": 695204,
+    "k20": 1067257,
+    "k100": 1447962
+  },
+  "activeness, age, type, yield": {
+    "k1": 93,
+    "k20": 1896,
+    "k100": 7466
+  },
+  "activeness, age, token, type, yield": {
+    "k1": 718447,
+    "k20": 1143180,
+    "k100": 1604278
+  },
+  "children": {
+    "k1": 0,
+    "k20": 0,
+    "k100": 0
+  },
+  "children, token": {
+    "k1": 601280,
+    "k20": 885721,
+    "k100": 1137692
+  },
+  "children, type": {
+    "k1": 1,
+    "k20": 123,
+    "k100": 951
+  },
+  "children, token, type": {
+    "k1": 617699,
+    "k20": 937711,
+    "k100": 1273844
+  },
+  "activeness, children": {
+    "k1": 0,
+    "k20": 0,
+    "k100": 104
+  },
+  "activeness, children, token": {
+    "k1": 655793,
+    "k20": 1003866,
+    "k100": 1364984
+  },
+  "activeness, children, type": {
+    "k1": 32,
+    "k20": 712,
+    "k100": 3285
+  },
+  "activeness, children, token, type": {
+    "k1": 676018,
+    "k20": 1076270,
+    "k100": 1509110
+  },
+  "age, children": {
+    "k1": 0,
+    "k20": 2,
+    "k100": 305
+  },
+  "age, children, token": {
+    "k1": 625208,
+    "k20": 954303,
+    "k100": 1288759
+  },
+  "age, children, type": {
+    "k1": 23,
+    "k20": 817,
+    "k100": 2834
+  },
+  "age, children, token, type": {
+    "k1": 644952,
+    "k20": 1023471,
+    "k100": 1452087
+  },
+  "activeness, age, children": {
+    "k1": 0,
+    "k20": 102,
+    "k100": 1249
+  },
+  "activeness, age, children, token": {
+    "k1": 684825,
+    "k20": 1092454,
+    "k100": 1522511
+  },
+  "activeness, age, children, type": {
+    "k1": 165,
+    "k20": 2322,
+    "k100": 9005
+  },
+  "activeness, age, children, token, type": {
+    "k1": 708998,
+    "k20": 1173649,
+    "k100": 1664511
+  },
+  "children, yield": {
+    "k1": 0,
+    "k20": 10,
+    "k100": 124
+  },
+  "children, token, yield": {
+    "k1": 685564,
+    "k20": 1070896,
+    "k100": 1513147
+  },
+  "children, type, yield": {
+    "k1": 40,
+    "k20": 773,
+    "k100": 4121
+  },
+  "children, token, type, yield": {
+    "k1": 710541,
+    "k20": 1176906,
+    "k100": 1743802
+  },
+  "activeness, children, yield": {
+    "k1": 4,
+    "k20": 307,
+    "k100": 3428
+  },
+  "activeness, children, token, yield": {
+    "k1": 751759,
+    "k20": 1248063,
+    "k100": 1793344
+  },
+  "activeness, children, type, yield": {
+    "k1": 255,
+    "k20": 3452,
+    "k100": 14633
+  },
+  "activeness, children, token, type, yield": {
+    "k1": 784284,
+    "k20": 1356792,
+    "k100": 1949576
+  },
+  "age, children, yield": {
+    "k1": 20,
+    "k20": 288,
+    "k100": 2836
+  },
+  "age, children, token, yield": {
+    "k1": 715235,
+    "k20": 1169147,
+    "k100": 1689360
+  },
+  "age, children, type, yield": {
+    "k1": 193,
+    "k20": 2860,
+    "k100": 12307
+  },
+  "age, children, token, type, yield": {
+    "k1": 744752,
+    "k20": 1289447,
+    "k100": 1914813
+  },
+  "activeness, age, children, yield": {
+    "k1": 71,
+    "k20": 2680,
+    "k100": 16062
+  },
+  "activeness, age, children, token, yield": {
+    "k1": 788541,
+    "k20": 1349666,
+    "k100": 1940271
+  },
+  "activeness, age, children, type, yield": {
+    "k1": 690,
+    "k20": 10681,
+    "k100": 41489
+  },
+  "activeness, age, children, token, type, yield": {
+    "k1": 824285,
+    "k20": 1460020,
+    "k100": 2076809
+  },
+  "parents": {
+    "k1": 0,
+    "k20": 0,
+    "k100": 0
+  },
+  "parents, token": {
+    "k1": 604949,
+    "k20": 891301,
+    "k100": 1117987
+  },
+  "parents, type": {
+    "k1": 2,
+    "k20": 38,
+    "k100": 665
+  },
+  "parents, token, type": {
+    "k1": 619839,
+    "k20": 932601,
+    "k100": 1230891
+  },
+  "activeness, parents": {
+    "k1": 0,
+    "k20": 20,
+    "k100": 131
+  },
+  "activeness, parents, token": {
+    "k1": 660132,
+    "k20": 997074,
+    "k100": 1335594
+  },
+  "activeness, parents, type": {
+    "k1": 16,
+    "k20": 738,
+    "k100": 3313
+  },
+  "activeness, parents, token, type": {
+    "k1": 678257,
+    "k20": 1060389,
+    "k100": 1462941
+  },
+  "age, parents": {
+    "k1": 0,
+    "k20": 29,
+    "k100": 274
+  },
+  "age, parents, token": {
+    "k1": 629295,
+    "k20": 955639,
+    "k100": 1263775
+  },
+  "age, parents, type": {
+    "k1": 18,
+    "k20": 579,
+    "k100": 2512
+  },
+  "age, parents, token, type": {
+    "k1": 646787,
+    "k20": 1011837,
+    "k100": 1406138
+  },
+  "activeness, age, parents": {
+    "k1": 2,
+    "k20": 186,
+    "k100": 1179
+  },
+  "activeness, age, parents, token": {
+    "k1": 688297,
+    "k20": 1081330,
+    "k100": 1491751
+  },
+  "activeness, age, parents, type": {
+    "k1": 114,
+    "k20": 2204,
+    "k100": 7827
+  },
+  "activeness, age, parents, token, type": {
+    "k1": 709307,
+    "k20": 1153263,
+    "k100": 1620152
+  },
+  "parents, yield": {
+    "k1": 0,
+    "k20": 14,
+    "k100": 108
+  },
+  "parents, token, yield": {
+    "k1": 690636,
+    "k20": 1060125,
+    "k100": 1488257
+  },
+  "parents, type, yield": {
+    "k1": 39,
+    "k20": 946,
+    "k100": 4379
+  },
+  "parents, token, type, yield": {
+    "k1": 712539,
+    "k20": 1148473,
+    "k100": 1667422
+  },
+  "activeness, parents, yield": {
+    "k1": 7,
+    "k20": 391,
+    "k100": 2675
+  },
+  "activeness, parents, token, yield": {
+    "k1": 754665,
+    "k20": 1230239,
+    "k100": 1740579
+  },
+  "activeness, parents, type, yield": {
+    "k1": 228,
+    "k20": 3746,
+    "k100": 12913
+  },
+  "activeness, parents, token, type, yield": {
+    "k1": 782148,
+    "k20": 1325236,
+    "k100": 1885446
+  },
+  "age, parents, yield": {
+    "k1": 16,
+    "k20": 415,
+    "k100": 2389
+  },
+  "age, parents, token, yield": {
+    "k1": 719162,
+    "k20": 1158399,
+    "k100": 1664249
+  },
+  "age, parents, type, yield": {
+    "k1": 168,
+    "k20": 2668,
+    "k100": 11142
+  },
+  "age, parents, token, type, yield": {
+    "k1": 744816,
+    "k20": 1261172,
+    "k100": 1846082
+  },
+  "activeness, age, parents, yield": {
+    "k1": 80,
+    "k20": 2096,
+    "k100": 13270
+  },
+  "activeness, age, parents, token, yield": {
+    "k1": 789204,
+    "k20": 1333373,
+    "k100": 1893913
+  },
+  "activeness, age, parents, type, yield": {
+    "k1": 673,
+    "k20": 9055,
+    "k100": 35500
+  },
+  "activeness, age, parents, token, type, yield": {
+    "k1": 819571,
+    "k20": 1431416,
+    "k100": 2022755
+  },
+  "children, parents": {
+    "k1": 0,
+    "k20": 43,
+    "k100": 352
+  },
+  "children, parents, token": {
+    "k1": 674326,
+    "k20": 1071154,
+    "k100": 1535969
+  },
+  "children, parents, type": {
+    "k1": 41,
+    "k20": 1131,
+    "k100": 4040
+  },
+  "children, parents, token, type": {
+    "k1": 695439,
+    "k20": 1164632,
+    "k100": 1708029
+  },
+  "activeness, children, parents": {
+    "k1": 12,
+    "k20": 493,
+    "k100": 3518
+  },
+  "activeness, children, parents, token": {
+    "k1": 741971,
+    "k20": 1255026,
+    "k100": 1794516
+  },
+  "activeness, children, parents, type": {
+    "k1": 265,
+    "k20": 3761,
+    "k100": 15494
+  },
+  "activeness, children, parents, token, type": {
+    "k1": 769952,
+    "k20": 1350114,
+    "k100": 1924029
+  },
+  "age, children, parents": {
+    "k1": 19,
+    "k20": 724,
+    "k100": 3843
+  },
+  "age, children, parents, token": {
+    "k1": 707940,
+    "k20": 1185339,
+    "k100": 1718840
+  },
+  "age, children, parents, type": {
+    "k1": 228,
+    "k20": 3542,
+    "k100": 13978
+  },
+  "age, children, parents, token, type": {
+    "k1": 734128,
+    "k20": 1290764,
+    "k100": 1888093
+  },
+  "activeness, age, children, parents": {
+    "k1": 123,
+    "k20": 3535,
+    "k100": 20835
+  },
+  "activeness, age, children, parents, token": {
+    "k1": 783633,
+    "k20": 1368007,
+    "k100": 1943407
+  },
+  "activeness, age, children, parents, type": {
+    "k1": 859,
+    "k20": 11311,
+    "k100": 46839
+  },
+  "activeness, age, children, parents, token, type": {
+    "k1": 815322,
+    "k20": 1463834,
+    "k100": 2061166
+  },
+  "children, parents, yield": {
+    "k1": 16,
+    "k20": 765,
+    "k100": 6556
+  },
+  "children, parents, token, yield": {
+    "k1": 778801,
+    "k20": 1367510,
+    "k100": 1961836
+  },
+  "children, parents, type, yield": {
+    "k1": 356,
+    "k20": 5551,
+    "k100": 19211
+  },
+  "children, parents, token, type, yield": {
+    "k1": 815026,
+    "k20": 1494626,
+    "k100": 2124253
+  },
+  "activeness, children, parents, yield": {
+    "k1": 252,
+    "k20": 6622,
+    "k100": 33544
+  },
+  "activeness, children, parents, token, yield": {
+    "k1": 869209,
+    "k20": 1563341,
+    "k100": 2170816
+  },
+  "activeness, children, parents, type, yield": {
+    "k1": 1403,
+    "k20": 17956,
+    "k100": 70524
+  },
+  "activeness, children, parents, token, type, yield": {
+    "k1": 911199,
+    "k20": 1666731,
+    "k100": 2277298
+  },
+  "age, children, parents, yield": {
+    "k1": 211,
+    "k20": 5429,
+    "k100": 28891
+  },
+  "age, children, parents, token, yield": {
+    "k1": 823150,
+    "k20": 1491000,
+    "k100": 2109815
+  },
+  "age, children, parents, type, yield": {
+    "k1": 1117,
+    "k20": 15473,
+    "k100": 61165
+  },
+  "age, children, parents, token, type, yield": {
+    "k1": 864711,
+    "k20": 1621113,
+    "k100": 2257062
+  },
+  "activeness, age, children, parents, yield": {
+    "k1": 1151,
+    "k20": 24442,
+    "k100": 103989
+  },
+  "activeness, age, children, parents, token, yield": {
+    "k1": 919172,
+    "k20": 1668443,
+    "k100": 2281330
+  },
+  "activeness, age, children, parents, type, yield": {
+    "k1": 3711,
+    "k20": 47421,
+    "k100": 168500
+  },
+  "activeness, age, children, parents, token, type, yield": {
+    "k1": 963257,
+    "k20": 1766932,
+    "k100": 2375756
+  },
+  "holdingSize": {
+    "k1": 0,
+    "k20": 0,
+    "k100": 0
+  },
+  "holdingSize, token": {
+    "k1": 614203,
+    "k20": 899129,
+    "k100": 1106734
+  },
+  "holdingSize, type": {
+    "k1": 0,
+    "k20": 27,
+    "k100": 152
+  },
+  "holdingSize, token, type": {
+    "k1": 630366,
+    "k20": 938133,
+    "k100": 1180776
+  },
+  "activeness, holdingSize": {
+    "k1": 1,
+    "k20": 4,
+    "k100": 41
+  },
+  "activeness, holdingSize, token": {
+    "k1": 646491,
+    "k20": 964433,
+    "k100": 1220841
+  },
+  "activeness, holdingSize, type": {
+    "k1": 13,
+    "k20": 463,
+    "k100": 4106
+  },
+  "activeness, holdingSize, token, type": {
+    "k1": 664981,
+    "k20": 1013932,
+    "k100": 1311528
+  },
+  "age, holdingSize": {
+    "k1": 1,
+    "k20": 31,
+    "k100": 185
+  },
+  "age, holdingSize, token": {
+    "k1": 638080,
+    "k20": 954522,
+    "k100": 1217479
+  },
+  "age, holdingSize, type": {
+    "k1": 17,
+    "k20": 489,
+    "k100": 3010
+  },
+  "age, holdingSize, token, type": {
+    "k1": 656732,
+    "k20": 1002389,
+    "k100": 1313336
+  },
+  "activeness, age, holdingSize": {
+    "k1": 2,
+    "k20": 71,
+    "k100": 733
+  },
+  "activeness, age, holdingSize, token": {
+    "k1": 673450,
+    "k20": 1029692,
+    "k100": 1332128
+  },
+  "activeness, age, holdingSize, type": {
+    "k1": 110,
+    "k20": 2547,
+    "k100": 10146
+  },
+  "activeness, age, holdingSize, token, type": {
+    "k1": 694535,
+    "k20": 1085734,
+    "k100": 1431831
+  },
+  "holdingSize, yield": {
+    "k1": 0,
+    "k20": 0,
+    "k100": 69
+  },
+  "holdingSize, token, yield": {
+    "k1": 699462,
+    "k20": 1050037,
+    "k100": 1383246
+  },
+  "holdingSize, type, yield": {
+    "k1": 30,
+    "k20": 1016,
+    "k100": 5760
+  },
+  "holdingSize, token, type, yield": {
+    "k1": 721807,
+    "k20": 1115154,
+    "k100": 1514055
+  },
+  "activeness, holdingSize, yield": {
+    "k1": 9,
+    "k20": 208,
+    "k100": 1727
+  },
+  "activeness, holdingSize, token, yield": {
+    "k1": 738258,
+    "k20": 1142231,
+    "k100": 1519462
+  },
+  "activeness, holdingSize, type, yield": {
+    "k1": 182,
+    "k20": 4485,
+    "k100": 15614
+  },
+  "activeness, holdingSize, token, type, yield": {
+    "k1": 764508,
+    "k20": 1215222,
+    "k100": 1650281
+  },
+  "age, holdingSize, yield": {
+    "k1": 16,
+    "k20": 350,
+    "k100": 1963
+  },
+  "age, holdingSize, token, yield": {
+    "k1": 727018,
+    "k20": 1126239,
+    "k100": 1522778
+  },
+  "age, holdingSize, type, yield": {
+    "k1": 172,
+    "k20": 3714,
+    "k100": 14730
+  },
+  "age, holdingSize, token, type, yield": {
+    "k1": 752320,
+    "k20": 1203008,
+    "k100": 1666870
+  },
+  "activeness, age, holdingSize, yield": {
+    "k1": 56,
+    "k20": 1835,
+    "k100": 13579
+  },
+  "activeness, age, holdingSize, token, yield": {
+    "k1": 769767,
+    "k20": 1218726,
+    "k100": 1646145
+  },
+  "activeness, age, holdingSize, type, yield": {
+    "k1": 740,
+    "k20": 10860,
+    "k100": 38852
+  },
+  "activeness, age, holdingSize, token, type, yield": {
+    "k1": 798416,
+    "k20": 1298731,
+    "k100": 1780908
+  },
+  "children, holdingSize": {
+    "k1": 0,
+    "k20": 0,
+    "k100": 79
+  },
+  "children, holdingSize, token": {
+    "k1": 685476,
+    "k20": 1059667,
+    "k100": 1432253
+  },
+  "children, holdingSize, type": {
+    "k1": 63,
+    "k20": 1084,
+    "k100": 4983
+  },
+  "children, holdingSize, token, type": {
+    "k1": 707126,
+    "k20": 1130628,
+    "k100": 1558650
+  },
+  "activeness, children, holdingSize": {
+    "k1": 9,
+    "k20": 332,
+    "k100": 3044
+  },
+  "activeness, children, holdingSize, token": {
+    "k1": 726539,
+    "k20": 1160908,
+    "k100": 1571183
+  },
+  "activeness, children, holdingSize, type": {
+    "k1": 287,
+    "k20": 4607,
+    "k100": 18817
+  },
+  "activeness, children, holdingSize, token, type": {
+    "k1": 752576,
+    "k20": 1238975,
+    "k100": 1697780
+  },
+  "age, children, holdingSize": {
+    "k1": 16,
+    "k20": 682,
+    "k100": 4820
+  },
+  "age, children, holdingSize, token": {
+    "k1": 717521,
+    "k20": 1154531,
+    "k100": 1591308
+  },
+  "age, children, holdingSize, type": {
+    "k1": 301,
+    "k20": 4106,
+    "k100": 19873
+  },
+  "age, children, holdingSize, token, type": {
+    "k1": 743707,
+    "k20": 1234919,
+    "k100": 1724789
+  },
+  "activeness, age, children, holdingSize": {
+    "k1": 86,
+    "k20": 3285,
+    "k100": 22602
+  },
+  "activeness, age, children, holdingSize, token": {
+    "k1": 763652,
+    "k20": 1253596,
+    "k100": 1714080
+  },
+  "activeness, age, children, holdingSize, type": {
+    "k1": 909,
+    "k20": 13728,
+    "k100": 50892
+  },
+  "activeness, age, children, holdingSize, token, type": {
+    "k1": 793323,
+    "k20": 1336058,
+    "k100": 1836402
+  },
+  "children, holdingSize, yield": {
+    "k1": 7,
+    "k20": 700,
+    "k100": 6400
+  },
+  "children, holdingSize, token, yield": {
+    "k1": 786184,
+    "k20": 1310971,
+    "k100": 1819154
+  },
+  "children, holdingSize, type, yield": {
+    "k1": 386,
+    "k20": 6452,
+    "k100": 26885
+  },
+  "children, holdingSize, token, type, yield": {
+    "k1": 820203,
+    "k20": 1412220,
+    "k100": 1968674
+  },
+  "activeness, children, holdingSize, yield": {
+    "k1": 158,
+    "k20": 6254,
+    "k100": 35581
+  },
+  "activeness, children, holdingSize, token, yield": {
+    "k1": 840320,
+    "k20": 1420066,
+    "k100": 1953939
+  },
+  "activeness, children, holdingSize, type, yield": {
+    "k1": 1470,
+    "k20": 20794,
+    "k100": 76573
+  },
+  "activeness, children, holdingSize, token, type, yield": {
+    "k1": 879094,
+    "k20": 1517617,
+    "k100": 2081708
+  },
+  "age, children, holdingSize, yield": {
+    "k1": 202,
+    "k20": 6052,
+    "k100": 30294
+  },
+  "age, children, holdingSize, token, yield": {
+    "k1": 827506,
+    "k20": 1413975,
+    "k100": 1971173
+  },
+  "age, children, holdingSize, type, yield": {
+    "k1": 1271,
+    "k20": 19817,
+    "k100": 69869
+  },
+  "age, children, holdingSize, token, type, yield": {
+    "k1": 865272,
+    "k20": 1519343,
+    "k100": 2113121
+  },
+  "activeness, age, children, holdingSize, yield": {
+    "k1": 1053,
+    "k20": 25841,
+    "k100": 106469
+  },
+  "activeness, age, children, holdingSize, token, yield": {
+    "k1": 884288,
+    "k20": 1512373,
+    "k100": 2082624
+  },
+  "activeness, age, children, holdingSize, type, yield": {
+    "k1": 4037,
+    "k20": 50543,
+    "k100": 167740
+  },
+  "activeness, age, children, holdingSize, token, type, yield": {
+    "k1": 924950,
+    "k20": 1609999,
+    "k100": 2199166
+  },
+  "holdingSize, parents": {
+    "k1": 0,
+    "k20": 0,
+    "k100": 485
+  },
+  "holdingSize, parents, token": {
+    "k1": 688884,
+    "k20": 1046600,
+    "k100": 1399724
+  },
+  "holdingSize, parents, type": {
+    "k1": 34,
+    "k20": 1332,
+    "k100": 6216
+  },
+  "holdingSize, parents, token, type": {
+    "k1": 707656,
+    "k20": 1106492,
+    "k100": 1511392
+  },
+  "activeness, holdingSize, parents": {
+    "k1": 10,
+    "k20": 428,
+    "k100": 2140
+  },
+  "activeness, holdingSize, parents, token": {
+    "k1": 729153,
+    "k20": 1145323,
+    "k100": 1539202
+  },
+  "activeness, holdingSize, parents, type": {
+    "k1": 263,
+    "k20": 4601,
+    "k100": 14952
+  },
+  "activeness, holdingSize, parents, token, type": {
+    "k1": 751576,
+    "k20": 1213469,
+    "k100": 1653260
+  },
+  "age, holdingSize, parents": {
+    "k1": 16,
+    "k20": 577,
+    "k100": 4046
+  },
+  "age, holdingSize, parents, token": {
+    "k1": 719491,
+    "k20": 1138886,
+    "k100": 1560529
+  },
+  "age, holdingSize, parents, type": {
+    "k1": 237,
+    "k20": 4113,
+    "k100": 16623
+  },
+  "age, holdingSize, parents, token, type": {
+    "k1": 741864,
+    "k20": 1209396,
+    "k100": 1682646
+  },
+  "activeness, age, holdingSize, parents": {
+    "k1": 78,
+    "k20": 2442,
+    "k100": 18638
+  },
+  "activeness, age, holdingSize, parents, token": {
+    "k1": 764279,
+    "k20": 1235537,
+    "k100": 1680137
+  },
+  "activeness, age, holdingSize, parents, type": {
+    "k1": 900,
+    "k20": 11893,
+    "k100": 44562
+  },
+  "activeness, age, holdingSize, parents, token, type": {
+    "k1": 789710,
+    "k20": 1309040,
+    "k100": 1794138
+  },
+  "holdingSize, parents, yield": {
+    "k1": 7,
+    "k20": 868,
+    "k100": 5059
+  },
+  "holdingSize, parents, token, yield": {
+    "k1": 786847,
+    "k20": 1285192,
+    "k100": 1767857
+  },
+  "holdingSize, parents, type, yield": {
+    "k1": 397,
+    "k20": 6670,
+    "k100": 21216
+  },
+  "holdingSize, parents, token, type, yield": {
+    "k1": 815593,
+    "k20": 1372902,
+    "k100": 1900780
+  },
+  "activeness, holdingSize, parents, yield": {
+    "k1": 171,
+    "k20": 5239,
+    "k100": 27866
+  },
+  "activeness, holdingSize, parents, token, yield": {
+    "k1": 838699,
+    "k20": 1395437,
+    "k100": 1899955
+  },
+  "activeness, holdingSize, parents, type, yield": {
+    "k1": 1518,
+    "k20": 18214,
+    "k100": 64231
+  },
+  "activeness, holdingSize, parents, token, type, yield": {
+    "k1": 871841,
+    "k20": 1482857,
+    "k100": 2023356
+  },
+  "age, holdingSize, parents, yield": {
+    "k1": 183,
+    "k20": 5111,
+    "k100": 25793
+  },
+  "age, holdingSize, parents, token, yield": {
+    "k1": 825699,
+    "k20": 1392193,
+    "k100": 1930608
+  },
+  "age, holdingSize, parents, type, yield": {
+    "k1": 1296,
+    "k20": 16743,
+    "k100": 58081
+  },
+  "age, holdingSize, parents, token, type, yield": {
+    "k1": 858059,
+    "k20": 1486799,
+    "k100": 2057427
+  },
+  "activeness, age, holdingSize, parents, yield": {
+    "k1": 922,
+    "k20": 21043,
+    "k100": 92062
+  },
+  "activeness, age, holdingSize, parents, token, yield": {
+    "k1": 880427,
+    "k20": 1489569,
+    "k100": 2038296
+  },
+  "activeness, age, holdingSize, parents, type, yield": {
+    "k1": 3783,
+    "k20": 43806,
+    "k100": 145918
+  },
+  "activeness, age, holdingSize, parents, token, type, yield": {
+    "k1": 915599,
+    "k20": 1578852,
+    "k100": 2150018
+  },
+  "children, holdingSize, parents": {
+    "k1": 15,
+    "k20": 1228,
+    "k100": 6476
+  },
+  "children, holdingSize, parents, token": {
+    "k1": 775271,
+    "k20": 1309024,
+    "k100": 1814119
+  },
+  "children, holdingSize, parents, type": {
+    "k1": 492,
+    "k20": 6696,
+    "k100": 25905
+  },
+  "children, holdingSize, parents, token, type": {
+    "k1": 804086,
+    "k20": 1396456,
+    "k100": 1935219
+  },
+  "activeness, children, holdingSize, parents": {
+    "k1": 267,
+    "k20": 6864,
+    "k100": 37179
+  },
+  "activeness, children, holdingSize, parents, token": {
+    "k1": 832087,
+    "k20": 1424259,
+    "k100": 1947550
+  },
+  "activeness, children, holdingSize, parents, type": {
+    "k1": 1625,
+    "k20": 20342,
+    "k100": 75026
+  },
+  "activeness, children, holdingSize, parents, token, type": {
+    "k1": 865098,
+    "k20": 1508392,
+    "k100": 2054831
+  },
+  "age, children, holdingSize, parents": {
+    "k1": 320,
+    "k20": 8520,
+    "k100": 38637
+  },
+  "age, children, holdingSize, parents, token": {
+    "k1": 821672,
+    "k20": 1427754,
+    "k100": 1969109
+  },
+  "age, children, holdingSize, parents, type": {
+    "k1": 1569,
+    "k20": 21657,
+    "k100": 78252
+  },
+  "age, children, holdingSize, parents, token, type": {
+    "k1": 854896,
+    "k20": 1518811,
+    "k100": 2086415
+  },
+  "activeness, age, children, holdingSize, parents": {
+    "k1": 1404,
+    "k20": 30556,
+    "k100": 119663
+  },
+  "activeness, age, children, holdingSize, parents, token": {
+    "k1": 880788,
+    "k20": 1525709,
+    "k100": 2070248
+  },
+  "activeness, age, children, holdingSize, parents, type": {
+    "k1": 4485,
+    "k20": 54554,
+    "k100": 181373
+  },
+  "activeness, age, children, holdingSize, parents, token, type": {
+    "k1": 916371,
+    "k20": 1609653,
+    "k100": 2169361
+  },
+  "children, holdingSize, parents, yield": {
+    "k1": 424,
+    "k20": 11731,
+    "k100": 65191
+  },
+  "children, holdingSize, parents, token, yield": {
+    "k1": 910594,
+    "k20": 1594844,
+    "k100": 2166325
+  },
+  "children, holdingSize, parents, type, yield": {
+    "k1": 2402,
+    "k20": 31067,
+    "k100": 119759
+  },
+  "children, holdingSize, parents, token, type, yield": {
+    "k1": 952191,
+    "k20": 1691795,
+    "k100": 2269922
+  },
+  "activeness, children, holdingSize, parents, yield": {
+    "k1": 2582,
+    "k20": 50393,
+    "k100": 216281
+  },
+  "activeness, children, holdingSize, parents, token, yield": {
+    "k1": 977487,
+    "k20": 1699512,
+    "k100": 2275324
+  },
+  "activeness, children, holdingSize, parents, type, yield": {
+    "k1": 7308,
+    "k20": 87780,
+    "k100": 306908
+  },
+  "activeness, children, holdingSize, parents, token, type, yield": {
+    "k1": 1021498,
+    "k20": 1786800,
+    "k100": 2366349
+  },
+  "age, children, holdingSize, parents, yield": {
+    "k1": 2387,
+    "k20": 43421,
+    "k100": 177847
+  },
+  "age, children, holdingSize, parents, token, yield": {
+    "k1": 964532,
+    "k20": 1705844,
+    "k100": 2289029
+  },
+  "age, children, holdingSize, parents, type, yield": {
+    "k1": 6644,
+    "k20": 79181,
+    "k100": 269562
+  },
+  "age, children, holdingSize, parents, token, type, yield": {
+    "k1": 1008891,
+    "k20": 1802043,
+    "k100": 2386662
+  },
+  "activeness, age, children, holdingSize, parents, yield": {
+    "k1": 9251,
+    "k20": 125691,
+    "k100": 406141
+  },
+  "activeness, age, children, holdingSize, parents, token, yield": {
+    "k1": 1029556,
+    "k20": 1792549,
+    "k100": 2373868
+  },
+  "activeness, age, children, holdingSize, parents, type, yield": {
+    "k1": 17729,
+    "k20": 177740,
+    "k100": 514507
+  },
+  "activeness, age, children, holdingSize, parents, token, type, yield": {
+    "k1": 1074330,
+    "k20": 1875520,
+    "k100": 2452248
+  },
+  "numberOfTokens": {
+    "k1": 0,
+    "k20": 0,
+    "k100": 0
+  },
+  "numberOfTokens, token": {
+    "k1": 574172,
+    "k20": 861119,
+    "k100": 1052240
+  },
+  "numberOfTokens, type": {
+    "k1": 3,
+    "k20": 34,
+    "k100": 190
+  },
+  "numberOfTokens, token, type": {
+    "k1": 589514,
+    "k20": 888930,
+    "k100": 1105631
+  },
+  "activeness, numberOfTokens": {
+    "k1": 0,
+    "k20": 0,
+    "k100": 0
+  },
+  "activeness, numberOfTokens, token": {
+    "k1": 618117,
+    "k20": 937324,
+    "k100": 1193126
+  },
+  "activeness, numberOfTokens, type": {
+    "k1": 9,
+    "k20": 325,
+    "k100": 2309
+  },
+  "activeness, numberOfTokens, token, type": {
+    "k1": 634737,
+    "k20": 977627,
+    "k100": 1266214
+  },
+  "age, numberOfTokens": {
+    "k1": 0,
+    "k20": 0,
+    "k100": 85
+  },
+  "age, numberOfTokens, token": {
+    "k1": 597067,
+    "k20": 906372,
+    "k100": 1148145
+  },
+  "age, numberOfTokens, type": {
+    "k1": 12,
+    "k20": 311,
+    "k100": 1395
+  },
+  "age, numberOfTokens, token, type": {
+    "k1": 614069,
+    "k20": 942175,
+    "k100": 1223662
+  },
+  "activeness, age, numberOfTokens": {
+    "k1": 1,
+    "k20": 63,
+    "k100": 369
+  },
+  "activeness, age, numberOfTokens, token": {
+    "k1": 643216,
+    "k20": 997305,
+    "k100": 1303330
+  },
+  "activeness, age, numberOfTokens, type": {
+    "k1": 58,
+    "k20": 1356,
+    "k100": 6393
+  },
+  "activeness, age, numberOfTokens, token, type": {
+    "k1": 662023,
+    "k20": 1044471,
+    "k100": 1385835
+  },
+  "numberOfTokens, yield": {
+    "k1": 0,
+    "k20": 0,
+    "k100": 90
+  },
+  "numberOfTokens, token, yield": {
+    "k1": 662097,
+    "k20": 998712,
+    "k100": 1335290
+  },
+  "numberOfTokens, type, yield": {
+    "k1": 15,
+    "k20": 456,
+    "k100": 3398
+  },
+  "numberOfTokens, token, type, yield": {
+    "k1": 681904,
+    "k20": 1049187,
+    "k100": 1445372
+  },
+  "activeness, numberOfTokens, yield": {
+    "k1": 0,
+    "k20": 100,
+    "k100": 921
+  },
+  "activeness, numberOfTokens, token, yield": {
+    "k1": 711126,
+    "k20": 1115824,
+    "k100": 1509857
+  },
+  "activeness, numberOfTokens, type, yield": {
+    "k1": 111,
+    "k20": 2654,
+    "k100": 9373
+  },
+  "activeness, numberOfTokens, token, type, yield": {
+    "k1": 733839,
+    "k20": 1178233,
+    "k100": 1621056
+  },
+  "age, numberOfTokens, yield": {
+    "k1": 9,
+    "k20": 236,
+    "k100": 1072
+  },
+  "age, numberOfTokens, token, yield": {
+    "k1": 687790,
+    "k20": 1066852,
+    "k100": 1472709
+  },
+  "age, numberOfTokens, type, yield": {
+    "k1": 87,
+    "k20": 1864,
+    "k100": 8329
+  },
+  "age, numberOfTokens, token, type, yield": {
+    "k1": 709521,
+    "k20": 1129347,
+    "k100": 1595700
+  },
+  "activeness, age, numberOfTokens, yield": {
+    "k1": 45,
+    "k20": 956,
+    "k100": 6913
+  },
+  "activeness, age, numberOfTokens, token, yield": {
+    "k1": 740541,
+    "k20": 1191959,
+    "k100": 1634453
+  },
+  "activeness, age, numberOfTokens, type, yield": {
+    "k1": 417,
+    "k20": 6087,
+    "k100": 21855
+  },
+  "activeness, age, numberOfTokens, token, type, yield": {
+    "k1": 765250,
+    "k20": 1259888,
+    "k100": 1750721
+  },
+  "children, numberOfTokens": {
+    "k1": 0,
+    "k20": 21,
+    "k100": 21
+  },
+  "children, numberOfTokens, token": {
+    "k1": 646335,
+    "k20": 1005295,
+    "k100": 1376150
+  },
+  "children, numberOfTokens, type": {
+    "k1": 26,
+    "k20": 970,
+    "k100": 2907
+  },
+  "children, numberOfTokens, token, type": {
+    "k1": 664743,
+    "k20": 1058481,
+    "k100": 1483370
+  },
+  "activeness, children, numberOfTokens": {
+    "k1": 1,
+    "k20": 104,
+    "k100": 1572
+  },
+  "activeness, children, numberOfTokens, token": {
+    "k1": 698123,
+    "k20": 1135358,
+    "k100": 1560332
+  },
+  "activeness, children, numberOfTokens, type": {
+    "k1": 193,
+    "k20": 2508,
+    "k100": 10605
+  },
+  "activeness, children, numberOfTokens, token, type": {
+    "k1": 720250,
+    "k20": 1198008,
+    "k100": 1666465
+  },
+  "age, children, numberOfTokens": {
+    "k1": 7,
+    "k20": 263,
+    "k100": 2174
+  },
+  "age, children, numberOfTokens, token": {
+    "k1": 674982,
+    "k20": 1092987,
+    "k100": 1535712
+  },
+  "age, children, numberOfTokens, type": {
+    "k1": 144,
+    "k20": 2291,
+    "k100": 9054
+  },
+  "age, children, numberOfTokens, token, type": {
+    "k1": 696728,
+    "k20": 1157947,
+    "k100": 1652440
+  },
+  "activeness, age, children, numberOfTokens": {
+    "k1": 44,
+    "k20": 1634,
+    "k100": 10159
+  },
+  "activeness, age, children, numberOfTokens, token": {
+    "k1": 732864,
+    "k20": 1224304,
+    "k100": 1700715
+  },
+  "activeness, age, children, numberOfTokens, type": {
+    "k1": 545,
+    "k20": 7317,
+    "k100": 26611
+  },
+  "activeness, age, children, numberOfTokens, token, type": {
+    "k1": 758293,
+    "k20": 1292835,
+    "k100": 1803719
+  },
+  "children, numberOfTokens, yield": {
+    "k1": 6,
+    "k20": 309,
+    "k100": 2986
+  },
+  "children, numberOfTokens, token, yield": {
+    "k1": 746046,
+    "k20": 1265716,
+    "k100": 1793056
+  },
+  "children, numberOfTokens, type, yield": {
+    "k1": 244,
+    "k20": 3688,
+    "k100": 12997
+  },
+  "children, numberOfTokens, token, type, yield": {
+    "k1": 773218,
+    "k20": 1347548,
+    "k100": 1914665
+  },
+  "activeness, children, numberOfTokens, yield": {
+    "k1": 72,
+    "k20": 3377,
+    "k100": 20436
+  },
+  "activeness, children, numberOfTokens, token, yield": {
+    "k1": 813903,
+    "k20": 1408424,
+    "k100": 1952432
+  },
+  "activeness, children, numberOfTokens, type, yield": {
+    "k1": 920,
+    "k20": 12112,
+    "k100": 43255
+  },
+  "activeness, children, numberOfTokens, token, type, yield": {
+    "k1": 846063,
+    "k20": 1489269,
+    "k100": 2056157
+  },
+  "age, children, numberOfTokens, yield": {
+    "k1": 100,
+    "k20": 2448,
+    "k100": 13926
+  },
+  "age, children, numberOfTokens, token, yield": {
+    "k1": 783252,
+    "k20": 1369166,
+    "k100": 1950816
+  },
+  "age, children, numberOfTokens, type, yield": {
+    "k1": 694,
+    "k20": 9697,
+    "k100": 35343
+  },
+  "age, children, numberOfTokens, token, type, yield": {
+    "k1": 813987,
+    "k20": 1456556,
+    "k100": 2064463
+  },
+  "activeness, age, children, numberOfTokens, yield": {
+    "k1": 536,
+    "k20": 13259,
+    "k100": 62419
+  },
+  "activeness, age, children, numberOfTokens, token, yield": {
+    "k1": 855586,
+    "k20": 1499288,
+    "k100": 2079310
+  },
+  "activeness, age, children, numberOfTokens, type, yield": {
+    "k1": 2278,
+    "k20": 28917,
+    "k100": 101559
+  },
+  "activeness, age, children, numberOfTokens, token, type, yield": {
+    "k1": 889992,
+    "k20": 1581787,
+    "k100": 2171992
+  },
+  "numberOfTokens, parents": {
+    "k1": 1,
+    "k20": 1,
+    "k100": 181
+  },
+  "numberOfTokens, parents, token": {
+    "k1": 651527,
+    "k20": 993689,
+    "k100": 1345465
+  },
+  "numberOfTokens, parents, type": {
+    "k1": 26,
+    "k20": 523,
+    "k100": 3186
+  },
+  "numberOfTokens, parents, token, type": {
+    "k1": 667789,
+    "k20": 1040249,
+    "k100": 1439643
+  },
+  "activeness, numberOfTokens, parents": {
+    "k1": 3,
+    "k20": 199,
+    "k100": 1378
+  },
+  "activeness, numberOfTokens, parents, token": {
+    "k1": 701822,
+    "k20": 1117955,
+    "k100": 1528102
+  },
+  "activeness, numberOfTokens, parents, type": {
+    "k1": 162,
+    "k20": 2764,
+    "k100": 9136
+  },
+  "activeness, numberOfTokens, parents, token, type": {
+    "k1": 721222,
+    "k20": 1174822,
+    "k100": 1622883
+  },
+  "age, numberOfTokens, parents": {
+    "k1": 9,
+    "k20": 253,
+    "k100": 1935
+  },
+  "age, numberOfTokens, parents, token": {
+    "k1": 679434,
+    "k20": 1078931,
+    "k100": 1504763
+  },
+  "age, numberOfTokens, parents, type": {
+    "k1": 124,
+    "k20": 2232,
+    "k100": 8735
+  },
+  "age, numberOfTokens, parents, token, type": {
+    "k1": 698175,
+    "k20": 1135302,
+    "k100": 1608684
+  },
+  "activeness, age, numberOfTokens, parents": {
+    "k1": 47,
+    "k20": 1364,
+    "k100": 8084
+  },
+  "activeness, age, numberOfTokens, parents, token": {
+    "k1": 734525,
+    "k20": 1207192,
+    "k100": 1668926
+  },
+  "activeness, age, numberOfTokens, parents, type": {
+    "k1": 493,
+    "k20": 6600,
+    "k100": 22478
+  },
+  "activeness, age, numberOfTokens, parents, token, type": {
+    "k1": 756359,
+    "k20": 1269020,
+    "k100": 1761110
+  },
+  "numberOfTokens, parents, yield": {
+    "k1": 8,
+    "k20": 306,
+    "k100": 2527
+  },
+  "numberOfTokens, parents, token, yield": {
+    "k1": 749288,
+    "k20": 1239829,
+    "k100": 1739096
+  },
+  "numberOfTokens, parents, type, yield": {
+    "k1": 222,
+    "k20": 3661,
+    "k100": 13214
+  },
+  "numberOfTokens, parents, token, type, yield": {
+    "k1": 772616,
+    "k20": 1312876,
+    "k100": 1849052
+  },
+  "activeness, numberOfTokens, parents, yield": {
+    "k1": 95,
+    "k20": 2879,
+    "k100": 17084
+  },
+  "activeness, numberOfTokens, parents, token, yield": {
+    "k1": 813057,
+    "k20": 1383985,
+    "k100": 1902653
+  },
+  "activeness, numberOfTokens, parents, type, yield": {
+    "k1": 938,
+    "k20": 10900,
+    "k100": 35567
+  },
+  "activeness, numberOfTokens, parents, token, type, yield": {
+    "k1": 840705,
+    "k20": 1456523,
+    "k100": 1999945
+  },
+  "age, numberOfTokens, parents, yield": {
+    "k1": 102,
+    "k20": 2189,
+    "k100": 11980
+  },
+  "age, numberOfTokens, parents, token, yield": {
+    "k1": 784408,
+    "k20": 1346818,
+    "k100": 1902126
+  },
+  "age, numberOfTokens, parents, type, yield": {
+    "k1": 658,
+    "k20": 8594,
+    "k100": 30308
+  },
+  "age, numberOfTokens, parents, token, type, yield": {
+    "k1": 810924,
+    "k20": 1426654,
+    "k100": 2004347
+  },
+  "activeness, age, numberOfTokens, parents, yield": {
+    "k1": 488,
+    "k20": 11054,
+    "k100": 53649
+  },
+  "activeness, age, numberOfTokens, parents, token, yield": {
+    "k1": 852452,
+    "k20": 1476477,
+    "k100": 2038329
+  },
+  "activeness, age, numberOfTokens, parents, type, yield": {
+    "k1": 2136,
+    "k20": 24894,
+    "k100": 85460
+  },
+  "activeness, age, numberOfTokens, parents, token, type, yield": {
+    "k1": 882333,
+    "k20": 1550702,
+    "k100": 2125051
+  },
+  "children, numberOfTokens, parents": {
+    "k1": 14,
+    "k20": 572,
+    "k100": 3784
+  },
+  "children, numberOfTokens, parents, token": {
+    "k1": 734381,
+    "k20": 1263156,
+    "k100": 1787893
+  },
+  "children, numberOfTokens, parents, type": {
+    "k1": 273,
+    "k20": 3752,
+    "k100": 13580
+  },
+  "children, numberOfTokens, parents, token, type": {
+    "k1": 757356,
+    "k20": 1332504,
+    "k100": 1880832
+  },
+  "activeness, children, numberOfTokens, parents": {
+    "k1": 125,
+    "k20": 3785,
+    "k100": 20194
+  },
+  "activeness, children, numberOfTokens, parents, token": {
+    "k1": 804655,
+    "k20": 1409760,
+    "k100": 1948900
+  },
+  "activeness, children, numberOfTokens, parents, type": {
+    "k1": 974,
+    "k20": 11790,
+    "k100": 41550
+  },
+  "activeness, children, numberOfTokens, parents, token, type": {
+    "k1": 831848,
+    "k20": 1478132,
+    "k100": 2031950
+  },
+  "age, children, numberOfTokens, parents": {
+    "k1": 142,
+    "k20": 3759,
+    "k100": 16676
+  },
+  "age, children, numberOfTokens, parents, token": {
+    "k1": 776441,
+    "k20": 1379434,
+    "k100": 1947133
+  },
+  "age, children, numberOfTokens, parents, type": {
+    "k1": 803,
+    "k20": 10569,
+    "k100": 38219
+  },
+  "age, children, numberOfTokens, parents, token, type": {
+    "k1": 803151,
+    "k20": 1453046,
+    "k100": 2034227
+  },
+  "activeness, age, children, numberOfTokens, parents": {
+    "k1": 729,
+    "k20": 16099,
+    "k100": 70925
+  },
+  "activeness, age, children, numberOfTokens, parents, token": {
+    "k1": 851261,
+    "k20": 1510809,
+    "k100": 2071243
+  },
+  "activeness, age, children, numberOfTokens, parents, type": {
+    "k1": 2487,
+    "k20": 30956,
+    "k100": 109324
+  },
+  "activeness, age, children, numberOfTokens, parents, token, type": {
+    "k1": 880808,
+    "k20": 1579273,
+    "k100": 2147686
+  },
+  "children, numberOfTokens, parents, yield": {
+    "k1": 205,
+    "k20": 5524,
+    "k100": 29155
+  },
+  "children, numberOfTokens, parents, token, yield": {
+    "k1": 870220,
+    "k20": 1571199,
+    "k100": 2162808
+  },
+  "children, numberOfTokens, parents, type, yield": {
+    "k1": 1306,
+    "k20": 15637,
+    "k100": 56628
+  },
+  "children, numberOfTokens, parents, token, type, yield": {
+    "k1": 903336,
+    "k20": 1647250,
+    "k100": 2233008
+  },
+  "activeness, children, numberOfTokens, parents, yield": {
+    "k1": 1501,
+    "k20": 30736,
+    "k100": 141485
+  },
+  "activeness, children, numberOfTokens, parents, token, yield": {
+    "k1": 954963,
+    "k20": 1698080,
+    "k100": 2281970
+  },
+  "activeness, children, numberOfTokens, parents, type, yield": {
+    "k1": 4283,
+    "k20": 51469,
+    "k100": 201104
+  },
+  "activeness, children, numberOfTokens, parents, token, type, yield": {
+    "k1": 990771,
+    "k20": 1766240,
+    "k100": 2345872
+  },
+  "age, children, numberOfTokens, parents, yield": {
+    "k1": 1077,
+    "k20": 20688,
+    "k100": 93695
+  },
+  "age, children, numberOfTokens, parents, token, yield": {
+    "k1": 921649,
+    "k20": 1684053,
+    "k100": 2284836
+  },
+  "age, children, numberOfTokens, parents, type, yield": {
+    "k1": 3338,
+    "k20": 38889,
+    "k100": 144408
+  },
+  "age, children, numberOfTokens, parents, token, type, yield": {
+    "k1": 957652,
+    "k20": 1756974,
+    "k100": 2350371
+  },
+  "activeness, age, children, numberOfTokens, parents, yield": {
+    "k1": 5115,
+    "k20": 77949,
+    "k100": 288275
+  },
+  "activeness, age, children, numberOfTokens, parents, token, yield": {
+    "k1": 1005614,
+    "k20": 1788628,
+    "k100": 2377087
+  },
+  "activeness, age, children, numberOfTokens, parents, type, yield": {
+    "k1": 10095,
+    "k20": 112074,
+    "k100": 372269
+  },
+  "activeness, age, children, numberOfTokens, parents, token, type, yield": {
+    "k1": 1042642,
+    "k20": 1853698,
+    "k100": 2434059
+  },
+  "holdingSize, numberOfTokens": {
+    "k1": 0,
+    "k20": 0,
+    "k100": 0
+  },
+  "holdingSize, numberOfTokens, token": {
+    "k1": 645433,
+    "k20": 982291,
+    "k100": 1264884
+  },
+  "holdingSize, numberOfTokens, type": {
+    "k1": 11,
+    "k20": 517,
+    "k100": 5379
+  },
+  "holdingSize, numberOfTokens, token, type": {
+    "k1": 663333,
+    "k20": 1023060,
+    "k100": 1328824
+  },
+  "activeness, holdingSize, numberOfTokens": {
+    "k1": 2,
+    "k20": 52,
+    "k100": 849
+  },
+  "activeness, holdingSize, numberOfTokens, token": {
+    "k1": 681158,
+    "k20": 1062239,
+    "k100": 1380087
+  },
+  "activeness, holdingSize, numberOfTokens, type": {
+    "k1": 122,
+    "k20": 3670,
+    "k100": 11864
+  },
+  "activeness, holdingSize, numberOfTokens, token, type": {
+    "k1": 701125,
+    "k20": 1108463,
+    "k100": 1452377
+  },
+  "age, holdingSize, numberOfTokens": {
+    "k1": 2,
+    "k20": 340,
+    "k100": 1683
+  },
+  "age, holdingSize, numberOfTokens, token": {
+    "k1": 672815,
+    "k20": 1050895,
+    "k100": 1376001
+  },
+  "age, holdingSize, numberOfTokens, type": {
+    "k1": 106,
+    "k20": 2712,
+    "k100": 12272
+  },
+  "age, holdingSize, numberOfTokens, token, type": {
+    "k1": 693566,
+    "k20": 1097992,
+    "k100": 1453453
+  },
+  "activeness, age, holdingSize, numberOfTokens": {
+    "k1": 26,
+    "k20": 1203,
+    "k100": 9504
+  },
+  "activeness, age, holdingSize, numberOfTokens, token": {
+    "k1": 711992,
+    "k20": 1132816,
+    "k100": 1478449
+  },
+  "activeness, age, holdingSize, numberOfTokens, type": {
+    "k1": 542,
+    "k20": 7932,
+    "k100": 27944
+  },
+  "activeness, age, holdingSize, numberOfTokens, token, type": {
+    "k1": 734688,
+    "k20": 1183508,
+    "k100": 1558650
+  },
+  "holdingSize, numberOfTokens, yield": {
+    "k1": 0,
+    "k20": 225,
+    "k100": 1613
+  },
+  "holdingSize, numberOfTokens, token, yield": {
+    "k1": 741185,
+    "k20": 1181049,
+    "k100": 1554828
+  },
+  "holdingSize, numberOfTokens, type, yield": {
+    "k1": 179,
+    "k20": 5116,
+    "k100": 15281
+  },
+  "holdingSize, numberOfTokens, token, type, yield": {
+    "k1": 766252,
+    "k20": 1237097,
+    "k100": 1652513
+  },
+  "activeness, holdingSize, numberOfTokens, yield": {
+    "k1": 64,
+    "k20": 2433,
+    "k100": 16495
+  },
+  "activeness, holdingSize, numberOfTokens, token, yield": {
+    "k1": 786264,
+    "k20": 1270170,
+    "k100": 1664937
+  },
+  "activeness, holdingSize, numberOfTokens, type, yield": {
+    "k1": 1015,
+    "k20": 12498,
+    "k100": 41106
+  },
+  "activeness, holdingSize, numberOfTokens, token, type, yield": {
+    "k1": 813893,
+    "k20": 1329079,
+    "k100": 1765304
+  },
+  "age, holdingSize, numberOfTokens, yield": {
+    "k1": 75,
+    "k20": 2318,
+    "k100": 12034
+  },
+  "age, holdingSize, numberOfTokens, token, yield": {
+    "k1": 774741,
+    "k20": 1258902,
+    "k100": 1685163
+  },
+  "age, holdingSize, numberOfTokens, type, yield": {
+    "k1": 762,
+    "k20": 11094,
+    "k100": 35960
+  },
+  "age, holdingSize, numberOfTokens, token, type, yield": {
+    "k1": 802170,
+    "k20": 1322170,
+    "k100": 1790338
+  },
+  "activeness, age, holdingSize, numberOfTokens, yield": {
+    "k1": 411,
+    "k20": 11350,
+    "k100": 58238
+  },
+  "activeness, age, holdingSize, numberOfTokens, token, yield": {
+    "k1": 821981,
+    "k20": 1341703,
+    "k100": 1776568
+  },
+  "activeness, age, holdingSize, numberOfTokens, type, yield": {
+    "k1": 2520,
+    "k20": 27787,
+    "k100": 94699
+  },
+  "activeness, age, holdingSize, numberOfTokens, token, type, yield": {
+    "k1": 851230,
+    "k20": 1405244,
+    "k100": 1882239
+  },
+  "children, holdingSize, numberOfTokens": {
+    "k1": 8,
+    "k20": 379,
+    "k100": 3866
+  },
+  "children, holdingSize, numberOfTokens, token": {
+    "k1": 729780,
+    "k20": 1196209,
+    "k100": 1598590
+  },
+  "children, holdingSize, numberOfTokens, type": {
+    "k1": 324,
+    "k20": 4634,
+    "k100": 17315
+  },
+  "children, holdingSize, numberOfTokens, token, type": {
+    "k1": 753908,
+    "k20": 1254447,
+    "k100": 1693038
+  },
+  "activeness, children, holdingSize, numberOfTokens": {
+    "k1": 86,
+    "k20": 3490,
+    "k100": 23133
+  },
+  "activeness, children, holdingSize, numberOfTokens, token": {
+    "k1": 778427,
+    "k20": 1291671,
+    "k100": 1708823
+  },
+  "activeness, children, holdingSize, numberOfTokens, type": {
+    "k1": 1109,
+    "k20": 13544,
+    "k100": 48284
+  },
+  "activeness, children, holdingSize, numberOfTokens, token, type": {
+    "k1": 805111,
+    "k20": 1351652,
+    "k100": 1803271
+  },
+  "age, children, holdingSize, numberOfTokens": {
+    "k1": 143,
+    "k20": 3731,
+    "k100": 21276
+  },
+  "age, children, holdingSize, numberOfTokens, token": {
+    "k1": 769114,
+    "k20": 1289745,
+    "k100": 1741225
+  },
+  "age, children, holdingSize, numberOfTokens, type": {
+    "k1": 1024,
+    "k20": 13298,
+    "k100": 48269
+  },
+  "age, children, holdingSize, numberOfTokens, token, type": {
+    "k1": 796583,
+    "k20": 1353887,
+    "k100": 1837777
+  },
+  "activeness, age, children, holdingSize, numberOfTokens": {
+    "k1": 712,
+    "k20": 17619,
+    "k100": 78351
+  },
+  "activeness, age, children, holdingSize, numberOfTokens, token": {
+    "k1": 820460,
+    "k20": 1373484,
+    "k100": 1829287
+  },
+  "activeness, age, children, holdingSize, numberOfTokens, type": {
+    "k1": 2948,
+    "k20": 35463,
+    "k100": 115335
+  },
+  "activeness, age, children, holdingSize, numberOfTokens, token, type": {
+    "k1": 849673,
+    "k20": 1438010,
+    "k100": 1922636
+  },
+  "children, holdingSize, numberOfTokens, yield": {
+    "k1": 175,
+    "k20": 6354,
+    "k100": 38417
+  },
+  "children, holdingSize, numberOfTokens, token, yield": {
+    "k1": 855729,
+    "k20": 1455019,
+    "k100": 1956494
+  },
+  "children, holdingSize, numberOfTokens, type, yield": {
+    "k1": 1593,
+    "k20": 19873,
+    "k100": 77027
+  },
+  "children, holdingSize, numberOfTokens, token, type, yield": {
+    "k1": 888546,
+    "k20": 1527794,
+    "k100": 2057493
+  },
+  "activeness, children, holdingSize, numberOfTokens, yield": {
+    "k1": 1435,
+    "k20": 32875,
+    "k100": 155739
+  },
+  "activeness, children, holdingSize, numberOfTokens, token, yield": {
+    "k1": 913648,
+    "k20": 1539387,
+    "k100": 2051707
+  },
+  "activeness, children, holdingSize, numberOfTokens, type, yield": {
+    "k1": 4965,
+    "k20": 58558,
+    "k100": 214052
+  },
+  "activeness, children, holdingSize, numberOfTokens, token, type, yield": {
+    "k1": 948606,
+    "k20": 1612247,
+    "k100": 2146779
+  },
+  "age, children, holdingSize, numberOfTokens, yield": {
+    "k1": 1177,
+    "k20": 24771,
+    "k100": 113773
+  },
+  "age, children, holdingSize, numberOfTokens, token, yield": {
+    "k1": 901707,
+    "k20": 1547759,
+    "k100": 2096057
+  },
+  "age, children, holdingSize, numberOfTokens, type, yield": {
+    "k1": 4179,
+    "k20": 49310,
+    "k100": 173731
+  },
+  "age, children, holdingSize, numberOfTokens, token, type, yield": {
+    "k1": 936971,
+    "k20": 1623896,
+    "k100": 2189256
+  },
+  "activeness, age, children, holdingSize, numberOfTokens, yield": {
+    "k1": 5304,
+    "k20": 83914,
+    "k100": 291084
+  },
+  "activeness, age, children, holdingSize, numberOfTokens, token, yield": {
+    "k1": 958323,
+    "k20": 1619479,
+    "k100": 2165143
+  },
+  "activeness, age, children, holdingSize, numberOfTokens, type, yield": {
+    "k1": 11521,
+    "k20": 120111,
+    "k100": 370569
+  },
+  "activeness, age, children, holdingSize, numberOfTokens, token, type, yield": {
+    "k1": 994450,
+    "k20": 1693501,
+    "k100": 2252113
+  },
+  "holdingSize, numberOfTokens, parents": {
+    "k1": 4,
+    "k20": 456,
+    "k100": 3086
+  },
+  "holdingSize, numberOfTokens, parents, token": {
+    "k1": 731659,
+    "k20": 1175960,
+    "k100": 1568247
+  },
+  "holdingSize, numberOfTokens, parents, type": {
+    "k1": 261,
+    "k20": 5338,
+    "k100": 14951
+  },
+  "holdingSize, numberOfTokens, parents, token, type": {
+    "k1": 752399,
+    "k20": 1227986,
+    "k100": 1651100
+  },
+  "activeness, holdingSize, numberOfTokens, parents": {
+    "k1": 102,
+    "k20": 2821,
+    "k100": 20182
+  },
+  "activeness, holdingSize, numberOfTokens, parents, token": {
+    "k1": 778805,
+    "k20": 1270671,
+    "k100": 1683448
+  },
+  "activeness, holdingSize, numberOfTokens, parents, type": {
+    "k1": 1107,
+    "k20": 12005,
+    "k100": 42255
+  },
+  "activeness, holdingSize, numberOfTokens, parents, token, type": {
+    "k1": 802109,
+    "k20": 1325535,
+    "k100": 1769608
+  },
+  "age, holdingSize, numberOfTokens, parents": {
+    "k1": 146,
+    "k20": 3271,
+    "k100": 17237
+  },
+  "age, holdingSize, numberOfTokens, parents, token": {
+    "k1": 768712,
+    "k20": 1269825,
+    "k100": 1717335
+  },
+  "age, holdingSize, numberOfTokens, parents, type": {
+    "k1": 905,
+    "k20": 12374,
+    "k100": 38972
+  },
+  "age, holdingSize, numberOfTokens, parents, token, type": {
+    "k1": 792502,
+    "k20": 1327643,
+    "k100": 1805300
+  },
+  "activeness, age, holdingSize, numberOfTokens, parents": {
+    "k1": 586,
+    "k20": 15626,
+    "k100": 69189
+  },
+  "activeness, age, holdingSize, numberOfTokens, parents, token": {
+    "k1": 818342,
+    "k20": 1355324,
+    "k100": 1808447
+  },
+  "activeness, age, holdingSize, numberOfTokens, parents, type": {
+    "k1": 2677,
+    "k20": 31391,
+    "k100": 102605
+  },
+  "activeness, age, holdingSize, numberOfTokens, parents, token, type": {
+    "k1": 843957,
+    "k20": 1412683,
+    "k100": 1893884
+  },
+  "holdingSize, numberOfTokens, parents, yield": {
+    "k1": 172,
+    "k20": 5572,
+    "k100": 31651
+  },
+  "holdingSize, numberOfTokens, parents, token, yield": {
+    "k1": 851152,
+    "k20": 1426255,
+    "k100": 1905998
+  },
+  "holdingSize, numberOfTokens, parents, type, yield": {
+    "k1": 1579,
+    "k20": 17436,
+    "k100": 63051
+  },
+  "holdingSize, numberOfTokens, parents, token, type, yield": {
+    "k1": 879674,
+    "k20": 1492055,
+    "k100": 1999050
+  },
+  "activeness, holdingSize, numberOfTokens, parents, yield": {
+    "k1": 1194,
+    "k20": 27569,
+    "k100": 128949
+  },
+  "activeness, holdingSize, numberOfTokens, parents, token, yield": {
+    "k1": 906994,
+    "k20": 1515536,
+    "k100": 2006179
+  },
+  "activeness, holdingSize, numberOfTokens, parents, type, yield": {
+    "k1": 4493,
+    "k20": 48616,
+    "k100": 178947
+  },
+  "activeness, holdingSize, numberOfTokens, parents, token, type, yield": {
+    "k1": 937488,
+    "k20": 1580860,
+    "k100": 2095766
+  },
+  "age, holdingSize, numberOfTokens, parents, yield": {
+    "k1": 1015,
+    "k20": 20883,
+    "k100": 95129
+  },
+  "age, holdingSize, numberOfTokens, parents, token, yield": {
+    "k1": 895141,
+    "k20": 1524830,
+    "k100": 2054084
+  },
+  "age, holdingSize, numberOfTokens, parents, type, yield": {
+    "k1": 3885,
+    "k20": 41567,
+    "k100": 148574
+  },
+  "age, holdingSize, numberOfTokens, parents, token, type, yield": {
+    "k1": 926072,
+    "k20": 1593904,
+    "k100": 2139309
+  },
+  "activeness, age, holdingSize, numberOfTokens, parents, yield": {
+    "k1": 4396,
+    "k20": 72474,
+    "k100": 256668
+  },
+  "activeness, age, holdingSize, numberOfTokens, parents, token, yield": {
+    "k1": 950240,
+    "k20": 1598122,
+    "k100": 2129687
+  },
+  "activeness, age, holdingSize, numberOfTokens, parents, type, yield": {
+    "k1": 10164,
+    "k20": 103834,
+    "k100": 322875
+  },
+  "activeness, age, holdingSize, numberOfTokens, parents, token, type, yield": {
+    "k1": 981993,
+    "k20": 1665261,
+    "k100": 2209124
+  },
+  "children, holdingSize, numberOfTokens, parents": {
+    "k1": 257,
+    "k20": 6455,
+    "k100": 36864
+  },
+  "children, holdingSize, numberOfTokens, parents, token": {
+    "k1": 845111,
+    "k20": 1450356,
+    "k100": 1939920
+  },
+  "children, holdingSize, numberOfTokens, parents, type": {
+    "k1": 1647,
+    "k20": 18679,
+    "k100": 70469
+  },
+  "children, holdingSize, numberOfTokens, parents, token, type": {
+    "k1": 872521,
+    "k20": 1512070,
+    "k100": 2018581
+  },
+  "activeness, children, holdingSize, numberOfTokens, parents": {
+    "k1": 1588,
+    "k20": 33630,
+    "k100": 146001
+  },
+  "activeness, children, holdingSize, numberOfTokens, parents, token": {
+    "k1": 904998,
+    "k20": 1540066,
+    "k100": 2037238
+  },
+  "activeness, children, holdingSize, numberOfTokens, parents, type": {
+    "k1": 4796,
+    "k20": 55758,
+    "k100": 197995
+  },
+  "activeness, children, holdingSize, numberOfTokens, parents, token, type": {
+    "k1": 934142,
+    "k20": 1601366,
+    "k100": 2112475
+  },
+  "age, children, holdingSize, numberOfTokens, parents": {
+    "k1": 1631,
+    "k20": 28589,
+    "k100": 122135
+  },
+  "age, children, holdingSize, numberOfTokens, parents, token": {
+    "k1": 895664,
+    "k20": 1555432,
+    "k100": 2081627
+  },
+  "age, children, holdingSize, numberOfTokens, parents, type": {
+    "k1": 4495,
+    "k20": 51093,
+    "k100": 178690
+  },
+  "age, children, holdingSize, numberOfTokens, parents, token, type": {
+    "k1": 925887,
+    "k20": 1620447,
+    "k100": 2157853
+  },
+  "activeness, age, children, holdingSize, numberOfTokens, parents": {
+    "k1": 6297,
+    "k20": 91179,
+    "k100": 296590
+  },
+  "activeness, age, children, holdingSize, numberOfTokens, parents, token": {
+    "k1": 954203,
+    "k20": 1626948,
+    "k100": 2148781
+  },
+  "activeness, age, children, holdingSize, numberOfTokens, parents, type": {
+    "k1": 12071,
+    "k20": 122805,
+    "k100": 368614
+  },
+  "activeness, age, children, holdingSize, numberOfTokens, parents, token, type": {
+    "k1": 985126,
+    "k20": 1688994,
+    "k100": 2220269
+  },
+  "children, holdingSize, numberOfTokens, parents, yield": {
+    "k1": 2736,
+    "k20": 59396,
+    "k100": 266757
+  },
+  "children, holdingSize, numberOfTokens, parents, token, yield": {
+    "k1": 999132,
+    "k20": 1712092,
+    "k100": 2264961
+  },
+  "children, holdingSize, numberOfTokens, parents, type, yield": {
+    "k1": 7225,
+    "k20": 92545,
+    "k100": 342388
+  },
+  "children, holdingSize, numberOfTokens, parents, token, type, yield": {
+    "k1": 1034134,
+    "k20": 1776084,
+    "k100": 2329532
+  },
+  "activeness, children, holdingSize, numberOfTokens, parents, yield": {
+    "k1": 11891,
+    "k20": 174301,
+    "k100": 547372
+  },
+  "activeness, children, holdingSize, numberOfTokens, parents, token, yield": {
+    "k1": 1061353,
+    "k20": 1790057,
+    "k100": 2345408
+  },
+  "activeness, children, holdingSize, numberOfTokens, parents, type, yield": {
+    "k1": 20427,
+    "k20": 220416,
+    "k100": 632191
+  },
+  "activeness, children, holdingSize, numberOfTokens, parents, token, type, yield": {
+    "k1": 1096770,
+    "k20": 1852837,
+    "k100": 2406859
+  },
+  "age, children, holdingSize, numberOfTokens, parents, yield": {
+    "k1": 9317,
+    "k20": 139322,
+    "k100": 476067
+  },
+  "age, children, holdingSize, numberOfTokens, parents, token, yield": {
+    "k1": 1052776,
+    "k20": 1812481,
+    "k100": 2378681
+  },
+  "age, children, holdingSize, numberOfTokens, parents, type, yield": {
+    "k1": 17463,
+    "k20": 187691,
+    "k100": 570128
+  },
+  "age, children, holdingSize, numberOfTokens, parents, token, type, yield": {
+    "k1": 1089241,
+    "k20": 1876347,
+    "k100": 2435920
+  },
+  "activeness, age, children, holdingSize, numberOfTokens, parents, yield": {
+    "k1": 29262,
+    "k20": 297646,
+    "k100": 767206
+  },
+  "activeness, age, children, holdingSize, numberOfTokens, parents, token, yield": {
+    "k1": 1109906,
+    "k20": 1872281,
+    "k100": 2433993
+  },
+  "activeness, age, children, holdingSize, numberOfTokens, parents, type, yield": {
+    "k1": 42221,
+    "k20": 355428,
+    "k100": 855751
+  },
+  "activeness, age, children, holdingSize, numberOfTokens, parents, token, type, yield": {
+    "k1": 1146022,
+    "k20": 1932533,
+    "k100": 2487620
+  },
+  "operator": {
+    "k1": 0,
+    "k20": 0,
+    "k100": 0
+  },
+  "operator, token": {
+    "k1": 534169,
+    "k20": 798968,
+    "k100": 950380
+  },
+  "operator, type": {
+    "k1": 0,
+    "k20": 17,
+    "k100": 72
+  },
+  "operator, token, type": {
+    "k1": 548264,
+    "k20": 825565,
+    "k100": 990491
+  },
+  "activeness, operator": {
+    "k1": 0,
+    "k20": 0,
+    "k100": 37
+  },
+  "activeness, operator, token": {
+    "k1": 585172,
+    "k20": 869737,
+    "k100": 1051504
+  },
+  "activeness, operator, type": {
+    "k1": 4,
+    "k20": 98,
+    "k100": 720
+  },
+  "activeness, operator, token, type": {
+    "k1": 600383,
+    "k20": 905023,
+    "k100": 1128510
+  },
+  "age, operator": {
+    "k1": 1,
+    "k20": 17,
+    "k100": 51
+  },
+  "age, operator, token": {
+    "k1": 555270,
+    "k20": 834670,
+    "k100": 1018093
+  },
+  "age, operator, type": {
+    "k1": 5,
+    "k20": 114,
+    "k100": 615
+  },
+  "age, operator, token, type": {
+    "k1": 570964,
+    "k20": 866963,
+    "k100": 1086619
+  },
+  "activeness, age, operator": {
+    "k1": 1,
+    "k20": 86,
+    "k100": 241
+  },
+  "activeness, age, operator, token": {
+    "k1": 607878,
+    "k20": 917890,
+    "k100": 1150850
+  },
+  "activeness, age, operator, type": {
+    "k1": 16,
+    "k20": 522,
+    "k100": 2781
+  },
+  "activeness, age, operator, token, type": {
+    "k1": 625111,
+    "k20": 962629,
+    "k100": 1243199
+  },
+  "operator, yield": {
+    "k1": 0,
+    "k20": 14,
+    "k100": 160
+  },
+  "operator, token, yield": {
+    "k1": 614873,
+    "k20": 899897,
+    "k100": 1105849
+  },
+  "operator, type, yield": {
+    "k1": 6,
+    "k20": 185,
+    "k100": 590
+  },
+  "operator, token, type, yield": {
+    "k1": 633223,
+    "k20": 941564,
+    "k100": 1233793
+  },
+  "activeness, operator, yield": {
+    "k1": 3,
+    "k20": 152,
+    "k100": 542
+  },
+  "activeness, operator, token, yield": {
+    "k1": 670345,
+    "k20": 998909,
+    "k100": 1309849
+  },
+  "activeness, operator, type, yield": {
+    "k1": 43,
+    "k20": 854,
+    "k100": 3955
+  },
+  "activeness, operator, token, type, yield": {
+    "k1": 691224,
+    "k20": 1065150,
+    "k100": 1457747
+  },
+  "age, operator, yield": {
+    "k1": 3,
+    "k20": 91,
+    "k100": 454
+  },
+  "age, operator, token, yield": {
+    "k1": 637286,
+    "k20": 950686,
+    "k100": 1230790
+  },
+  "age, operator, type, yield": {
+    "k1": 32,
+    "k20": 688,
+    "k100": 2829
+  },
+  "age, operator, token, type, yield": {
+    "k1": 657558,
+    "k20": 1006254,
+    "k100": 1389406
+  },
+  "activeness, age, operator, yield": {
+    "k1": 16,
+    "k20": 339,
+    "k100": 1500
+  },
+  "activeness, age, operator, token, yield": {
+    "k1": 695585,
+    "k20": 1067529,
+    "k100": 1448238
+  },
+  "activeness, age, operator, type, yield": {
+    "k1": 150,
+    "k20": 2448,
+    "k100": 8444
+  },
+  "activeness, age, operator, token, type, yield": {
+    "k1": 718597,
+    "k20": 1143269,
+    "k100": 1604424
+  },
+  "children, operator": {
+    "k1": 1,
+    "k20": 35,
+    "k100": 242
+  },
+  "children, operator, token": {
+    "k1": 601626,
+    "k20": 886353,
+    "k100": 1138034
+  },
+  "children, operator, type": {
+    "k1": 10,
+    "k20": 201,
+    "k100": 1326
+  },
+  "children, operator, token, type": {
+    "k1": 617926,
+    "k20": 937812,
+    "k100": 1273893
+  },
+  "activeness, children, operator": {
+    "k1": 7,
+    "k20": 134,
+    "k100": 526
+  },
+  "activeness, children, operator, token": {
+    "k1": 656199,
+    "k20": 1004175,
+    "k100": 1365136
+  },
+  "activeness, children, operator, type": {
+    "k1": 55,
+    "k20": 1026,
+    "k100": 4195
+  },
+  "activeness, children, operator, token, type": {
+    "k1": 676201,
+    "k20": 1076320,
+    "k100": 1509137
+  },
+  "age, children, operator": {
+    "k1": 5,
+    "k20": 82,
+    "k100": 723
+  },
+  "age, children, operator, token": {
+    "k1": 625566,
+    "k20": 954861,
+    "k100": 1289042
+  },
+  "age, children, operator, type": {
+    "k1": 46,
+    "k20": 949,
+    "k100": 3670
+  },
+  "age, children, operator, token, type": {
+    "k1": 645173,
+    "k20": 1023565,
+    "k100": 1452126
+  },
+  "activeness, age, children, operator": {
+    "k1": 34,
+    "k20": 438,
+    "k100": 2026
+  },
+  "activeness, age, children, operator, token": {
+    "k1": 685234,
+    "k20": 1092745,
+    "k100": 1522634
+  },
+  "activeness, age, children, operator, type": {
+    "k1": 227,
+    "k20": 2935,
+    "k100": 10139
+  },
+  "activeness, age, children, operator, token, type": {
+    "k1": 709166,
+    "k20": 1173692,
+    "k100": 1664527
+  },
+  "children, operator, yield": {
+    "k1": 8,
+    "k20": 180,
+    "k100": 647
+  },
+  "children, operator, token, yield": {
+    "k1": 685940,
+    "k20": 1071329,
+    "k100": 1513349
+  },
+  "children, operator, type, yield": {
+    "k1": 67,
+    "k20": 1130,
+    "k100": 4684
+  },
+  "children, operator, token, type, yield": {
+    "k1": 710715,
+    "k20": 1176984,
+    "k100": 1743836
+  },
+  "activeness, children, operator, yield": {
+    "k1": 46,
+    "k20": 755,
+    "k100": 4324
+  },
+  "activeness, children, operator, token, yield": {
+    "k1": 752096,
+    "k20": 1248276,
+    "k100": 1793426
+  },
+  "activeness, children, operator, type, yield": {
+    "k1": 343,
+    "k20": 4089,
+    "k100": 15662
+  },
+  "activeness, children, operator, token, type, yield": {
+    "k1": 784414,
+    "k20": 1356824,
+    "k100": 1949595
+  },
+  "age, children, operator, yield": {
+    "k1": 37,
+    "k20": 651,
+    "k100": 3428
+  },
+  "age, children, operator, token, yield": {
+    "k1": 715628,
+    "k20": 1169556,
+    "k100": 1689520
+  },
+  "age, children, operator, type, yield": {
+    "k1": 249,
+    "k20": 3359,
+    "k100": 13263
+  },
+  "age, children, operator, token, type, yield": {
+    "k1": 744925,
+    "k20": 1289517,
+    "k100": 1914838
+  },
+  "activeness, age, children, operator, yield": {
+    "k1": 166,
+    "k20": 3278,
+    "k100": 17208
+  },
+  "activeness, age, children, operator, token, yield": {
+    "k1": 788864,
+    "k20": 1349854,
+    "k100": 1940315
+  },
+  "activeness, age, children, operator, type, yield": {
+    "k1": 851,
+    "k20": 11327,
+    "k100": 42288
+  },
+  "activeness, age, children, operator, token, type, yield": {
+    "k1": 824407,
+    "k20": 1460049,
+    "k100": 2076823
+  },
+  "operator, parents": {
+    "k1": 0,
+    "k20": 17,
+    "k100": 126
+  },
+  "operator, parents, token": {
+    "k1": 605254,
+    "k20": 891858,
+    "k100": 1118552
+  },
+  "operator, parents, type": {
+    "k1": 10,
+    "k20": 176,
+    "k100": 775
+  },
+  "operator, parents, token, type": {
+    "k1": 620035,
+    "k20": 932700,
+    "k100": 1230947
+  },
+  "activeness, operator, parents": {
+    "k1": 7,
+    "k20": 144,
+    "k100": 395
+  },
+  "activeness, operator, parents, token": {
+    "k1": 660519,
+    "k20": 997477,
+    "k100": 1335715
+  },
+  "activeness, operator, parents, type": {
+    "k1": 44,
+    "k20": 969,
+    "k100": 4114
+  },
+  "activeness, operator, parents, token, type": {
+    "k1": 678421,
+    "k20": 1060458,
+    "k100": 1462982
+  },
+  "age, operator, parents": {
+    "k1": 9,
+    "k20": 152,
+    "k100": 549
+  },
+  "age, operator, parents, token": {
+    "k1": 629614,
+    "k20": 956198,
+    "k100": 1264275
+  },
+  "age, operator, parents, type": {
+    "k1": 37,
+    "k20": 758,
+    "k100": 2865
+  },
+  "age, operator, parents, token, type": {
+    "k1": 646967,
+    "k20": 1011950,
+    "k100": 1406190
+  },
+  "activeness, age, operator, parents": {
+    "k1": 29,
+    "k20": 394,
+    "k100": 1687
+  },
+  "activeness, age, operator, parents, token": {
+    "k1": 688694,
+    "k20": 1081650,
+    "k100": 1491949
+  },
+  "activeness, age, operator, parents, type": {
+    "k1": 184,
+    "k20": 2508,
+    "k100": 8719
+  },
+  "activeness, age, operator, parents, token, type": {
+    "k1": 709460,
+    "k20": 1153327,
+    "k100": 1620186
+  },
+  "operator, parents, yield": {
+    "k1": 7,
+    "k20": 138,
+    "k100": 528
+  },
+  "operator, parents, token, yield": {
+    "k1": 690997,
+    "k20": 1060602,
+    "k100": 1488545
+  },
+  "operator, parents, type, yield": {
+    "k1": 77,
+    "k20": 1195,
+    "k100": 4702
+  },
+  "operator, parents, token, type, yield": {
+    "k1": 712701,
+    "k20": 1148568,
+    "k100": 1667459
+  },
+  "activeness, operator, parents, yield": {
+    "k1": 36,
+    "k20": 719,
+    "k100": 3293
+  },
+  "activeness, operator, parents, token, yield": {
+    "k1": 755020,
+    "k20": 1230489,
+    "k100": 1740732
+  },
+  "activeness, operator, parents, type, yield": {
+    "k1": 309,
+    "k20": 4121,
+    "k100": 13792
+  },
+  "activeness, operator, parents, token, type, yield": {
+    "k1": 782284,
+    "k20": 1325329,
+    "k100": 1885469
+  },
+  "age, operator, parents, yield": {
+    "k1": 40,
+    "k20": 672,
+    "k100": 2898
+  },
+  "age, operator, parents, token, yield": {
+    "k1": 719526,
+    "k20": 1158831,
+    "k100": 1664578
+  },
+  "age, operator, parents, type, yield": {
+    "k1": 241,
+    "k20": 3018,
+    "k100": 11917
+  },
+  "age, operator, parents, token, type, yield": {
+    "k1": 744963,
+    "k20": 1261260,
+    "k100": 1846116
+  },
+  "activeness, age, operator, parents, yield": {
+    "k1": 143,
+    "k20": 2520,
+    "k100": 14401
+  },
+  "activeness, age, operator, parents, token, yield": {
+    "k1": 789538,
+    "k20": 1333543,
+    "k100": 1893948
+  },
+  "activeness, age, operator, parents, type, yield": {
+    "k1": 804,
+    "k20": 9610,
+    "k100": 36229
+  },
+  "activeness, age, operator, parents, token, type, yield": {
+    "k1": 819694,
+    "k20": 1431504,
+    "k100": 2022771
+  },
+  "children, operator, parents": {
+    "k1": 14,
+    "k20": 237,
+    "k100": 806
+  },
+  "children, operator, parents, token": {
+    "k1": 674662,
+    "k20": 1071579,
+    "k100": 1536311
+  },
+  "children, operator, parents, type": {
+    "k1": 77,
+    "k20": 1380,
+    "k100": 4765
+  },
+  "children, operator, parents, token, type": {
+    "k1": 695610,
+    "k20": 1164706,
+    "k100": 1708050
+  },
+  "activeness, children, operator, parents": {
+    "k1": 69,
+    "k20": 893,
+    "k100": 3985
+  },
+  "activeness, children, operator, parents, token": {
+    "k1": 742338,
+    "k20": 1255243,
+    "k100": 1794537
+  },
+  "activeness, children, operator, parents, type": {
+    "k1": 360,
+    "k20": 4195,
+    "k100": 16095
+  },
+  "activeness, children, operator, parents, token, type": {
+    "k1": 770100,
+    "k20": 1350165,
+    "k100": 1924032
+  },
+  "age, children, operator, parents": {
+    "k1": 61,
+    "k20": 1041,
+    "k100": 4310
+  },
+  "age, children, operator, parents, token": {
+    "k1": 708280,
+    "k20": 1185733,
+    "k100": 1719028
+  },
+  "age, children, operator, parents, type": {
+    "k1": 300,
+    "k20": 3908,
+    "k100": 14505
+  },
+  "age, children, operator, parents, token, type": {
+    "k1": 734294,
+    "k20": 1290830,
+    "k100": 1888205
+  },
+  "activeness, age, children, operator, parents": {
+    "k1": 218,
+    "k20": 3968,
+    "k100": 21705
+  },
+  "activeness, age, children, operator, parents, token": {
+    "k1": 783989,
+    "k20": 1368132,
+    "k100": 1943423
+  },
+  "activeness, age, children, operator, parents, type": {
+    "k1": 993,
+    "k20": 11781,
+    "k100": 47727
+  },
+  "activeness, age, children, operator, parents, token, type": {
+    "k1": 815459,
+    "k20": 1463849,
+    "k100": 2061169
+  },
+  "children, operator, parents, yield": {
+    "k1": 62,
+    "k20": 1146,
+    "k100": 7214
+  },
+  "children, operator, parents, token, yield": {
+    "k1": 779156,
+    "k20": 1367756,
+    "k100": 1961904
+  },
+  "children, operator, parents, type, yield": {
+    "k1": 436,
+    "k20": 5993,
+    "k100": 19730
+  },
+  "children, operator, parents, token, type, yield": {
+    "k1": 815151,
+    "k20": 1494686,
+    "k100": 2124270
+  },
+  "activeness, children, operator, parents, yield": {
+    "k1": 382,
+    "k20": 7161,
+    "k100": 34519
+  },
+  "activeness, children, operator, parents, token, yield": {
+    "k1": 869489,
+    "k20": 1563407,
+    "k100": 2170824
+  },
+  "activeness, children, operator, parents, type, yield": {
+    "k1": 1595,
+    "k20": 18530,
+    "k100": 71255
+  },
+  "activeness, children, operator, parents, token, type, yield": {
+    "k1": 911300,
+    "k20": 1666750,
+    "k100": 2277300
+  },
+  "age, children, operator, parents, yield": {
+    "k1": 310,
+    "k20": 5901,
+    "k100": 29604
+  },
+  "age, children, operator, parents, token, yield": {
+    "k1": 823512,
+    "k20": 1491238,
+    "k100": 2109848
+  },
+  "age, children, operator, parents, type, yield": {
+    "k1": 1253,
+    "k20": 15863,
+    "k100": 61657
+  },
+  "age, children, operator, parents, token, type, yield": {
+    "k1": 864829,
+    "k20": 1621166,
+    "k100": 2257070
+  },
+  "activeness, age, children, operator, parents, yield": {
+    "k1": 1345,
+    "k20": 25106,
+    "k100": 105034
+  },
+  "activeness, age, children, operator, parents, token, yield": {
+    "k1": 919412,
+    "k20": 1668537,
+    "k100": 2281334
+  },
+  "activeness, age, children, operator, parents, type, yield": {
+    "k1": 3934,
+    "k20": 47900,
+    "k100": 169280
+  },
+  "activeness, age, children, operator, parents, token, type, yield": {
+    "k1": 963342,
+    "k20": 1766943,
+    "k100": 2375757
+  },
+  "holdingSize, operator": {
+    "k1": 0,
+    "k20": 0,
+    "k100": 126
+  },
+  "holdingSize, operator, token": {
+    "k1": 614573,
+    "k20": 899566,
+    "k100": 1107068
+  },
+  "holdingSize, operator, type": {
+    "k1": 7,
+    "k20": 205,
+    "k100": 1004
+  },
+  "holdingSize, operator, token, type": {
+    "k1": 630549,
+    "k20": 938249,
+    "k100": 1180825
+  },
+  "activeness, holdingSize, operator": {
+    "k1": 2,
+    "k20": 193,
+    "k100": 1088
+  },
+  "activeness, holdingSize, operator, token": {
+    "k1": 646874,
+    "k20": 964733,
+    "k100": 1220975
+  },
+  "activeness, holdingSize, operator, type": {
+    "k1": 34,
+    "k20": 1053,
+    "k100": 5262
+  },
+  "activeness, holdingSize, operator, token, type": {
+    "k1": 665133,
+    "k20": 1014011,
+    "k100": 1311565
+  },
+  "age, holdingSize, operator": {
+    "k1": 6,
+    "k20": 117,
+    "k100": 1128
+  },
+  "age, holdingSize, operator, token": {
+    "k1": 638471,
+    "k20": 954920,
+    "k100": 1217690
+  },
+  "age, holdingSize, operator, type": {
+    "k1": 44,
+    "k20": 857,
+    "k100": 4090
+  },
+  "age, holdingSize, operator, token, type": {
+    "k1": 656899,
+    "k20": 1002478,
+    "k100": 1313378
+  },
+  "activeness, age, holdingSize, operator": {
+    "k1": 24,
+    "k20": 559,
+    "k100": 1895
+  },
+  "activeness, age, holdingSize, operator, token": {
+    "k1": 673806,
+    "k20": 1029937,
+    "k100": 1332244
+  },
+  "activeness, age, holdingSize, operator, type": {
+    "k1": 201,
+    "k20": 3384,
+    "k100": 11363
+  },
+  "activeness, age, holdingSize, operator, token, type": {
+    "k1": 694669,
+    "k20": 1085811,
+    "k100": 1431863
+  },
+  "holdingSize, operator, yield": {
+    "k1": 4,
+    "k20": 293,
+    "k100": 1130
+  },
+  "holdingSize, operator, token, yield": {
+    "k1": 699841,
+    "k20": 1050386,
+    "k100": 1383499
+  },
+  "holdingSize, operator, type, yield": {
+    "k1": 81,
+    "k20": 1533,
+    "k100": 6615
+  },
+  "holdingSize, operator, token, type, yield": {
+    "k1": 721955,
+    "k20": 1115232,
+    "k100": 1514091
+  },
+  "activeness, holdingSize, operator, yield": {
+    "k1": 51,
+    "k20": 806,
+    "k100": 2977
+  },
+  "activeness, holdingSize, operator, token, yield": {
+    "k1": 738594,
+    "k20": 1142425,
+    "k100": 1519541
+  },
+  "activeness, holdingSize, operator, type, yield": {
+    "k1": 325,
+    "k20": 5409,
+    "k100": 16385
+  },
+  "activeness, holdingSize, operator, token, type, yield": {
+    "k1": 764627,
+    "k20": 1215309,
+    "k100": 1650302
+  },
+  "age, holdingSize, operator, yield": {
+    "k1": 41,
+    "k20": 778,
+    "k100": 3127
+  },
+  "age, holdingSize, operator, token, yield": {
+    "k1": 727394,
+    "k20": 1126492,
+    "k100": 1522913
+  },
+  "age, holdingSize, operator, type, yield": {
+    "k1": 284,
+    "k20": 4430,
+    "k100": 15715
+  },
+  "age, holdingSize, operator, token, type, yield": {
+    "k1": 752452,
+    "k20": 1203083,
+    "k100": 1667004
+  },
+  "activeness, age, holdingSize, operator, yield": {
+    "k1": 157,
+    "k20": 2676,
+    "k100": 14764
+  },
+  "activeness, age, holdingSize, operator, token, yield": {
+    "k1": 770071,
+    "k20": 1218902,
+    "k100": 1646210
+  },
+  "activeness, age, holdingSize, operator, type, yield": {
+    "k1": 998,
+    "k20": 11971,
+    "k100": 39185
+  },
+  "activeness, age, holdingSize, operator, token, type, yield": {
+    "k1": 798526,
+    "k20": 1298817,
+    "k100": 1780926
+  },
+  "children, holdingSize, operator": {
+    "k1": 15,
+    "k20": 308,
+    "k100": 759
+  },
+  "children, holdingSize, operator, token": {
+    "k1": 685880,
+    "k20": 1059987,
+    "k100": 1432345
+  },
+  "children, holdingSize, operator, type": {
+    "k1": 100,
+    "k20": 1619,
+    "k100": 5868
+  },
+  "children, holdingSize, operator, token, type": {
+    "k1": 707279,
+    "k20": 1130707,
+    "k100": 1558666
+  },
+  "activeness, children, holdingSize, operator": {
+    "k1": 73,
+    "k20": 919,
+    "k100": 4300
+  },
+  "activeness, children, holdingSize, operator, token": {
+    "k1": 726870,
+    "k20": 1161079,
+    "k100": 1571228
+  },
+  "activeness, children, holdingSize, operator, type": {
+    "k1": 417,
+    "k20": 5388,
+    "k100": 19449
+  },
+  "activeness, children, holdingSize, operator, token, type": {
+    "k1": 752700,
+    "k20": 1238997,
+    "k100": 1697788
+  },
+  "age, children, holdingSize, operator": {
+    "k1": 60,
+    "k20": 1151,
+    "k100": 5979
+  },
+  "age, children, holdingSize, operator, token": {
+    "k1": 717911,
+    "k20": 1154740,
+    "k100": 1591382
+  },
+  "age, children, holdingSize, operator, type": {
+    "k1": 392,
+    "k20": 4836,
+    "k100": 20838
+  },
+  "age, children, holdingSize, operator, token, type": {
+    "k1": 743853,
+    "k20": 1234975,
+    "k100": 1724800
+  },
+  "activeness, age, children, holdingSize, operator": {
+    "k1": 219,
+    "k20": 4134,
+    "k100": 23657
+  },
+  "activeness, age, children, holdingSize, operator, token": {
+    "k1": 763965,
+    "k20": 1253746,
+    "k100": 1714216
+  },
+  "activeness, age, children, holdingSize, operator, type": {
+    "k1": 1136,
+    "k20": 14585,
+    "k100": 51572
+  },
+  "activeness, age, children, holdingSize, operator, token, type": {
+    "k1": 793436,
+    "k20": 1336096,
+    "k100": 1836408
+  },
+  "children, holdingSize, operator, yield": {
+    "k1": 84,
+    "k20": 1261,
+    "k100": 7560
+  },
+  "children, holdingSize, operator, token, yield": {
+    "k1": 786512,
+    "k20": 1311118,
+    "k100": 1819212
+  },
+  "children, holdingSize, operator, type, yield": {
+    "k1": 531,
+    "k20": 7077,
+    "k100": 27966
+  },
+  "children, holdingSize, operator, token, type, yield": {
+    "k1": 820324,
+    "k20": 1412267,
+    "k100": 1968684
+  },
+  "activeness, children, holdingSize, operator, yield": {
+    "k1": 338,
+    "k20": 7189,
+    "k100": 36841
+  },
+  "activeness, children, holdingSize, operator, token, yield": {
+    "k1": 840572,
+    "k20": 1420127,
+    "k100": 1953964
+  },
+  "activeness, children, holdingSize, operator, type, yield": {
+    "k1": 1754,
+    "k20": 21541,
+    "k100": 76868
+  },
+  "activeness, children, holdingSize, operator, token, type, yield": {
+    "k1": 879189,
+    "k20": 1517636,
+    "k100": 2081715
+  },
+  "age, children, holdingSize, operator, yield": {
+    "k1": 360,
+    "k20": 6816,
+    "k100": 31428
+  },
+  "age, children, holdingSize, operator, token, yield": {
+    "k1": 827804,
+    "k20": 1414131,
+    "k100": 1971219
+  },
+  "age, children, holdingSize, operator, type, yield": {
+    "k1": 1526,
+    "k20": 20435,
+    "k100": 70280
+  },
+  "age, children, holdingSize, operator, token, type, yield": {
+    "k1": 865390,
+    "k20": 1519408,
+    "k100": 2113129
+  },
+  "activeness, age, children, holdingSize, operator, yield": {
+    "k1": 1353,
+    "k20": 26885,
+    "k100": 107562
+  },
+  "activeness, age, children, holdingSize, operator, token, yield": {
+    "k1": 884524,
+    "k20": 1512462,
+    "k100": 2082642
+  },
+  "activeness, age, children, holdingSize, operator, type, yield": {
+    "k1": 4435,
+    "k20": 51193,
+    "k100": 168185
+  },
+  "activeness, age, children, holdingSize, operator, token, type, yield": {
+    "k1": 925040,
+    "k20": 1610012,
+    "k100": 2199171
+  },
+  "holdingSize, operator, parents": {
+    "k1": 13,
+    "k20": 176,
+    "k100": 983
+  },
+  "holdingSize, operator, parents, token": {
+    "k1": 689253,
+    "k20": 1046955,
+    "k100": 1399934
+  },
+  "holdingSize, operator, parents, type": {
+    "k1": 81,
+    "k20": 1699,
+    "k100": 7110
+  },
+  "holdingSize, operator, parents, token, type": {
+    "k1": 707796,
+    "k20": 1106569,
+    "k100": 1511417
+  },
+  "activeness, holdingSize, operator, parents": {
+    "k1": 57,
+    "k20": 832,
+    "k100": 3189
+  },
+  "activeness, holdingSize, operator, parents, token": {
+    "k1": 729491,
+    "k20": 1145561,
+    "k100": 1539248
+  },
+  "activeness, holdingSize, operator, parents, type": {
+    "k1": 369,
+    "k20": 5268,
+    "k100": 15892
+  },
+  "activeness, holdingSize, operator, parents, token, type": {
+    "k1": 751696,
+    "k20": 1213529,
+    "k100": 1653273
+  },
+  "age, holdingSize, operator, parents": {
+    "k1": 72,
+    "k20": 862,
+    "k100": 5103
+  },
+  "age, holdingSize, operator, parents, token": {
+    "k1": 719851,
+    "k20": 1139134,
+    "k100": 1560619
+  },
+  "age, holdingSize, operator, parents, type": {
+    "k1": 334,
+    "k20": 4593,
+    "k100": 17612
+  },
+  "age, holdingSize, operator, parents, token, type": {
+    "k1": 741995,
+    "k20": 1209448,
+    "k100": 1682664
+  },
+  "activeness, age, holdingSize, operator, parents": {
+    "k1": 188,
+    "k20": 3131,
+    "k100": 19748
+  },
+  "activeness, age, holdingSize, operator, parents, token": {
+    "k1": 764591,
+    "k20": 1235696,
+    "k100": 1680170
+  },
+  "activeness, age, holdingSize, operator, parents, type": {
+    "k1": 1064,
+    "k20": 12685,
+    "k100": 45370
+  },
+  "activeness, age, holdingSize, operator, parents, token, type": {
+    "k1": 789819,
+    "k20": 1309076,
+    "k100": 1794148
+  },
+  "holdingSize, operator, parents, yield": {
+    "k1": 72,
+    "k20": 1346,
+    "k100": 6213
+  },
+  "holdingSize, operator, parents, token, yield": {
+    "k1": 787164,
+    "k20": 1285484,
+    "k100": 1767911
+  },
+  "holdingSize, operator, parents, type, yield": {
+    "k1": 519,
+    "k20": 7305,
+    "k100": 22380
+  },
+  "holdingSize, operator, parents, token, type, yield": {
+    "k1": 815707,
+    "k20": 1372984,
+    "k100": 1900794
+  },
+  "activeness, holdingSize, operator, parents, yield": {
+    "k1": 300,
+    "k20": 5999,
+    "k100": 29051
+  },
+  "activeness, holdingSize, operator, parents, token, yield": {
+    "k1": 838970,
+    "k20": 1395563,
+    "k100": 1900075
+  },
+  "activeness, holdingSize, operator, parents, type, yield": {
+    "k1": 1750,
+    "k20": 18905,
+    "k100": 64540
+  },
+  "activeness, holdingSize, operator, parents, token, type, yield": {
+    "k1": 871936,
+    "k20": 1482903,
+    "k100": 2023364
+  },
+  "age, holdingSize, operator, parents, yield": {
+    "k1": 298,
+    "k20": 5736,
+    "k100": 27002
+  },
+  "age, holdingSize, operator, parents, token, yield": {
+    "k1": 825997,
+    "k20": 1392340,
+    "k100": 1930646
+  },
+  "age, holdingSize, operator, parents, type, yield": {
+    "k1": 1487,
+    "k20": 17391,
+    "k100": 58810
+  },
+  "age, holdingSize, operator, parents, token, type, yield": {
+    "k1": 858162,
+    "k20": 1486858,
+    "k100": 2057437
+  },
+  "activeness, age, holdingSize, operator, parents, yield": {
+    "k1": 1135,
+    "k20": 22056,
+    "k100": 93139
+  },
+  "activeness, age, holdingSize, operator, parents, token, yield": {
+    "k1": 880671,
+    "k20": 1489742,
+    "k100": 2038309
+  },
+  "activeness, age, holdingSize, operator, parents, type, yield": {
+    "k1": 4091,
+    "k20": 44561,
+    "k100": 146477
+  },
+  "activeness, age, holdingSize, operator, parents, token, type, yield": {
+    "k1": 915687,
+    "k20": 1578957,
+    "k100": 2150023
+  },
+  "children, holdingSize, operator, parents": {
+    "k1": 87,
+    "k20": 1633,
+    "k100": 7275
+  },
+  "children, holdingSize, operator, parents, token": {
+    "k1": 775610,
+    "k20": 1309115,
+    "k100": 1814154
+  },
+  "children, holdingSize, operator, parents, type": {
+    "k1": 615,
+    "k20": 7297,
+    "k100": 26684
+  },
+  "children, holdingSize, operator, parents, token, type": {
+    "k1": 804198,
+    "k20": 1396478,
+    "k100": 1935224
+  },
+  "activeness, children, holdingSize, operator, parents": {
+    "k1": 437,
+    "k20": 7521,
+    "k100": 38247
+  },
+  "activeness, children, holdingSize, operator, parents, token": {
+    "k1": 832342,
+    "k20": 1424355,
+    "k100": 1947556
+  },
+  "activeness, children, holdingSize, operator, parents, type": {
+    "k1": 1835,
+    "k20": 21012,
+    "k100": 75874
+  },
+  "activeness, children, holdingSize, operator, parents, token, type": {
+    "k1": 865194,
+    "k20": 1508424,
+    "k100": 2054832
+  },
+  "age, children, holdingSize, operator, parents": {
+    "k1": 459,
+    "k20": 9064,
+    "k100": 39820
+  },
+  "age, children, holdingSize, operator, parents, token": {
+    "k1": 821978,
+    "k20": 1427850,
+    "k100": 1969134
+  },
+  "age, children, holdingSize, operator, parents, type": {
+    "k1": 1731,
+    "k20": 22184,
+    "k100": 79095
+  },
+  "age, children, holdingSize, operator, parents, token, type": {
+    "k1": 855008,
+    "k20": 1518829,
+    "k100": 2086418
+  },
+  "activeness, age, children, holdingSize, operator, parents": {
+    "k1": 1649,
+    "k20": 31398,
+    "k100": 120765
+  },
+  "activeness, age, children, holdingSize, operator, parents, token": {
+    "k1": 881023,
+    "k20": 1525793,
+    "k100": 2070253
+  },
+  "activeness, age, children, holdingSize, operator, parents, type": {
+    "k1": 4744,
+    "k20": 55250,
+    "k100": 181792
+  },
+  "activeness, age, children, holdingSize, operator, parents, token, type": {
+    "k1": 916455,
+    "k20": 1609658,
+    "k100": 2169362
+  },
+  "children, holdingSize, operator, parents, yield": {
+    "k1": 608,
+    "k20": 12374,
+    "k100": 66252
+  },
+  "children, holdingSize, operator, parents, token, yield": {
+    "k1": 910842,
+    "k20": 1594894,
+    "k100": 2166345
+  },
+  "children, holdingSize, operator, parents, type, yield": {
+    "k1": 2641,
+    "k20": 31529,
+    "k100": 120447
+  },
+  "children, holdingSize, operator, parents, token, type, yield": {
+    "k1": 952279,
+    "k20": 1691833,
+    "k100": 2269926
+  },
+  "activeness, children, holdingSize, operator, parents, yield": {
+    "k1": 2874,
+    "k20": 51282,
+    "k100": 217105
+  },
+  "activeness, children, holdingSize, operator, parents, token, yield": {
+    "k1": 977674,
+    "k20": 1699549,
+    "k100": 2275326
+  },
+  "activeness, children, holdingSize, operator, parents, type, yield": {
+    "k1": 7625,
+    "k20": 88396,
+    "k100": 307265
+  },
+  "activeness, children, holdingSize, operator, parents, token, type, yield": {
+    "k1": 1021567,
+    "k20": 1786807,
+    "k100": 2366350
+  },
+  "age, children, holdingSize, operator, parents, yield": {
+    "k1": 2657,
+    "k20": 44164,
+    "k100": 178916
+  },
+  "age, children, holdingSize, operator, parents, token, yield": {
+    "k1": 964749,
+    "k20": 1705876,
+    "k100": 2289041
+  },
+  "age, children, holdingSize, operator, parents, type, yield": {
+    "k1": 6930,
+    "k20": 79767,
+    "k100": 270251
+  },
+  "age, children, holdingSize, operator, parents, token, type, yield": {
+    "k1": 1008981,
+    "k20": 1802075,
+    "k100": 2386665
+  },
+  "activeness, age, children, holdingSize, operator, parents, yield": {
+    "k1": 9654,
+    "k20": 126667,
+    "k100": 406845
+  },
+  "activeness, age, children, holdingSize, operator, parents, token, yield": {
+    "k1": 1029715,
+    "k20": 1792579,
+    "k100": 2373870
+  },
+  "activeness, age, children, holdingSize, operator, parents, type, yield": {
+    "k1": 18114,
+    "k20": 178276,
+    "k100": 514709
+  },
+  "activeness, age, children, holdingSize, operator, parents, token, type, yield": {
+    "k1": 1074390,
+    "k20": 1875524,
+    "k100": 2452249
+  },
+  "numberOfTokens, operator": {
+    "k1": 0,
+    "k20": 0,
+    "k100": 0
+  },
+  "numberOfTokens, operator, token": {
+    "k1": 574572,
+    "k20": 861661,
+    "k100": 1052850
+  },
+  "numberOfTokens, operator, type": {
+    "k1": 5,
+    "k20": 84,
+    "k100": 752
+  },
+  "numberOfTokens, operator, token, type": {
+    "k1": 589720,
+    "k20": 889032,
+    "k100": 1105713
+  },
+  "activeness, numberOfTokens, operator": {
+    "k1": 1,
+    "k20": 98,
+    "k100": 819
+  },
+  "activeness, numberOfTokens, operator, token": {
+    "k1": 618537,
+    "k20": 937683,
+    "k100": 1193318
+  },
+  "activeness, numberOfTokens, operator, type": {
+    "k1": 20,
+    "k20": 685,
+    "k100": 3460
+  },
+  "activeness, numberOfTokens, operator, token, type": {
+    "k1": 634918,
+    "k20": 977701,
+    "k100": 1266360
+  },
+  "age, numberOfTokens, operator": {
+    "k1": 2,
+    "k20": 71,
+    "k100": 413
+  },
+  "age, numberOfTokens, operator, token": {
+    "k1": 597466,
+    "k20": 906895,
+    "k100": 1148821
+  },
+  "age, numberOfTokens, operator, type": {
+    "k1": 25,
+    "k20": 434,
+    "k100": 2402
+  },
+  "age, numberOfTokens, operator, token, type": {
+    "k1": 614262,
+    "k20": 942271,
+    "k100": 1223739
+  },
+  "activeness, age, numberOfTokens, operator": {
+    "k1": 16,
+    "k20": 312,
+    "k100": 1418
+  },
+  "activeness, age, numberOfTokens, operator, token": {
+    "k1": 643628,
+    "k20": 997577,
+    "k100": 1303603
+  },
+  "activeness, age, numberOfTokens, operator, type": {
+    "k1": 111,
+    "k20": 1979,
+    "k100": 7290
+  },
+  "activeness, age, numberOfTokens, operator, token, type": {
+    "k1": 662182,
+    "k20": 1044543,
+    "k100": 1385873
+  },
+  "numberOfTokens, operator, yield": {
+    "k1": 4,
+    "k20": 139,
+    "k100": 718
+  },
+  "numberOfTokens, operator, token, yield": {
+    "k1": 662519,
+    "k20": 999161,
+    "k100": 1335740
+  },
+  "numberOfTokens, operator, type, yield": {
+    "k1": 31,
+    "k20": 885,
+    "k100": 4465
+  },
+  "numberOfTokens, operator, token, type, yield": {
+    "k1": 682074,
+    "k20": 1049270,
+    "k100": 1445431
+  },
+  "activeness, numberOfTokens, operator, yield": {
+    "k1": 28,
+    "k20": 548,
+    "k100": 2085
+  },
+  "activeness, numberOfTokens, operator, token, yield": {
+    "k1": 711490,
+    "k20": 1116131,
+    "k100": 1510064
+  },
+  "activeness, numberOfTokens, operator, type, yield": {
+    "k1": 199,
+    "k20": 3490,
+    "k100": 10086
+  },
+  "activeness, numberOfTokens, operator, token, type, yield": {
+    "k1": 733987,
+    "k20": 1178285,
+    "k100": 1621183
+  },
+  "age, numberOfTokens, operator, yield": {
+    "k1": 21,
+    "k20": 562,
+    "k100": 2073
+  },
+  "age, numberOfTokens, operator, token, yield": {
+    "k1": 688214,
+    "k20": 1067276,
+    "k100": 1473035
+  },
+  "age, numberOfTokens, operator, type, yield": {
+    "k1": 150,
+    "k20": 2545,
+    "k100": 9226
+  },
+  "age, numberOfTokens, operator, token, type, yield": {
+    "k1": 709682,
+    "k20": 1129425,
+    "k100": 1595755
+  },
+  "activeness, age, numberOfTokens, operator, yield": {
+    "k1": 109,
+    "k20": 1632,
+    "k100": 8060
+  },
+  "activeness, age, numberOfTokens, operator, token, yield": {
+    "k1": 740893,
+    "k20": 1192204,
+    "k100": 1634526
+  },
+  "activeness, age, numberOfTokens, operator, type, yield": {
+    "k1": 575,
+    "k20": 6944,
+    "k100": 22340
+  },
+  "activeness, age, numberOfTokens, operator, token, type, yield": {
+    "k1": 765383,
+    "k20": 1259978,
+    "k100": 1750743
+  },
+  "children, numberOfTokens, operator": {
+    "k1": 4,
+    "k20": 209,
+    "k100": 546
+  },
+  "children, numberOfTokens, operator, token": {
+    "k1": 646780,
+    "k20": 1005669,
+    "k100": 1376312
+  },
+  "children, numberOfTokens, operator, type": {
+    "k1": 50,
+    "k20": 1341,
+    "k100": 3640
+  },
+  "children, numberOfTokens, operator, token, type": {
+    "k1": 664928,
+    "k20": 1058534,
+    "k100": 1483397
+  },
+  "activeness, children, numberOfTokens, operator": {
+    "k1": 29,
+    "k20": 575,
+    "k100": 2733
+  },
+  "activeness, children, numberOfTokens, operator, token": {
+    "k1": 698502,
+    "k20": 1135567,
+    "k100": 1560405
+  },
+  "activeness, children, numberOfTokens, operator, type": {
+    "k1": 286,
+    "k20": 3237,
+    "k100": 11561
+  },
+  "activeness, children, numberOfTokens, operator, token, type": {
+    "k1": 720397,
+    "k20": 1198099,
+    "k100": 1666478
+  },
+  "age, children, numberOfTokens, operator": {
+    "k1": 35,
+    "k20": 605,
+    "k100": 2888
+  },
+  "age, children, numberOfTokens, operator, token": {
+    "k1": 675430,
+    "k20": 1093301,
+    "k100": 1535846
+  },
+  "age, children, numberOfTokens, operator, type": {
+    "k1": 213,
+    "k20": 2898,
+    "k100": 9795
+  },
+  "age, children, numberOfTokens, operator, token, type": {
+    "k1": 696891,
+    "k20": 1157993,
+    "k100": 1652464
+  },
+  "activeness, age, children, numberOfTokens, operator": {
+    "k1": 134,
+    "k20": 2272,
+    "k100": 11494
+  },
+  "activeness, age, children, numberOfTokens, operator, token": {
+    "k1": 733224,
+    "k20": 1224492,
+    "k100": 1700753
+  },
+  "activeness, age, children, numberOfTokens, operator, type": {
+    "k1": 701,
+    "k20": 8120,
+    "k100": 27144
+  },
+  "activeness, age, children, numberOfTokens, operator, token, type": {
+    "k1": 758422,
+    "k20": 1292880,
+    "k100": 1803724
+  },
+  "children, numberOfTokens, operator, yield": {
+    "k1": 52,
+    "k20": 778,
+    "k100": 3846
+  },
+  "children, numberOfTokens, operator, token, yield": {
+    "k1": 746446,
+    "k20": 1265887,
+    "k100": 1793262
+  },
+  "children, numberOfTokens, operator, type, yield": {
+    "k1": 331,
+    "k20": 4318,
+    "k100": 13646
+  },
+  "children, numberOfTokens, operator, token, type, yield": {
+    "k1": 773346,
+    "k20": 1347585,
+    "k100": 1914682
+  },
+  "activeness, children, numberOfTokens, operator, yield": {
+    "k1": 202,
+    "k20": 4117,
+    "k100": 21560
+  },
+  "activeness, children, numberOfTokens, operator, token, yield": {
+    "k1": 814201,
+    "k20": 1408503,
+    "k100": 1952451
+  },
+  "activeness, children, numberOfTokens, operator, type, yield": {
+    "k1": 1127,
+    "k20": 12761,
+    "k100": 43821
+  },
+  "activeness, children, numberOfTokens, operator, token, type, yield": {
+    "k1": 846163,
+    "k20": 1489288,
+    "k100": 2056162
+  },
+  "age, children, numberOfTokens, operator, yield": {
+    "k1": 197,
+    "k20": 3121,
+    "k100": 14961
+  },
+  "age, children, numberOfTokens, operator, token, yield": {
+    "k1": 783647,
+    "k20": 1369336,
+    "k100": 1950912
+  },
+  "age, children, numberOfTokens, operator, type, yield": {
+    "k1": 868,
+    "k20": 10330,
+    "k100": 35999
+  },
+  "age, children, numberOfTokens, operator, token, type, yield": {
+    "k1": 814105,
+    "k20": 1456586,
+    "k100": 2064480
+  },
+  "activeness, age, children, numberOfTokens, operator, yield": {
+    "k1": 762,
+    "k20": 14167,
+    "k100": 63462
+  },
+  "activeness, age, children, numberOfTokens, operator, token, yield": {
+    "k1": 855856,
+    "k20": 1499375,
+    "k100": 2079325
+  },
+  "activeness, age, children, numberOfTokens, operator, type, yield": {
+    "k1": 2558,
+    "k20": 29670,
+    "k100": 101872
+  },
+  "activeness, age, children, numberOfTokens, operator, token, type, yield": {
+    "k1": 890082,
+    "k20": 1581802,
+    "k100": 2171996
+  },
+  "numberOfTokens, operator, parents": {
+    "k1": 8,
+    "k20": 153,
+    "k100": 583
+  },
+  "numberOfTokens, operator, parents, token": {
+    "k1": 651935,
+    "k20": 994131,
+    "k100": 1345844
+  },
+  "numberOfTokens, operator, parents, type": {
+    "k1": 51,
+    "k20": 711,
+    "k100": 3863
+  },
+  "numberOfTokens, operator, parents, token, type": {
+    "k1": 667948,
+    "k20": 1040324,
+    "k100": 1439679
+  },
+  "activeness, numberOfTokens, operator, parents": {
+    "k1": 36,
+    "k20": 488,
+    "k100": 2433
+  },
+  "activeness, numberOfTokens, operator, parents, token": {
+    "k1": 702199,
+    "k20": 1118143,
+    "k100": 1528151
+  },
+  "activeness, numberOfTokens, operator, parents, type": {
+    "k1": 251,
+    "k20": 3248,
+    "k100": 10290
+  },
+  "activeness, numberOfTokens, operator, parents, token, type": {
+    "k1": 721360,
+    "k20": 1174867,
+    "k100": 1622900
+  },
+  "age, numberOfTokens, operator, parents": {
+    "k1": 33,
+    "k20": 465,
+    "k100": 2472
+  },
+  "age, numberOfTokens, operator, parents, token": {
+    "k1": 679841,
+    "k20": 1079386,
+    "k100": 1504986
+  },
+  "age, numberOfTokens, operator, parents, type": {
+    "k1": 187,
+    "k20": 2617,
+    "k100": 9574
+  },
+  "age, numberOfTokens, operator, parents, token, type": {
+    "k1": 698327,
+    "k20": 1135373,
+    "k100": 1608812
+  },
+  "activeness, age, numberOfTokens, operator, parents": {
+    "k1": 124,
+    "k20": 1809,
+    "k100": 9315
+  },
+  "activeness, age, numberOfTokens, operator, parents, token": {
+    "k1": 734895,
+    "k20": 1207342,
+    "k100": 1668960
+  },
+  "activeness, age, numberOfTokens, operator, parents, type": {
+    "k1": 637,
+    "k20": 7328,
+    "k100": 23144
+  },
+  "activeness, age, numberOfTokens, operator, parents, token, type": {
+    "k1": 756484,
+    "k20": 1269062,
+    "k100": 1761121
+  },
+  "numberOfTokens, operator, parents, yield": {
+    "k1": 42,
+    "k20": 648,
+    "k100": 3317
+  },
+  "numberOfTokens, operator, parents, token, yield": {
+    "k1": 749698,
+    "k20": 1240104,
+    "k100": 1739177
+  },
+  "numberOfTokens, operator, parents, type, yield": {
+    "k1": 310,
+    "k20": 4250,
+    "k100": 14191
+  },
+  "numberOfTokens, operator, parents, token, type, yield": {
+    "k1": 772737,
+    "k20": 1312962,
+    "k100": 1849070
+  },
+  "activeness, numberOfTokens, operator, parents, yield": {
+    "k1": 189,
+    "k20": 3505,
+    "k100": 18307
+  },
+  "activeness, numberOfTokens, operator, parents, token, yield": {
+    "k1": 813354,
+    "k20": 1384103,
+    "k100": 1902770
+  },
+  "activeness, numberOfTokens, operator, parents, type, yield": {
+    "k1": 1114,
+    "k20": 11674,
+    "k100": 36051
+  },
+  "activeness, numberOfTokens, operator, parents, token, type, yield": {
+    "k1": 840811,
+    "k20": 1456569,
+    "k100": 1999952
+  },
+  "age, numberOfTokens, operator, parents, yield": {
+    "k1": 172,
+    "k20": 2740,
+    "k100": 12986
+  },
+  "age, numberOfTokens, operator, parents, token, yield": {
+    "k1": 784808,
+    "k20": 1347062,
+    "k100": 1902164
+  },
+  "age, numberOfTokens, operator, parents, type, yield": {
+    "k1": 815,
+    "k20": 9206,
+    "k100": 31190
+  },
+  "age, numberOfTokens, operator, parents, token, type, yield": {
+    "k1": 811033,
+    "k20": 1426716,
+    "k100": 2004359
+  },
+  "activeness, age, numberOfTokens, operator, parents, yield": {
+    "k1": 658,
+    "k20": 11866,
+    "k100": 54711
+  },
+  "activeness, age, numberOfTokens, operator, parents, token, yield": {
+    "k1": 852739,
+    "k20": 1476561,
+    "k100": 2038338
+  },
+  "activeness, age, numberOfTokens, operator, parents, type, yield": {
+    "k1": 2391,
+    "k20": 25695,
+    "k100": 85796
+  },
+  "activeness, age, numberOfTokens, operator, parents, token, type, yield": {
+    "k1": 882431,
+    "k20": 1550724,
+    "k100": 2125054
+  },
+  "children, numberOfTokens, operator, parents": {
+    "k1": 61,
+    "k20": 939,
+    "k100": 4338
+  },
+  "children, numberOfTokens, operator, parents, token": {
+    "k1": 734795,
+    "k20": 1263419,
+    "k100": 1788031
+  },
+  "children, numberOfTokens, operator, parents, type": {
+    "k1": 357,
+    "k20": 4099,
+    "k100": 14141
+  },
+  "children, numberOfTokens, operator, parents, token, type": {
+    "k1": 757499,
+    "k20": 1332558,
+    "k100": 1880840
+  },
+  "activeness, children, numberOfTokens, operator, parents": {
+    "k1": 237,
+    "k20": 4303,
+    "k100": 21303
+  },
+  "activeness, children, numberOfTokens, operator, parents, token": {
+    "k1": 804961,
+    "k20": 1409860,
+    "k100": 1948911
+  },
+  "activeness, children, numberOfTokens, operator, parents, type": {
+    "k1": 1135,
+    "k20": 12345,
+    "k100": 42319
+  },
+  "activeness, children, numberOfTokens, operator, parents, token, type": {
+    "k1": 831959,
+    "k20": 1478166,
+    "k100": 2031952
+  },
+  "age, children, numberOfTokens, operator, parents": {
+    "k1": 234,
+    "k20": 4274,
+    "k100": 17380
+  },
+  "age, children, numberOfTokens, operator, parents, token": {
+    "k1": 776841,
+    "k20": 1379607,
+    "k100": 1947154
+  },
+  "age, children, numberOfTokens, operator, parents, type": {
+    "k1": 942,
+    "k20": 11066,
+    "k100": 38912
+  },
+  "age, children, numberOfTokens, operator, parents, token, type": {
+    "k1": 803288,
+    "k20": 1453173,
+    "k100": 2034231
+  },
+  "activeness, age, children, numberOfTokens, operator, parents": {
+    "k1": 907,
+    "k20": 16786,
+    "k100": 72169
+  },
+  "activeness, age, children, numberOfTokens, operator, parents, token": {
+    "k1": 851536,
+    "k20": 1510853,
+    "k100": 2071252
+  },
+  "activeness, age, children, numberOfTokens, operator, parents, type": {
+    "k1": 2712,
+    "k20": 31496,
+    "k100": 109788
+  },
+  "activeness, age, children, numberOfTokens, operator, parents, token, type": {
+    "k1": 880907,
+    "k20": 1579280,
+    "k100": 2147688
+  },
+  "children, numberOfTokens, operator, parents, yield": {
+    "k1": 347,
+    "k20": 6071,
+    "k100": 29989
+  },
+  "children, numberOfTokens, operator, parents, token, yield": {
+    "k1": 870565,
+    "k20": 1571335,
+    "k100": 2162828
+  },
+  "children, numberOfTokens, operator, parents, type, yield": {
+    "k1": 1490,
+    "k20": 16117,
+    "k100": 57582
+  },
+  "children, numberOfTokens, operator, parents, token, type, yield": {
+    "k1": 903443,
+    "k20": 1647290,
+    "k100": 2233016
+  },
+  "activeness, children, numberOfTokens, operator, parents, yield": {
+    "k1": 1751,
+    "k20": 31507,
+    "k100": 142580
+  },
+  "activeness, children, numberOfTokens, operator, parents, token, yield": {
+    "k1": 955167,
+    "k20": 1698120,
+    "k100": 2281975
+  },
+  "activeness, children, numberOfTokens, operator, parents, type, yield": {
+    "k1": 4529,
+    "k20": 52052,
+    "k100": 201608
+  },
+  "activeness, children, numberOfTokens, operator, parents, token, type, yield": {
+    "k1": 990849,
+    "k20": 1766248,
+    "k100": 2345873
+  },
+  "age, children, numberOfTokens, operator, parents, yield": {
+    "k1": 1272,
+    "k20": 21400,
+    "k100": 94867
+  },
+  "age, children, numberOfTokens, operator, parents, token, yield": {
+    "k1": 921967,
+    "k20": 1684112,
+    "k100": 2284846
+  },
+  "age, children, numberOfTokens, operator, parents, type, yield": {
+    "k1": 3569,
+    "k20": 39466,
+    "k100": 144818
+  },
+  "age, children, numberOfTokens, operator, parents, token, type, yield": {
+    "k1": 957753,
+    "k20": 1757009,
+    "k100": 2350375
+  },
+  "activeness, age, children, numberOfTokens, operator, parents, yield": {
+    "k1": 5448,
+    "k20": 78774,
+    "k100": 289304
+  },
+  "activeness, age, children, numberOfTokens, operator, parents, token, yield": {
+    "k1": 1005790,
+    "k20": 1788641,
+    "k100": 2377091
+  },
+  "activeness, age, children, numberOfTokens, operator, parents, type, yield": {
+    "k1": 10398,
+    "k20": 112647,
+    "k100": 372616
+  },
+  "activeness, age, children, numberOfTokens, operator, parents, token, type, yield": {
+    "k1": 1042712,
+    "k20": 1853703,
+    "k100": 2434060
+  },
+  "holdingSize, numberOfTokens, operator": {
+    "k1": 0,
+    "k20": 205,
+    "k100": 1164
+  },
+  "holdingSize, numberOfTokens, operator, token": {
+    "k1": 645843,
+    "k20": 982656,
+    "k100": 1265030
+  },
+  "holdingSize, numberOfTokens, operator, type": {
+    "k1": 51,
+    "k20": 1269,
+    "k100": 6320
+  },
+  "holdingSize, numberOfTokens, operator, token, type": {
+    "k1": 663484,
+    "k20": 1023175,
+    "k100": 1328860
+  },
+  "activeness, holdingSize, numberOfTokens, operator": {
+    "k1": 35,
+    "k20": 785,
+    "k100": 1962
+  },
+  "activeness, holdingSize, numberOfTokens, operator, token": {
+    "k1": 681495,
+    "k20": 1062429,
+    "k100": 1380170
+  },
+  "activeness, holdingSize, numberOfTokens, operator, type": {
+    "k1": 266,
+    "k20": 4570,
+    "k100": 12344
+  },
+  "activeness, holdingSize, numberOfTokens, operator, token, type": {
+    "k1": 701255,
+    "k20": 1108551,
+    "k100": 1452393
+  },
+  "age, holdingSize, numberOfTokens, operator": {
+    "k1": 30,
+    "k20": 894,
+    "k100": 2843
+  },
+  "age, holdingSize, numberOfTokens, operator, token": {
+    "k1": 673221,
+    "k20": 1051238,
+    "k100": 1376234
+  },
+  "age, holdingSize, numberOfTokens, operator, type": {
+    "k1": 219,
+    "k20": 3590,
+    "k100": 12850
+  },
+  "age, holdingSize, numberOfTokens, operator, token, type": {
+    "k1": 693709,
+    "k20": 1098085,
+    "k100": 1453485
+  },
+  "activeness, age, holdingSize, numberOfTokens, operator": {
+    "k1": 132,
+    "k20": 2170,
+    "k100": 10552
+  },
+  "activeness, age, holdingSize, numberOfTokens, operator, token": {
+    "k1": 712304,
+    "k20": 1133019,
+    "k100": 1478625
+  },
+  "activeness, age, holdingSize, numberOfTokens, operator, type": {
+    "k1": 773,
+    "k20": 8768,
+    "k100": 28457
+  },
+  "activeness, age, holdingSize, numberOfTokens, operator, token, type": {
+    "k1": 734807,
+    "k20": 1183612,
+    "k100": 1558662
+  },
+  "holdingSize, numberOfTokens, operator, yield": {
+    "k1": 47,
+    "k20": 875,
+    "k100": 2867
+  },
+  "holdingSize, numberOfTokens, operator, token, yield": {
+    "k1": 741547,
+    "k20": 1181301,
+    "k100": 1554906
+  },
+  "holdingSize, numberOfTokens, operator, type, yield": {
+    "k1": 348,
+    "k20": 5987,
+    "k100": 15903
+  },
+  "holdingSize, numberOfTokens, operator, token, type, yield": {
+    "k1": 766370,
+    "k20": 1237158,
+    "k100": 1652534
+  },
+  "activeness, holdingSize, numberOfTokens, operator, yield": {
+    "k1": 225,
+    "k20": 3520,
+    "k100": 17715
+  },
+  "activeness, holdingSize, numberOfTokens, operator, token, yield": {
+    "k1": 786540,
+    "k20": 1270305,
+    "k100": 1664979
+  },
+  "activeness, holdingSize, numberOfTokens, operator, type, yield": {
+    "k1": 1337,
+    "k20": 13398,
+    "k100": 41380
+  },
+  "activeness, holdingSize, numberOfTokens, operator, token, type, yield": {
+    "k1": 813997,
+    "k20": 1329127,
+    "k100": 1765316
+  },
+  "age, holdingSize, numberOfTokens, operator, yield": {
+    "k1": 197,
+    "k20": 3319,
+    "k100": 13134
+  },
+  "age, holdingSize, numberOfTokens, operator, token, yield": {
+    "k1": 775087,
+    "k20": 1259078,
+    "k100": 1685233
+  },
+  "age, holdingSize, numberOfTokens, operator, type, yield": {
+    "k1": 1036,
+    "k20": 11939,
+    "k100": 36484
+  },
+  "age, holdingSize, numberOfTokens, operator, token, type, yield": {
+    "k1": 802276,
+    "k20": 1322228,
+    "k100": 1790357
+  },
+  "activeness, age, holdingSize, numberOfTokens, operator, yield": {
+    "k1": 685,
+    "k20": 12481,
+    "k100": 59304
+  },
+  "activeness, age, holdingSize, numberOfTokens, operator, token, yield": {
+    "k1": 822239,
+    "k20": 1341851,
+    "k100": 1776603
+  },
+  "activeness, age, holdingSize, numberOfTokens, operator, type, yield": {
+    "k1": 2943,
+    "k20": 28407,
+    "k100": 94942
+  },
+  "activeness, age, holdingSize, numberOfTokens, operator, token, type, yield": {
+    "k1": 851328,
+    "k20": 1405291,
+    "k100": 1882248
+  },
+  "children, holdingSize, numberOfTokens, operator": {
+    "k1": 72,
+    "k20": 1023,
+    "k100": 4983
+  },
+  "children, holdingSize, numberOfTokens, operator, token": {
+    "k1": 730187,
+    "k20": 1196398,
+    "k100": 1598632
+  },
+  "children, holdingSize, numberOfTokens, operator, type": {
+    "k1": 451,
+    "k20": 5367,
+    "k100": 17989
+  },
+  "children, holdingSize, numberOfTokens, operator, token, type": {
+    "k1": 754023,
+    "k20": 1254469,
+    "k100": 1693048
+  },
+  "activeness, children, holdingSize, numberOfTokens, operator": {
+    "k1": 253,
+    "k20": 4490,
+    "k100": 24246
+  },
+  "activeness, children, holdingSize, numberOfTokens, operator, token": {
+    "k1": 778712,
+    "k20": 1291772,
+    "k100": 1708841
+  },
+  "activeness, children, holdingSize, numberOfTokens, operator, type": {
+    "k1": 1369,
+    "k20": 14275,
+    "k100": 48549
+  },
+  "activeness, children, holdingSize, numberOfTokens, operator, token, type": {
+    "k1": 805210,
+    "k20": 1351664,
+    "k100": 1803274
+  },
+  "age, children, holdingSize, numberOfTokens, operator": {
+    "k1": 292,
+    "k20": 4493,
+    "k100": 22345
+  },
+  "age, children, holdingSize, numberOfTokens, operator, token": {
+    "k1": 769492,
+    "k20": 1289875,
+    "k100": 1741260
+  },
+  "age, children, holdingSize, numberOfTokens, operator, type": {
+    "k1": 1251,
+    "k20": 14048,
+    "k100": 48795
+  },
+  "age, children, holdingSize, numberOfTokens, operator, token, type": {
+    "k1": 796682,
+    "k20": 1353905,
+    "k100": 1837784
+  },
+  "activeness, age, children, holdingSize, numberOfTokens, operator": {
+    "k1": 1000,
+    "k20": 18772,
+    "k100": 79299
+  },
+  "activeness, age, children, holdingSize, numberOfTokens, operator, token": {
+    "k1": 820728,
+    "k20": 1373571,
+    "k100": 1829302
+  },
+  "activeness, age, children, holdingSize, numberOfTokens, operator, type": {
+    "k1": 3294,
+    "k20": 36208,
+    "k100": 115676
+  },
+  "activeness, age, children, holdingSize, numberOfTokens, operator, token, type": {
+    "k1": 849762,
+    "k20": 1438018,
+    "k100": 1922638
+  },
+  "children, holdingSize, numberOfTokens, operator, yield": {
+    "k1": 373,
+    "k20": 7405,
+    "k100": 39499
+  },
+  "children, holdingSize, numberOfTokens, operator, token, yield": {
+    "k1": 855991,
+    "k20": 1455073,
+    "k100": 1956517
+  },
+  "children, holdingSize, numberOfTokens, operator, type, yield": {
+    "k1": 1915,
+    "k20": 20576,
+    "k100": 77319
+  },
+  "children, holdingSize, numberOfTokens, operator, token, type, yield": {
+    "k1": 888638,
+    "k20": 1527828,
+    "k100": 2057498
+  },
+  "activeness, children, holdingSize, numberOfTokens, operator, yield": {
+    "k1": 1809,
+    "k20": 34009,
+    "k100": 157017
+  },
+  "activeness, children, holdingSize, numberOfTokens, operator, token, yield": {
+    "k1": 913853,
+    "k20": 1539415,
+    "k100": 2051715
+  },
+  "activeness, children, holdingSize, numberOfTokens, operator, type, yield": {
+    "k1": 5388,
+    "k20": 59146,
+    "k100": 214284
+  },
+  "activeness, children, holdingSize, numberOfTokens, operator, token, type, yield": {
+    "k1": 948682,
+    "k20": 1612277,
+    "k100": 2146782
+  },
+  "age, children, holdingSize, numberOfTokens, operator, yield": {
+    "k1": 1491,
+    "k20": 25903,
+    "k100": 114725
+  },
+  "age, children, holdingSize, numberOfTokens, operator, token, yield": {
+    "k1": 901956,
+    "k20": 1547828,
+    "k100": 2096075
+  },
+  "age, children, holdingSize, numberOfTokens, operator, type, yield": {
+    "k1": 4571,
+    "k20": 49918,
+    "k100": 173984
+  },
+  "age, children, holdingSize, numberOfTokens, operator, token, type, yield": {
+    "k1": 937053,
+    "k20": 1623908,
+    "k100": 2189260
+  },
+  "activeness, age, children, holdingSize, numberOfTokens, operator, yield": {
+    "k1": 5797,
+    "k20": 85053,
+    "k100": 291800
+  },
+  "activeness, age, children, holdingSize, numberOfTokens, operator, token, yield": {
+    "k1": 958521,
+    "k20": 1619499,
+    "k100": 2165149
+  },
+  "activeness, age, children, holdingSize, numberOfTokens, operator, type, yield": {
+    "k1": 12003,
+    "k20": 120483,
+    "k100": 370759
+  },
+  "activeness, age, children, holdingSize, numberOfTokens, operator, token, type, yield": {
+    "k1": 994522,
+    "k20": 1693507,
+    "k100": 2252115
+  },
+  "holdingSize, numberOfTokens, operator, parents": {
+    "k1": 54,
+    "k20": 973,
+    "k100": 4236
+  },
+  "holdingSize, numberOfTokens, operator, parents, token": {
+    "k1": 732021,
+    "k20": 1176175,
+    "k100": 1568297
+  },
+  "holdingSize, numberOfTokens, operator, parents, type": {
+    "k1": 372,
+    "k20": 6101,
+    "k100": 15779
+  },
+  "holdingSize, numberOfTokens, operator, parents, token, type": {
+    "k1": 752516,
+    "k20": 1228022,
+    "k100": 1651110
+  },
+  "activeness, holdingSize, numberOfTokens, operator, parents": {
+    "k1": 232,
+    "k20": 3689,
+    "k100": 21207
+  },
+  "activeness, holdingSize, numberOfTokens, operator, parents, token": {
+    "k1": 779091,
+    "k20": 1270751,
+    "k100": 1683466
+  },
+  "activeness, holdingSize, numberOfTokens, operator, parents, type": {
+    "k1": 1346,
+    "k20": 12822,
+    "k100": 42663
+  },
+  "activeness, holdingSize, numberOfTokens, operator, parents, token, type": {
+    "k1": 802211,
+    "k20": 1325556,
+    "k100": 1769612
+  },
+  "age, holdingSize, numberOfTokens, operator, parents": {
+    "k1": 260,
+    "k20": 3970,
+    "k100": 18427
+  },
+  "age, holdingSize, numberOfTokens, operator, parents, token": {
+    "k1": 769059,
+    "k20": 1270047,
+    "k100": 1717367
+  },
+  "age, holdingSize, numberOfTokens, operator, parents, type": {
+    "k1": 1093,
+    "k20": 13137,
+    "k100": 39607
+  },
+  "age, holdingSize, numberOfTokens, operator, parents, token, type": {
+    "k1": 792607,
+    "k20": 1327675,
+    "k100": 1805305
+  },
+  "activeness, age, holdingSize, numberOfTokens, operator, parents": {
+    "k1": 810,
+    "k20": 16659,
+    "k100": 70064
+  },
+  "activeness, age, holdingSize, numberOfTokens, operator, parents, token": {
+    "k1": 818624,
+    "k20": 1355399,
+    "k100": 1808459
+  },
+  "activeness, age, holdingSize, numberOfTokens, operator, parents, type": {
+    "k1": 2973,
+    "k20": 32040,
+    "k100": 103057
+  },
+  "activeness, age, holdingSize, numberOfTokens, operator, parents, token, type": {
+    "k1": 844052,
+    "k20": 1412702,
+    "k100": 1893886
+  },
+  "holdingSize, numberOfTokens, operator, parents, yield": {
+    "k1": 320,
+    "k20": 6399,
+    "k100": 32784
+  },
+  "holdingSize, numberOfTokens, operator, parents, token, yield": {
+    "k1": 851427,
+    "k20": 1426316,
+    "k100": 1906015
+  },
+  "holdingSize, numberOfTokens, operator, parents, type, yield": {
+    "k1": 1821,
+    "k20": 18117,
+    "k100": 63656
+  },
+  "holdingSize, numberOfTokens, operator, parents, token, type, yield": {
+    "k1": 879752,
+    "k20": 1492097,
+    "k100": 1999054
+  },
+  "activeness, holdingSize, numberOfTokens, operator, parents, yield": {
+    "k1": 1476,
+    "k20": 28622,
+    "k100": 129920
+  },
+  "activeness, holdingSize, numberOfTokens, operator, parents, token, yield": {
+    "k1": 907200,
+    "k20": 1515584,
+    "k100": 2006183
+  },
+  "activeness, holdingSize, numberOfTokens, operator, parents, type, yield": {
+    "k1": 4871,
+    "k20": 49217,
+    "k100": 179290
+  },
+  "activeness, holdingSize, numberOfTokens, operator, parents, token, type, yield": {
+    "k1": 937562,
+    "k20": 1580894,
+    "k100": 2095767
+  },
+  "age, holdingSize, numberOfTokens, operator, parents, yield": {
+    "k1": 1252,
+    "k20": 21920,
+    "k100": 96155
+  },
+  "age, holdingSize, numberOfTokens, operator, parents, token, yield": {
+    "k1": 895410,
+    "k20": 1524879,
+    "k100": 2054096
+  },
+  "age, holdingSize, numberOfTokens, operator, parents, type, yield": {
+    "k1": 4199,
+    "k20": 42159,
+    "k100": 148834
+  },
+  "age, holdingSize, numberOfTokens, operator, parents, token, type, yield": {
+    "k1": 926147,
+    "k20": 1593944,
+    "k100": 2139312
+  },
+  "activeness, age, holdingSize, numberOfTokens, operator, parents, yield": {
+    "k1": 4786,
+    "k20": 73520,
+    "k100": 257441
+  },
+  "activeness, age, holdingSize, numberOfTokens, operator, parents, token, yield": {
+    "k1": 950434,
+    "k20": 1598139,
+    "k100": 2129690
+  },
+  "activeness, age, holdingSize, numberOfTokens, operator, parents, type, yield": {
+    "k1": 10561,
+    "k20": 104188,
+    "k100": 323171
+  },
+  "activeness, age, holdingSize, numberOfTokens, operator, parents, token, type, yield": {
+    "k1": 982064,
+    "k20": 1665269,
+    "k100": 2209125
+  },
+  "children, holdingSize, numberOfTokens, operator, parents": {
+    "k1": 446,
+    "k20": 7160,
+    "k100": 37883
+  },
+  "children, holdingSize, numberOfTokens, operator, parents, token": {
+    "k1": 845382,
+    "k20": 1450411,
+    "k100": 1939930
+  },
+  "children, holdingSize, numberOfTokens, operator, parents, type": {
+    "k1": 1867,
+    "k20": 19320,
+    "k100": 71116
+  },
+  "children, holdingSize, numberOfTokens, operator, parents, token, type": {
+    "k1": 872603,
+    "k20": 1512081,
+    "k100": 2018582
+  },
+  "activeness, children, holdingSize, numberOfTokens, operator, parents": {
+    "k1": 1900,
+    "k20": 34645,
+    "k100": 147279
+  },
+  "activeness, children, holdingSize, numberOfTokens, operator, parents, token": {
+    "k1": 905178,
+    "k20": 1540118,
+    "k100": 2037242
+  },
+  "activeness, children, holdingSize, numberOfTokens, operator, parents, type": {
+    "k1": 5125,
+    "k20": 56374,
+    "k100": 198234
+  },
+  "activeness, children, holdingSize, numberOfTokens, operator, parents, token, type": {
+    "k1": 934214,
+    "k20": 1601390,
+    "k100": 2112476
+  },
+  "age, children, holdingSize, numberOfTokens, operator, parents": {
+    "k1": 1895,
+    "k20": 29336,
+    "k100": 123059
+  },
+  "age, children, holdingSize, numberOfTokens, operator, parents, token": {
+    "k1": 895917,
+    "k20": 1555460,
+    "k100": 2081634
+  },
+  "age, children, holdingSize, numberOfTokens, operator, parents, type": {
+    "k1": 4770,
+    "k20": 51648,
+    "k100": 179073
+  },
+  "age, children, holdingSize, numberOfTokens, operator, parents, token, type": {
+    "k1": 925967,
+    "k20": 1620477,
+    "k100": 2157854
+  },
+  "activeness, age, children, holdingSize, numberOfTokens, operator, parents": {
+    "k1": 6696,
+    "k20": 92194,
+    "k100": 297498
+  },
+  "activeness, age, children, holdingSize, numberOfTokens, operator, parents, token": {
+    "k1": 954372,
+    "k20": 1626956,
+    "k100": 2148785
+  },
+  "activeness, age, children, holdingSize, numberOfTokens, operator, parents, type": {
+    "k1": 12427,
+    "k20": 123391,
+    "k100": 368813
+  },
+  "activeness, age, children, holdingSize, numberOfTokens, operator, parents, token, type": {
+    "k1": 985189,
+    "k20": 1688996,
+    "k100": 2220270
+  },
+  "children, holdingSize, numberOfTokens, operator, parents, yield": {
+    "k1": 3053,
+    "k20": 60374,
+    "k100": 267934
+  },
+  "children, holdingSize, numberOfTokens, operator, parents, token, yield": {
+    "k1": 999317,
+    "k20": 1712152,
+    "k100": 2264965
+  },
+  "children, holdingSize, numberOfTokens, operator, parents, type, yield": {
+    "k1": 7585,
+    "k20": 93212,
+    "k100": 342749
+  },
+  "children, holdingSize, numberOfTokens, operator, parents, token, type, yield": {
+    "k1": 1034201,
+    "k20": 1776114,
+    "k100": 2329533
+  },
+  "activeness, children, holdingSize, numberOfTokens, operator, parents, yield": {
+    "k1": 12352,
+    "k20": 175257,
+    "k100": 547980
+  },
+  "activeness, children, holdingSize, numberOfTokens, operator, parents, token, yield": {
+    "k1": 1061481,
+    "k20": 1790084,
+    "k100": 2345410
+  },
+  "activeness, children, holdingSize, numberOfTokens, operator, parents, type, yield": {
+    "k1": 20818,
+    "k20": 220849,
+    "k100": 632375
+  },
+  "activeness, children, holdingSize, numberOfTokens, operator, parents, token, type, yield": {
+    "k1": 1096824,
+    "k20": 1852839,
+    "k100": 2406860
+  },
+  "age, children, holdingSize, numberOfTokens, operator, parents, yield": {
+    "k1": 9728,
+    "k20": 140324,
+    "k100": 477033
+  },
+  "age, children, holdingSize, numberOfTokens, operator, parents, token, yield": {
+    "k1": 1052945,
+    "k20": 1812495,
+    "k100": 2378683
+  },
+  "age, children, holdingSize, numberOfTokens, operator, parents, type, yield": {
+    "k1": 17827,
+    "k20": 188218,
+    "k100": 570338
+  },
+  "age, children, holdingSize, numberOfTokens, operator, parents, token, type, yield": {
+    "k1": 1089307,
+    "k20": 1876373,
+    "k100": 2435921
+  },
+  "activeness, age, children, holdingSize, numberOfTokens, operator, parents, yield": {
+    "k1": 29802,
+    "k20": 298583,
+    "k100": 767579
+  },
+  "activeness, age, children, holdingSize, numberOfTokens, operator, parents, token, yield": {
+    "k1": 1110020,
+    "k20": 1872285,
+    "k100": 2433995
+  },
+  "activeness, age, children, holdingSize, numberOfTokens, operator, parents, type, yield": {
+    "k1": 42650,
+    "k20": 355691,
+    "k100": 855886
+  },
+  "activeness, age, children, holdingSize, numberOfTokens, operator, parents, token, type, yield": {
+    "k1": 1146069,
+    "k20": 1932534,
+    "k100": 2487621
+  }
 }
