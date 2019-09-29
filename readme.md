@@ -6,7 +6,7 @@ Polonius is a blockchain analysis framework. It creates entity taxonomies out of
 1. Data Extraction: Data is extracted from a raw data sources and written into an Address graph.
 2. Entity Clustering: Applies heuristics to the address graph and then constructs and Entity graph
 3. Taxonomy: Creates an entity taxonomy of the address graph at a specific blocknumber.
-
+<img src="m.png" width="400" height="790">
 ![alt text](m.png "Model")
 
 Step one and two are blockchain-specific. The taxonomy step is blockchain independent and can be reused for other blockchains. Polonius stores all data in a SQLite database and most logic is implemented as SQL commands. The SQL commands are triggered by Node.js scripts and data source scrapers are also implemented in Node.js.
