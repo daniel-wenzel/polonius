@@ -39,7 +39,7 @@ For validating if the installation worked, testing the tokenParser component is 
 
 ## Project Structure
 
-The three major steps correspond to the three folder `data-extraction`, `entity-clustering` and `taxonomy`. In `data-extraction` and `entity-clustering` the application logic lies in the folder `erc20`. Shared logic can be found in the util folder. The token-explorer component for analyzing the address graph can be found in the subfolder `token-explorer` and has a seperate readme file.
+The three major steps correspond to the three folder `data-extraction`, `entity-clustering` and `taxonomy`. In `data-extraction` and `entity-clustering` the application logic lies in the folder `erc20`. Shared logic can be found in the util folder. The token-explorer component for analyzing the address graph can be found in the subfolder `tokenexplorer` and has a seperate readme file.
 
 Data files are stored in the `data` folder. The most important file is `tokens.json` which maintains a list of all known token classes. The SQLite database is stored in `db/baltasar.db`. The `util` folder contains code which is reused. Most imporantly, `util/requireSQL` file allows the parsing of sql files with multiple scripts.
 

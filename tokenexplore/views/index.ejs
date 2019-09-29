@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<% const isSelf = (a) => address == a %>
+<% const shrt = (a) => a.substring(2,8)+"..."+a.substring(a.length-6, a.length) %>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Overview for <%=address%></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        a {
+            color: black;
+            font-weight: 600;
+        }
+        a[href] {
+            color: blue;
+        }
+        .amount.in {
+            color: green;
+        }
+        .amount.out {
+            color: red; 
+        }
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+        }
+        .side {
+            max-width: 30vw;
+        }
+        #graph {
+            width: 70vw;
+        }
+        svg {
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+    <div class="graph">
+        <%- include partials/network.ejs -%>
+    </div>
+    <div class="side">
+        <h1 class="header">Overview for <%=shrt(address)%></h1>
+        <div class=stats">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Address</td>
+                        <td><%= node.address %> <a href="https://etherscan.io/address/<%= node.address %>">(Etherscan)</a></td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td><%= node.name %></td>
+                    </tr>
+                    <tr>
+                        <td>URL</td>
+                        <td><a href="<%= node.url %>"><%= node.url %></a></td>
+                    </tr>
+                    <tr>
+                        <td>Tags</td>
+                        <td><%= node.tags? node.tags.join(", "):'' %></a></td>
+                    </tr>
+                    <tr>
+                        <td>Age</td>
+                        <td><%= node.age %></a></td>
+                    </tr>
+                    <tr>
+                        <td>Indegree</td>
+                        <td><%= node.indegree %> (<%= node.distinctIndegree %>)</td>
+                    </tr>
+                    <tr>
+                        <td>Outdegree</td>
+                        <td><%= node.outdegree %> (<%= node.distinctOutdegree %>)</td>
+                    </tr>
+                    <tr>
+                        <td>Balances</td>
+                        <td><%= Array.from(node.balances, ([key, value]) => value +" "+key).join(', ')%></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="transactions">
+            <h2>Transfers</h2>
+        <% for (const t of transfers) { %>
+            <div>
+                [ <%= t.date.format('LLL') %>]
+                From
+                <a <% if (!isSelf(t.from)) { %>href='/address/<%= t.from %>' <%}%>><%= shrt(t.from) %></a>
+                to 
+                <a <% if (!isSelf(t.to)) { %>href='/address/<%= t.to %>' <%}%>><%= shrt(t.to) %></a>
+                <span class="amount <%= isSelf(t.to)? 'in':'out'%>"><%= t.amountInTokens %></span> <%= t.token  %> Tokens (<%= t.amountInUSDCurrent %> USD)
+            </div>
+        <% } %>
+    </div>
+    </div>
+</div>
+</body>
+</html>

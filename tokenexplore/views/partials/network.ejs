@@ -1,0 +1,254 @@
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://d3js.org/d3-dispatch.v1.min.js"></script>
+  <script src="https://d3js.org/d3-quadtree.v1.min.js"></script>
+  <script src="https://d3js.org/d3-timer.v1.min.js"></script>
+  <script src="https://d3js.org/d3-force.v2.min.js"></script>
+  <svg id="graph" height="1200" width="1200">
+      <defs>
+          <marker id="arrow" viewBox="0 0 10 10" refX="25" refY="5" markerUnits="strokeWidth" markerWidth="2" markerHeight="1.5" orient="auto">
+              <path d="M 0 0 L 10 5 L 0 10 z" stroke="none" fill="black"/>
+      
+        </defs>
+  </svg>
+  <style>
+  div.tooltip {	
+    position: absolute;			
+    text-align: center;						
+    height: 28px;					
+    padding: 2px;				
+    font: 12px sans-serif;		
+    background: lightsteelblue;	
+    border: 0px;		
+    border-radius: 8px;			
+    pointer-events: none;			
+}</style>
+
+  <script>
+    let baseURL = window.location.protocol + "//"+window.location.host+window.location.pathname
+    if (!baseURL.endsWith('/')) baseURL += '/'
+    let baseURLWithoutAddress = baseURL.split('/').slice(0, baseURL.split('/').length-2).join('/')+"/"
+    const address = "<%= address %>"
+    
+      let senderAddresses = new Set()
+      let receiverAddresses = new Set()
+      let sendersSender = new Set()
+      let receiversReceiver = new Set()
+      const width = 1200;
+      const height = 800;
+
+      const centerByCategory = {
+        sendersSender: 0.1 * width,
+        sender: 0.3 * width,
+        address: 0.5 * width,
+        receiver: 0.7 * width,
+        receiversReceiver: 0.9 * width
+      }
+    function normalize(array, value, minValue, maxValue) {
+      const currentMax = Math.max(...array.map(a => a[value]))
+      array.forEach(a => {
+        a[value] *= (maxValue-minValue) / currentMax
+        a[value] += minValue
+      })
+    }
+
+    function drag(simulation) {
+      const dragstarted = d => {
+        if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+        d.fx = d.x;
+        d.fy = d.y;
+      };
+
+      const dragged = d => {
+        d.fx = d3.event.x;
+        d.fy = d3.event.y;
+      };
+
+      const dragended = d => {
+        if (!d3.event.active) simulation.alphaTarget(0);
+        d.fx = null;
+        d.fy = null;
+      };
+
+      return d3
+        .drag()
+        .on("start", dragstarted)
+        .on("drag", dragged)
+        .on("end", dragended);
+    }
+    function color() {
+      const scale = d3.scaleOrdinal(d3.schemeCategory10);
+      return d => {
+        if (d.address == address) {
+          return '#FF0000'
+        }
+        
+        return scale(d.tags)
+      };
+    }
+    function strokeColor() {
+      const scale = d3.scaleOrdinal(d3.schemeCategory10);
+      return d => {
+        return scale(d.type)
+      };
+    }
+    d3.json(
+      baseURL+"neighbourhoodGraph"
+    ).then(data => {
+      const relevantAddresses = new Set(address.startsWith("0x")? [address] : data.nodes.filter(n => n.name && n.name.includes(address)).map(n => n.address))
+
+      const links = data.transfers.map(d => Object.create(d));
+
+      links.forEach(l => {
+          l.source = l.from
+          l.target = l.to
+          l.value = +l.amountInUSDCurrent
+          if (receiverAddresses.has(l.from)) {
+            l.type = '2ndDegreeOut'
+            receiversReceiver.add(l.to)
+          }
+          if (senderAddresses.has(l.to)) {
+            l.type = '2ndDegreeIn'
+            sendersSender.add(l.from)
+          }
+          if (senderAddresses.has(l.from) && receiverAddresses.has(l.to)) {
+            l.type = 'mixed'
+          }
+          if (relevantAddresses.has(l.from)) {
+            l.type = 'out'
+            receiverAddresses.add(l.to)
+          }
+          if (relevantAddresses.has(l.to)) {
+            l.type = 'in'
+            senderAddresses.add(l.from)
+          }
+      })
+      const newSets = removeDuplicates(senderAddresses, sendersSender, receiverAddresses, receiversReceiver)
+      senderAddresses = newSets[0]
+      sendersSender = newSets[1]
+      receiverAddresses = newSets[2]
+      receiversReceiver = newSets[3]
+
+      normalize(links, 'value', 5, 100)
+      const nodes = data.nodes.map(d => Object.create(d));
+      nodes.forEach(n => {
+          n.id = n.address
+          n.size = n.degree
+      })
+      normalize(nodes, 'size', 20, 500)
+
+      let simulation
+      if (address.startsWith('0x')) {
+        simulation = d3
+        .forceSimulation(nodes)
+        .force("link", d3.forceLink(links).id(d => d.id).distance(50))
+        .force("charge", d3.forceManyBody().strength(-50))
+        .force("center", d3.forceCenter(width / 2, height / 2))
+        .force('x', d3.forceX().x(calcX).strength(0.5))
+      }
+      else {
+        simulation = d3
+        .forceSimulation(nodes)
+        .force("link", d3.forceLink(links).id(d => d.id).distance(50))
+        .force("charge", d3.forceManyBody().strength(-10))
+        .force("center", d3.forceCenter(width / 2, height / 2))
+      }
+
+      const svg = d3.select("#graph");
+      const tooltip = d3.select("body").append("div")	
+        .attr("class", "tooltip")				
+        .style("opacity", 0);
+
+      const link = svg
+        .append("g")
+        .attr("stroke", "#999")
+        .attr("stroke-opacity", 0.6)
+        .selectAll("line")
+        .data(links)
+        .join("line")
+        .attr("stroke-width", d => Math.pow(d.value, 0.75))
+        .attr('marker-end', 'url(#arrow)')
+        .attr('stroke', strokeColor())
+
+      const node = svg
+        .append("g")
+        .attr("stroke", "#fff")
+        .attr("stroke-width", 1.5)
+        .selectAll("a")
+        .data(nodes)
+        .join("a")
+        .attr("href", n => baseURLWithoutAddress+n.address)
+        .append("circle")
+        .attr("r", n => Math.sqrt(n.size))
+        .attr("fill", color())
+        .call(drag(simulation))
+        .on("mouseover", function(d) {		
+            tooltip.transition()		
+                .duration(200)		
+                .style("opacity", .9);	
+            let html = d.name? d.name+" ": ""
+            html += d.tags.join(', ')	
+            if (html) html += "<br/>"
+            html += d.address
+            tooltip.html(html)	
+                .style("left", (d3.event.pageX) + "px")		
+                .style("top", (d3.event.pageY - 28) + "px");	
+            })
+        .on("mouseout", function(d) {		
+          tooltip.transition()		
+                .duration(500)		
+                .style("opacity", 0);	
+        });
+      node.append("title").text(d => d.id);
+
+      simulation.on("tick", () => {
+        link
+          .attr("x1", d => d.source.x)
+          .attr("y1", d => d.source.y)
+          .attr("x2", d => d.target.x)
+          .attr("y2", d => d.target.y);
+
+        node.attr("cx", d => d.x).attr("cy", d => d.y);
+      });
+    });
+
+
+
+    function removeDuplicates(...sets) {
+      const newSets = []
+      for (let i=0; i<sets.length; i++) {
+        const set = sets[i]
+        const otherSets = sets.slice(0,i).concat(sets.slice(i+1,set.length))
+        const newSet = new Set()
+        valueLoop:
+        for (const v of set.values()) {
+          for (otherSet of otherSets) {
+            if (otherSet.has(v)) {
+              continue valueLoop
+            }
+          }
+          newSet.add(v)
+        }
+        newSets.push(newSet)
+      }
+      return newSets
+    }
+
+    function calcX(d) {
+            if (address == d.id) {
+              return centerByCategory.address
+            }
+            if (senderAddresses.has(d.id)) {
+              return centerByCategory.sender
+            }
+            if (receiverAddresses.has(d.id)) {
+              return centerByCategory.receiver
+            }
+            if (sendersSender.has(d.id)) {
+              return centerByCategory.sendersSender
+            }
+            if (receiversReceiver.has(d.id)) {
+              return centerByCategory.receiversReceiver
+            }
+            return centerByCategory.address
+          }
+  </script>
