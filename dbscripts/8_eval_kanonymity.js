@@ -85,3 +85,74 @@ function saveIfNeeded(force=false) {
         console.log("saved")
     }
 }
+
+function calcPermutations(array) {
+    const combinations = [[]]
+
+    array.forEach(d => {
+        combinations.forEach(c => {
+            combinations.push(c.concat(d))
+        })
+    })
+    combinations.splice(0,1) // remove empty group by at the start
+    return combinations
+}
+
+const allResults = {}
+for (dimension of dimensions) {
+    const otherDimensions = dimensions.filter(d => d != dimension)
+    const permutations = calcPermutations(otherDimensions)
+    const nPermutations = permutations.map(p => numOptions(p.length, otherDimensions.length))
+    const normalizedPermuatations = permutations.map(normalizeCombination)
+    const valuesWithoutDimensions = normalizedPermuatations.map(p => combinations[p]).reduce((acc, c, i) => {
+        return {
+            k1: acc.k1 + c.k1 * nPermutations[i],
+            k20: acc.k20 + c.k20 * nPermutations[i],
+            k100: acc.k100 + c.k100 * nPermutations[i]
+        }
+    }, {k1:0, k20:0, k100:0})
+
+    const normalizedPersWithD = permutations.map(p => p.concat([dimension])).map(normalizeCombination)
+    const valuesWithDimensions = normalizedPersWithD.map(p => combinations[p]).reduce((acc, c, i) => {
+        return {
+            k1: acc.k1 + c.k1 * nPermutations[i],
+            k20: acc.k20 + c.k20 * nPermutations[i],
+            k100: acc.k100 + c.k100 * nPermutations[i]
+        }
+    }, {k1:0, k20:0, k100:0})
+    const numPermutations = nPermutations.reduce((a,b) => a+b)
+    console.log(numPermutations)
+    const results = {
+        k1: (valuesWithDimensions.k1 - valuesWithoutDimensions.k1) / numPermutations,
+        k20: (valuesWithDimensions.k20 - valuesWithoutDimensions.k20) / numPermutations,
+        k100: (valuesWithDimensions.k100 - valuesWithoutDimensions.k100) / numPermutations
+    }
+    allResults[dimension] = results
+}
+
+const sums = Object.values(allResults).reduce((a,b) => ({
+    k1: a.k1 + b.k1,
+    k20: a.k20 + b.k20,
+    k100: a.k100 + b.k100
+}))
+
+const numEntries = 5518590
+Object.values(allResults).forEach(r => {
+    r.k1_p = Math.floor(r.k1 / sums.k1 * 100000) / 1000 + "%",
+    r.k20_p = Math.floor(r.k20 / sums.k20 * 100000) / 1000+ "%",
+    r.k100_p = Math.floor(r.k100 / sums.k100 * 100000) / 1000+ "%"
+})
+Object.keys(allResults).forEach(k => allResults[k].name = k)
+const vals = Object.values(allResults)
+vals.sort((x, y) => x.k1 - y.k1)
+console.log(vals.map(v => [v.name, v.k1_p, v.k20_p, v.k100_p].join(', ')).join('\n'))
+
+function numOptions(placedDimensions, allDimensions) {
+    const unplacedDimensions = allDimensions - placedDimensions
+    return fact(placedDimensions) * fact(unplacedDimensions)
+}
+
+
+function fact(n) {
+    return n < 1? 1: n * fact(n-1)
+}

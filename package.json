@@ -1,10 +1,16 @@
 {
-  "name": "baltasar",
+  "name": "Polonius",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "extract:erc20:eventLogParser": "node 1_data-extraction/erc20/eventLogParser",
+    "extract:erc20:tokenParser": "node 1_data-extraction/erc20/tokenParser",
+    "extract:erc20:labelExtractor": "node 1_data-extraction/erc20/labelExtractor",
+    "extract:erc20:icoFinder": "node 1_data-extraction/erc20/icoFinder",
+    "entityclustering:erc2:heuristicComputer": "node 2_entity-clustering/erc20/heuristicComputer",
+    "entityclustering:erc2:clusterizer": "node 2_entity-clustering/erc20/clusterizer",
+    "taxonomizer": "node 3_taxonomy/taxonomizer"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +22,7 @@
     "cheerio": "^1.0.0-rc.3",
     "event-stream": "^4.0.1",
     "gunzip-maybe": "^1.4.1",
+    "js-combinatorics": "^0.5.4",
     "log-timestamp": "^0.3.0",
     "moment": "^2.24.0",
     "request": "^2.88.0",
