@@ -23,28 +23,43 @@ npm i
 
 **On the data-extraction level**:
 
-Token Parser:
-```npm run extract:erc20:tokenParser```
+#### Token Parser:
+- Crawls CoinMarketCap and creates a list of all tokens by checking if they are listed on Etherscan.
+- Requirements: None
+- Execute: ```npm run extract:erc20:tokenParser```
 
-EventLogParser:
-```npm run extract:erc20:eventLogParser```
+#### EventLogParser:
+- Parses and EventLog file and writes the results into the database.
+- Requirements: An event log tar.gz. file (see url in the file), tokens.json file created by the Token Parser component.
+- Execute: ```npm run extract:erc20:eventLogParser```
 
-LabelExtractor
-```npm run extract:erc20:labelExtractor```
+#### LabelExtractor
+- Crawls Etherscan and extracts all address labels
+- Requirements: None
+- Execute: ```npm run extract:erc20:labelExtractor```
 
-ICOFinder:
-```npm run extract:erc20:icoFinder```
+#### ICOFinder:
+- Finds ICOs according to the algorithm presented in the paper.
+- Requirements: EventLogParser
+- Execute: ```npm run extract:erc20:icoFinder```
 
 **On the entity-clustering level**:
 
-Heuristic Computer:
-```npm run entityclustering:erc2:heuristicComputer```
+#### Heuristic Computer:
+- Performs the heuristics presented in the paper.
+- Requirements: All Previous Steps
+- Execute: ```npm run entityclustering:erc2:heuristicComputer```
 
-Clusterizer:
-```npm run entityclustering:erc2:clusterizer```
+#### Clusterizer:
+- Creates the Entity Graph tables and performs a union find algorith on all addresses.
+- Requirements: Heuristic Computer
+- Execute: ```npm run entityclustering:erc2:clusterizer```
 
 **And to compute the taxonomy**:
-```npm run taxonomizer```
+#### Taxonomizer:
+- Calculates the taxonomy at one point in time. You can pass a blocknumber (see the code for details). If no parameter is given, it creates a taxonomy for the most recent blocknumber.
+- Requirements: Clusterizer
+- Execute: ```npm run taxonomizer```
 
 For validating if the installation worked, testing the Token Parser component is a good choice. The scripts on entity-clustering and taxonomy level start by dropping large tables and recalculating them which can be very time intensive.
 
