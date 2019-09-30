@@ -21,20 +21,32 @@ npm i
 ```
 3. Running individual analysis steps:
 
-On the data-extraction level:
+**On the data-extraction level**:
+
+Token Parser:
 ```npm run extract:erc20:tokenParser```
+
+EventLogParser:
 ```npm run extract:erc20:eventLogParser```
+
+LabelExtractor
 ```npm run extract:erc20:labelExtractor```
+
+ICOFinder:
 ```npm run extract:erc20:icoFinder```
 
-On the entity-clustering level:
+**On the entity-clustering level**:
+
+Heuristic Computer:
 ```npm run entityclustering:erc2:heuristicComputer```
+
+Clusterizer:
 ```npm run entityclustering:erc2:clusterizer```
 
-And to compute the taxonomy:
+**And to compute the taxonomy**:
 ```npm run taxonomizer```
 
-For validating if the installation worked, testing the tokenParser component is a good choice. The scripts on entity-clustering and taxonomy level start by dropping large tables and recalculating them which can be very time intensive.
+For validating if the installation worked, testing the Token Parser component is a good choice. The scripts on entity-clustering and taxonomy level start by dropping large tables and recalculating them which can be very time intensive.
 
 ## Project Structure
 
